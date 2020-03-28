@@ -1,0 +1,36 @@
+\babel@toc {french}{}
+\contentsline {chapter}{Introduction}{8}{chapter*.7}% 
+\contentsline {chapter}{\numberline {1}Contexte g\IeC {\'e}n\IeC {\'e}ral du projet}{10}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Pr\IeC {\'e}sentation de l\IeC {\textquoteright }organisme d\IeC {\textquoteright }accueil}{11}{section.1.1}% 
+\contentsline {subsection}{\numberline {1.1.1}Cadre g\IeC {\'e}n\IeC {\'e}ral de travail}{11}{subsection.1.1.1}% 
+\contentsline {subsection}{\numberline {1.1.2}Domaines d\IeC {\textquoteright }activit\IeC {\'e} de l'entreprise}{11}{subsection.1.1.2}% 
+\contentsline {subsection}{\numberline {1.1.3}Mission de l'entreprise}{11}{subsection.1.1.3}% 
+\contentsline {section}{\numberline {1.2}\IeC {\'E}tude de l'existant}{12}{section.1.2}% 
+\contentsline {subsection}{\numberline {1.2.1}Cadre du projet}{12}{subsection.1.2.1}% 
+\contentsline {subsection}{\numberline {1.2.2}Probl\IeC {\'e}matique}{12}{subsection.1.2.2}% 
+\contentsline {subsection}{\numberline {1.2.3}Solution propos\IeC {\'e}e}{13}{subsection.1.2.3}% 
+\contentsline {section}{\numberline {1.3}Planification et conduite du projet}{13}{section.1.3}% 
+\contentsline {subsection}{\numberline {1.3.1}D\IeC {\'e}marche adopt\IeC {\'e}e}{13}{subsection.1.3.1}% 
+\contentsline {subsubsection}{presentation de la methode Scrum }{14}{section*.10}% 
+\contentsline {subsubsection}{Processus de d\IeC {\'e}veloppement}{14}{section*.11}% 
+\contentsline {subsubsection}{l'equipe Scrum}{15}{section*.13}% 
+\contentsline {subsubsection}{les \IeC {\'e}v\IeC {\'e}nements Scrum}{16}{section*.15}% 
+\contentsline {subsection}{\numberline {1.3.2}Planning du projet}{16}{subsection.1.3.2}% 
+\contentsline {subsection}{\numberline {1.3.3}La mod\IeC {\'e}lisation objet}{19}{subsection.1.3.3}% 
+\contentsline {subsubsection}{D\IeC {\'e}finition de UML}{19}{section*.17}% 
+\contentsline {subsubsection}{Processus de mod\IeC {\'e}lisation}{19}{section*.18}% 
+\contentsline {section}{\numberline {1.4}Conclusion}{19}{section.1.4}% 
+\contentsline {chapter}{\numberline {2}Analyse et sp\IeC {\'e}cification des besoins}{20}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Sp\IeC {\'e}cifications des besoins}{21}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Identification des acteurs}{21}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}Les besoins fonctionnels}{23}{subsection.2.1.2}% 
+\contentsline {subsection}{\numberline {2.1.3}Les besoins non fonctionnels}{23}{subsection.2.1.3}% 
+\contentsline {section}{\numberline {2.2}Backlog produit}{24}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Planification des Sprints}{25}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Backlog des Sprints}{25}{subsection.2.2.2}% 
+\contentsline {section}{\numberline {2.3}Diagrammes des cas d'utilisation global}{25}{section.2.3}% 
+\contentsline {subsubsection}{Le profil Admin :}{26}{section*.21}% 
+\contentsline {subsubsection}{Le profil Catalog Manager :}{32}{section*.23}% 
+\contentsline {subsubsection}{Le profil Support Member :}{32}{section*.25}% 
+\contentsline {subsection}{\numberline {2.3.1}Conclusion}{34}{subsection.2.3.1}% 
+\contentsline {chapter}{Webographie}{35}{chapter*.27}% 
