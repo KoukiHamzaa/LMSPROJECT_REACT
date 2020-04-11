@@ -8,7 +8,7 @@ export default class Details extends Component {
   render() {
     return (
       <ProductConsumer>
-        {value => {
+        {(value) => {
           //   console.log(value.detailProduct);
           const {
             id,
@@ -17,7 +17,7 @@ export default class Details extends Component {
             info,
             price,
             title,
-            inCart
+            inCart,
           } = value.detailProduct;
           return (
             <div className="container py-5 ">
@@ -48,6 +48,22 @@ export default class Details extends Component {
                   <p className="text-capitalize font-weight-bold mt-3 mb-0">
                     some infor about the product :
                   </p>
+                  <p className="text-muted lead">{info}</p>
+                  {/* Buttons */}
+                  <div>
+                    <Link to="/">
+                      <ButtonContainer>back to products</ButtonContainer>
+                    </Link>
+                    <ButtonContainer
+                      cart 
+                      disable={inCart ? true : false}
+                      onClick={() => {
+                        value.addToCart(id);
+                      }}
+                    >
+                      Add To Cart
+                    </ButtonContainer>
+                  </div>
                 </div>
               </div>
             </div>

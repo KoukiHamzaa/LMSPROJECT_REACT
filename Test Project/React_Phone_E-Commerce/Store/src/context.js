@@ -7,14 +7,14 @@ const ProductContext = React.createContext();
 class ProductProvider extends Component {
   state = {
     products: [],
-    detailProduct: detailProduct
+    detailProduct: detailProduct,
   };
-componentDidMount(){
-  this.setProducts();
-}
+  componentDidMount() {
+    this.setProducts();
+  }
   setProducts = () => {
     let tempProducts = [];
-    storeProducts.forEach(item => {
+    storeProducts.forEach((item) => {
       const singleItem = { ...item };
       tempProducts = [...tempProducts, singleItem];
     });
@@ -23,12 +23,21 @@ componentDidMount(){
     });
   };
 
-  handleDetail = () => {
-    console.log("hello from detail");
+  getItem = id => {
+    const product = this.state.products.find(item => item.id === id);
+    return product;
   };
 
-  addToCart = () => {
-    console.log("hello from add to cart");
+  handleDetail = (id) => {
+    // console.log("hello from detail");
+    const product = this.getItem(id);
+    this.setState(() => {
+      return { detailProduct: product };
+    });
+  };
+
+  addToCart = (id) => {
+    console.log(`hello from add to cart.id is ${id}`);
   };
 
   // tester = () => {
@@ -54,7 +63,7 @@ componentDidMount(){
         value={{
           ...this.state,
           handleDetail: this.handleDetail,
-          addToCart: this.addToCart
+          addToCart: this.addToCart,
         }}
       >
         {/* <button onClick={this.tester}>Test me ! </button> */}
