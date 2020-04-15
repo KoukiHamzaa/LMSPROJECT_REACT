@@ -9,6 +9,8 @@ class ProductProvider extends Component {
     products: [],
     detailProduct: detailProduct,
     cart: [],
+    modalOpen: false,
+    modelProduct: detailProduct,
   };
 
   componentDidMount() {
@@ -49,11 +51,12 @@ class ProductProvider extends Component {
     product.count = 1;
     const price = product.price;
     product.total = price;
+
     this.setState(
       () => {
         return {
           products: [...tempProducts],
-          cart: [...this.state.cart,product],
+          cart: [...this.state.cart, product],
           detailProduct: { ...product },
         };
       },
@@ -62,23 +65,18 @@ class ProductProvider extends Component {
       }
     );
   };
+  openModal = (id) => {
+    const product = this.getItem(id);
+    this.setState(() => {
+      return { modelProduct: product, modalOpen: true };
+    });
+  };
 
-  // tester = () => {
-  //   console.log("state products :", this.state.products[0].inCart);
-  //   console.log("Data products :", storeProducts[0].inCart);
-
-  //   const tempProducts = [...this.state.products];
-  //   tempProducts[0].inCart = true;
-  //   this.setState(
-  //     () => {
-  //       return { products: tempProducts };
-  //     },
-  //     () => {
-  //       console.log("state products :", this.state.products[0].inCart);
-  //       console.log("Data products :", storeProducts[0].inCart);
-  //     }
-  //   );
-  // };
+  closeModal = () => {
+    this.setState(() => {
+      return { modalOpen: false };
+    });
+  }; 
 
   render() {
     return (
@@ -87,6 +85,8 @@ class ProductProvider extends Component {
           ...this.state,
           handleDetail: this.handleDetail,
           addToCart: this.addToCart,
+          openModal: this.openModal,
+          closeModal:this.closeModal,
         }}
       >
         {/* <button onClick={this.tester}>Test me ! </button> */}
