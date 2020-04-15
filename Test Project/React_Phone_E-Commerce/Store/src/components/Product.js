@@ -11,36 +11,34 @@ export default class Product extends Component {
       <ProductWrapper className="col-9 maw-auto col-md-6 col-lg-3 my-3">
         <div className="card">
           <ProductConsumer>
-            {(value) => (
-              <div
-                className="img-container p-5"
-                onClick={() =>
-                  // console.log("you clicked me in the image container ! ")
-                  value.handleDetail(id)
-                }
-              >
-                <Link to="/details">
-                  <img src={img} alt="product" className="card-img-top" />
-                </Link>
-                <button
-                  className="cart-btn"
-                  disabled={inCart ? true : false}
-                  onClick={() => {
-                    // console.log("added to the cart");
-                    value.addToCart(id);
-                  }}
+            {(value) => {
+              return (
+                <div
+                  className="img-container p-5"
+                  onClick={() => value.handleDetail(id)}
                 >
-                  {inCart ? (
-                    <p className="text-capitalize mb-0" disabled>
-                      {""}
-                      in cart
-                    </p>
-                  ) : (
-                    <i className="fas fa-cart-plus"></i>
-                  )}
-                </button>
-              </div>
-            )}
+                  <Link to="/details">
+                    <img src={img} alt="product" className="card-img-top" />
+                  </Link>
+                  <button
+                    className="cart-btn"
+                    disabled={inCart ? true : false}
+                    onClick={() => {
+                      value.addToCart(id);
+                    }}
+                  >
+                    {inCart ? (
+                      <p className="text-capitalize mb-0" disabled>
+                        {/* {""} */}
+                        in cart
+                      </p>
+                    ) : (
+                      <i className="fas fa-cart-plus"/>
+                    )}
+                  </button>
+                </div>
+              );
+            }}
           </ProductConsumer>
           {/* cart footer */}
           <div className="card-footer d-flex justify-content-between">
@@ -61,6 +59,6 @@ Product.propTypes = {
     img: PropTypes.string,
     title: PropTypes.string,
     price: PropTypes.number,
-    inCart: PropTypes.bool,
+    // inCart: PropTypes.bool,
   }).isRequired,
 };
