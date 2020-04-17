@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-export default class Cart extends Component {
+
+export default class CartItem extends Component {
     state = {  }
     render() { 
         return ( 
             <div>
-                <h3>Hello from cart</h3>
+                this is the cart item
             </div>
          );
     }
