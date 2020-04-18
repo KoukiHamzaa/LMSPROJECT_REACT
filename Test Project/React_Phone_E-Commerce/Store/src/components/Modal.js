@@ -4,7 +4,6 @@ import { ButtonContainer, ModalContainer } from "./myStyles";
 import { Link } from "react-router-dom";
 
 export default class Modal extends Component {
-  state = {};
   render() {
     return (
       <ProductConsumer>
@@ -35,7 +34,7 @@ export default class Modal extends Component {
                         >
                           store
                         </ButtonContainer>
-                      </Link>
+                      </Link> 
                       <Link to="/cart">
                         <ButtonContainer
                           cart

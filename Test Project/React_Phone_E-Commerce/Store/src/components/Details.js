@@ -59,7 +59,7 @@ export default class Details extends Component {
                       disable={inCart ? true : false}
                       onClick={() => {
                         value.addToCart(id);
-                        value.modalOpen(id);
+                        value.openModal(id);
                       }}
                     >
                       {inCart ? (<p className="text-capitalize mb-0" disabled> InCart</p> )
