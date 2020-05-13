@@ -130,7 +130,7 @@ final class Versions
   'sebastian/version' => '2.0.1@99732be0ddb3361e16ad77b68ba41efc8e979019',
   'theseer/tokenizer' => '1.1.3@11336f6f84e16a720dae9d8e6ed5019efa85a0f9',
   'webmozart/assert' => '1.4.0@83e253c8e0be5b0257b881e1827274667c5c17a9',
-  'ulearnpro/ulearn' => 'dev-master@90dce805f7b0a1859c2ff4f705da3e0b9eb020b7',
+  'ulearnpro/ulearn' => 'dev-master@14d272014811068c72417bbf471b25b5a8f2026e',
 );
 
     private function __construct()

@@ -22,5 +22,17 @@
 \BOOKMARK [2][-]{subsection.2.2.1}{Planification des Sprints}{section.2.2}% 22
 \BOOKMARK [2][-]{subsection.2.2.2}{Backlog des Sprints}{section.2.2}% 23
 \BOOKMARK [1][-]{section.2.3}{Diagrammes des cas d'utilisation global}{chapter.2}% 24
-\BOOKMARK [2][-]{subsection.2.3.1}{Conclusion}{section.2.3}% 25
-\BOOKMARK [0][-]{chapter*.27}{Webographie}{}% 26
+\BOOKMARK [1][-]{section.2.4}{Diagrammes de classes global}{chapter.2}% 25
+\BOOKMARK [2][-]{subsection.2.4.1}{Conclusion}{section.2.4}% 26
+\BOOKMARK [0][-]{chapter.3}{\311tude Conceptuel et architectural}{}% 27
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.2}{Mod\350le de donn\351es}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.2.1}{Catalogue et versions}{section.3.2}% 30
+\BOOKMARK [2][-]{subsection.3.2.2}{Les produits}{section.3.2}% 31
+\BOOKMARK [2][-]{subsection.3.2.3}{Les cat\351gories}{section.3.2}% 32
+\BOOKMARK [2][-]{subsection.3.2.4}{Les medias}{section.3.2}% 33
+\BOOKMARK [1][-]{section.3.3}{Le flux d'import}{chapter.3}% 34
+\BOOKMARK [1][-]{section.3.4}{Architecture Logiciel du projet}{chapter.3}% 35
+\BOOKMARK [1][-]{section.3.5}{Architecture physique du projet}{chapter.3}% 36
+\BOOKMARK [1][-]{section.3.6}{Conclusion}{chapter.3}% 37
+\BOOKMARK [0][-]{chapter*.42}{Webographie}{}% 38

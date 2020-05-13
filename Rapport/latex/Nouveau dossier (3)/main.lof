@@ -6,5 +6,17 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces H\IeC {\'e}irarchie des profiles humaines.\relax }}{21}{figure.caption.19}% 
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Les cas d'utilisation global.\relax }}{26}{figure.caption.22}% 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Les cas d'utilisation du profil Catalog Manager.\relax }}{32}{figure.caption.24}% 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Les cas d'utilisation du profil Support Member.\relax }}{33}{figure.caption.26}% 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagrammes de classes global.\relax }}{30}{figure.caption.23}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Aper\IeC {\c c}u du diagramme de classes du catalogue et ses versions.\relax }}{32}{figure.caption.24}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Le principe du catalogue des produits d'Hybris.\relax }}{33}{figure.caption.25}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces R\IeC {\'e}capitulatif du processus de Synchronisation.\relax }}{34}{figure.caption.26}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces R\IeC {\'e}capitulatif de l'abstraction du produit.\relax }}{35}{figure.caption.27}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagramme de classes des produits.\relax }}{37}{figure.caption.31}% 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagramme de classe des cat\IeC {\'e}gories.\relax }}{39}{figure.caption.32}% 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagramme de classe des m\IeC {\'e}dias.\relax }}{41}{figure.caption.33}% 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Processus d'import des produits.\relax }}{42}{figure.caption.34}% 
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Processus de splitting des fichiers xml.\relax }}{43}{figure.caption.36}% 
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Splitting d'un fichier multiple vers des fichier unitaire.\relax }}{43}{figure.caption.37}% 
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Architecture logiciel du projet.\relax }}{46}{figure.caption.40}% 
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Architecture physique du projet.\relax }}{47}{figure.caption.41}% 

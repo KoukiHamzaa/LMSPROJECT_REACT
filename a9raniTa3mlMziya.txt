@@ -1,0 +1,104 @@
+aslama , behi il bare7 s2ltk 9otlk xampp ye5dem 3andk ?oui y5dme
+a7na twa tamplate ta3na basé sur sql just ba3d man5admouha ou kol chay ywali kima n7ebou a7na 
+bech nbadlo sql bl noSql (lazmna na3mlo formation sghira fil mangoDb ) 
+ok
+
+tamplate ahya => esmha ulearn 
+la7dha nawrihalk sur net -> 
+bon a7na tamplate hathi bech na3Mlo 3Liha des modfications sghar ou mm kbar chwaya mmkn 
+heya se3a en anglais a7na lazm nabdlou hathaka kol en francais :( 
+bhi
+zada heya a9rb minha ll example ta3 udemy.com akther mn platform d ensgnement 
+donc mana3rfch fama 7ajat mmkn nbadlouhom nsizo or na9so netfhamou fihom nraj3ohm 
+swa ken fil code or fil uml zda 
+ok behi tawa bech na3Ml base de donner fil sql bech nsamiha 'lms' 
+
+behi twa bech nsob les modules !o k=> kif ntala3 ena project ken react , laravel , 7ata angular 
+il git ytla3 ken il code les modules hathom homa comme si les bubliotheque ta3o rzan barcha bensba ll git 
+ywali maytla3homch donc kif ta3ml enti kima tawa thbt projet ml git awl mara lazm tsob les modules -> 
+la7dha ok matabtache brabi
+behi le temp kaml 
+bech nfaserlk 7ja 3la laravel => m3a laravel 
+matemchich ta3ml wa7dek les tableau fil base donner 
+enti just ta3ml il base akahwa ou ba3d ta3ml les tableau fi wst il
+ laravel just tab9a 3la il excution bech ywalio mawjoudin  fil base donner real ta3K 
+
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=lms
+DB_USERNAME=root
+DB_PASSWORD=''
+
+
+hathi par default tabda les valeur ta3ha vide enti tektb il adress ,port .. 
+kima bedhbt ken tetdhaker 3manwl fil projet ta3 c#
+
+m3aya khawla maw ? ey
+
+behi barcha 
+
+rit fi dossier database/migrations : fine ?
+ahwka 7alito fil vscode rito ok
+kol tableau bech ta3mlo temchi ta3ml 
+fichier b2smo fi dossier hathaka 
+donc ahwka a7na 3na list fiha 9rib 10 tableau 
+
+rit par example tableau hatha categoris 
+enti tektb asami les champ type ta3Hom ect .. o
+kba3d fil exction yet3mal fil base 
+m3aya khawla ? eey behi 
+
+behi 7aja o5ra 
+kol projet ta3Mlo fil laravel ykon 3ando unique key 
+honi 
+APP_KEY=base64:rQMLqXYOm52gjnnxUgf6syWBU10XjmYr5v7AojS+Hyo=
+kif ta3Ml clone il projet min git or ay blasa 
+lazm ta3di il coammnd hathi 'php artisan ken:generate' bech y3awed ya3tiha key jdid 
+================================
+
+
+behi twa bech nfaserlk les command ili 3adithom tawa : 
+
+composer install : sabina modeuls or bubliotheque laravel php 
+npm install : sabina  modeuls or bubliotheque node.js yest7a9ha fi 7ala ta3na laravel && react 
+'php artisan ken:generate' bech y3awed ya3tiha key jdid 
+php artisan migrate : les tableau ili 3malnahom fil projet twa bel command hathi ywalio fil base 
+
+behi twa a5er command ili heya bech t5adm il projet 
+php artisan serve : honi kima bedhbt fi react 3la local hostya3tina port 
+ou ba3d ca depont route kol page ou enti cha3titha esm
+
+
+=================
+
+127.0.0.1:8000 => honi bech yehzna tool lll home page (accuel) 
+mais a7na kifch bech na3rfo l adress ta3 ba9iyat les pages ta3na ? 
+
+honi bech nemchieo ll dossier hatha => route/web.php
+behi honi par example fil home page 
+Route::get('/', 'HomeController@index')->name('home');
+
+hathi tet9sm il 5amsa : p  7ajat khawla 
+method -> get 
+path -> '/' <---- honi ma3tinahech esm bech dob manktbo 127.0.0.1:8000 njio fiha tool 
+
+controller (bedhbt nafs il rol kif JEE) => HomeController 
+fonction => index
+
+wath7a khawla ? ey
+
+behi barcha inshallah kif netfaker akther laravel ou nefhmo il code ta3 projet akther twali 7alwa bensba lina 
+
+
+behi tawa kima tra il page d acceul fargha 
+
+ba3d kif n3abio les donner fil base tawa ybano ok
+
+behi ena hatha win wslt tnajm t9ol lba9i bech twali ta39dat tawa inshallah rabi m3ana haw 3ana il wa9t zada bech 
+na3Mlo ou oslo lili n7obo 3Lih inshallah :D 
+y3tik al sa7a rabi ibrek fik ou fik zada 
+page hathi sajlha balk mafhnmtch 7aja min ili 9olto ou techla9 biha ba3d t3awed ta9raha or tes2Lni ok bhi 3ychek hamza
+
+

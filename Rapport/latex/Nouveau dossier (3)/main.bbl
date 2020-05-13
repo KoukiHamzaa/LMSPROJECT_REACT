@@ -5,4 +5,28 @@ Wikipédia, ``Sqli --- wikipédia{,} l'encyclopédie libre.''
   \url{http://fr.wikipedia.org/w/index.php?title=SQLI&oldid=158242840}, 2019.
 \newblock [Consulté le 7 avril 2019].
 
+\bibitem{wiki:dam}
+Wikipédia, ``Gestion des ressources numériques --- wikipédia{,}
+  l'encyclopédie libre.''
+  \url{http://fr.wikipedia.org/w/index.php?title=Gestion_des_ressources_num\%C3\%A9riques&oldid=156929136},
+  2019.
+\newblock [Consulté le le 16 juin 2019].
+
+\bibitem{xcbl}
+C.~Pages, ``Xml common business library (xcbl).''
+  \url{http://xml.coverpages.org/cbl.html}, 2001.
+\newblock [Consulté le le 16 juin 2019].
+
+\bibitem{wiki:sonarqube}
+Wikipédia, ``Sonarqube --- wikipédia{,} l'encyclopédie libre.''
+  \url{http://fr.wikipedia.org/w/index.php?title=SonarQube&oldid=159160337},
+  2019.
+\newblock [Consulté le le 16 juin 2019].
+
+\bibitem{wiki:ant}
+Wikipédia, ``Apache ant --- wikipédia{,} l'encyclopédie libre.''
+  \url{http://fr.wikipedia.org/w/index.php?title=Apache_Ant&oldid=154452007},
+  2018.
+\newblock [Consulté le le 16 juin 2019].
+
 \end{thebibliography}

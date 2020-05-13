@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.7)  28 MAR 2020 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.1)  13 MAY 2020 10:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -601,7 +601,7 @@ Package: enumitem 2019/02/04 v3.8 Customized lists
 
 LaTeX Warning: Label `tab: first-table' multiply defined.
 
-) (./07-Analyse.aux))
+) (./07-Analyse.aux) (./08-Conception.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 181.
@@ -683,7 +683,7 @@ LaTeX Info: Redefining \nameref on input line 181.
 \openout2 = `sansnom-3.aux'.
 
  (./sansnom-3.tex
-<logo-ensak.png, id=108, 225.84375pt x 225.84375pt>
+<logo-ensak.png, id=156, 225.84375pt x 225.84375pt>
 File: logo-ensak.png Graphic file (type png)
 <use logo-ensak.png>
 Package pdftex.def Info: logo-ensak.png  used on input line 6.
@@ -698,7 +698,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 9.
 (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<uni.png, id=109, 188.20313pt x 94.10156pt>
+<uni.png, id=157, 188.20313pt x 94.10156pt>
 File: uni.png Graphic file (type png)
 <use uni.png>
 Package pdftex.def Info: uni.png  used on input line 20.
@@ -800,7 +800,7 @@ a-vail dans son contexte
 
 
 ]
-<images/sqli_logo.png, id=224, 286.06876pt x 208.78pt>
+<images/sqli_logo.png, id=306, 286.06876pt x 208.78pt>
 File: images/sqli_logo.png Graphic file (type png)
 <use images/sqli_logo.png>
 Package pdftex.def Info: images/sqli_logo.png  used on input line 18.
@@ -841,7 +841,7 @@ Overfull \hbox (7.90022pt too wide) in paragraph at lines 102--143
  []
 
 [13]
-<images/scrum.png, id=248, 612.03656pt x 280.04625pt>
+<images/scrum.png, id=331, 612.03656pt x 280.04625pt>
 File: images/scrum.png Graphic file (type png)
 <use images/scrum.png>
 Package pdftex.def Info: images/scrum.png  used on input line 170.
@@ -859,18 +859,13 @@ LaTeX Font Info:    Try loading font information for T1+cmss on input line 220.
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [16
 
-] [17]
-<images/gantt.PNG, id=277, 980.16188pt x 527.72156pt>
+]
+<images/gantt.PNG, id=356, 980.16188pt x 527.72156pt>
 File: images/gantt.PNG Graphic file (type png)
 <use images/gantt.PNG>
-Package pdftex.def Info: images/gantt.PNG  used on input line 243.
-(pdftex.def)             Requested size: 668.65494pt x 455.24086pt.
-
-
-LaTeX Warning: Float too large for page by 72.87996pt on input line 246.
-
-[18 <./images/gantt.PNG>]) [19
-
+Package pdftex.def Info: images/gantt.PNG  used on input line 277.
+(pdftex.def)             Requested size: 455.23215pt x 398.33475pt.
+ [17] [18 <./images/gantt.PNG>]) [19
 
 ]
 \openout2 = `07-Analyse.aux'.
@@ -882,7 +877,7 @@ Chapitre 2.
 
 
 ]
-<images/profiles.png, id=296, 358.941pt x 308.352pt>
+<images/profiles.png, id=379, 358.941pt x 308.352pt>
 File: images/profiles.png Graphic file (type png)
 <use images/profiles.png>
 Package pdftex.def Info: images/profiles.png  used on input line 26.
@@ -922,48 +917,168 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--135
  []
 
 [24]
-<images/UseCaseAdmin.png, id=319, 545.03625pt x 350.05782pt>
+<images/UseCaseAdmin.png, id=402, 789.54974pt x 484.209pt>
 File: images/UseCaseAdmin.png Graphic file (type png)
 <use images/UseCaseAdmin.png>
 Package pdftex.def Info: images/UseCaseAdmin.png  used on input line 179.
-(pdftex.def)             Requested size: 512.17615pt x 341.45721pt.
+(pdftex.def)             Requested size: 512.17722pt x 341.44127pt.
 
-Overfull \hbox (51.45491pt too wide) in paragraph at lines 179--180
+Overfull \hbox (51.45598pt too wide) in paragraph at lines 179--180
  [][] 
  []
 
-[25] [26 <./images/UseCaseAdmin.png>] [27] [28] [29] [30] [31]
-<images/UseCaseCatalogManager.png, id=384, 492.33937pt x 188.95593pt>
-File: images/UseCaseCatalogManager.png Graphic file (type png)
-<use images/UseCaseCatalogManager.png>
-Package pdftex.def Info: images/UseCaseCatalogManager.png  used on input line 4
-54.
-(pdftex.def)             Requested size: 512.1711pt x 227.62247pt.
+[25] [26 <./images/UseCaseAdmin.png>] [27] [28]
+<images/UseCaseCatalogManager.jpg, id=444, 1009.7725pt x 936.49875pt>
+File: images/UseCaseCatalogManager.jpg Graphic file (type jpg)
+<use images/UseCaseCatalogManager.jpg>
+Package pdftex.def Info: images/UseCaseCatalogManager.jpg  used on input line 3
+32.
+(pdftex.def)             Requested size: 512.15752pt x 227.62225pt.
 
-Overfull \hbox (51.44986pt too wide) in paragraph at lines 454--455
+Overfull \hbox (51.43628pt too wide) in paragraph at lines 332--333
  [][] 
  []
 
-<images/UseCaseSuportMember.png, id=386, 500.62032pt x 132.495pt>
-File: images/UseCaseSuportMember.png Graphic file (type png)
-<use images/UseCaseSuportMember.png>
-Package pdftex.def Info: images/UseCaseSuportMember.png  used on input line 467
-.
-(pdftex.def)             Requested size: 512.20721pt x 142.27365pt.
+[29]) [30 <./images/UseCaseCatalogManager.jpg>]
+\openout2 = `08-Conception.aux'.
 
-Overfull \hbox (51.48598pt too wide) in paragraph at lines 467--468
+ (./08-Conception.tex
+Chapitre 3.
+[31
+
+
+
+]
+<images/catalog-classes.png, id=460, 295.1025pt x 49.68562pt>
+File: images/catalog-classes.png Graphic file (type png)
+<use images/catalog-classes.png>
+Package pdftex.def Info: images/catalog-classes.png  used on input line 28.
+(pdftex.def)             Requested size: 295.10176pt x 49.6855pt.
+ [32
+
+ <./images/catalog-classes.png>]
+<images/catalog.png, id=467, 402.50375pt x 201.75375pt>
+File: images/catalog.png Graphic file (type png)
+<use images/catalog.png>
+Package pdftex.def Info: images/catalog.png  used on input line 58.
+(pdftex.def)             Requested size: 284.52756pt x 142.61813pt.
+ [33 <./images/catalog.png>]
+<images/synchronization.png, id=474, 593.21625pt x 201.75375pt>
+File: images/synchronization.png Graphic file (type png)
+<use images/synchronization.png>
+Package pdftex.def Info: images/synchronization.png  used on input line 104.
+(pdftex.def)             Requested size: 398.33858pt x 135.47908pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+<images/herarchie_product.png, id=476, 636.87938pt x 247.67531pt>
+File: images/herarchie_product.png Graphic file (type png)
+<use images/herarchie_product.png>
+Package pdftex.def Info: images/herarchie_product.png  used on input line 117.
+(pdftex.def)             Requested size: 426.78471pt x 159.33551pt.
+[34 <./images/synchronization.png>] [35 <./images/herarchie_product.png>]
+[36]
+<images/classes-diagram.png, id=496, 616.55344pt x 469.755pt>
+File: images/classes-diagram.png Graphic file (type png)
+<use images/classes-diagram.png>
+Package pdftex.def Info: images/classes-diagram.png  used on input line 186.
+(pdftex.def)             Requested size: 483.69684pt x 368.53629pt.
+
+Overfull \hbox (22.9756pt too wide) in paragraph at lines 186--187
  [][] 
  []
 
-[32 <./images/UseCaseCatalogManager.png>] [33 <./images/UseCaseSuportMember.png
->]) [34] (./main.bbl
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 5.
+[37 <./images/classes-diagram.png>] [38]
+<images/categories.png, id=508, 338.76563pt x 238.64156pt>
+File: images/categories.png Graphic file (type png)
+<use images/categories.png>
+Package pdftex.def Info: images/categories.png  used on input line 252.
+(pdftex.def)             Requested size: 338.76479pt x 238.64096pt.
+ [39 <./images/categories.png>]
+<images/media-classes.jpg, id=517, 514.17094pt x 349.305pt>
+File: images/media-classes.jpg Graphic file (type jpg)
+<use images/media-classes.jpg>
+Package pdftex.def Info: images/media-classes.jpg  used on input line 280.
+(pdftex.def)             Requested size: 514.1697pt x 349.30414pt.
+
+Overfull \hbox (53.44846pt too wide) in paragraph at lines 280--281
+ [][] 
+ []
+
+[40]
+<images/import.png, id=523, 895.09406pt x 347.04657pt>
+File: images/import.png Graphic file (type png)
+<use images/import.png>
+Package pdftex.def Info: images/import.png  used on input line 303.
+(pdftex.def)             Requested size: 483.69684pt x 187.54533pt.
+
+Overfull \hbox (22.9756pt too wide) in paragraph at lines 303--304
+ [][] 
+ []
+
+[41 <./images/media-classes.jpg>]
+<images/splitting1.png, id=531, 809.27344pt x 247.67531pt>
+File: images/splitting1.png Graphic file (type png)
+<use images/splitting1.png>
+Package pdftex.def Info: images/splitting1.png  used on input line 329.
+(pdftex.def)             Requested size: 483.69684pt x 148.03566pt.
+
+Overfull \hbox (22.9756pt too wide) in paragraph at lines 329--330
+ [][] 
+ []
+
+[42 <./images/import.png>]
+<images/splitting.png, id=543, 946.28531pt x 404.26031pt>
+File: images/splitting.png Graphic file (type png)
+<use images/splitting.png>
+Package pdftex.def Info: images/splitting.png  used on input line 340.
+(pdftex.def)             Requested size: 483.69684pt x 206.63884pt.
+
+Overfull \hbox (22.9756pt too wide) in paragraph at lines 340--341
+ [][] 
+ []
+
+[43 <./images/splitting1.png> <./images/splitting.png>] [44] [45]
+<images/architecture.png, id=560, 294.34969pt x 289.83281pt>
+File: images/architecture.png Graphic file (type png)
+<use images/architecture.png>
+Package pdftex.def Info: images/architecture.png  used on input line 405.
+(pdftex.def)             Requested size: 260.0795pt x 256.0748pt.
+ [46
+
+ <./images/architecture.png>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 435.
+
  (c:/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-))
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
+)
+<images/physique.png, id=570, 724.7075pt x 363.3575pt>
+File: images/physique.png Graphic file (type png)
+<use images/physique.png>
+Package pdftex.def Info: images/physique.png  used on input line 446.
+(pdftex.def)             Requested size: 483.69684pt x 242.52234pt.
 
-[35
+Overfull \hbox (22.9756pt too wide) in paragraph at lines 446--447
+ [][] 
+ []
+
+[47 <./images/physique.png>]) [48] (./main.bbl
+Underfull \hbox (badness 6559) in paragraph at lines 9--14
+[]\T1/cmr/m/n/12 Wikipédia, ``Ges-tion des res-sources nu-mé-riques --- wi-ki-p
+é-dia, l'en-cy-clo-pé-die
+ []
+
+
+Underfull \hbox (badness 3250) in paragraph at lines 9--14
+\T1/cmr/m/n/12 libre.'' [][]$\T1/cmtt/m/n/12 http : / / fr . wikipedia . org / 
+w / index . php ? title = Gestion _ des _ ressources _
+ []
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
+ [49
 
 
 
@@ -971,11 +1086,12 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
  (./main.aux (./sansnom-3.aux) (./01-Dedicace.aux) (./01-Dedicace-2.aux)
 (./02-Remerciements.aux) (./03-Resume.aux) (./04-Acronymes.aux)
-(./05-Introduction.aux) (./06-Contexte.aux) (./07-Analyse.aux))
+(./05-Introduction.aux) (./06-Contexte.aux) (./07-Analyse.aux)
+(./08-Conception.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 34E64CC98BAC017897DE269B40D963C5;1908.
+(rerunfilecheck)             Checksum: 917644E88E1EBBD7982C9623F35587F4;2736.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -983,15 +1099,30 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
  ) 
 Here is how much of TeX's memory you used:
- 12139 strings out of 492623
- 176382 string characters out of 6133291
- 305101 words of memory out of 5000000
- 15575 multiletter control sequences out of 15000+600000
- 25681 words of font info for 62 fonts, out of 8000000 for 9000
+ 12303 strings out of 492623
+ 179222 string characters out of 6133291
+ 306825 words of memory out of 5000000
+ 15668 multiletter control sequences out of 15000+600000
+ 31977 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,16n,48p,767b,846s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{cite.wiki\\penalty\040\\@M\040\040:sqli} has been
- referenced but does not exist, replaced by a fixed one
+ 44i,16n,48p,767b,844s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{cite.wiki\\penalty\040\\@M\040\040:ant} has been 
+referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.wiki\\penalty\040\\@M\040\040:sonarqube} has b
+een referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.wiki\\penalty\040\\@M\040\040:dam} has been re
+ferenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.wiki\\penalty\040\\@M\040\040:sqli} has been r
+eferenced but does not exist, replaced by a fixed one
 
 {c:/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texliv
 e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2019/te
@@ -1005,17 +1136,20 @@ per/sfbx1095.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx12
 019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2019/texmf-
 dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2019/texmf-dist/fonts
 /type1/public/cm-super/sfcc1440.pfb><c:/texlive/2019/texmf-dist/fonts/type1/pub
-lic/cm-super/sfrm0900.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm1095.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm120
-0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/
-texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb><c:/texlive/20
-19/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2019/texmf-d
-ist/fonts/type1/public/cm-super/sfti1440.pfb><c:/texlive/2019/texmf-dist/fonts/
-type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (36 pages, 846728 bytes).
+lic/cm-super/sfrm0800.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm0900.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm100
+0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/
+texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/20
+19/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2019/texmf-d
+ist/fonts/type1/public/cm-super/sfss1200.pfb><c:/texlive/2019/texmf-dist/fonts/
+type1/public/cm-super/sfti1200.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publ
+ic/cm-super/sfti1440.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-supe
+r/sftt1000.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200
+.pfb>
+Output written on main.pdf (50 pages, 1426020 bytes).
 PDF statistics:
- 509 PDF objects out of 1000 (max. 8388607)
- 432 compressed objects within 5 object streams
- 138 named destinations out of 1000 (max. 500000)
- 254 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 720 PDF objects out of 1000 (max. 8388607)
+ 608 compressed objects within 7 object streams
+ 178 named destinations out of 1000 (max. 500000)
+ 405 words of extra memory for PDF output out of 10000 (max. 10000000)
 
