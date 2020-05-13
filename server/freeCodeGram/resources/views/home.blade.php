@@ -9,21 +9,27 @@
         </div>
         <div class="col-9 pt-5">
                 <div>
-                    <h1>freecodecamp<h1>
+                    <!-- <h1>freecodecamp<h1> -->
+                    <h1>{{$user->username}}</h1>
                 </div>
             <div class="d-flex">
-                <div class="pr-5"><strong>153</strong> posts</div>
-                <div class="pr-5"><strong>23k</strong> followers</div>
-                <div class="pr-5"><strong>212</strong> following</div>
+                <div class="pr-5"><strong>153</strong> Posts</div>
+                <div class="pr-5"><strong>23k</strong> Followers</div>
+                <div class="pr-5"><strong>212</strong> Following</div>
             </div>
             <div class="pt-4 font-weight-bold">
-                freeCodeCamp.org
+                <!-- freeCodeCamp.org -->
+                {{$user->profile->title}}
             </div>
             <div>
-                We're a global community of millions of people learning to code together.We're an<br> 
-                open source, donor-supported, 501(c)(3) nonprofit.
+                <!-- We're a global community of millions of people learning to code together.We're an<br> 
+                open source, donor-supported, 501(c)(3) nonprofit. -->
+                {{$user->profile->description}}
             </div>
-            <div><a href="#">www.freecodecamp.org</a></div>
+            <div>
+                <!-- <a href="#">www.freecodecamp.org</a> -->
+                <a href="#">{{$user->profile->url ?? 'N/A'}}</a>
+            </div>
         </div>
     </div>
     <div class="row pt-5">
