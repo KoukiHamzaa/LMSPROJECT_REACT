@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.1)  13 MAY 2020 10:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.1)  13 MAY 2020 11:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -683,7 +683,7 @@ LaTeX Info: Redefining \nameref on input line 181.
 \openout2 = `sansnom-3.aux'.
 
  (./sansnom-3.tex
-<logo-ensak.png, id=156, 225.84375pt x 225.84375pt>
+<logo-ensak.png, id=144, 225.84375pt x 225.84375pt>
 File: logo-ensak.png Graphic file (type png)
 <use logo-ensak.png>
 Package pdftex.def Info: logo-ensak.png  used on input line 6.
@@ -698,7 +698,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 9.
 (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<uni.png, id=157, 188.20313pt x 94.10156pt>
+<uni.png, id=145, 188.20313pt x 94.10156pt>
 File: uni.png Graphic file (type png)
 <use uni.png>
 Package pdftex.def Info: uni.png  used on input line 20.
@@ -800,7 +800,7 @@ a-vail dans son contexte
 
 
 ]
-<images/sqli_logo.png, id=306, 286.06876pt x 208.78pt>
+<images/sqli_logo.png, id=283, 286.06876pt x 208.78pt>
 File: images/sqli_logo.png Graphic file (type png)
 <use images/sqli_logo.png>
 Package pdftex.def Info: images/sqli_logo.png  used on input line 18.
@@ -841,7 +841,7 @@ Overfull \hbox (7.90022pt too wide) in paragraph at lines 102--143
  []
 
 [13]
-<images/scrum.png, id=331, 612.03656pt x 280.04625pt>
+<images/scrum.png, id=307, 612.03656pt x 280.04625pt>
 File: images/scrum.png Graphic file (type png)
 <use images/scrum.png>
 Package pdftex.def Info: images/scrum.png  used on input line 170.
@@ -860,7 +860,7 @@ File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [16
 
 ]
-<images/gantt.PNG, id=356, 980.16188pt x 527.72156pt>
+<images/gantt.PNG, id=333, 980.16188pt x 527.72156pt>
 File: images/gantt.PNG Graphic file (type png)
 <use images/gantt.PNG>
 Package pdftex.def Info: images/gantt.PNG  used on input line 277.
@@ -877,7 +877,7 @@ Chapitre 2.
 
 
 ]
-<images/profiles.png, id=379, 358.941pt x 308.352pt>
+<images/profiles.png, id=356, 358.941pt x 308.352pt>
 File: images/profiles.png Graphic file (type png)
 <use images/profiles.png>
 Package pdftex.def Info: images/profiles.png  used on input line 26.
@@ -917,7 +917,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--135
  []
 
 [24]
-<images/UseCaseAdmin.png, id=402, 789.54974pt x 484.209pt>
+<images/UseCaseAdmin.png, id=379, 789.54974pt x 484.209pt>
 File: images/UseCaseAdmin.png Graphic file (type png)
 <use images/UseCaseAdmin.png>
 Package pdftex.def Info: images/UseCaseAdmin.png  used on input line 179.
@@ -928,7 +928,7 @@ Overfull \hbox (51.45598pt too wide) in paragraph at lines 179--180
  []
 
 [25] [26 <./images/UseCaseAdmin.png>] [27] [28]
-<images/UseCaseCatalogManager.jpg, id=444, 1009.7725pt x 936.49875pt>
+<images/UseCaseCatalogManager.jpg, id=420, 1009.7725pt x 936.49875pt>
 File: images/UseCaseCatalogManager.jpg Graphic file (type jpg)
 <use images/UseCaseCatalogManager.jpg>
 Package pdftex.def Info: images/UseCaseCatalogManager.jpg  used on input line 3
@@ -948,123 +948,13 @@ Chapitre 3.
 
 
 
-]
-<images/catalog-classes.png, id=460, 295.1025pt x 49.68562pt>
-File: images/catalog-classes.png Graphic file (type png)
-<use images/catalog-classes.png>
-Package pdftex.def Info: images/catalog-classes.png  used on input line 28.
-(pdftex.def)             Requested size: 295.10176pt x 49.6855pt.
- [32
+]) [32
 
- <./images/catalog-classes.png>]
-<images/catalog.png, id=467, 402.50375pt x 201.75375pt>
-File: images/catalog.png Graphic file (type png)
-<use images/catalog.png>
-Package pdftex.def Info: images/catalog.png  used on input line 58.
-(pdftex.def)             Requested size: 284.52756pt x 142.61813pt.
- [33 <./images/catalog.png>]
-<images/synchronization.png, id=474, 593.21625pt x 201.75375pt>
-File: images/synchronization.png Graphic file (type png)
-<use images/synchronization.png>
-Package pdftex.def Info: images/synchronization.png  used on input line 104.
-(pdftex.def)             Requested size: 398.33858pt x 135.47908pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
-
- []
-
-<images/herarchie_product.png, id=476, 636.87938pt x 247.67531pt>
-File: images/herarchie_product.png Graphic file (type png)
-<use images/herarchie_product.png>
-Package pdftex.def Info: images/herarchie_product.png  used on input line 117.
-(pdftex.def)             Requested size: 426.78471pt x 159.33551pt.
-[34 <./images/synchronization.png>] [35 <./images/herarchie_product.png>]
-[36]
-<images/classes-diagram.png, id=496, 616.55344pt x 469.755pt>
-File: images/classes-diagram.png Graphic file (type png)
-<use images/classes-diagram.png>
-Package pdftex.def Info: images/classes-diagram.png  used on input line 186.
-(pdftex.def)             Requested size: 483.69684pt x 368.53629pt.
-
-Overfull \hbox (22.9756pt too wide) in paragraph at lines 186--187
- [][] 
- []
-
-[37 <./images/classes-diagram.png>] [38]
-<images/categories.png, id=508, 338.76563pt x 238.64156pt>
-File: images/categories.png Graphic file (type png)
-<use images/categories.png>
-Package pdftex.def Info: images/categories.png  used on input line 252.
-(pdftex.def)             Requested size: 338.76479pt x 238.64096pt.
- [39 <./images/categories.png>]
-<images/media-classes.jpg, id=517, 514.17094pt x 349.305pt>
-File: images/media-classes.jpg Graphic file (type jpg)
-<use images/media-classes.jpg>
-Package pdftex.def Info: images/media-classes.jpg  used on input line 280.
-(pdftex.def)             Requested size: 514.1697pt x 349.30414pt.
-
-Overfull \hbox (53.44846pt too wide) in paragraph at lines 280--281
- [][] 
- []
-
-[40]
-<images/import.png, id=523, 895.09406pt x 347.04657pt>
-File: images/import.png Graphic file (type png)
-<use images/import.png>
-Package pdftex.def Info: images/import.png  used on input line 303.
-(pdftex.def)             Requested size: 483.69684pt x 187.54533pt.
-
-Overfull \hbox (22.9756pt too wide) in paragraph at lines 303--304
- [][] 
- []
-
-[41 <./images/media-classes.jpg>]
-<images/splitting1.png, id=531, 809.27344pt x 247.67531pt>
-File: images/splitting1.png Graphic file (type png)
-<use images/splitting1.png>
-Package pdftex.def Info: images/splitting1.png  used on input line 329.
-(pdftex.def)             Requested size: 483.69684pt x 148.03566pt.
-
-Overfull \hbox (22.9756pt too wide) in paragraph at lines 329--330
- [][] 
- []
-
-[42 <./images/import.png>]
-<images/splitting.png, id=543, 946.28531pt x 404.26031pt>
-File: images/splitting.png Graphic file (type png)
-<use images/splitting.png>
-Package pdftex.def Info: images/splitting.png  used on input line 340.
-(pdftex.def)             Requested size: 483.69684pt x 206.63884pt.
-
-Overfull \hbox (22.9756pt too wide) in paragraph at lines 340--341
- [][] 
- []
-
-[43 <./images/splitting1.png> <./images/splitting.png>] [44] [45]
-<images/architecture.png, id=560, 294.34969pt x 289.83281pt>
-File: images/architecture.png Graphic file (type png)
-<use images/architecture.png>
-Package pdftex.def Info: images/architecture.png  used on input line 405.
-(pdftex.def)             Requested size: 260.0795pt x 256.0748pt.
- [46
-
- <./images/architecture.png>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 435.
-
+] (./main.bbl
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 5.
  (c:/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<images/physique.png, id=570, 724.7075pt x 363.3575pt>
-File: images/physique.png Graphic file (type png)
-<use images/physique.png>
-Package pdftex.def Info: images/physique.png  used on input line 446.
-(pdftex.def)             Requested size: 483.69684pt x 242.52234pt.
-
-Overfull \hbox (22.9756pt too wide) in paragraph at lines 446--447
- [][] 
- []
-
-[47 <./images/physique.png>]) [48] (./main.bbl
 Underfull \hbox (badness 6559) in paragraph at lines 9--14
 []\T1/cmr/m/n/12 Wikipédia, ``Ges-tion des res-sources nu-mé-riques --- wi-ki-p
 é-dia, l'en-cy-clo-pé-die
@@ -1078,7 +968,7 @@ w / index . php ? title = Gestion _ des _ ressources _
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
- [49
+ [33
 
 
 
@@ -1090,39 +980,72 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
 (./08-Conception.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 917644E88E1EBBD7982C9623F35587F4;2736.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 34FFB16655AC8070516A1D962260E034;2504
+(rerunfilecheck)             After:  E39F57214BACB8918F5443DDDD60D359;2150.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
  ) 
 Here is how much of TeX's memory you used:
- 12303 strings out of 492623
- 179222 string characters out of 6133291
- 306825 words of memory out of 5000000
- 15668 multiletter control sequences out of 15000+600000
- 31977 words of font info for 82 fonts, out of 8000000 for 9000
+ 12171 strings out of 492623
+ 176846 string characters out of 6133291
+ 306464 words of memory out of 5000000
+ 15593 multiletter control sequences out of 15000+600000
+ 25681 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,16n,48p,767b,844s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{cite.wiki\\penalty\040\\@M\040\040:ant} has been 
-referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{cite.wiki\\penalty\040\\@M\040\040:sqli} has been
+ referenced but does not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.wiki\\penalty\040\\@M\040\040:sonarqube} has b
-een referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{figure.caption.34} has been referenced but does not
+ exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+pdfTeX warning (dest): name{figure.caption.33} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.30} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.29} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.27} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.26} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.25} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.24} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.35} has been referenced but does not exist
 , replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+pdfTeX warning (dest): name{section.3.5} has been referenced but does not exist
 , replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.wiki\\penalty\040\\@M\040\040:dam} has been re
-ferenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{section.3.4} has been referenced but does not exist
+, replaced by a fixed one
 
-pdfTeX warning (dest): name{cite.wiki\\penalty\040\\@M\040\040:sqli} has been r
-eferenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{section.3.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.1.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.1.1} has been referenced but does not 
+exist, replaced by a fixed one
 
 {c:/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texliv
 e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2019/te
@@ -1136,20 +1059,17 @@ per/sfbx1095.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx12
 019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2019/texmf-
 dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2019/texmf-dist/fonts
 /type1/public/cm-super/sfcc1440.pfb><c:/texlive/2019/texmf-dist/fonts/type1/pub
-lic/cm-super/sfrm0800.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm0900.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm100
-0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/
-texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/20
-19/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2019/texmf-d
-ist/fonts/type1/public/cm-super/sfss1200.pfb><c:/texlive/2019/texmf-dist/fonts/
-type1/public/cm-super/sfti1200.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publ
-ic/cm-super/sfti1440.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-supe
-r/sftt1000.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200
-.pfb>
-Output written on main.pdf (50 pages, 1426020 bytes).
+lic/cm-super/sfrm0900.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm1095.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm120
+0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/
+texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb><c:/texlive/20
+19/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2019/texmf-d
+ist/fonts/type1/public/cm-super/sfti1440.pfb><c:/texlive/2019/texmf-dist/fonts/
+type1/public/cm-super/sftt1200.pfb>
+Output written on main.pdf (34 pages, 1081874 bytes).
 PDF statistics:
- 720 PDF objects out of 1000 (max. 8388607)
- 608 compressed objects within 7 object streams
- 178 named destinations out of 1000 (max. 500000)
- 405 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 559 PDF objects out of 1000 (max. 8388607)
+ 488 compressed objects within 5 object streams
+ 145 named destinations out of 1000 (max. 500000)
+ 321 words of extra memory for PDF output out of 10000 (max. 10000000)
 
