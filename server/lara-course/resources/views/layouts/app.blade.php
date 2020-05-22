@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
 
+    <!-- Icon Place -->
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/PcGSCyQ/Ulearn.png" />
+
     @yield('css')
 </head>
 
