@@ -42934,7 +42934,7 @@
 													"top": 87,
 													"width": 153.13720703125,
 													"height": 13,
-													"text": "Lifeline1: Utilisateur"
+													"text": "Lifeline1: Enseignants"
 												},
 												{
 													"_type": "LabelView",
@@ -44338,7 +44338,7 @@
 					},
 					"name": "Role1",
 					"type": {
-						"$ref": "AAAAAAFxFx3wAiZALD0="
+						"$ref": "AAAAAAFwzyZZhELWT7Y="
 					}
 				},
 				{

@@ -42,6 +42,7 @@
 
 \usepackage{changepage}
 
+\usepackage{multirow}
 
 \setlength\arrayrulewidth{1pt}
 \renewcommand{\baselinestretch}{1.05}
@@ -50,6 +51,27 @@
 \fancyfoot{}
 \fancyhead[LE,RO]{\bfseries\thepage}
 \fancyhead[RE]{\bfseries\nouppercase{\leftmark}}
+
+
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+\makeatletter
+\newcounter {subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection .\@alph\c@subsubsubsection}
+\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}%
+	{-3.25ex\@plus -1ex \@minus -.2ex}%
+	{1.5ex \@plus .2ex}%
+	{\normalfont\normalsize\bfseries}}
+\newcommand*\l@subsubsubsection{\@dottedtocline{3}{10.0em}{4.1em}}
+\newcommand*{\subsubsubsectionmark}[1]{}
+\makeatother
+
+
+
+
+
 \fancyhead[LO]{\bfseries\nouppercase{\rightmark}}
 \setlength{\headheight}{14.5pt}
 
@@ -107,6 +129,10 @@
 \newtheorem{exemple}{Exemple}[chapter]
 
 %table break line
+
+\usepackage{multirow}
+
+
 
 \usepackage{makecell}
 
@@ -202,7 +228,7 @@
 \include{06-Contexte}
 \include{07-Analyse}
 \include{08-Conception}
-%\include{09-Realisation}
+\include{09-Realisation}
 %\include{10-Conclusion}
 
 \clearpage

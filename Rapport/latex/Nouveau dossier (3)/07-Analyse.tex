@@ -67,7 +67,7 @@ Visiteur & \begin{tabular}[c]{@{}c@{}}N’importe quel visiteur qui \\veut tél�
 \caption{Acteurs en interaction avec le système}
 \label{actors}
 \end{table}
-\clearpage
+
 \subsection{Les besoins fonctionnels}
 Les besoins fonctionnels expriment une action que doit effectuer le système en réponse à une demande .\\
 Les besoins principaux à couvrir par le système sont les suivants :\\
@@ -168,178 +168,341 @@ les critères réunies dans le mot INVEST, c’est à dire
 Le Sprint Backlog comporte la liste des tâches du Sprint (son périmètre donc) ainsi que la charge de travail associée à ces dernières. Chaque jour, le Reste A Faire de chaque tâche est actualisé par l’équipe de développement afin de tracer le graphique d’avancement de Sprint.
 
 
+\clearpage      
+
+
 \section{Diagrammes des cas d'utilisation global}
 Le modèle des cas d’utilisation décrit les fonctionnalités d’un système d’un point de vue utilisateur, sous la forme d’actions et de réactions ; l’ensemble des fonctionnalités est déterminé en examinant les besoins fonctionnels de tous les utilisateurs potentiels.\\
 Ainsi, pour construire notre modèle, nous allons organiser les cas d’utilisation et les regrouper en ensembles fonctionnels cohérents. Pour ce faire, nous utilisons le concept général d’UML, le package.
 
-\subsubsection{Le profil Admin :}
+
 Ce diagramme illustre le cas d’utilisation générale de notre système. Ces cas d’utilisation seront par la suite expliqués en détaille. (voir la figure \ref{fig:UseCaseAdmin}):
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=18cm,height=12cm]{UseCaseAdmin.png}
+  \includegraphics[width=18cm,height=12cm]{Diagrammedecasdutilisationgénéra.jpg}
   \caption{Les cas d'utilisation global.}
   \label{fig:UseCaseAdmin}
 \end{figure}
 \FloatBarrier
-\begin{itemize}
 
-\item[$\bullet$] \textbf{Cas d’utilisation S’authentifier :} permet aux utilisateurs de se connecter au système avec leurs logins et mots de passe afin de sécuriser la platforme.
-\medskip
-    \begin{itemize}
-    \item \textit{\textbf{Objectif :}}  Cette fonctionnalité permet aux différents acteurs de se connecter. 
-
-    \item \textit{\textbf{Acteur :}} Tous les acteurs
-
-    \item \textit{\textbf{Pré-condition  :}} L’utilisateur existe dans la base de données.
-\item \textit{\textbf{Post-conditions   :}} Utilisateur authentifié.
-    \item \textit{\textbf{Scénario nominal :}}
-         \begin{enumerate}
-             \item L’acteur saisit son login et son mot de passe. 
-             \item Le système vérifie les informations saisies. 
-             \item Le système trouve que les informations saisies sont valides.  
-             \item Le système vérifie le rôle de l’acteur.  
-             \item Le système connecte l’acteur à son espace.
-         \end{enumerate}
-    \item \textit{\textbf{Scénario d'erreur :}} 
-         \begin{enumerate}
-             \item L’acteur saisit son login et son mot de passe. 
-             \item Le système vérifie les informations saisies.   
-             \item Le système trouve que les informations saisies sont invalides.  
-             \item Le système demande à l’acteur de vérifier les informations saisies.
-         \end{enumerate}
-    \end{itemize}
-
-\bigskip
-
-\item[$\bullet$] \textbf{Cas d’utilisation Gérer les employés :} L’administrateur prend en charge la gestion des utilisateurs de la plat-forme :
-\medskip
-    \begin{itemize}
-    \item \textit{\textbf{Objectif :}}  Cette fonctionnalité permet à l’administrateur de gérer les utilisateurs du PIM qui sont des employés du client.
-
-    \item \textit{\textbf{Acteur :}} Administrateur
-
-    \item \textit{\textbf{Pré-condition  :}} L’acteur se connecte au système. 
-
-    \item \textit{\textbf{Scénarios nominaux :}}
-         \begin{enumerate}
-             \item \textit{Ajouter un utilisateur.}
-                    \begin{itemize}
-                       \item[$\star$]  L’acteur saisit les informations de l’utilisateur. 
-                       \item[$\star$] Le système confirme à l’administrateur l’enregistrement de l’utilisateur.
-                       \item[$\star$] Le système affiche la liste des utilisateurs contenant l’utilisateur ajouté.
-                    \end{itemize}
-             \item \textit{Modifier un utilisateur.}
-                    \begin{itemize}
-                       \item[$\star$] L’acteur affiche la liste des utilisateurs. 
-                       \item[$\star$] L’acteur sélectionne l’utilisateur à modifier. 
-                       \item[$\star$] Le système affiche les informations de l’utilisateur sélectionné
-                       \item[$\star$] L’acteur modifie les champs concernés. 
-                       \item[$\star$] L’acteur valide ses modifications. 
-                       \item[$\star$] Le système confirme à l’acteur la mise à jour des informations.
-                       \item[$\star$] Le système affiche la liste des utilisateurs contenant l’utilisateur modifié.
-                    \end{itemize}
-             \item \textit{Supprimer un utilisateur :}
-                    \begin{itemize}
-                       \item[$\star$] L’acteur affiche la liste des utilisateurs. 
-                       \item[$\star$] L’acteur sélectionne l’utilisateur à supprimer. 
-                       \item[$\star$] Le système alerte l’acteur sur son action. 
-                       \item[$\star$] L’acteur valide son action.
-                       \item[$\star$] Le système confirme à l’acteur la suppression de l’utilisateur.
-                    \end{itemize}
-                \item \textit{Chercher des utilisateurs :}
-                    \begin{itemize}
-                       \item[$\star$] L’acteur affiche la liste des utilisateurs. 
-                       \item[$\star$] L’acteur clique sur le volet de recherche.
-                       \item[$\star$] L'acteur choisit les critères de recherche. 
-                       \item[$\star$] L’acteur lance la recherche.
-                       \item[$\star$] Le système affiche les résultats de recherche.
-                    \end{itemize}
-         \end{enumerate}
-    \end{itemize}
-    \bigskip
-
-\item[$\bullet$] \textbf{Cas d’utilisation Gérer les catégories :} L’administrateur peut gérer les catégories qui sert a classifier les produits selon leurs critères et typologies :
-\medskip
-    \begin{itemize}
-    \item \textit{\textbf{Objectif :}}  Cette fonctionnalité permet à l’administrateur de gérer les catégories des produits disponibles dans le PIM.
-
-    \item \textit{\textbf{Acteur :}} Administrateur
-
-    \item \textit{\textbf{Pré-condition  :}} L’acteur se connecte au système. 
-
-    \item \textit{\textbf{Scénarios nominaux :}}
-         \begin{enumerate}
-             \item \textit{Ajouter une catégorie.}
-                    \begin{itemize}
-                       \item[$\star$]  L’acteur saisit les informations de la catégorie. 
-                       \item[$\star$] Le système confirme à l’administrateur l’enregistrement de la catégorie.
-                       \item[$\star$] Le système affiche la liste des catégories contenant la catégorie ajoutée.
-                    \end{itemize}
-             \item \textit{Modifier une catégorie.}
-                    \begin{itemize}
-                       \item[$\star$] L’acteur affiche la liste des catégories. 
-                       \item[$\star$] L’acteur sélectionne la catégorie à modifier. 
-                       \item[$\star$] Le système affiche les informations de la catégorie sélectionnée
-                       \item[$\star$] L’acteur modifie les champs concernés. 
-                       \item[$\star$] L’acteur valide ses modifications. 
-                       \item[$\star$] Le système confirme à l’acteur la mise à jour des informations.
-                    \end{itemize}
-             \item \textit{Supprimer une catégorie :}
-                    \begin{itemize}
-                       \item[$\star$] L’acteur affiche la liste des catégories. 
-                       \item[$\star$] L’acteur sélectionne la catégorie à supprimer. 
-                       \item[$\star$] Le système alerte l’acteur sur son action. 
-                       \item[$\star$] L’acteur valide son action.
-                       \item[$\star$] Le système confirme à l’acteur la suppression de la catégorie.
-                    \end{itemize}
-                \item \textit{Affecter/désaffecter des produits à une catégorie :}
-                    \begin{itemize}
-                        \item[$\star$] L’acteur affiche la liste des catégories. 
-                       \item[$\star$] L’acteur sélectionne la catégorie souhaitée. 
-                       \item[$\star$] Le système affiche les informations de la catégorie sélectionnée
-                       \item[$\star$] L’acteur ouvre l'onglet des produits inclut dans la catégorie. 
-                       \item[$\star$] L’acteur ajoute/supprime des produits à/de la catégorie.
-                       \item[$\star$] L’acteur valide ses modifications.
-                       \item[$\star$] Le système confirme à l’acteur la mise à jour des informations.
-                    \end{itemize}
-                \item \textit{Chercher une catégorie :}
-                    \begin{itemize}
-                       \item[$\star$] L’acteur affiche la liste des catégories. 
-                       \item[$\star$] L’acteur sélectionne ouvre le voler de recherche. 
-                       \item[$\star$] L'utilisateur choisit les critères de recherche. 
-                       \item[$\star$] L’acteur lance la recherche.
-                       \item[$\star$] Le système affiche la liste des catégories conformes à la recherche.
-                    \end{itemize}
-         \end{enumerate}
-    \end{itemize}
-    \bigskip
-
-    
-
-
-    \end{itemize}
-        \bigskip
-
-       
-                   
+     
 \section{Diagrammes de classes global}
 Le diagramme de classes est un schéma utilisé en génie logiciel pour présenter les classes et les interfaces des systèmes ainsi que les différentes relations entre celles ci. Ce diagramme fait
 partie de la partie statique d’UML car il fait abstraction des aspects temporels et dynamiques.
-Une classe est un ensemble de fonctions et de données (attributs) qui sont liées ensembles par un champ sémantique [N4]. Dans ce qui suit nous allons décrire le diagramme de classes relatif à notre application.
- \ref{fig:UseCaseCatalogManager}).
+Une classe est un ensemble de fonctions et de données (attributs) qui sont liées ensembles par un champ sémantique . Dans ce qui suit nous allons décrire le diagramme de classes relatif à notre application.
+ \ref{fig:UseCaseCatalogManager}. \\
+ \\Voici quelques notions de base du diagramme :
+  \begin{itemize}
+ 	\item \textit{\textbf{Une classe :}}  représente la description abstraite d'un ensemble d'objets
+ 	possédant les mêmes caractéristiques. On peut parler également de type. 
+ 	
+ 	\item \textit{\textbf{Un attribut :}} représente un type d'information contenu dans une classe .
+ 	
+ 	\item \textit{\textbf{Une opération  :}} représente un élément de comportement (un service)
+ 	contenu dans une classe.
+ 	
+ 
+ 	\item \textit{\textbf{Une association   :}} représente une relation sémantique durable entre deux
+ 	classes.
+ 	
+ 	\item \textit{\textbf{Une superclasse :}}
+ 	 est une classe plus générale reliée à une ou plusieurs
+ 	autres classes plus spécialisées (sous-classes) par une relation de
+ 	généralisation. Les sous-classes «Héritent» des propriétés de leur
+ 	superclasse et peuvent comporter des propriétés spécifiques
+ 	supplémentaires.
+ 	\end{itemize}
+ La figure ci-dessous représente le diagramme de classes \cite{wiki:Diagramme_de_classes}:
+ 	
+ 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=18cm,height=8cm]{UseCaseCatalogManager.jpg}
+  \includegraphics[width=18cm,height=8cm]{DiagrammedeclasseClassDiagram.jpg}
   \caption{Diagrammes de classes global.}
   \label{fig:UseCaseCatalogManager}
 \end{figure}
 \FloatBarrier
+{\Large \color{cyan} Description des entités:}
+ 
+\begin{table}[h]
+	\begin{itemize}
+		
+		\item \textit{\textbf{ Enseignants:}} L’utilisateur principal du module, il a accès à plusieurs fonctionnalités qui
+		vont lui permettre de réussir le processus éducatif.
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
+			
+			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
+			
+			Id enseig & 1 & 2& \\
+			
+			Nom & 2 & 4  &\\
+			
+			Id matiere & 3 & 6 & \\
+			
+		\end{tabular}
+	\end{center}
+	\caption{Tables  "Enseignants"}
+	\label{mes belles tables}
+\end{table}
+
+\begin{table}[h]
+	
+	\begin{itemize}
+		
+		\item \textit{\textbf{ Administration:}} C'est la classe qui contient toutes les actions prises en charge
+		par l'administrateur : 
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
+			
+			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
+			
+			Id: intege & 1 & 2& \\
+			
+			Login: string & 2 & 4  &\\
+			Mot de passe: string & 1 & 2& \\
+			
+			role & 2 & 4  &\\
+			
+		
+			
+		\end{tabular}
+	\end{center}
+	\caption{Tables  "Administration"}
+	\label{mes belles tables}
+\end{table}
 
 
 
 
 
 
-              
-\subsection{Conclusion}
+
+
+
+
+\begin{table}[h]
+	
+	\begin{itemize}
+		
+		\item \textit{\textbf{Documentation:}}ca englobe toute documentation nécessaires au processus d'enseignement à distance
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
+			
+			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
+			
+			id-Doc & 1 & 2& \\
+			
+			Date & 2 & 4  &\\
+			visibilite & 1 & 2& \\
+			
+		Nom-Doc & 2 & 4  &\\
+			Type-doc & 1 & 2& \\
+			
+			
+			
+			
+			
+		\end{tabular}
+	\end{center}
+	\caption{Tables  "Documentation"}
+	\label{mes belles tables}
+\end{table}
+
+
+
+
+
+
+
+
+\begin{table}[h]
+	
+	\begin{itemize}
+		
+		\item \textit{\textbf{ Examen:}}  ça englobe toute les examens requis
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
+			
+			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
+			
+			id matière & 1 & 2& \\
+			Date & 2 & 4  &\\
+			durée & 1 & 2& \\
+			Type & 2 & 4  &\\
+			heure & 2 & 4  &\\
+			
+		\end{tabular}
+	\end{center}
+	\caption{Tables  "Examen"}
+	\label{mes belles tables}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+\begin{table}[h]
+	
+	\begin{itemize}
+		
+		\item \textit{\textbf{ Utilisateur:}}elle contient tous les utilisateurs du plateforme selon leur :
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
+			
+			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
+			
+			Prenom: string & 1 & 2& \\
+			
+			Nom & 2 & 4  &\\
+			Login: string & 2 & 4  &\\
+			mot de passe: string & 2 & 4  &\\
+			Email & 2 & 4  &\\
+		Rôle & 2 & 4  &\\
+			
+			
+			
+		\end{tabular}
+	\end{center}
+	\caption{Tables  "Utilisateur"}
+	\label{mes belles tables}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+\begin{table}[h]
+	
+	\begin{itemize}
+		
+		\item \textit{\textbf{ Cours:}}
+		ca englobe toute les cours nécessaires au processus d'enseignement à distance
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
+			
+			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
+			
+			Nom & 1 & 2& \\
+			
+			Matiére & 2 & 4  &\\
+		date & 2 & 4  &\\
+			
+			
+		\end{tabular}
+	\end{center}
+	\caption{Tables  "Cours"}
+	\label{mes belles tables}
+\end{table}
+
+\begin{table}[h]
+    \begin{itemize}
+      \item \textit{\textbf{ Matiére:}}ca englobe toute les Matiéres
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
+			
+			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
+			
+			id matière & 1 & 2& \\
+			
+			date & 2 & 4  &\\
+			
+			
+			
+		\end{tabular}
+	\end{center}
+	\caption{Tables  " Matiére"}
+	\label{mes belles tables}
+\end{table}
+
+\begin{table}[h]
+	
+	\begin{itemize}
+		
+		\item \textit{\textbf{ Droits:}}c'est la classe qui contient les droits attribués aux plateforme par
+		l’administrateur ainsi la suppression ou l’ajout de certains privilèges.
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
+			
+			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
+			
+			Type & 1 & 2& \\
+
+			
+			
+			
+		\end{tabular}
+	\end{center}
+	\caption{Tables  "Droits"}
+	\label{mes belles tables}
+\end{table}
+\begin{table}[h]
+	
+	\begin{itemize}
+		
+		\item \textit{\textbf{ problèmes technique:}}C'est la classe qui contient toutes les problèmes technique prises en charge par l'administrateur :
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
+			
+			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
+			
+			Type-erreurs & 1 & 2& \\	
+		\end{tabular}
+	\end{center}
+	\caption{Tables  "problèmes technique"}
+	\label{mes belles tables}
+\end{table}
+
+
+
+
+
+
+\begin{table}[h]
+	
+	\begin{itemize}
+		
+		\item \textit{\textbf{ Etudiant:}} Le deuxième utilisateur du module avec des fonctionnalités facilitant la
+		tâche de mémorisation.
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
+			
+			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
+			
+			Num de carte etudiants & 1 & 2& \\
+			
+		
+			
+			
+			
+		\end{tabular}
+	\end{center}
+	\caption{Tables  "Etudiant"}
+	\label{mes belles tables}
+\end{table}
+
+
+
+\FloatBarrier
+\section{Conclusion}
 Le but de ce chapitre était de définir et d’analyser l’ensemble des besoins fonctionnels  de notre solution. Cette étape est primordiale dans le développement d’un projet informatique puisque elle nous permet de définir le périmètre fonctionnel du projet, et de garantir la couverture de l’ensemble des fonctionnalités recensées.
