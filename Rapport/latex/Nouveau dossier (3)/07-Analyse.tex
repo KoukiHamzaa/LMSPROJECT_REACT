@@ -190,8 +190,8 @@ Ce diagramme illustre le cas d’utilisation générale de notre système. Ces c
 
     \item \textit{\textbf{Acteur :}} Tous les acteurs
 
-    \item \textit{\textbf{Pré-condition  :}} L’acteur se connecte au système.
-
+    \item \textit{\textbf{Pré-condition  :}} L’utilisateur existe dans la base de données.
+\item \textit{\textbf{Post-conditions   :}} Utilisateur authentifié.
     \item \textit{\textbf{Scénario nominal :}}
          \begin{enumerate}
              \item L’acteur saisit son login et son mot de passe. 
@@ -313,197 +313,33 @@ Ce diagramme illustre le cas d’utilisation générale de notre système. Ces c
          \end{enumerate}
     \end{itemize}
     \bigskip
-\item[$\bullet$] \textbf{Cas d’utilisation Gérer les produits :} Cette fonctionnalité permet à l’administrateur de lister, modifier ou chercher les produits disponible dans le PIM. l'ajout et la suppression des produits ne sont pas inclues.
-\medskip
-    \begin{itemize}
-    \item \textit{\textbf{Objectif :}} L’administrateur peut gérer les produits disponibles dans le PIM. 
 
-    \item \textit{\textbf{Acteur :}} Administrateur
-
-    \item \textit{\textbf{Pré-condition  :}} L’acteur se connecte au système. 
-
-    \item \textit{\textbf{Scénarios nominaux :}}
-         \begin{enumerate}
-             \item \textit{Modifier un produit.}
-                    \begin{itemize}
-                       \item[$\star$] L’acteur affiche la liste des produits. 
-                       \item[$\star$] L’acteur sélectionne le produit à modifier. 
-                       \item[$\star$] Le système affiche les informations du produit sélectionné
-                       \item[$\star$] L’acteur modifie les champs concernés. 
-                       \item[$\star$] L’acteur valide ses modifications. 
-                       \item[$\star$] Le système confirme à l’acteur la mise à jour des informations.
-                    \end{itemize}
-                \item \textit{Chercher un produit :}
-                    \begin{itemize}
-                       \item[$\star$] L’acteur affiche la liste des produits. 
-                       \item[$\star$] L’acteur ouvre le voler de recherche. 
-                       \item[$\star$] L'acteur choisit les critères de recherche. 
-                       \item[$\star$] L’acteur lance la recherche.
-                       \item[$\star$] Le système affiche la liste des produits conformes à la recherche.
-                    \end{itemize}
-                \item \textit{Affecter/désaffecter un produit à une ou plusieurs catégories :}
-                    \begin{itemize}
-                        \item[$\star$] L’acteur affiche la liste des produits. 
-                       \item[$\star$] L’acteur sélectionne le produit souhaité.
-                       \item[$\star$] Le système affiche les informations du produit sélectionné
-                       \item[$\star$] L’acteur ouvre l'anglet de catégorisation. 
-                       \item[$\star$] L’acteur ajoute/supprime des catégories au/du produit.
-                       \item[$\star$] L’acteur valide ses modifications.
-                       \item[$\star$] Le système confirme à l’acteur la mise à jour des informations.
-                    \end{itemize}
-                \item \textit{Établir des liens entre des produits :}
-                    \begin{itemize}
-                        \item[$\star$] L’acteur affiche la liste des produits. 
-                       \item[$\star$] L’acteur sélectionne le produit souhaité.
-                       \item[$\star$] Le système affiche les informations du produit sélectionné
-                       \item[$\star$] L’acteur ouvre l'onglet des liens. 
-                       \item[$\star$] L’acteur ajoute/supprime des liens au/du produit vers d'autres produits.
-                       \item[$\star$] L’acteur valide ses modifications.
-                       \item[$\star$] Le système confirme à l’acteur la mise à jour des informations.
-                    \end{itemize}
-         \end{enumerate}
-    \end{itemize}
     
-    \bigskip
-\item[$\bullet$] \textbf{Cas d’utilisation Gérer le catalogue :} Le catalogue constitue une sorte de conteneur global des produits et catégories disponibles dans le PIM. Il est divisé en deux version Staged (intermédiaire) et Online (validée ou publiée) pour distinguer les données en cours d'enrichissement des données publiées (utilisables pour être exportées). Le présent cas d'utilisation permet la synchronisation entre ces deux versions et l'indexation des objets de ce catalogue.
 
-\medskip
-    \begin{itemize}
-    \item \textit{\textbf{Objectif :}} L’administrateur peut gérer le catalogue des produits du PIM :
 
-    \item \textit{\textbf{Acteur :}} Administrateur
-
-    \item \textit{\textbf{Pré-condition  :}} L’acteur se connecte au système. 
-
-    \item \textit{\textbf{Scénarios nominaux :}}
-         \begin{enumerate}
-             \item \textit{Lancer l'indexation du catalogue.}
-                    \begin{itemize}
-                        \item[$\star$] L’acteur affiche la liste des jobs disponibles.
-                       \item[$\star$] L’acteur choisit le job d'indexation. 
-                       \item[$\star$] L’acteur lance le job d'indexation. 
-                       \item[$\star$] Le système affiche l'état d'avancement du job.
-                    \end{itemize}
-                \item \textit{Lancer la synchronisation des version du catalogue :}
-                    \begin{itemize}
-                       \item[$\star$] L’acteur affiche la liste des jobs disponibles. 
-                       \item[$\star$] L’acteur sélectionne le job de synchronisation. 
-                       \item[$\star$] L'acteur lance le job. 
-                       \item[$\star$] L’acteur lance la recherche.
-                       \item[$\star$] Le système affiche l'état d'avancement du job.
-                    \end{itemize}
-         \end{enumerate}
-    \end{itemize}
-    
-        \bigskip
-\item[$\bullet$] \textbf{Cas d’utilisation Gérer les canaux ou les assortiments:} Le canaux ou les assortiments constituent une sorte de catégories permettant de regrouper les produits par les endroits ou les canaux vers lesquels ils sont exportés.
-
-\medskip
-\begin{itemize}
-    \item \textit{\textbf{Objectif :}} L’administrateur peut gérer les canaux ou les assortiments :
-
-    \item \textit{\textbf{Acteur :}} Administrateur
-
-    \item \textit{\textbf{Pré-condition  :}} L’acteur se connecte au système. 
-
-    \item \textit{\textbf{Scénarios nominaux :}} les scénarios de ce cas sont les mêmes que pour le cas d'utilisation de gestion des catégories.
     \end{itemize}
         \bigskip
-\item[$\bullet$] \textbf{Cas d’utilisation lancer l'export des produits :} 
 
-\medskip
-    \begin{itemize}
-    \item \textit{\textbf{Objectif :}} L’administrateur peut exporter des produits avec différents formats.
-
-    \item \textit{\textbf{Acteur :}} Administrateur
-
-    \item \textit{\textbf{Pré-condition  :}} L’acteur se connecte au système. 
-
-    \item \textit{\textbf{Scénarios nominaux :}}
-         \begin{enumerate}
-             \item \textit{Exporter tous les produits.}
-                    \begin{itemize}
-                        \item[$\star$] L’acteur affiche la liste des produits disponibles.
-                       \item[$\star$] L’acteur choisit le format d'export. 
-                       \item[$\star$] le système affiche la pop-in de l'export et demande à l'utilisateur de renseigner les champs et les langes à exporter. 
-                       \item[$\star$] l'acteurs renseigne les champs et les langues et lance l'éxport.
-                       \item[$\star$] le système exporte les produits.
-                    \end{itemize}
-                \item \textit{Exporter partiellement les produits }
-                    \begin{itemize}
-                        \item[$\star$] L’acteur affiche la liste des produits disponibles.
-                       \item[$\star$] L’acteur ouvre le volet de recherche et choisit les critères souhaités.
-                       \item[$\star$] L’acteur lance la recherche.
-                       \item[$\star$] le système affiche les résultats de recherche.
-                       \item[$\star$] L’acteur choisit le format d'export. 
-                       \item[$\star$] le système affiche la pop-in de l'export et demande à l'utilisateur de renseigner les champs et les langes à exporter. 
-                       \item[$\star$] l'acteurs renseigne les champs et les langues et lance l'éxport.
-                       \item[$\star$] le système exporte les produits correspondants au critères de recherche.
-                    \end{itemize}
-         \end{enumerate}
-    \end{itemize}
-    
-            \bigskip
-
-\end{itemize}
-
-\subsubsection{Le profil Catalog Manager :}
-Les présents cas d’utilisation concernent l’acteur  Catalog Manager. Après avoir authentifié le Catalog Manager peut de gérer les catégories et les produits ainsi que les assortiments et les canaux (voir la figure \ref{fig:UseCaseCatalogManager}).
+       
+                   
+\section{Diagrammes de classes global}
+Le diagramme de classes est un schéma utilisé en génie logiciel pour présenter les classes et les interfaces des systèmes ainsi que les différentes relations entre celles ci. Ce diagramme fait
+partie de la partie statique d’UML car il fait abstraction des aspects temporels et dynamiques.
+Une classe est un ensemble de fonctions et de données (attributs) qui sont liées ensembles par un champ sémantique [N4]. Dans ce qui suit nous allons décrire le diagramme de classes relatif à notre application.
+ \ref{fig:UseCaseCatalogManager}).
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=18cm,height=8cm]{UseCaseCatalogManager.png}
-  \caption{Les cas d'utilisation du profil Catalog Manager.}
+  \includegraphics[width=18cm,height=8cm]{UseCaseCatalogManager.jpg}
+  \caption{Diagrammes de classes global.}
   \label{fig:UseCaseCatalogManager}
 \end{figure}
 \FloatBarrier
 
-Les trois cas d'utilisation sont semblables à celles décrites pour le profile Admin.
 
-\subsubsection{Le profil Support Member :}
-Les présents cas d’utilisation concernent l’acteur  Support Member. Un profil Support qui gère le support du PIM, il peut donc créer des nouveaux comptes, nouvelles catégories.
-Il a le droit de naviguer en lecture seule dans les produits et il ne peut rien modifier ou supprimer. Tous les cas d’utilisation passent obligatoirement par une authentification (voir la figure \ref{fig:UseCaseSupportMember}).
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=18cm,height=5cm]{UseCaseSuportMember.png}
-  \caption{Les cas d'utilisation du profil Support Member.}
-  \label{fig:UseCaseSupportMember}
-\end{figure}
-\FloatBarrier
 
-\begin{itemize}
-   \bigskip
-\item[$\bullet$] \textbf{Cas d’utilisation Consulter des produits :} Cette fonctionnalité permet au Support Member de lister ou chercher des produits disponibles dans le PIM pour les consulter.
-\medskip
-    \begin{itemize}
-    \item \textit{\textbf{Objectif :}} Le Support Member peut consulter les produits disponibles dans le PIM. 
 
-    \item \textit{\textbf{Acteur :}} Support Member
 
-    \item \textit{\textbf{Pré-condition  :}} L’acteur se connecte au système. 
 
-    \item \textit{\textbf{Scénarios nominaux :}}
-         \begin{enumerate}
-             \item \textit{Consulter un produit.}
-                    \begin{itemize}
-                       \item[$\star$] L’acteur affiche la liste des produits. 
-                       \item[$\star$] L’acteur sélectionne le produit à modifier. 
-                       \item[$\star$] Le système affiche les informations du produit sélectionné
-                       \item[$\star$] L’acteur modifie les champs concernés. 
-                       \item[$\star$] L’acteur valide ses modifications. 
-                       \item[$\star$] Le système confirme à l’acteur la mise à jour des informations.
-                    \end{itemize}
-                \item \textit{Chercher un produit :}
-                    \begin{itemize}
-                       \item[$\star$] L’acteur affiche la liste des produits. 
-                       \item[$\star$] L’acteur ouvre le voler de recherche. 
-                       \item[$\star$] L'acteur choisit les critères de recherche. 
-                       \item[$\star$] L’acteur lance la recherche.
-                       \item[$\star$] Le système affiche la liste des produits conformes à la recherche.
-                    \end{itemize}
-         \end{enumerate}
-    \end{itemize}
-    \item[$\bullet$] \textbf{Cas d’utilisation gérer les utilisateurs :} Cette fonctionnalité est la même décrite pour le profil Admin.
-    \item[$\bullet$] \textbf{Cas d’utilisation gérer les catégories :} Cette fonctionnalité est la même décrite pour le profil Admin.
-\end{itemize}
+              
 \subsection{Conclusion}
 Le but de ce chapitre était de définir et d’analyser l’ensemble des besoins fonctionnels  de notre solution. Cette étape est primordiale dans le développement d’un projet informatique puisque elle nous permet de définir le périmètre fonctionnel du projet, et de garantir la couverture de l’ensemble des fonctionnalités recensées.

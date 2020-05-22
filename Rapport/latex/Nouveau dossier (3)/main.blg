@@ -10,38 +10,39 @@ A level-1 auxiliary file: 04-Acronymes.aux
 A level-1 auxiliary file: 05-Introduction.aux
 A level-1 auxiliary file: 06-Contexte.aux
 A level-1 auxiliary file: 07-Analyse.aux
+A level-1 auxiliary file: 08-Conception.aux
 The style file: ieeetr.bst
 Database file #1: references.bib
-You've used 1 entry,
+You've used 2 entries,
             1876 wiz_defined-function locations,
-            492 strings with 3772 characters,
-and the built_in function-call counts, 158 in all, are:
-= -- 14
-> -- 4
+            500 strings with 4031 characters,
+and the built_in function-call counts, 294 in all, are:
+= -- 28
+> -- 8
 < -- 0
-+ -- 2
-- -- 1
-* -- 7
-:= -- 31
-add.period$ -- 2
-call.type$ -- 1
-change.case$ -- 1
++ -- 4
+- -- 2
+* -- 12
+:= -- 51
+add.period$ -- 4
+call.type$ -- 2
+change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 4
-empty$ -- 19
-format.name$ -- 1
-if$ -- 36
+cite$ -- 2
+duplicate$ -- 8
+empty$ -- 37
+format.name$ -- 2
+if$ -- 71
 int.to.chr$ -- 0
-int.to.str$ -- 1
+int.to.str$ -- 2
 missing$ -- 0
-newline$ -- 7
-num.names$ -- 1
-pop$ -- 6
+newline$ -- 11
+num.names$ -- 2
+pop$ -- 12
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 3
+skip$ -- 6
 stack$ -- 0
 substring$ -- 0
 swap$ -- 0
@@ -50,6 +51,6 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 1
-width$ -- 2
-write$ -- 12
+while$ -- 2
+width$ -- 3
+write$ -- 22

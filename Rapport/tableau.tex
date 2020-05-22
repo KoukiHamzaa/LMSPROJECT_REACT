@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{multirow}
+\begin{document}
+% \section{start_tableau}
+\begin{table}[]
+\begin{tabular}{|l|l|l|l|}
+\hline 
+\textbf{Item}                          & \textbf{User Story}                                                   & \textbf{Description}                                                                                              & \textbf{Priorité} \\ \hline
+\textbf{s'inscrire}                    & s'inscrire                                                            & En tant qu'utilisateur, je peux m'inscrire                                                                        & 1    \\ \hline
+\textbf{s'authentifier}                & s'authentifier                                                        & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur, je dois m'identifier \\ pour acceder a mon espace\end{tabular} & 2                 \\ \hline
+\multirow{4}{*}{\textbf{gérer profil}} & \begin{tabular}[c]{@{}l@{}}Consulter\\ profil\end{tabular}            & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur je peux consulter mon \\ profil\end{tabular}                    & 3                 \\ \cline{2-4} 
+                                       & Modifier profil                                                       & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur je peux modifier mon \\ profil\end{tabular}                     &                   \\ \cline{2-4} 
+                                       & \begin{tabular}[c]{@{}l@{}}Modifier\\ image de \\ profil\end{tabular} & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisatuer je peux uploader modifier\\ une image de profil\end{tabular}    &                   \\ \cline{2-4} 
+                                       & Désactiver profil                                                     & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur je peux désactiver mon\\ profil\end{tabular}                    &                   \\ \hline
+\end{tabular}
+\end{table}
+% \section{end_tableau}
+
+\end{document}
