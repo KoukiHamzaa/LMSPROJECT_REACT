@@ -11,6 +11,7 @@
         <th>Email</th>
         <th>Password</th>
         <th>View Count</th>
+        <th>Role Id</th>
         <th>Remember Token</th>
                 <th colspan="3">Action</th>
             </tr>
@@ -27,6 +28,7 @@
             <td>{{ $user->email }}</td>
             <td>{{ $user->password }}</td>
             <td>{{ $user->view_count }}</td>
+            <td>{{ $user->role_id }}</td>
             <td>{{ $user->remember_token }}</td>
                 <td>
                     {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'delete']) !!}

@@ -110,6 +110,28 @@
         "inIndex": true
     },
     {
+        "name": "role_id",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "deleted_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
         "name": "remember_token",
         "dbType": "string,100:nullable",
         "htmlType": "text",
@@ -122,9 +144,9 @@
     },
     {
         "name": "created_at",
-        "dbType": "datetime",
+        "dbType": "datetime:nullable",
         "htmlType": "date",
-        "validations": "required",
+        "validations": null,
         "searchable": false,
         "fillable": false,
         "primary": false,
@@ -133,9 +155,9 @@
     },
     {
         "name": "updated_at",
-        "dbType": "datetime",
+        "dbType": "datetime:nullable",
         "htmlType": "date",
-        "validations": "required",
+        "validations": null,
         "searchable": false,
         "fillable": false,
         "primary": false,

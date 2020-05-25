@@ -1,0 +1,10 @@
+.role_center {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  display:block
+}
+
+/* .role_center:after {
+    white-space: pre;
+  } */

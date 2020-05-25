@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->integer('view_count')->default(0); // counting views :D   
+            $table->integer('role_id')->default(4);
             
             $table->softDeletes();
             $table->rememberToken();

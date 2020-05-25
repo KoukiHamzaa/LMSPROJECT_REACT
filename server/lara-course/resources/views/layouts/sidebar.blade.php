@@ -13,7 +13,16 @@
                 @if (Auth::guest())
                 <p>InfyOm</p>
                 @else
-                    <p>{{ Auth::user()->name}}</p>
+                    @if(Auth::user()->role_id == 1)
+                            <p><div class="role_center">© admin</div> <br/> {{ Auth::user()->name}}</p>
+                        @elseif(Auth::user()->role_id == 2)
+                            <p><div class="role_center">© moderator</div> <br/>  {{ Auth::user()->name}}</p>
+                        @elseif(Auth::user()->role_id == 3)
+                            <p><div class="role_center">© instructor</div> <br/>  {{ Auth::user()->name}}</p>
+                        @else 
+                        <p><div class="role_center">© student</div> <br/>  {{ Auth::user()->name}}</p>
+                    @endif
+
                 @endif
                 <!-- Status -->
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>

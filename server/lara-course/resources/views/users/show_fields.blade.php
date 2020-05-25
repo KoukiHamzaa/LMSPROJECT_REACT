@@ -58,6 +58,18 @@
     <p>{{ $user->view_count }}</p>
 </div>
 
+<!-- Role Id Field -->
+<div class="form-group">
+    {!! Form::label('role_id', 'Role Id:') !!}
+    <p>{{ $user->role_id }}</p>
+</div>
+
+<!-- Deleted At Field -->
+<div class="form-group">
+    {!! Form::label('deleted_at', 'Deleted At:') !!}
+    <p>{{ $user->deleted_at }}</p>
+</div>
+
 <!-- Remember Token Field -->
 <div class="form-group">
     {!! Form::label('remember_token', 'Remember Token:') !!}

@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class UserRepository
  * @package App\Repositories
- * @version May 20, 2020, 11:06 pm UTC
+ * @version May 25, 2020, 2:32 pm UTC
  *
  * @method User findWithoutFail($id, $columns = ['*'])
  * @method User find($id, $columns = ['*'])
@@ -29,6 +29,7 @@ class UserRepository extends BaseRepository
         'email',
         'password',
         'view_count',
+        'role_id',
         'remember_token'
     ];
 

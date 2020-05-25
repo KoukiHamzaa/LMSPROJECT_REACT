@@ -27,6 +27,8 @@
     <!-- Icon Place -->
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/PcGSCyQ/Ulearn.png" />
 
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}" />    
+
     @yield('css')
 </head>
 
@@ -38,7 +40,7 @@
 
             <!-- Logo -->
             <a href="#" class="logo">
-                <b>InfyOm</b>
+                <b>Ulearn</b>
             </a>
 
             <!-- Header Navbar -->

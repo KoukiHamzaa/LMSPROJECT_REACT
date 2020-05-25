@@ -17,6 +17,8 @@ $factory->define(User::class, function (Faker $faker) {
         'email' => $faker->word,
         'password' => $faker->word,
         'view_count' => $faker->randomDigitNotNull,
+        'role_id' => $faker->randomDigitNotNull,
+        'deleted_at' => $faker->date('Y-m-d H:i:s'),
         'remember_token' => $faker->word,
         'created_at' => $faker->date('Y-m-d H:i:s'),
         'updated_at' => $faker->date('Y-m-d H:i:s')
