@@ -1,0 +1,109 @@
+\babel@toc {french}{}
+\contentsline {chapter}{Introduction}{12}{chapter*.7}% 
+\contentsline {chapter}{\numberline {1}Contexte g\IeC {\'e}n\IeC {\'e}ral du projet}{14}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Pr\IeC {\'e}sentation de l\IeC {\textquoteright }organisme d\IeC {\textquoteright }accueil}{15}{section.1.1}% 
+\contentsline {subsection}{\numberline {1.1.1}Cadre g\IeC {\'e}n\IeC {\'e}ral de travail}{15}{subsection.1.1.1}% 
+\contentsline {subsection}{\numberline {1.1.2}Domaines d\IeC {\textquoteright }activit\IeC {\'e} de l'entreprise}{15}{subsection.1.1.2}% 
+\contentsline {subsection}{\numberline {1.1.3}Mission de l'entreprise}{15}{subsection.1.1.3}% 
+\contentsline {section}{\numberline {1.2}\IeC {\'E}tude de l'existant}{16}{section.1.2}% 
+\contentsline {subsection}{\numberline {1.2.1}Cadre du projet}{16}{subsection.1.2.1}% 
+\contentsline {subsection}{\numberline {1.2.2}Probl\IeC {\'e}matique}{16}{subsection.1.2.2}% 
+\contentsline {subsection}{\numberline {1.2.3}Solution propos\IeC {\'e}e}{17}{subsection.1.2.3}% 
+\contentsline {section}{\numberline {1.3}Planification et conduite du projet}{17}{section.1.3}% 
+\contentsline {subsection}{\numberline {1.3.1}D\IeC {\'e}marche adopt\IeC {\'e}e}{17}{subsection.1.3.1}% 
+\contentsline {subsubsection}{\numberline {1.3.1.1}presentation de la methode Scrum }{18}{subsubsection.1.3.1.1}% 
+\contentsline {subsubsection}{\numberline {1.3.1.2}Processus de d\IeC {\'e}veloppement}{18}{subsubsection.1.3.1.2}% 
+\contentsline {subsubsection}{\numberline {1.3.1.3}l'equipe Scrum}{19}{subsubsection.1.3.1.3}% 
+\contentsline {subsubsection}{\numberline {1.3.1.4}les \IeC {\'e}v\IeC {\'e}nements Scrum}{20}{subsubsection.1.3.1.4}% 
+\contentsline {subsection}{\numberline {1.3.2}Planning du projet}{20}{subsection.1.3.2}% 
+\contentsline {subsection}{\numberline {1.3.3}La mod\IeC {\'e}lisation objet}{23}{subsection.1.3.3}% 
+\contentsline {subsubsection}{\numberline {1.3.3.1}D\IeC {\'e}finition de UML}{23}{subsubsection.1.3.3.1}% 
+\contentsline {subsubsection}{\numberline {1.3.3.2}Processus de mod\IeC {\'e}lisation}{23}{subsubsection.1.3.3.2}% 
+\contentsline {section}{\numberline {1.4}Conclusion}{23}{section.1.4}% 
+\contentsline {chapter}{\numberline {2}Analyse et sp\IeC {\'e}cification des besoins}{24}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Sp\IeC {\'e}cifications des besoins}{25}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Identification des acteurs}{25}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}Les besoins fonctionnels}{26}{subsection.2.1.2}% 
+\contentsline {subsection}{\numberline {2.1.3}Les besoins non fonctionnels}{27}{subsection.2.1.3}% 
+\contentsline {section}{\numberline {2.2}Backlog produit}{28}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Planification des Sprints}{29}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Backlog des Sprints}{29}{subsection.2.2.2}% 
+\contentsline {section}{\numberline {2.3}Diagrammes des cas d'utilisation global}{30}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}Diagrammes de classes global}{31}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Conclusion}{36}{section.2.5}% 
+\contentsline {chapter}{\numberline {3}La r\IeC {\'e}alisation}{37}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Sprint 1 : Utilisateur }{38}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}item 1 : Authentification}{40}{subsection.3.1.1}% 
+\contentsline {subsubsection}{\numberline {3.1.1.1}Diagramme de cas d\IeC {\textquoteright }utilisation }{40}{subsubsection.3.1.1.1}% 
+\contentsline {subsubsubsection}{\numberline {3.1.1.1.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{40}{subsubsubsection.3.1.1.1.1}% 
+\contentsline {subsubsection}{\numberline {3.1.1.2}Diagrammes de s\IeC {\'e}quence syst\IeC {\`e}me }{41}{subsubsection.3.1.1.2}% 
+\contentsline {subsection}{\numberline {3.1.2}item 2 : G\IeC {\'e}rer le profil}{42}{subsection.3.1.2}% 
+\contentsline {subsubsection}{\numberline {3.1.2.1}Diagramme de cas d\IeC {\textquoteright }utilisation }{42}{subsubsection.3.1.2.1}% 
+\contentsline {subsection}{\numberline {3.1.3}item 3 : Modification de r\IeC {\^o}le}{44}{subsection.3.1.3}% 
+\contentsline {subsubsection}{\numberline {3.1.3.1}Diagrammes de s\IeC {\'e}quence syst\IeC {\`e}me }{44}{subsubsection.3.1.3.1}% 
+\contentsline {section}{\numberline {3.2}Sprint 2 : Administration }{45}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}item 1 : G\IeC {\'e}rer les utilisateurs}{47}{subsection.3.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.1.1}Diagramme de cas d\IeC {\textquoteright }utilisation d\IeC {\'e}taill\IeC {\'e} \IeC {\guillemotleft }administrer du site de t\IeC {\'e}l\IeC {\'e}formation\IeC {\guillemotright } }{47}{subsubsection.3.2.1.1}% 
+\contentsline {subsubsubsection}{\numberline {3.2.1.1.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{47}{subsubsubsection.3.2.1.1.1}% 
+\contentsline {subsubsubsection}{\numberline {3.2.1.1.b}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{48}{subsubsubsection.3.2.1.1.2}% 
+\contentsline {subsubsection}{\numberline {3.2.1.2}Diagrammes de s\IeC {\'e}quence du cas d' utilisation "Modifier un utilisateur" }{49}{subsubsection.3.2.1.2}% 
+\contentsline {subsubsubsection}{\numberline {3.2.1.2.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{49}{subsubsubsection.3.2.1.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.1.3}Diagramme de s\IeC {\'e}quence du cas d' utilisation "Supprimer un utilisateur" }{50}{subsubsection.3.2.1.3}% 
+\contentsline {subsubsubsection}{\numberline {3.2.1.3.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{51}{subsubsubsection.3.2.1.3.1}% 
+\contentsline {subsubsection}{\numberline {3.2.1.4}Diagrammes de s\IeC {\'e}quence du cas d' utilisation "Ajouter un utilisateur" }{51}{subsubsection.3.2.1.4}% 
+\contentsline {subsubsubsection}{\numberline {3.2.1.4.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{52}{subsubsubsection.3.2.1.4.1}% 
+\contentsline {subsubsection}{\numberline {3.2.1.5}Diagramme de s\IeC {\'e}quence \IeC {\guillemotleft } d' ajout d'un professeur \IeC {\guillemotright } }{53}{subsubsection.3.2.1.5}% 
+\contentsline {subsubsubsection}{\numberline {3.2.1.5.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{54}{subsubsubsection.3.2.1.5.1}% 
+\contentsline {subsubsection}{\numberline {3.2.1.6}Diagramme d\IeC {\textquoteright }activit\IeC {\'e}s \IeC {\guillemotleft } G\IeC {\'e}rer les utilisateurs \IeC {\guillemotright } }{54}{subsubsection.3.2.1.6}% 
+\contentsline {subsubsubsection}{\numberline {3.2.1.6.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{55}{subsubsubsection.3.2.1.6.1}% 
+\contentsline {subsection}{\numberline {3.2.2}item 2 : Inscription et r\IeC {\'e}inscription d'un \IeC {\'e}tudiant}{56}{subsection.3.2.2}% 
+\contentsline {subsubsection}{\numberline {3.2.2.1}Diagramme de s\IeC {\'e}quence \IeC {\guillemotleft } d' inscription d' un \IeC {\'e}tudiant \IeC {\guillemotright } }{56}{subsubsection.3.2.2.1}% 
+\contentsline {subsubsubsection}{\numberline {3.2.2.1.a}Description : Diagramme de s\IeC {\'e}quence \IeC {\guillemotleft } d' inscription d' un \IeC {\'e}tudiant \IeC {\guillemotright } }{56}{subsubsubsection.3.2.2.1.1}% 
+\contentsline {subsubsection}{\numberline {3.2.2.2}Diagramme d'activit\IeC {\'e}s \IeC {\guillemotleft } d'inscription d'un \IeC {\'e}tudiant\IeC {\guillemotright } }{57}{subsubsection.3.2.2.2}% 
+\contentsline {subsubsubsection}{\numberline {3.2.2.2.a} Description du processus de diagramme d\IeC {\textquoteright }activit\IeC {\'e}s \IeC {\guillemotleft }Inscription d\IeC {\textquoteright }un \IeC {\'e}l\IeC {\`e}ve\IeC {\guillemotright } :}{57}{subsubsubsection.3.2.2.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.2.3}Diagramme de collaboration \IeC {\guillemotleft }r\IeC {\'e}inscription d' un \IeC {\'e}tudiant\IeC {\guillemotright }}{58}{subsubsection.3.2.2.3}% 
+\contentsline {subsubsubsection}{\numberline {3.2.2.3.a}Description : Diagramme de collaboration \IeC {\guillemotleft }r\IeC {\'e}inscription d' un \IeC {\'e}tudiant\IeC {\guillemotright }}{59}{subsubsubsection.3.2.2.3.1}% 
+\contentsline {subsubsection}{\numberline {3.2.2.4}Diagramme d' activit\IeC {\'e}s \IeC {\guillemotleft } d' affectation des notes \IeC {\'e}tudiant \IeC {\guillemotright } }{59}{subsubsection.3.2.2.4}% 
+\contentsline {subsubsubsection}{\numberline {3.2.2.4.a}Description du processus de diagramme d\IeC {\textquoteright }activit\IeC {\'e}s \IeC {\guillemotleft }Affecter les notes d\IeC {\textquoteright }\IeC {\'e}l\IeC {\`e}ves\IeC {\guillemotright } :}{60}{subsubsubsection.3.2.2.4.1}% 
+\contentsline {section}{\numberline {3.3}Sprint 3 : Enseignants }{61}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}item 1 : G\IeC {\'e}rer les cours}{63}{subsection.3.3.1}% 
+\contentsline {subsubsection}{\numberline {3.3.1.1}Diagramme de cas d\IeC {\textquoteright }utilisation d\IeC {\'e}taill\IeC {\'e} \IeC {\guillemotleft }administrer du site de t\IeC {\'e}l\IeC {\'e}formation\IeC {\guillemotright } }{63}{subsubsection.3.3.1.1}% 
+\contentsline {subsubsubsection}{\numberline {3.3.1.1.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{63}{subsubsubsection.3.3.1.1.1}% 
+\contentsline {subsubsection}{\numberline {3.3.1.2}Diagramme des cas d' utilisation G\IeC {\'e}rer les cours }{63}{subsubsection.3.3.1.2}% 
+\contentsline {subsubsubsection}{\numberline {3.3.1.2.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{64}{subsubsubsection.3.3.1.2.1}% 
+\contentsline {subsubsection}{\numberline {3.3.1.3}diagramme de s\IeC {\'e}quences }{65}{subsubsection.3.3.1.3}% 
+\contentsline {subsubsubsection}{\numberline {3.3.1.3.a}Description :Diagramme de s\IeC {\'e}quence "Gerer les cours"}{65}{subsubsubsection.3.3.1.3.1}% 
+\contentsline {subsubsection}{\numberline {3.3.1.4}diagramme de s\IeC {\'e}quences }{65}{subsubsection.3.3.1.4}% 
+\contentsline {subsubsubsection}{\numberline {3.3.1.4.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{66}{subsubsubsection.3.3.1.4.1}% 
+\contentsline {subsubsection}{\numberline {3.3.1.5}diagramme de s\IeC {\'e}quences }{66}{subsubsection.3.3.1.5}% 
+\contentsline {subsubsubsection}{\numberline {3.3.1.5.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{67}{subsubsubsection.3.3.1.5.1}% 
+\contentsline {subsection}{\numberline {3.3.2}item 2 : G\IeC {\'e}rer les tests}{68}{subsection.3.3.2}% 
+\contentsline {subsubsection}{\numberline {3.3.2.1}diagramme de s\IeC {\'e}quences }{68}{subsubsection.3.3.2.1}% 
+\contentsline {subsubsubsection}{\numberline {3.3.2.1.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{68}{subsubsubsection.3.3.2.1.1}% 
+\contentsline {subsubsection}{\numberline {3.3.2.2}diagramme de s\IeC {\'e}quences }{69}{subsubsection.3.3.2.2}% 
+\contentsline {subsubsubsection}{\numberline {3.3.2.2.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{69}{subsubsubsection.3.3.2.2.1}% 
+\contentsline {section}{\numberline {3.4}Sprint 4 : \IeC {\'E}tudiant}{70}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}item 1 : Consulter les ressources et les liens d'apprentissage}{72}{subsection.3.4.1}% 
+\contentsline {subsubsection}{\numberline {3.4.1.1}Diagramme de cas d\IeC {\textquoteright }utilisation d\IeC {\'e}taill\IeC {\'e} \IeC {\guillemotleft }administrer du site de t\IeC {\'e}l\IeC {\'e}formation\IeC {\guillemotright } }{72}{subsubsection.3.4.1.1}% 
+\contentsline {subsubsubsection}{\numberline {3.4.1.1.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{72}{subsubsubsection.3.4.1.1.1}% 
+\contentsline {subsubsection}{\numberline {3.4.1.2}diagramme de s\IeC {\'e}quences }{72}{subsubsection.3.4.1.2}% 
+\contentsline {subsubsubsection}{\numberline {3.4.1.2.a}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{73}{subsubsubsection.3.4.1.2.1}% 
+\contentsline {subsection}{\numberline {3.4.2}item 2 : Consulter agenda des livrables}{74}{subsection.3.4.2}% 
+\contentsline {subsubsection}{\numberline {3.4.2.1}diagramme de s\IeC {\'e}quences }{74}{subsubsection.3.4.2.1}% 
+\contentsline {subsubsubsection}{\numberline {3.4.2.1.a}Description : Diagramme de s\IeC {\'e}quences consulter agenda des livrables}{74}{subsubsubsection.3.4.2.1.1}% 
+\contentsline {subsection}{\numberline {3.4.3}item 3 : Passer les examens}{75}{subsection.3.4.3}% 
+\contentsline {subsubsection}{\numberline {3.4.3.1}Diagramme de cas d\IeC {\textquoteright }utilisation }{75}{subsubsection.3.4.3.1}% 
+\contentsline {subsubsubsection}{\numberline {3.4.3.1.a}Description :Diagramme de s\IeC {\'e}quence " Passer les examens"}{75}{subsubsubsection.3.4.3.1.1}% 
+\contentsline {subsubsubsection}{\numberline {3.4.3.1.b}Description d\IeC {\'e}taill\IeC {\'e}e des cas d\IeC {\textquoteright }utilisations}{76}{subsubsubsection.3.4.3.1.2}% 
+\contentsline {section}{\numberline {3.5}Conclusion}{77}{section.3.5}% 
+\contentsline {chapter}{\numberline {4}Mise en oeuvre de la solution}{78}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Introduction :}{79}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Environnement de travail : Outils et technologies utilis\IeC {\'e}es }{79}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Environnement mat\IeC {\'e}riel}{79}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Environnement logiciel}{79}{subsection.4.2.2}% 
+\contentsline {subsubsection}{\numberline {4.2.2.1}Outils de d\IeC {\'e}veloppement et mod\IeC {\'e}lisation :}{79}{subsubsection.4.2.2.1}% 
+\contentsline {subsubsection}{\numberline {4.2.2.2}Langages de programmation :}{81}{subsubsection.4.2.2.2}% 
+\contentsline {subsection}{\numberline {4.2.3}Outils de d\IeC {\'e}veloppement et de collaboration :}{82}{subsection.4.2.3}% 
+\contentsline {subsubsection}{\numberline {4.2.3.1}Le syst\IeC {\`e}me de contr\IeC {\^o}le des versions GIT :}{82}{subsubsection.4.2.3.1}% 
+\contentsline {section}{\numberline {4.3}Conclusion}{83}{section.4.3}% 
+\contentsline {chapter}{Webographie}{84}{chapter*.71}% 

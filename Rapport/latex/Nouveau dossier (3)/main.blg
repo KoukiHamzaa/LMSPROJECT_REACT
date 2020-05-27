@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: sansnom-3.aux
+A level-1 auxiliary file: 01-Dedicace.aux
+A level-1 auxiliary file: 01-Dedicace-2.aux
+A level-1 auxiliary file: 02-Remerciements.aux
+A level-1 auxiliary file: 03-Resume.aux
+A level-1 auxiliary file: 04-Acronymes.aux
+A level-1 auxiliary file: 05-Introduction.aux
+A level-1 auxiliary file: 06-Contexte.aux
+A level-1 auxiliary file: 07-Analyse.aux
+A level-1 auxiliary file: 08-Conception.aux
+A level-1 auxiliary file: 09-Realisation.aux
+The style file: ieeetr.bst
+Database file #1: references.bib
+You've used 8 entries,
+            1876 wiz_defined-function locations,
+            527 strings with 5131 characters,
+and the built_in function-call counts, 1110 in all, are:
+= -- 112
+> -- 32
+< -- 0
++ -- 16
+- -- 8
+* -- 42
+:= -- 171
+add.period$ -- 16
+call.type$ -- 8
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 32
+empty$ -- 145
+format.name$ -- 8
+if$ -- 281
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 0
+newline$ -- 35
+num.names$ -- 8
+pop$ -- 48
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 24
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 8
+width$ -- 9
+write$ -- 82
