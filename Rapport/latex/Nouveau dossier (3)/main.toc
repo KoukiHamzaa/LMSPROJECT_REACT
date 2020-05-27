@@ -98,18 +98,12 @@
 \contentsline {section}{\numberline {3.5}Conclusion}{77}{section.3.5}% 
 \contentsline {chapter}{\numberline {4}Mise en oeuvre de la solution}{78}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Introduction :}{79}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Outils et technologies utilis\IeC {\'e}es :}{79}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}La plateforme Java EE}{79}{subsection.4.2.1}% 
-\contentsline {subsection}{\numberline {4.2.2}La plateforme SAP Hybris}{79}{subsection.4.2.2}% 
-\contentsline {subsection}{\numberline {4.2.3}Outils de d\IeC {\'e}veloppement et de collaboration :}{81}{subsection.4.2.3}% 
-\contentsline {subsubsection}{\numberline {4.2.3.1}L'IDE IntelliJ IDEA :}{81}{subsubsection.4.2.3.1}% 
-\contentsline {subsubsection}{\numberline {4.2.3.2}Le syst\IeC {\`e}me de contr\IeC {\^o}le des versions GIT :}{81}{subsubsection.4.2.3.2}% 
-\contentsline {subsubsection}{\numberline {4.2.3.3}Atlassian JIRA :}{81}{subsubsection.4.2.3.3}% 
-\contentsline {section}{\numberline {4.3}Quelques interfaces de la plate-forme}{81}{section.4.3}% 
-\contentsline {subsection}{\numberline {4.3.1}La page de Login}{82}{subsection.4.3.1}% 
-\contentsline {subsection}{\numberline {4.3.2}La Vue Administration}{82}{subsection.4.3.2}% 
-\contentsline {subsection}{\numberline {4.3.3}La Vue Catalogue}{83}{subsection.4.3.3}% 
-\contentsline {subsection}{\numberline {4.3.4}La Vue Cat\IeC {\'e}gories}{83}{subsection.4.3.4}% 
-\contentsline {subsection}{\numberline {4.3.5}La Vue Dashboard}{83}{subsection.4.3.5}% 
-\contentsline {section}{\numberline {4.4}Conclusion}{84}{section.4.4}% 
-\contentsline {chapter}{Webographie}{85}{chapter*.65}% 
+\contentsline {section}{\numberline {4.2}Environnement de travail : Outils et technologies utilis\IeC {\'e}es }{79}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Environnement mat\IeC {\'e}riel}{79}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Environnement logiciel}{79}{subsection.4.2.2}% 
+\contentsline {subsubsection}{\numberline {4.2.2.1}Outils de d\IeC {\'e}veloppement et mod\IeC {\'e}lisation :}{79}{subsubsection.4.2.2.1}% 
+\contentsline {subsubsection}{\numberline {4.2.2.2}Langages de programmation :}{81}{subsubsection.4.2.2.2}% 
+\contentsline {subsection}{\numberline {4.2.3}Outils de d\IeC {\'e}veloppement et de collaboration :}{82}{subsection.4.2.3}% 
+\contentsline {subsubsection}{\numberline {4.2.3.1}Le syst\IeC {\`e}me de contr\IeC {\^o}le des versions GIT :}{82}{subsubsection.4.2.3.1}% 
+\contentsline {section}{\numberline {4.3}Conclusion}{83}{section.4.3}% 
+\contentsline {chapter}{Webographie}{84}{chapter*.71}% 

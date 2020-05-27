@@ -97,18 +97,12 @@
 \BOOKMARK [1][-]{section.3.5}{Conclusion}{subsubsubsection.3.4.3.1.2}% 97
 \BOOKMARK [0][-]{chapter.4}{Mise en oeuvre de la solution}{}% 98
 \BOOKMARK [1][-]{section.4.1}{Introduction :}{chapter.4}% 99
-\BOOKMARK [1][-]{section.4.2}{Outils et technologies utilis\351es :}{chapter.4}% 100
-\BOOKMARK [2][-]{subsection.4.2.1}{La plateforme Java EE}{section.4.2}% 101
-\BOOKMARK [2][-]{subsection.4.2.2}{La plateforme SAP Hybris}{section.4.2}% 102
-\BOOKMARK [2][-]{subsection.4.2.3}{Outils de d\351veloppement et de collaboration :}{section.4.2}% 103
-\BOOKMARK [3][-]{subsubsection.4.2.3.1}{L'IDE IntelliJ IDEA :}{subsection.4.2.3}% 104
-\BOOKMARK [3][-]{subsubsection.4.2.3.2}{Le syst\350me de contr\364le des versions GIT :}{subsection.4.2.3}% 105
-\BOOKMARK [3][-]{subsubsection.4.2.3.3}{Atlassian JIRA :}{subsection.4.2.3}% 106
-\BOOKMARK [1][-]{section.4.3}{Quelques interfaces de la plate-forme}{chapter.4}% 107
-\BOOKMARK [2][-]{subsection.4.3.1}{La page de Login}{section.4.3}% 108
-\BOOKMARK [2][-]{subsection.4.3.2}{La Vue Administration}{section.4.3}% 109
-\BOOKMARK [2][-]{subsection.4.3.3}{La Vue Catalogue}{section.4.3}% 110
-\BOOKMARK [2][-]{subsection.4.3.4}{La Vue Cat\351gories}{section.4.3}% 111
-\BOOKMARK [2][-]{subsection.4.3.5}{La Vue Dashboard}{section.4.3}% 112
-\BOOKMARK [1][-]{section.4.4}{Conclusion}{chapter.4}% 113
-\BOOKMARK [0][-]{chapter*.65}{Webographie}{}% 114
+\BOOKMARK [1][-]{section.4.2}{Environnement de travail : Outils et technologies utilis\351es }{chapter.4}% 100
+\BOOKMARK [2][-]{subsection.4.2.1}{Environnement mat\351riel}{section.4.2}% 101
+\BOOKMARK [2][-]{subsection.4.2.2}{Environnement logiciel}{section.4.2}% 102
+\BOOKMARK [3][-]{subsubsection.4.2.2.1}{Outils de d\351veloppement et mod\351lisation :}{subsection.4.2.2}% 103
+\BOOKMARK [3][-]{subsubsection.4.2.2.2}{Langages de programmation :}{subsection.4.2.2}% 104
+\BOOKMARK [2][-]{subsection.4.2.3}{Outils de d\351veloppement et de collaboration :}{section.4.2}% 105
+\BOOKMARK [3][-]{subsubsection.4.2.3.1}{Le syst\350me de contr\364le des versions GIT :}{subsection.4.2.3}% 106
+\BOOKMARK [1][-]{section.4.3}{Conclusion}{chapter.4}% 107
+\BOOKMARK [0][-]{chapter*.71}{Webographie}{}% 108
