@@ -14,36 +14,36 @@ A level-1 auxiliary file: 08-Conception.aux
 A level-1 auxiliary file: 09-Realisation.aux
 The style file: ieeetr.bst
 Database file #1: references.bib
-You've used 8 entries,
+You've used 10 entries,
             1876 wiz_defined-function locations,
-            527 strings with 5131 characters,
-and the built_in function-call counts, 1110 in all, are:
-= -- 112
-> -- 32
+            536 strings with 5649 characters,
+and the built_in function-call counts, 1384 in all, are:
+= -- 140
+> -- 40
 < -- 0
-+ -- 16
-- -- 8
-* -- 42
-:= -- 171
-add.period$ -- 16
-call.type$ -- 8
-change.case$ -- 8
++ -- 20
+- -- 10
+* -- 52
+:= -- 213
+add.period$ -- 20
+call.type$ -- 10
+change.case$ -- 10
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 32
-empty$ -- 145
-format.name$ -- 8
-if$ -- 281
+cite$ -- 10
+duplicate$ -- 40
+empty$ -- 181
+format.name$ -- 10
+if$ -- 351
 int.to.chr$ -- 0
-int.to.str$ -- 8
+int.to.str$ -- 10
 missing$ -- 0
-newline$ -- 35
-num.names$ -- 8
-pop$ -- 48
+newline$ -- 43
+num.names$ -- 10
+pop$ -- 60
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 24
+skip$ -- 29
 stack$ -- 0
 substring$ -- 0
 swap$ -- 0
@@ -52,6 +52,6 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 8
-width$ -- 9
-write$ -- 82
+while$ -- 10
+width$ -- 12
+write$ -- 102

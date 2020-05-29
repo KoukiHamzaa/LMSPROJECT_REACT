@@ -103,7 +103,6 @@
 \contentsline {subsection}{\numberline {4.2.2}Environnement logiciel}{79}{subsection.4.2.2}% 
 \contentsline {subsubsection}{\numberline {4.2.2.1}Outils de d\IeC {\'e}veloppement et mod\IeC {\'e}lisation :}{79}{subsubsection.4.2.2.1}% 
 \contentsline {subsubsection}{\numberline {4.2.2.2}Langages de programmation :}{81}{subsubsection.4.2.2.2}% 
-\contentsline {subsection}{\numberline {4.2.3}Outils de d\IeC {\'e}veloppement et de collaboration :}{82}{subsection.4.2.3}% 
-\contentsline {subsubsection}{\numberline {4.2.3.1}Le syst\IeC {\`e}me de contr\IeC {\^o}le des versions GIT :}{82}{subsubsection.4.2.3.1}% 
-\contentsline {section}{\numberline {4.3}Conclusion}{83}{section.4.3}% 
-\contentsline {chapter}{Webographie}{84}{chapter*.71}% 
+\contentsline {subsection}{\numberline {4.2.3}Outils de d\IeC {\'e}veloppement et de collaboration :}{83}{subsection.4.2.3}% 
+\contentsline {section}{\numberline {4.3}Conclusion}{84}{section.4.3}% 
+\contentsline {chapter}{Webographie}{85}{chapter*.74}% 

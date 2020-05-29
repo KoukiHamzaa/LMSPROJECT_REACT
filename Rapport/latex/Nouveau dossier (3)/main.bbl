@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{wiki:sqli}
 Wikipédia, ``Sqli --- wikipédia{,} l'encyclopédie libre.''
@@ -40,6 +40,20 @@ Wikipedia, ``{Hypertext Markup Language} --- {W}ikipedia{,} the free
   \url{http://de.wikipedia.org/w/index.php?title=Hypertext\%20Markup\%20Language&oldid=199154733},
   2020.
 \newblock [Online; accessed 26-May-2020].
+
+\bibitem{wiki:Feuilles_de_style_en_cascade}
+Wikipedia, ``{Feuilles de style en cascade} --- {W}ikipedia{,} the free
+  encyclopedia.''
+  \url{http://fr.wikipedia.org/w/index.php?title=Feuilles\%20de\%20style\%20en\%20cascade&oldid=169651943},
+  2020.
+\newblock [Online; accessed 28-May-2020].
+
+\bibitem{wiki:Bootstrap_(front-end_framework)}
+Wikipedia, ``{Bootstrap (front-end framework)} --- {W}ikipedia{,} the free
+  encyclopedia.''
+  \url{http://en.wikipedia.org/w/index.php?title=Bootstrap\%20(front-end\%20framework)&oldid=956816409},
+  2020.
+\newblock [Online; accessed 28-May-2020].
 
 \bibitem{wiki:git}
 Wikipédia, ``Git --- wikipédia{,} l'encyclopédie libre.''
