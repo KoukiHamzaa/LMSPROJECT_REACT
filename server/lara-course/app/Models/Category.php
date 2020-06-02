@@ -32,7 +32,7 @@ class Category extends Model
         'name',
         'description',
         'view_count',
-        'categories_photos'
+        // 'categories_photos'
     ];
 
     /**

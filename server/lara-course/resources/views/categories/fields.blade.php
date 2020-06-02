@@ -13,7 +13,7 @@
 <!-- categories_photos Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('categories_photos', 'Add Categories Photos:') !!}
-    {!! Form::textarea('categories_photos', null, ['class' => 'form-control']) !!}
+    {!! Form::text('categories_photos', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- View Count Field -->
