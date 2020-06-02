@@ -16,6 +16,12 @@
     <p>{{ $category->description }}</p>
 </div>
 
+<!-- categories_photos Field -->
+<div class="form-group">
+    {!! Form::label('categories_photos', 'Categories Photos:') !!}
+    <p>{{ $category->categories_photos }}</p>
+</div>
+
 <!-- View Count Field -->
 <div class="form-group">
     {!! Form::label('view_count', 'View Count:') !!}

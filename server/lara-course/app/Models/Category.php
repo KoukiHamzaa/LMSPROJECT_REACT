@@ -31,7 +31,8 @@ class Category extends Model
     public $fillable = [
         'name',
         'description',
-        'view_count'
+        'view_count',
+        'categories_photos'
     ];
 
     /**

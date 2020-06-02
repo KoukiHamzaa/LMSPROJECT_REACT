@@ -10,6 +10,12 @@
     {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- categories_photos Field -->
+<div class="form-group col-sm-12 col-lg-12">
+    {!! Form::label('categories_photos', 'Add Categories Photos:') !!}
+    {!! Form::textarea('categories_photos', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- View Count Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('view_count', 'View Count:') !!}

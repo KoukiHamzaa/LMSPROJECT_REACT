@@ -17,6 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->longText('description');
+            $table->longText('categories_photos');
             $table->integer('view_count')->default(0);
             $table->softDeletes();
             $table->timestamps();

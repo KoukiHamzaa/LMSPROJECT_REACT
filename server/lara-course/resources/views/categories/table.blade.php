@@ -5,7 +5,7 @@
 			<div class="col-sm-4">
 				<div class="card">
 						<!-- <img class="card-img-top" src="http://placehold.jp/230x180.png" alt="Card image cap" width="230" height="180"> -->
-						<img class="card-img-top" src="https://www.agencemit.com/files/2019-08/iot.png" alt="Card image cap" width="230" height="180">
+						<img class="card-img-top" src="{{ $category->categories_photos }}" alt="Card image cap" width="230" height="180">
 						
 						<div class="card-body">
 							<h5 class="card-title">{!! $category->name !!}</h5>
