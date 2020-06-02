@@ -105,7 +105,10 @@
 
         <!-- Main Footer -->
         <footer class="main-footer" style="max-height: 100px;text-align: center">
-            <strong>Copyright © 2016 <a href="#">Company</a>.</strong> All rights reserved.
+            <strong>Copyright © 2020 
+                <img src="https://www.n-3rd.com/wp-content/uploads/2019/09/cropped-n-3rd-logo-110-32x32.png" width="15" height="15" alt="icon_copyright">.
+                <a href="https://www.n-3rd.com">N3RD</a>
+            </strong> All rights reserved.
         </footer>
 
     </div>
