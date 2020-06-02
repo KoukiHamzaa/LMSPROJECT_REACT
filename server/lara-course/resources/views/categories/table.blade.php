@@ -1,46 +1,38 @@
-<div class="table-responsive">
-    <table class="table" id="categories-table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>View Count</th>
-                <th colspan="3">Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <div class="card" style="width: 18rem;">
-                @foreach($categories as $category)
-                    <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                <tr>
-                    <td>{{ $category->name }}</td>
-                    <td>{{ $category->description }}</td>
-                    <td>{{ $category->view_count }}</td>
-                    <td>
-                        {!! Form::open(['route' => ['categories.destroy', $category->id], 'method' => 'delete']) !!}
-                        <div class='btn-group'>
-                            <a href="{{ route('categories.show', [$category->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
-                            <a href="{{ route('categories.edit', [$category->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                            {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
-                        </div>
-                        {!! Form::close() !!}
-                    </td>
-                </tr>
-            @endforeach
-    </div>    
-        </tbody>
-    </table>
+<!-- <div class="card-columns"> -->
+<div class="card-deck">
+    <div class="row">
+		@foreach($categories as $category)
+			<div class="col-sm-4">
+				<div class="card">
+						<!-- <img class="card-img-top" src="http://placehold.jp/230x180.png" alt="Card image cap" width="230" height="180"> -->
+						<img class="card-img-top" src="https://www.agencemit.com/files/2019-08/iot.png" alt="Card image cap" width="230" height="180">
+						
+						<div class="card-body">
+							<h5 class="card-title">{!! $category->name !!}</h5>
+							<p class="card-text">
+							{{ \Illuminate\Support\Str::limit($category->description, 150, $end='...') }}
+							</p> 
+							<ul class="list-group list-group-flush">
+									<!-- <li class="list-group-item">{!! $category->view_count !!}</li> -->
+									<small class="text-muted">Views :{{ $category->view_count }}</small>
+							</ul>
+						</div>
+						
+						<div class="card-footer">
+							{!! Form::open(['route' => ['categories.destroy', $category->id], 'method' => 'delete']) !!}
+									<!-- <div class='btn-group'> -->
+									<div class="btn-toolbar">
+									<a href="{{ route('categories.show', [$category->id]) }}" class="btn btn-primary" >View Category</a>
+								@if(Auth::user()->role_id < 3)
+									<a href="{{ route('categories.edit', [$category->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
+									{!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+								@endif 
+									</div>
+								{!! Form::close() !!}
+						</div>
+						
+				</div>
+			</div>    <!-- the end of col sm - 3  -->
+		@endforeach
+    </div> <!-- the end of row -->
 </div>
