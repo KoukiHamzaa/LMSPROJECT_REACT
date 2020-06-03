@@ -17,10 +17,12 @@
 </div>
 
 <!-- View Count Field -->
-<div class="form-group col-sm-6">
+<!-- <div class="form-group col-sm-6">
     {!! Form::label('view_count', 'View Count:') !!}
     {!! Form::number('view_count', null, ['class' => 'form-control']) !!}
-</div>
+
+</div> -->
+
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
