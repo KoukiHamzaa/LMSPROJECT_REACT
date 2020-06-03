@@ -44,6 +44,17 @@
         "inIndex": true
     },
     {
+        "name": "sub_title",
+        "dbType": "string,255",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
         "name": "description",
         "dbType": "text",
         "htmlType": "textarea",
@@ -56,9 +67,108 @@
     },
     {
         "name": "about_instructor",
-        "dbType": "text",
+        "dbType": "text:nullable",
         "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "playlist_url",
+        "dbType": "string,255",
+        "htmlType": "text",
         "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "photo",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "promo_video_url",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "tags",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "creator_status",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "admin_status",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "what_will_student_learn",
+        "dbType": "text:nullable",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "target_student",
+        "dbType": "text:nullable",
+        "htmlType": "textarea",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "requirements",
+        "dbType": "text:nullable",
+        "htmlType": "textarea",
+        "validations": null,
         "searchable": true,
         "fillable": true,
         "primary": false,
@@ -80,17 +190,6 @@
         "name": "actual_price",
         "dbType": "float,10,2",
         "htmlType": null,
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true
-    },
-    {
-        "name": "playlist_url",
-        "dbType": "string,255",
-        "htmlType": "text",
         "validations": "required",
         "searchable": true,
         "fillable": true,
@@ -121,28 +220,6 @@
         "inIndex": true
     },
     {
-        "name": "status",
-        "dbType": "integer,false",
-        "htmlType": null,
-        "validations": "required",
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true
-    },
-    {
-        "name": "photo",
-        "dbType": "string,255:nullable",
-        "htmlType": "text",
-        "validations": null,
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true
-    },
-    {
         "name": "deleted_at",
         "dbType": "datetime:nullable",
         "htmlType": "date",
@@ -155,9 +232,9 @@
     },
     {
         "name": "created_at",
-        "dbType": "datetime",
+        "dbType": "datetime:nullable",
         "htmlType": "date",
-        "validations": "required",
+        "validations": null,
         "searchable": false,
         "fillable": false,
         "primary": false,
@@ -166,9 +243,9 @@
     },
     {
         "name": "updated_at",
-        "dbType": "datetime",
+        "dbType": "datetime:nullable",
         "htmlType": "date",
-        "validations": "required",
+        "validations": null,
         "searchable": false,
         "fillable": false,
         "primary": false,

@@ -1,27 +1,51 @@
 <div class="table-responsive">
     <table class="table" id="courses-table">
         <thead>
+            <tr>
+                <th>User Id</th>
+        <th>Category Id</th>
+        <th>Title</th>
+        <th>Sub Title</th>
         <th>Description</th>
+        <th>About Instructor</th>
+        <th>Playlist Url</th>
+        <th>Photo</th>
+        <th>Promo Video Url</th>
+        <th>Tags</th>
+        <th>Creator Status</th>
+        <th>Admin Status</th>
+        <th>What Will Student Learn</th>
+        <th>Target Student</th>
+        <th>Requirements</th>
         <th>Discount Price</th>
         <th>Actual Price</th>
         <th>View Count</th>
         <th>Subscriber Count</th>
-        <th>Status</th>
-        <th>Photo</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
         <tbody>
         @foreach($courses as $course)
-
-            <b class="w-100">{{ $course->title }}</b>
-            <td>{{ $course->photo }}</td>
+            <tr>
+                <td>{{ $course->user_id }}</td>
+            <td>{{ $course->category_id }}</td>
+            <td>{{ $course->title }}</td>
+            <td>{{ $course->sub_title }}</td>
             <td>{{ $course->description }}</td>
+            <td>{{ $course->about_instructor }}</td>
+            <td>{{ $course->playlist_url }}</td>
+            <td>{{ $course->photo }}</td>
+            <td>{{ $course->promo_video_url }}</td>
+            <td>{{ $course->tags }}</td>
+            <td>{{ $course->creator_status }}</td>
+            <td>{{ $course->admin_status }}</td>
+            <td>{{ $course->what_will_student_learn }}</td>
+            <td>{{ $course->target_student }}</td>
+            <td>{{ $course->requirements }}</td>
             <td>{{ $course->discount_price }}</td>
             <td>{{ $course->actual_price }}</td>
             <td>{{ $course->view_count }}</td>
             <td>{{ $course->subscriber_count }}</td>
-            <td>{{ $course->status }}</td>
                 <td>
                     {!! Form::open(['route' => ['courses.destroy', $course->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

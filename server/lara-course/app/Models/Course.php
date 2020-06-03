@@ -8,20 +8,27 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Course
  * @package App\Models
- * @version May 20, 2020, 9:11 pm UTC
+ * @version June 3, 2020, 4:37 pm UTC
  *
  * @property integer user_id
  * @property integer category_id
  * @property string title
+ * @property string sub_title
  * @property string description
  * @property string about_instructor
+ * @property string playlist_url
+ * @property string photo
+ * @property string promo_video_url
+ * @property string tags
+ * @property integer creator_status
+ * @property integer admin_status
+ * @property string what_will_student_learn
+ * @property string target_student
+ * @property string requirements
  * @property number discount_price
  * @property number actual_price
- * @property string playlist_url
  * @property integer view_count
  * @property integer subscriber_count
- * @property integer status
- * @property string photo
  */
 class Course extends Model
 {
@@ -41,15 +48,22 @@ class Course extends Model
         'user_id',
         'category_id',
         'title',
+        'sub_title',
         'description',
         'about_instructor',
+        'playlist_url',
+        'photo',
+        'promo_video_url',
+        'tags',
+        'creator_status',
+        'admin_status',
+        'what_will_student_learn',
+        'target_student',
+        'requirements',
         'discount_price',
         'actual_price',
-        'playlist_url',
         'view_count',
-        'subscriber_count',
-        'status',
-        'photo'
+        'subscriber_count'
     ];
 
     /**
@@ -62,15 +76,22 @@ class Course extends Model
         'user_id' => 'integer',
         'category_id' => 'integer',
         'title' => 'string',
+        'sub_title' => 'string',
         'description' => 'string',
         'about_instructor' => 'string',
+        'playlist_url' => 'string',
+        'photo' => 'string',
+        'promo_video_url' => 'string',
+        'tags' => 'string',
+        'creator_status' => 'integer',
+        'admin_status' => 'integer',
+        'what_will_student_learn' => 'string',
+        'target_student' => 'string',
+        'requirements' => 'string',
         'discount_price' => 'float',
         'actual_price' => 'float',
-        'playlist_url' => 'string',
         'view_count' => 'integer',
-        'subscriber_count' => 'integer',
-        'status' => 'integer',
-        'photo' => 'string'
+        'subscriber_count' => 'integer'
     ];
 
     /**
@@ -82,16 +103,15 @@ class Course extends Model
         'user_id' => 'required',
         'category_id' => 'required',
         'title' => 'required',
+        'sub_title' => 'required',
         'description' => 'required',
-        'about_instructor' => 'required',
+        'playlist_url' => 'required',
+        'creator_status' => 'required',
+        'admin_status' => 'required',
         'discount_price' => 'required',
         'actual_price' => 'required',
-        'playlist_url' => 'required',
         'view_count' => 'required',
-        'subscriber_count' => 'required',
-        'status' => 'required',
-        // 'created_at' => 'required',
-        // 'updated_at' => 'required'
+        'subscriber_count' => 'required'
     ];
 
     

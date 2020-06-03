@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class CourseRepository
  * @package App\Repositories
- * @version May 20, 2020, 9:11 pm UTC
+ * @version June 3, 2020, 4:37 pm UTC
  *
  * @method Course findWithoutFail($id, $columns = ['*'])
  * @method Course find($id, $columns = ['*'])
@@ -23,15 +23,22 @@ class CourseRepository extends BaseRepository
         'user_id',
         'category_id',
         'title',
+        'sub_title',
         'description',
         'about_instructor',
+        'playlist_url',
+        'photo',
+        'promo_video_url',
+        'tags',
+        'creator_status',
+        'admin_status',
+        'what_will_student_learn',
+        'target_student',
+        'requirements',
         'discount_price',
         'actual_price',
-        'playlist_url',
         'view_count',
-        'subscriber_count',
-        'status',
-        'photo'
+        'subscriber_count'
     ];
 
     /**

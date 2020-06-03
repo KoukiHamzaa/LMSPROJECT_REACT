@@ -22,6 +22,12 @@
     <p>{{ $course->title }}</p>
 </div>
 
+<!-- Sub Title Field -->
+<div class="form-group">
+    {!! Form::label('sub_title', 'Sub Title:') !!}
+    <p>{{ $course->sub_title }}</p>
+</div>
+
 <!-- Description Field -->
 <div class="form-group">
     {!! Form::label('description', 'Description:') !!}
@@ -32,6 +38,60 @@
 <div class="form-group">
     {!! Form::label('about_instructor', 'About Instructor:') !!}
     <p>{{ $course->about_instructor }}</p>
+</div>
+
+<!-- Playlist Url Field -->
+<div class="form-group">
+    {!! Form::label('playlist_url', 'Playlist Url:') !!}
+    <p>{{ $course->playlist_url }}</p>
+</div>
+
+<!-- Photo Field -->
+<div class="form-group">
+    {!! Form::label('photo', 'Photo:') !!}
+    <p>{{ $course->photo }}</p>
+</div>
+
+<!-- Promo Video Url Field -->
+<div class="form-group">
+    {!! Form::label('promo_video_url', 'Promo Video Url:') !!}
+    <p>{{ $course->promo_video_url }}</p>
+</div>
+
+<!-- Tags Field -->
+<div class="form-group">
+    {!! Form::label('tags', 'Tags:') !!}
+    <p>{{ $course->tags }}</p>
+</div>
+
+<!-- Creator Status Field -->
+<div class="form-group">
+    {!! Form::label('creator_status', 'Creator Status:') !!}
+    <p>{{ $course->creator_status }}</p>
+</div>
+
+<!-- Admin Status Field -->
+<div class="form-group">
+    {!! Form::label('admin_status', 'Admin Status:') !!}
+    <p>{{ $course->admin_status }}</p>
+</div>
+
+<!-- What Will Student Learn Field -->
+<div class="form-group">
+    {!! Form::label('what_will_student_learn', 'What Will Student Learn:') !!}
+    <p>{{ $course->what_will_student_learn }}</p>
+</div>
+
+<!-- Target Student Field -->
+<div class="form-group">
+    {!! Form::label('target_student', 'Target Student:') !!}
+    <p>{{ $course->target_student }}</p>
+</div>
+
+<!-- Requirements Field -->
+<div class="form-group">
+    {!! Form::label('requirements', 'Requirements:') !!}
+    <p>{{ $course->requirements }}</p>
 </div>
 
 <!-- Discount Price Field -->
@@ -46,12 +106,6 @@
     <p>{{ $course->actual_price }}</p>
 </div>
 
-<!-- Playlist Url Field -->
-<div class="form-group">
-    {!! Form::label('playlist_url', 'Playlist Url:') !!}
-    <p>{{ $course->playlist_url }}</p>
-</div>
-
 <!-- View Count Field -->
 <div class="form-group">
     {!! Form::label('view_count', 'View Count:') !!}
@@ -62,18 +116,6 @@
 <div class="form-group">
     {!! Form::label('subscriber_count', 'Subscriber Count:') !!}
     <p>{{ $course->subscriber_count }}</p>
-</div>
-
-<!-- Status Field -->
-<div class="form-group">
-    {!! Form::label('status', 'Status:') !!}
-    <p>{{ $course->status }}</p>
-</div>
-
-<!-- Photo Field -->
-<div class="form-group">
-    {!! Form::label('photo', 'Photo:') !!}
-    <p>{{ $course->photo }}</p>
 </div>
 
 <!-- Deleted At Field -->
