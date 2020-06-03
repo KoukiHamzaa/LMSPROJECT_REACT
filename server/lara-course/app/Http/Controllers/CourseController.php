@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use Illuminate\Support\Facades\DB;
 
 class CourseController extends AppBaseController
 {
@@ -81,6 +82,7 @@ class CourseController extends AppBaseController
             return redirect(route('courses.index'));
         }
 
+        DB::table('courses')->where('id', $id)->increment('view_count');
         return view('courses.show')->with('course', $course);
     }
 
