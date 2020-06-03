@@ -58,3 +58,7 @@
 @endif
 
 
+<li class="{{ Request::is('coupons*') ? 'active' : '' }}">
+    <a href="{{ route('coupons.index') }}"><i class="fa fa-edit"></i><span>Coupons</span></a>
+</li>
+

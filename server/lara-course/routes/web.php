@@ -41,3 +41,5 @@ Route::resource('users', 'UserController');
 Route::resource('views', 'ViewController');
 
 Route::resource('roles', 'RoleController');
+
+Route::resource('coupons', 'CouponController');
