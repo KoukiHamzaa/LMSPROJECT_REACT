@@ -20,6 +20,7 @@ class CreateCouponsTable extends Migration
             $table->integer('student_id');
             $table->integer('category_id')->nullable();
             $table->integer('user_account_id')->nullable();
+            $table->string('available_on_course_page')->default('on'); //yes or no conditions
             $table->string('type')->default('free'); // whitch mean free descount and the type of this discount
             $table->double('price', 8, 2);
             $table->string('status')->default('on'); //on, off
