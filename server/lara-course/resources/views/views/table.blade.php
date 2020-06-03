@@ -2,7 +2,7 @@
     <table class="table" id="views-table">
         <thead>
             <tr>
-                <th>User Id</th>
+        <th>User Id</th>
         <th>User Account Id</th>
         <th>Category Id</th>
         <th>Course Id</th>

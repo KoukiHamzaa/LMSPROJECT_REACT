@@ -16,6 +16,7 @@
             <li>
               <i class="fa fa-pencil bg-blue"></i>
               <div class="timeline-item">
+              <span class="time"><a href="http://127.0.0.1:8000/courses/"> <i class="fa fa-angle-double-left"></i>Go back</a></span>
                 <div class="timeline-header text-primary">
                 {!! Form::label('user_id', 'User Code:') !!}
                 </div>
@@ -87,9 +88,15 @@
                     <!---hiddenitem----->
               <div class="timeline-item invisible">
                 <div class="timeline-body">
-                  <img src="http://placehold.it/250x1" alt="..." class="margin">
-                  <img src="http://placehold.it/250x5" alt="..." class="margin">
-                  <img src="http://placehold.it/250x5" alt="..." class="margin">
+                  <img src="http://placehold.it/100x1" alt="..." class="">
+                  <img src="http://placehold.it/100x1" alt="..." class="">
+                  <img src="http://placehold.it/100x1" alt="..." class="">
+                  <img src="http://placehold.it/100x1" alt="..." class="">
+                  <img src="http://placehold.it/100x1" alt="..." class="">
+                  <img src="http://placehold.it/100x1" alt="..." class="">
+                  <img src="http://placehold.it/100x1" alt="..." class="">
+                  <img src="http://placehold.it/100x1" alt="..." class="">
+                  <img src="http://placehold.it/100x1" alt="..." class="">
                 </div>
               </div>
             </li>
