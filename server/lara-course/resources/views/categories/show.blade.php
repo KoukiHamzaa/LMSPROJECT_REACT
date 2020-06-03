@@ -15,7 +15,7 @@
 					  <h3 class="timeline-header">
 						<a href="http://127.0.0.1:8000/profile/">
 						<strong>Created By: </strong>
-						{{ strtoupper(Auth::user()->name) }}</a>
+							{{ strtoupper(Auth::user()->name) }}</a>
 					  </h3>
 					  <div class="timeline-body">
 					  {{ $category->description }}

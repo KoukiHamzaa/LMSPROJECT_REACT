@@ -2,7 +2,7 @@
     <table class="table" id="courseUsers-table">
         <thead>
             <tr>
-                <th>User Id</th>
+        <th>User Id</th>
         <th>Course Id</th>
         <th>User Account Id</th>
         <th>Paid Data</th>

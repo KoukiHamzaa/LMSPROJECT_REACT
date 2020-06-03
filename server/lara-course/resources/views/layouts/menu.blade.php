@@ -1,7 +1,7 @@
 {{--Admin:1, moderator:2, instructors:3 also students:4 !! --}}
 
 <li class="{{ Request::is('categories*') ? 'active' : '' }}">
-    <a href="{{ route('categories.index') }}"><i class="fa fa-edit"></i><span>All Courses</span></a>
+    <a href="{{ route('categories.index') }}"><i class="fa fa-edit"></i><span>Courses Categories</span></a>
             <!-- we change this item from Categories  to Courses -->
 </li>
 
