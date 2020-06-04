@@ -13,33 +13,16 @@
                   </span>
             </li>
             <!Start-------------------->
-            <li>
+            <li class="d-lg-none">
               <i class="fa fa-pencil bg-blue"></i>
               <div class="timeline-item">
-              <span class="time"><a href="http://127.0.0.1:8000/courses/"> <i class="fa fa-angle-double-left"></i>Go back</a></span>
                 <div class="timeline-header text-primary">
                 {!! Form::label('user_id', 'User Code:') !!}
                 </div>
                         <!-------------------->
                 <div class="timeline-body ">
                     <div class="form-group-sm ">
-                    {!! Form::number('user_id', null, ['class' => 'form-control']) !!}
-                    </div>
-                </div>
-              </div>
-            </li>
-            <!End-------------------->
-            <!Start-------------------->
-            <li>
-              <i class="fa fa-pencil bg-aqua"></i>
-              <div class="timeline-item">
-                <div class="timeline-header text-primary">
-                {!! Form::label('category_id', 'Category Code:') !!}
-                </div>
-                                        <!-------------------->
-                <div class="timeline-body ">
-                    <div class="from-group-sm ">
-                    {!! Form::number('category_id', null, ['class' => 'form-control']) !!}
+                    {!! Form::number('user_id', Auth::user()->id) !!}
                     </div>
                 </div>
               </div>
@@ -48,8 +31,8 @@
             <!Start-------------------->
             <li>
               <i class="fa fa-pencil bg-yellow"></i>
-              <div class="timeline-item">
-
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8">
+              <span class="time"><a href="http://127.0.0.1:8000/courses/"> <i class="fa fa-angle-double-left"></i>Go back</a></span>
                 <div class="timeline-header text-primary">
                 {!! Form::label('title', 'Title:') !!}
                 </div>
@@ -65,7 +48,7 @@
             <!Start-------------------->
             <li>
 				<i class="fa fa-pencil bg-purple"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							{!! Form::label('sub_title', 'Sub Title:') !!}
 					</div>
@@ -78,6 +61,26 @@
               </div>
             </li>  
             <!End-------------------->
+            <!Start-------------------->
+            <li>
+                    <i class="fa fa-pencil bg-maroon"></i>
+                          <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 col-xs-12 col-sm-6 col-lg-8">
+                            <div class="timeline-header text-primary">
+                                          <label for="category_id">Category Name</label>
+                            </div>
+                                        <!-------------------->
+                            <div class="timeline-body">
+                                <div class="from-group-sm">
+                                  <select	class="browser-default custom-select font-weight-bold" name="category_id" id="category_id">
+                                    @foreach($categories as $category)
+                                      <option class="font-weight-bold" value="{{$category->id}}"> {{$category->name}} </option>
+                                    @endforeach
+                                  </select>
+                                </div>
+                            </div>
+                         </div>
+            </li>  
+            <!End-------------------->
             <li class="time-label">
                   <span class="bg-green">
                     Second Section
@@ -86,7 +89,7 @@
             <!Start-------------------->
             <li>
                     <!---hiddenitem----->
-              <div class="timeline-item invisible">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 invisible">
                 <div class="timeline-body">
                   <img src="http://placehold.it/100x1" alt="..." class="">
                   <img src="http://placehold.it/100x1" alt="..." class="">
@@ -104,7 +107,7 @@
             <!Start-------------------->
             <li>
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							    {!! Form::label('description', 'Description:') !!}
 					</div>
@@ -120,7 +123,7 @@
             <!Start-------------------->
             <li>
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							        {!! Form::label('about_instructor', 'About Instructor:') !!}
 					</div>
@@ -141,7 +144,7 @@
             <!Start-------------------->
             <li>
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							            {!! Form::label('playlist_url', 'Playlist Url:') !!}
 					</div>
@@ -157,7 +160,7 @@
             <!Start-------------------->
             <li>
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							            {!! Form::label('photo', 'Photo:') !!}
 					</div>
@@ -173,7 +176,7 @@
             <!Start-------------------->
             <li>
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							            {!! Form::label('promo_video_url', 'Promo Video Url:') !!}
 					</div>
@@ -194,7 +197,7 @@
             <!Start-------------------->
             <li>
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							            {!! Form::label('tags', 'Tags:') !!}
 					</div>
@@ -207,33 +210,33 @@
               </div>
             </li> 
             <!End-------------------->
-            <!Start-------------------->
-            <li>
+            <!Start-------------d-lg-none------->
+            <li class="d-lg-none">
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							            {!! Form::label('creator_status', 'Creator Status:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
 						  <div class="from-group-sm">
-							{!! Form::number('creator_status', null, ['class' => 'form-control']) !!}
+							{!! Form::number('creator_status', Auth::user()->id) !!}
 						  </div>
 					</div>
               </div>
             </li>  
             <!End-------------------->
             <!Start-------------------->
-            <li>
+            <li class="d-lg-none">
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							            {!! Form::label('admin_status', 'Admin Status:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
 						  <div class="from-group-sm">
-							{!! Form::number('admin_status', null, ['class' => 'form-control']) !!}
+							{!! Form::number('admin_status', Auth::user()->id) !!}
 						  </div>
 					</div>
               </div>
@@ -242,7 +245,7 @@
             <!Start-------------------->
             <li>
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							            {!! Form::label('what_will_student_learn', 'What Will Student Learn:') !!}
 					</div>
@@ -258,7 +261,7 @@
             <!Start-------------------->
             <li>
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							            {!! Form::label('target_student', 'Target Student:') !!}
 					</div>
@@ -279,7 +282,7 @@
             <!Start-------------------->
             <li>
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							            {!! Form::label('requirements', 'Requirements:') !!}
 					</div>
@@ -295,14 +298,14 @@
             <!Start-------------------->
             <li>
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							            {!! Form::label('discount_price', 'Discount Price:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
 						  <div class="from-group-sm">
-							 {!! Form::number('discount_price', null, ['class' => 'form-control']) !!}
+							 {!! Form::number('discount_price', Auth::user()->id) !!}
 						  </div>
 					</div>
               </div>
@@ -311,7 +314,7 @@
             <!Start-------------------->
             <li>
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							            {!! Form::label('actual_price', 'Actual Price:') !!}
 					</div>
@@ -325,32 +328,32 @@
             </li> 
             <!End-------------------->
             <!Start-------------------->
-            <li>
+            <li class="d-lg-none">
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							            {!! Form::label('view_count', 'View Count:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
 						  <div class="from-group-sm">
-							 {!! Form::number('view_count', null, ['class' => 'form-control']) !!}
+							 {!! Form::number('view_count', Auth::user()->id) !!}
 						  </div>
 					</div>
               </div>
             </li> 
             <!End-------------------->
-            <!Start-------------------->
-            <li>
+            <!Start-------------->
+            <li class="d-lg-none">
 				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item ">
+              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
 							            {!! Form::label('subscriber_count', 'Subscriber Count:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
 						  <div class="from-group-sm">
-							 {!! Form::number('subscriber_count', null, ['class' => 'form-control']) !!}
+							 {!! Form::number('subscriber_count', Auth::user()->id) !!}
 						  </div>
 					</div>
               </div>

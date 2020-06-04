@@ -99,6 +99,7 @@ class Course extends Model
      *
      * @var array
      */
+
     public static $rules = [
         'user_id' => 'required',
         'category_id' => 'required',
@@ -114,5 +115,18 @@ class Course extends Model
         'subscriber_count' => 'required'
     ];
 
+/**
+* Get the role that owns this users.
+*/
+
+public function category()
+{
+return $this->belongsTo('App\Models\Category'); 
+}
+
+public function users()
+{
+return $this->belongsTo('App\Models\User'); 
+}
     
 }
