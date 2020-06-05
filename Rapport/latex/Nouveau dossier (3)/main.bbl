@@ -23,6 +23,11 @@ Wikipedia, ``{StarUML} --- {W}ikipedia{,} the free encyclopedia.''
   2020.
 \newblock [Online; accessed 25-May-2020].
 
+\bibitem{wiki:MySQL}
+Wikipedia, ``{MySQL} --- {W}ikipedia{,} the free encyclopedia.''
+  \url{http://fr.wikipedia.org/w/index.php?title=MySQL&oldid=169088262}, 2020.
+\newblock [Online; accessed 05-June-2020].
+
 \bibitem{wiki:XAMPP}
 Wikipedia, ``{XAMPP} --- {W}ikipedia{,} the free encyclopedia.''
   \url{http://fr.wikipedia.org/w/index.php?title=XAMPP&oldid=170566221}, 2020.
@@ -59,5 +64,16 @@ Wikipedia, ``{Bootstrap (front-end framework)} --- {W}ikipedia{,} the free
 Wikipédia, ``Git --- wikipédia{,} l'encyclopédie libre.''
   \url{http://fr.wikipedia.org/w/index.php?title=Git&oldid=160009701}, 2019.
 \newblock [Consulté le le 8 juin 2019].
+
+\bibitem{wiki:PHP}
+Wikipedia, ``{PHP} --- {W}ikipedia{,} the free encyclopedia.''
+  \url{http://fr.wikipedia.org/w/index.php?title=PHP&oldid=171144258}, 2020.
+\newblock [Online; accessed 04-June-2020].
+
+\bibitem{wiki:Laravel}
+Wikipedia, ``{Laravel} --- {W}ikipedia{,} the free encyclopedia.''
+  \url{http://fr.wikipedia.org/w/index.php?title=Laravel&oldid=171538565},
+  2020.
+\newblock [Online; accessed 04-June-2020].
 
 \end{thebibliography}

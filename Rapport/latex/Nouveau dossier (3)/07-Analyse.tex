@@ -15,8 +15,66 @@ La spécification des besoins va nous permettre d’avoir une meilleure approche
 	\item Identification des besoins non fonctionnels .
 \end{itemize}
 
+\subsection{Le processus d’apprentissage}
+
+\begin{itemize}
+	\item \underline{Apprentissage }: L’apprentissage est décrit comme un ensemble de mécanismes menant à
+	l’acquisition de savoir, savoir -faire, savoir-être ou de connaissances.
+	Dans ce processus l’acteur de l’apprentissage est appelé apprenant son rôle et d’acquérir la
+	connaissance qui peut être opposé à l’enseignement dont le but est de dispenser des connaissances
+	et savoirs. 
+	
+	
+	\item  \underline{ Enseignement} : L’enseignement est l’action de transmettre des connaissances nouvelles ou
+	savoirs à un apprenant (instruire et endoctriner tout en respectant certaines règles). Il s’agit du
+	système et de la méthode d’enseigner, composée par tout un ensemble de connaissances, de
+	principes et d’idées transmis à quelqu’un.
+	L’enseignement constitue un composant de l’éducation, ce dernier terme beaucoup plus
+	général, correspond à la formation globale d’un individu, à divers niveaux (au niveau religieux, moral,
+	social, technique, scientifique, médical, etc.) 	
+	\item \underline{ Didactique }: La didactique vient du grec qui signifie "enseigner", c’est la science qui a pour
+	objet l’étude des méthodes et des pratiques de l’enseignement en général, ou de l’enseignement
+	d’une discipline ou d’une matière particulière .
+	Une méthode didactique c’est une méthode d’enseignement qui suit une approche
+	scientifique ou style éducatif cohérente pour engager l’esprit de l’étudiant. Et on distingue :
+	\begin{itemize}	
+	\item[$\star$] La didactique générale qui s’intéresse à la conduite de la classe (cours magistraux,
+	leçons dialoguées, travaux pratiques individuels ou collectifs, utilisation de manuels,
+	etc.);
+	\item[$\star$] La didactique spéciale qui s’intéresse à l’enseignement d’une discipline particulière
+	pour une classe, un cycle d’études ou un ordre d’enseignement.
+\end{itemize}
+	\item \underline{ Le triangle didactique }: proposé par Jean Houssaye en 1988 comme modèle de
+	compréhension du pédagogique. Il se compose des composantes principales d’un acte pédagogique
+	(étudiant, savoir, enseignant) et les processus (apprendre, enseigner, former). De cela, il permet de faire des comparaisons entre les diverses situations pédagogiques  :
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=14cm,height=8.5cm]{LetriangledejeanHoussaye.jpg}
+		\caption{ Le triangle de jean Houssaye.}
+		\label{fig: Le triangle de jean Houssaye}
+	\end{figure}
+	\FloatBarrier
+	
+	
+		\begin{itemize}	
+		\item[$\star$] Le processus Enseigner : axé de façon privilégiée sur la relation Savoir-Enseignant, et sur
+		la transmission de ce savoir structurée par l’enseignant.
+		\item[$\star$] Le processus Former : axé sur la liaison Enseignant-Former. Il correspond aux pédagogies
+		centrées sur la formation humaine et sur la socialisation.
+     	\item[$\star$]Le processus Apprendre : Il porte sur le rapport direct Savoir-Apprenant. Là, l’enseignant
+    	devient l’organisateur de situations et de conditions externes d’apprentissage par
+    	lesquelles il met en relation savoir et apprenant en jouant un rôle de médiateur.
+	
+     \end{itemize}
+\end{itemize}
 
 
+
+
+
+
+
+\clearpage
 
 \subsection{Identification des acteurs}
 Un acteur est une personne, un matériel ou un logiciel qui interagit avec le système. L’analyse du présent projet commence par une identification des acteurs agissants sur les différentes parties du système. Les acteurs présentés dans la figure \ref{fig:profiles} sont des employés du clients en plus du serveur  qui est la solution adoptée par le client pour la communication et le partage des informations entre ces systèmes et départements .
@@ -162,13 +220,8 @@ les critères réunies dans le mot INVEST, c’est à dire
  \bigskip
  
 
-\subsection{Planification des Sprints}
--Duree des Sprints
-\subsection{Backlog des Sprints}
-Le Sprint Backlog comporte la liste des tâches du Sprint (son périmètre donc) ainsi que la charge de travail associée à ces dernières. Chaque jour, le Reste A Faire de chaque tâche est actualisé par l’équipe de développement afin de tracer le graphique d’avancement de Sprint.
 
 
-\clearpage      
 
 
 \section{Diagrammes des cas d'utilisation global}
@@ -179,7 +232,7 @@ Ainsi, pour construire notre modèle, nous allons organiser les cas d’utilisat
 Ce diagramme illustre le cas d’utilisation générale de notre système. Ces cas d’utilisation seront par la suite expliqués en détaille. (voir la figure \ref{fig:UseCaseAdmin}):
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=18cm,height=12cm]{Diagrammedecasdutilisationgénéra.jpg}
+  \includegraphics[width=18cm,height=9cm]{Diagrammedecasdutilisationgénéra.jpg}
   \caption{Les cas d'utilisation global.}
   \label{fig:UseCaseAdmin}
 \end{figure}
@@ -212,46 +265,85 @@ Une classe est un ensemble de fonctions et de données (attributs) qui sont lié
  	superclasse et peuvent comporter des propriétés spécifiques
  	supplémentaires.
  	\end{itemize}
+ \begin{figure}[ht]
+ 	\centering
+ 	\includegraphics[width=9cm,height=6.80cm]{Larelation.jpg}
+ 	\caption{ La relation entre les différentes classes de l'application.}
+ 	\label{fig: La relation entre les différentes classes de l'application}
+ \end{figure}
+ \FloatBarrier
+ \clearpage 
  La figure ci-dessous représente le diagramme de classes \cite{wiki:Diagramme_de_classes}:
  	
  
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=18cm,height=8cm]{DiagrammedeclasseClassDiagram.jpg}
+  \includegraphics[width=18cm,height=16cm]{DiagrammedeclasseClassDiagram.jpg}
   \caption{Diagrammes de classes global.}
   \label{fig:UseCaseCatalogManager}
 \end{figure}
 \FloatBarrier
+ \clearpage    
+
 {\Large \color{cyan} Description des entités:}
- 
+ \smallskip
+  \smallskip
+   \smallskip
+    \smallskip
+     \smallskip
+      \smallskip
+       \smallskip
+        \smallskip
+         \smallskip
+          \smallskip
+           \smallskip
 \begin{table}[h]
 	\begin{itemize}
 		
 		\item \textit{\textbf{ Enseignants:}} L’utilisateur principal du module, il a accès à plusieurs fonctionnalités qui
 		vont lui permettre de réussir le processus éducatif.
+			\begin{itemize}	
+
+			\item[$\star$] Faire un cours magistral :
+			présentation, explication,
+			argumentation et
+			illustration d’un savoir
+		
+
+
+		\end{itemize}
 	\end{itemize}
 	\begin{center}
 		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
 			
 			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
 			
-			Id enseig & 1 & 2& \\
+			Id enseig & INT & PRIMARY KEY& \\
 			
-			Nom & 2 & 4  &\\
+			Nom & VARCHAR(200)  & ---  &\\
+			Prenom & VARCHAR(200)  & ---  &\\
 			
-			Id matiere & 3 & 6 & \\
+			specialite  & VARCHAR & --- & \\
+			specialite enseignement& INT& ---&\\
+
+			email &VARCHAR(200)& UNIQUE&\\
+telephone & VARCHAR(8) & ---& \\
+
 			
 		\end{tabular}
 	\end{center}
 	\caption{Tables  "Enseignants"}
-	\label{mes belles tables}
+	\label{Tables  "Enseignants"}
 \end{table}
-
+\smallskip
+\smallskip
+\smallskip
 \begin{table}[h]
 	
 	\begin{itemize}
 		
-		\item \textit{\textbf{ Administration:}} C'est la classe qui contient toutes les actions prises en charge
+		\item \textit{\textbf{ Administration:}} On  le schéma de la base
+		de données suivant :C'est la classe qui contient toutes les actions prises en charge
 		par l'administrateur : 
 	\end{itemize}
 	\begin{center}
@@ -259,13 +351,15 @@ Une classe est un ensemble de fonctions et de données (attributs) qui sont lié
 			
 			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
 			
-			Id: intege & 1 & 2& \\
+			Id & INT & PRIMARY KEY& \\
 			
-			Login: string & 2 & 4  &\\
-			Mot de passe: string & 1 & 2& \\
+			Nom &VARCHAR(200) & --- &\\
+			prenom &VARCHAR(200) & --- &\\
+			Mot de passe & VARCHAR(200)  & UNIQUE& \\
 			
-			role & 2 & 4  &\\
-			
+			role & VARCHAR(200) & UNIQUE  &\\
+			email& VARCHAR(200)& UNIQUE &\\
+
 		
 			
 		\end{tabular}
@@ -275,42 +369,56 @@ Une classe est un ensemble de fonctions et de données (attributs) qui sont lié
 \end{table}
 
 
-
-
-
-
-
-
-
-
 \begin{table}[h]
 	
 	\begin{itemize}
 		
-		\item \textit{\textbf{Documentation:}}ca englobe toute documentation nécessaires au processus d'enseignement à distance
+		\item \textit{\textbf{ Etudiant:}} Le deuxième utilisateur du module avec des fonctionnalités facilitant la
+		tâche de mémorisation.
 	\end{itemize}
 	\begin{center}
 		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
 			
 			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
 			
-			id-Doc & 1 & 2& \\
-			
-			Date & 2 & 4  &\\
-			visibilite & 1 & 2& \\
-			
-		Nom-Doc & 2 & 4  &\\
-			Type-doc & 1 & 2& \\
-			
+			Num de carte etudiants & INT & PRIMARY KEY& \\
+			nom & VARCHAR(200) & ---& \\
+			prenom & VARCHAR(200) & ---& \\
+			email &VARCHAR(200) &UNIQUE\\
+
 			
 			
 			
 			
 		\end{tabular}
 	\end{center}
-	\caption{Tables  "Documentation"}
-	\label{mes belles tables}
+	\caption{Tables  "Etudiant"}
+	\label{mes belles table}
 \end{table}
+
+\begin{table}[h]
+	
+	\begin{itemize}
+		
+		\item \textit{\textbf{ TP/TD:}}C'est la classe qui contient toutes les TP et TD :
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
+			
+			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
+			
+id &	INT(10)	&PRIMARY KEY& \\	
+		\end{tabular}
+	\end{center}
+	\caption{Tables  "problèmes technique"}
+	\label{Tables  "problèmes technique"s}
+\end{table}
+
+
+
+
+
+
 
 
 
@@ -330,16 +438,16 @@ Une classe est un ensemble de fonctions et de données (attributs) qui sont lié
 			
 			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
 			
-			id matière & 1 & 2& \\
-			Date & 2 & 4  &\\
-			durée & 1 & 2& \\
-			Type & 2 & 4  &\\
-			heure & 2 & 4  &\\
+			id &	INT(10)	&PRIMARY KEY& \\
+			Date &VARCHAR(200) &---&\\
+			durée & VARCHAR(200) &---&\\
+			Type & VARCHAR(200) &---&\\
+			heure & VARCHAR(200) &---&\\
 			
 		\end{tabular}
 	\end{center}
 	\caption{Tables  "Examen"}
-	\label{mes belles tables}
+	\label{Tables  "Examen"}
 \end{table}
 
 
@@ -361,21 +469,19 @@ Une classe est un ensemble de fonctions et de données (attributs) qui sont lié
 		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
 			
 			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
-			
-			Prenom: string & 1 & 2& \\
-			
-			Nom & 2 & 4  &\\
-			Login: string & 2 & 4  &\\
-			mot de passe: string & 2 & 4  &\\
-			Email & 2 & 4  &\\
-		Rôle & 2 & 4  &\\
+			id &INT &PRIMARY KEY&\\
+pseudo& VARCHAR(200) &UNIQUE&\\
+password& VARCHAR(200) &---&\\
+privilege &VARCHAR(20) &---&\\
+
+
 			
 			
 			
 		\end{tabular}
 	\end{center}
 	\caption{Tables  "Utilisateur"}
-	\label{mes belles tables}
+	\label{Tables  "Utilisateur"}
 \end{table}
 
 
@@ -398,40 +504,83 @@ Une classe est un ensemble de fonctions et de données (attributs) qui sont lié
 		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
 			
 			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
-			
-			Nom & 1 & 2& \\
-			
-			Matiére & 2 & 4  &\\
-		date & 2 & 4  &\\
+
+		id &	INT(10)	&PRIMARY KEY& \\
+		
+		user id&	INT(11)&---& \\
+		
+		category id&	INT(11)&---& \\
+		
+		title	&varchar(255)&---& \\	
+		
+		sub title&	varchar(255)&---& \\		
+		
+		description	&longtext	&---& \\
+		
+		about instructor&	longtext&---& \\	
+		
+		playlist url&	varchar(255)&---& \\	
+		
+		photo&	varchar(255)&---& \\	
+		
+		promo video url&	varchar(255)&---& \\	
+		
+		tags&	varchar(255)&---& \\	
+		
+		creator status&	INT(11)	&---& \\		
+		
+		admin status&	INT(11)	&---& \\	
+		
+		what will student learn&	longtext	&---& \\
+		
+		target student&	longtext&---& \\		
+		
+		requirements&	longtext&---& \\	
+		
+		discount price&	double(10,2)&---& \\		
+		
+		actual price&	double(10,2)	&---& \\	
+		
+		view count&	INT(11)	&---& \\		
+		
+		subscriber count&	int(11)	&---& \\
 			
 			
 		\end{tabular}
 	\end{center}
 	\caption{Tables  "Cours"}
-	\label{mes belles tables}
+	\label{Tables  "Cours"}
 \end{table}
 
 \begin{table}[h]
     \begin{itemize}
-      \item \textit{\textbf{ Matiére:}}ca englobe toute les Matiéres
+      \item \textit{\textbf{ Catégorie Matiére:}}ca englobe toute les Matiéres
 	\end{itemize}
 	\begin{center}
 		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
 			
 			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
-			
-			id matière & 1 & 2& \\
-			
-			date & 2 & 4  &\\
-			
+  
+
+id 	&INT(10)	&PRIMARY KEY& \\	
+
+name&	varchar(255)&---& \\	
+
+description	&longtext&---	& \\
+
+categories photos&	longtext&---& \\	
+
+view count	&INT(11)&---	& \\		
+
+
 			
 			
 		\end{tabular}
 	\end{center}
-	\caption{Tables  " Matiére"}
-	\label{mes belles tables}
+	\caption{Tables  "Catégorie Matiére"}
+	\label{Catégorie Matiére}
 \end{table}
-
+\clearpage 
 \begin{table}[h]
 	
 	\begin{itemize}
@@ -444,65 +593,16 @@ Une classe est un ensemble de fonctions et de données (attributs) qui sont lié
 			
 			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
 			
-			Type & 1 & 2& \\
-
-			
-			
-			
+			id & INT & PRIMARY KEY& \\
+			titre & VARCHAR(200) & UNIQUE& \\
 		\end{tabular}
 	\end{center}
 	\caption{Tables  "Droits"}
-	\label{mes belles tables}
+	\label{mTables  "Droits"}
 \end{table}
-\begin{table}[h]
-	
-	\begin{itemize}
-		
-		\item \textit{\textbf{ problèmes technique:}}C'est la classe qui contient toutes les problèmes technique prises en charge par l'administrateur :
-	\end{itemize}
-	\begin{center}
-		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
-			
-			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
-			
-			Type-erreurs & 1 & 2& \\	
-		\end{tabular}
-	\end{center}
-	\caption{Tables  "problèmes technique"}
-	\label{mes belles tables}
-\end{table}
-
-
-
-
-
-
-\begin{table}[h]
-	
-	\begin{itemize}
-		
-		\item \textit{\textbf{ Etudiant:}} Le deuxième utilisateur du module avec des fonctionnalités facilitant la
-		tâche de mémorisation.
-	\end{itemize}
-	\begin{center}
-		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
-			
-			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
-			
-			Num de carte etudiants & 1 & 2& \\
-			
-		
-			
-			
-			
-		\end{tabular}
-	\end{center}
-	\caption{Tables  "Etudiant"}
-	\label{mes belles table}
-\end{table}
-
 
 
 \FloatBarrier
+
 \section{Conclusion}
 Le but de ce chapitre était de définir et d’analyser l’ensemble des besoins fonctionnels  de notre solution. Cette étape est primordiale dans le développement d’un projet informatique puisque elle nous permet de définir le périmètre fonctionnel du projet, et de garantir la couverture de l’ensemble des fonctionnalités recensées.
