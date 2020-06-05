@@ -76,6 +76,4 @@ class CourseUser extends Model
         // 'created_at' => 'required',
         // 'updated_at' => 'required'
     ];
-
-    
 }

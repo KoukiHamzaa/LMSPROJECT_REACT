@@ -66,14 +66,14 @@
                     <i class="fa fa-pencil bg-maroon"></i>
                           <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 col-xs-12 col-sm-6 col-lg-8">
                             <div class="timeline-header text-primary">
-                                          <label for="category_id">Category Name</label>
+                                          <label for="category_name">Category Name</label>
                             </div>
                                         <!-------------------->
                             <div class="timeline-body">
                                 <div class="from-group-sm">
-                                  <select	class="browser-default custom-select font-weight-bold" name="category_id" id="category_id">
+                                  <select	class="browser-default custom-select font-weight-bold" name="category_name" id="category_name">
                                     @foreach($categories as $category)
-                                      <option class="font-weight-bold" value="{{$category->id}}"> {{$category->name}} </option>
+                                      <option class="font-weight-bold" value="{{$category->name}}"> {{$category->name}} </option>
                                     @endforeach
                                   </select>
                                 </div>

@@ -83,5 +83,10 @@ class User extends Model
         'role_id' => 'required'
     ];
 
+    public function course()
+    {
+        return $this->hasOne(Course::class);
+    }
+
     
 }

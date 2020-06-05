@@ -19,7 +19,7 @@ class CreateCoursesTable extends Migration
             $table->integer('user_id');
 
             //create course section
-            $table->integer('category_id');
+            $table->string('category_name');
             $table->string('title');
             $table->string('sub_title');
             $table->longText('description');

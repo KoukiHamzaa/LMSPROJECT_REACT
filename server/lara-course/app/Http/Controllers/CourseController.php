@@ -81,9 +81,10 @@ class CourseController extends AppBaseController
 
         if (empty($course)) {
             Flash::error('Course not found');
-
+            
             return redirect(route('courses.index'));
         }
+        
 
         return view('courses.show')->with('course', $course);
     }

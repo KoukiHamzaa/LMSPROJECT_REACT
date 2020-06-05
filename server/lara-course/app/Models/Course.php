@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @version June 3, 2020, 4:37 pm UTC
  *
  * @property integer user_id
- * @property integer category_id
+ * @property string category_name
  * @property string title
  * @property string sub_title
  * @property string description
@@ -46,7 +46,7 @@ class Course extends Model
 
     public $fillable = [
         'user_id',
-        'category_id',
+        'category_name',
         'title',
         'sub_title',
         'description',
@@ -74,7 +74,7 @@ class Course extends Model
     protected $casts = [
         'id' => 'integer',
         'user_id' => 'integer',
-        'category_id' => 'integer',
+        'category_name' => 'string',
         'title' => 'string',
         'sub_title' => 'string',
         'description' => 'string',
@@ -102,7 +102,7 @@ class Course extends Model
 
     public static $rules = [
         'user_id' => 'required',
-        'category_id' => 'required',
+        'category_name' => 'required',
         'title' => 'required',
         'sub_title' => 'required',
         'description' => 'required',
@@ -119,14 +119,10 @@ class Course extends Model
 * Get the role that owns this users.
 */
 
-public function category()
+public function user()
 {
-return $this->belongsTo('App\Models\Category'); 
+    return $this->belongsTo(User::class);
 }
 
-public function users()
-{
-return $this->belongsTo('App\Models\User'); 
-}
-    
+// s
 }

@@ -1,18 +1,27 @@
 <div class="table-responsive">
     <table class="table" id="courses-table">
         <thead>
+            <tr>
         <th>Title</th>
+        <th>Category Name</th>
+        <th>Description</th>
+		<th>Promo Video</th>
         <th>Discount Price</th>
         <th>Actual Price</th>
+        <th>Photo</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
         <tbody>
         @foreach($courses as $course)
-
-            <b class="w-100">{{ $course->title }}</b>
+            <tr>
+            <td>{{ $course->title }}</td>
+            <td>{{ $course->category_name}}</td>
+            <td>{{ $course->description }}</td>
+			<td>{{ $course->promo_video_url }}</td>
             <td>{{ $course->discount_price }}</td>
             <td>{{ $course->actual_price }}</td>
+            <td>{{ $course->photo }}</td>
                 <td>
                     {!! Form::open(['route' => ['courses.destroy', $course->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

@@ -19,7 +19,7 @@
 <!-- Title Field -->
 <div class="form-group">
     {!! Form::label('title', 'Title:') !!}
-    <p>{{ $course->title }}</p>
+    <p>{{ $course->actual_price}}</p>
 </div>
 
 <!-- Sub Title Field -->
