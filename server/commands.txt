@@ -1,0 +1,6 @@
+            <!-- <td>
+            {{ $data = DB::table('categories')
+            ->join('courses', 'categories.id', '=', 'courses.category_id')
+            ->select('categories.name')
+            ->get();}}
+            </td> -->
