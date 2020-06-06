@@ -55,7 +55,7 @@ class Category extends Model
     public static $rules = [
         'name' => 'required',
         'description' => 'required',
-        'view_count' => 'required',
+        // 'view_count' => 'required',
         // 'created_at' => 'required',
         // 'updated_at' => 'required'
     ];

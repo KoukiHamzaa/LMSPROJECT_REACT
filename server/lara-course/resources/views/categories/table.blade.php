@@ -14,12 +14,13 @@
 							</p> 
 							<ul class="list-group list-group-flush">
 									<!-- <li class="list-group-item">{!! $category->view_count !!}</li> -->
-									<small class="text-muted">Views :{{ $category->view_count }}</small>
+									<!-- <small class="text-muted">Views :{{ $category->view_count }}</small> -->
+									<small class="text-muted">Views :{{ $category->id }}</small>
 							</ul>
 						</div>
 						
 						<div class="card-footer">
-							{!! Form::open(['route' => ['categories.destroy', $category->name], 'method' => 'delete']) !!}
+							{!! Form::open(['route' => ['categories.destroy', $category->id], 'method' => 'delete']) !!}
 									<!-- <div class='btn-group'> -->
 									<div class="btn-toolbar">
 									<a href="{{ route('categories.show', [$category->id]) }}" class="btn btn-primary" >View Category</a>
