@@ -19,7 +19,7 @@
 						</div>
 						
 						<div class="card-footer">
-							{!! Form::open(['route' => ['categories.destroy', $category->id], 'method' => 'delete']) !!}
+							{!! Form::open(['route' => ['categories.destroy', $category->name], 'method' => 'delete']) !!}
 									<!-- <div class='btn-group'> -->
 									<div class="btn-toolbar">
 									<a href="{{ route('categories.show', [$category->id]) }}" class="btn btn-primary" >View Category</a>
