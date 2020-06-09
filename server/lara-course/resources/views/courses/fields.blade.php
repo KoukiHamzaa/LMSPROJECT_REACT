@@ -13,22 +13,6 @@
                   </span>
             </li>
             <!Start-------------------->
-            <li class="d-lg-none">
-              <i class="fa fa-pencil bg-blue"></i>
-              <div class="timeline-item">
-                <div class="timeline-header text-primary">
-                {!! Form::label('user_id', 'User Code:') !!}
-                </div>
-                        <!-------------------->
-                <div class="timeline-body ">
-                    <div class="form-group-sm ">
-                    {!! Form::number('user_id', Auth::user()->id) !!}
-                    </div>
-                </div>
-              </div>
-            </li>
-            <!End-------------------->
-            <!Start-------------------->
             <li>
               <i class="fa fa-pencil bg-yellow"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8">
@@ -210,38 +194,6 @@
               </div>
             </li> 
             <!End-------------------->
-            <!Start-------------d-lg-none------->
-            <li class="d-lg-none">
-				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
-					<div class="timeline-header text-primary">
-							            {!! Form::label('creator_status', 'Creator Status:') !!}
-					</div>
-												<!-------------------->
-					<div class="timeline-body">
-						  <div class="from-group-sm">
-							{!! Form::number('creator_status', Auth::user()->id) !!}
-						  </div>
-					</div>
-              </div>
-            </li>  
-            <!End-------------------->
-            <!Start-------------------->
-            <li class="d-lg-none">
-				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
-					<div class="timeline-header text-primary">
-							            {!! Form::label('admin_status', 'Admin Status:') !!}
-					</div>
-												<!-------------------->
-					<div class="timeline-body">
-						  <div class="from-group-sm">
-							{!! Form::number('admin_status', Auth::user()->id) !!}
-						  </div>
-					</div>
-              </div>
-            </li>  
-            <!End-------------------->
             <!Start-------------------->
             <li>
 				<i class="fa fa-pencil bg-maroon"></i>
@@ -305,7 +257,7 @@
 												<!-------------------->
 					<div class="timeline-body">
 						  <div class="from-group-sm">
-							 {!! Form::number('discount_price', Auth::user()->id) !!}
+							 {!! Form::number('discount_price', null, ['class' => 'form-control']) !!}
 						  </div>
 					</div>
               </div>
@@ -327,37 +279,6 @@
               </div>
             </li> 
             <!End-------------------->
-            <!Start-------------------->
-            <li class="d-lg-none">
-				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
-					<div class="timeline-header text-primary">
-							            {!! Form::label('view_count', 'View Count:') !!}
-					</div>
-												<!-------------------->
-					<div class="timeline-body">
-						  <div class="from-group-sm">
-							 {!! Form::number('view_count', Auth::user()->id) !!}
-						  </div>
-					</div>
-              </div>
-            </li> 
-            <!End-------------------->
-            <!Start-------------->
-            <li class="d-lg-none">
-				<i class="fa fa-pencil bg-maroon"></i>
-              <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
-					<div class="timeline-header text-primary">
-							            {!! Form::label('subscriber_count', 'Subscriber Count:') !!}
-					</div>
-												<!-------------------->
-					<div class="timeline-body">
-						  <div class="from-group-sm">
-							 {!! Form::number('subscriber_count', Auth::user()->id) !!}
-						  </div>
-					</div>
-              </div>
-            </li> 
             <li class="time-label">
                   <span class="bg-light">
                   {!! Form::submit('Save', ['class' => 'btn btn-danger']) !!}

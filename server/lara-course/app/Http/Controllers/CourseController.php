@@ -12,6 +12,7 @@ use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 use Auth;
 use App\Models\Category;
+use App\Models\Course;
 
 class CourseController extends AppBaseController
 {
@@ -46,7 +47,14 @@ class CourseController extends AppBaseController
     public function create()
     {
         $categories = Category::all();
-        return view('courses.create')->with('categories', $categories);
+        $mainCourses = Course::where('user_id',Auth::user()->id)
+        ->where( 'admin_status', 1)
+        ->where( 'creator_status', 1)
+        ->get();
+
+        return view('courses.create')
+        ->with('categories', $categories)
+        ->with( 'mainCourses', $mainCourses);
     }
 
     /**
@@ -60,6 +68,8 @@ class CourseController extends AppBaseController
     {
         $input = $request->all();
         $input['user_id'] = Auth::user()->id;
+        $input['category_id'] = Auth::user()->id;
+        // dd(Auth::user()->id);
 
         $course = $this->courseRepository->create($input);
 

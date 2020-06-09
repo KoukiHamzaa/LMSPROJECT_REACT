@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *
  * @property string name
  * @property string description
+ * @property string categories_photos
  * @property integer view_count
  */
 class Category extends Model
@@ -32,7 +33,7 @@ class Category extends Model
         'name',
         'description',
         'view_count',
-        // 'categories_photos'
+        'categories_photos'
     ];
 
     /**
@@ -44,6 +45,7 @@ class Category extends Model
         'id' => 'integer',
         'name' => 'string',
         'description' => 'string',
+        'categories_photos' => 'string',
         'view_count' => 'integer'
     ];
 
@@ -55,6 +57,7 @@ class Category extends Model
     public static $rules = [
         'name' => 'required',
         'description' => 'required',
+        'categories_photos' => 'required'
         // 'view_count' => 'required',
         // 'created_at' => 'required',
         // 'updated_at' => 'required'
