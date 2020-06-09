@@ -1,38 +1,43 @@
-<div class="table-responsive">
-    <table class="table" id="courses-table">
-        <thead>
-            <tr>
-        <th>Title</th>
-        <th>Category Name</th>
-        <th>Description</th>
-		<th>Promo Video</th>
-        <th>Discount Price</th>
-        <th>Actual Price</th>
-        <th>Photo</th>
-                <th colspan="3">Action</th>
-            </tr>
-        </thead>
-        <tbody>
+<!-- <div class="card-columns"> -->
+<div class="card-deck" id="courses-table">
+    <div class="row">
         @foreach($courses as $course)
-            <tr>
-            <td>{{ $course->title }}</td>
-            <td>{{ $course->category_name}}</td>
-            <td>{{ $course->description }}</td>
-			<td>{{ $course->promo_video_url }}</td>
-            <td>{{ $course->discount_price }}</td>
-            <td>{{ $course->actual_price }}</td>
-            <td>{{ $course->photo }}</td>
-                <td>
-                    {!! Form::open(['route' => ['courses.destroy', $course->id], 'method' => 'delete']) !!}
-                    <div class='btn-group'>
-                        <a href="{{ route('courses.show', [$course->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
-                        <a href="{{ route('courses.edit', [$course->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                        {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
-                    </div>
-                    {!! Form::close() !!}
-                </td>
-            </tr>
-        @endforeach
-        </tbody>
-    </table>
+				<div class="col-sm-4">
+				<div class="card">
+						<!-- <img class="card-img-top" src="{!! $course->photo !!}" alt="Card image cap" width="230" height="180"> -->
+                        <div class="">
+                        <iframe  src="{!! $course->promo_video_url !!}"
+                               frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="270" height="180">
+                        </iframe>
+                        </div>
+						<div class="card-body">
+							<h5 class="card-title">{!! $course->title !!}</h5>
+							<p class="card-text">
+							{{ \Illuminate\Support\Str::limit($course->description, 150, $end='...') }}
+							</p> 
+							<ul class="list-group list-group-flush">
+									<small class="text-muted">Views :{{ $course->view_count }}</small>
+							</ul>
+						</div>
+						<div class="card-footer">
+						{!! Form::open(['route' => ['courses.destroy', $course->id], 'method' => 'delete']) !!}
+							 <div class="btn-toolbar">
+								<a href="{{ route('courses.show', [$course->id]) }}" class="btn btn-primary" >View Course</a>
+								@if(Auth::user()->role_id < 3)
+									<a href="{{ route('courses.edit', [$course->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
+									{!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+								@endif
+							 <div>
+								{!! Form::close() !!}
+						</div>
+				</div>
+			</div>    <!-- the end of col sm - 3  -->
+		@endforeach
+    </div> <!-- the end of row -->
 </div>
+
+
+<!-- <iframe width="230" height="180" src="https://www.youtube.com/embed/CqlsgjnePmg"
+ frameborder="0" allow="accelerometer; autoplay;
+  encrypted-media; gyroscope; picture-in-picture" 
+ allowfullscreen></iframe> -->
