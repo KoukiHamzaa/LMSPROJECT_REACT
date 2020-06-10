@@ -110,10 +110,11 @@ class Course extends Model
         'title' => 'required',
         'sub_title' => 'required',
         'description' => 'required',
+        // 'promo_video_url' => 'required',
         'playlist_url' => 'required',
         // 'creator_status' => 'required',
         // 'admin_status' => 'required',
-        'discount_price' => 'required',
+        // 'discount_price' => 'required',
         'actual_price' => 'required',
         // 'view_count' => 'required',
         // 'subscriber_count' => 'required'

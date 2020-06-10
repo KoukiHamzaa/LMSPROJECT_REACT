@@ -11,10 +11,12 @@
                         </iframe>
 						
 						<div class="card-body">
-							<h2 class="card-title">{!! $course->title !!}</h2>
+							<h2 class="card-title text-primary font-weight-bold text-capitalize">{!! $course->title !!}</h2>
 							<p class="card-text">
 							{{ \Illuminate\Support\Str::limit($course->description, 150, $end='...') }}
 							</p> 
+							<h3 class="text-secondary font-weight-normal text-capitalize">price {!! $course->actual_price !!} $ </h3>
+							<h6 class="text-info font-weight-light text-capitalize">discount price {!! $course->discount_price !!} $ </h6>
 							<ul class="list-group list-group-flush">
 									<small class="text-muted">Views :{{ $course->id }}</small>
 							</ul>

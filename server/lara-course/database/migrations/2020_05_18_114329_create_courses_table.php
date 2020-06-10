@@ -26,7 +26,7 @@ class CreateCoursesTable extends Migration
             $table->string('sub_title');
             $table->longText('description');
             $table->longText('about_instructor')->nullable();
-            $table->string('playlist_url');
+            $table->string('playlist_url')->default("https://mdbootstrap.com/img/video/animation-intro.mp4");
             $table->string('photo')->nullable();
             $table->string('promo_video_url')->nullable();
             $table->string('tags')->nullable(); // it can be php, laravel, any thing like that 
@@ -38,7 +38,7 @@ class CreateCoursesTable extends Migration
             $table->longText('requirements')->nullable(); 
 
             //price and coupons
-            $table->double('discount_price', 10, 2);
+            $table->double('discount_price', 10, 2)->default(0);
             $table->double('actual_price', 10, 2);
 
             //stats
