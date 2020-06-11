@@ -124,10 +124,13 @@ class Course extends Model
 * Get the role that owns this users.
 */
 
-public function user()
+public function category()
 {
-    return $this->belongsTo(User::class);
+    return $this->belongsTo('App\Models\Category');
 }
 
-// s
+public function user()
+{
+    return $this->belongsTo('App\Models\User');
+}
 }

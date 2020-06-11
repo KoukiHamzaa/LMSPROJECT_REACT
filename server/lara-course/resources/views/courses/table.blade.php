@@ -4,8 +4,6 @@
 	@foreach($courses as $course)
 			<div class="col-sm-4">
 				<div class="card">
-						<!-- <img class="card-img-top" src="http://placehold.jp/230x180.png" alt="Card image cap" width="230" height="180"> -->
-						<!-- <img class="card-img-top" src="{{ $course->photo }}" alt="Card image cap" width="230" height="180"> -->
 						<iframe  src="{!! $course->promo_video_url !!}"
                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen >
                         </iframe>
@@ -15,11 +13,16 @@
 							<p class="card-text">
 							{{ \Illuminate\Support\Str::limit($course->description, 150, $end='...') }}
 							</p> 
+							<h4 class="text-success font-weight-bold text-capitalize ">Course Created by <u>{!! $course->user['name'] !!}</u></h4>
+							<p class="text-muted font-weight-bold text-capitalize">Subscriber in this Course : {!!number_format($course->subscriber_count)!!} Student</p>
+
 							<h3 class="text-secondary font-weight-normal text-capitalize">price {!! $course->actual_price !!} $ </h3>
-							<h6 class="text-info font-weight-light text-capitalize">discount price {!! $course->discount_price !!} $ </h6>
+							<h4 class="text-info font-weight-light text-capitalize">discount price {!! $course->discount_price !!} $ </h4>
+							@if(Auth::user()->role_id < 3)
 							<ul class="list-group list-group-flush">
 									<small class="text-muted">Views :{{ $course->id }}</small>
 							</ul>
+							@endif
 						</div>
 						
 						<div class="card-footer">

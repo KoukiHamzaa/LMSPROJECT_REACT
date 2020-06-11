@@ -39,6 +39,7 @@
 </head>
 
 <body class="skin-blue sidebar-mini">
+<!-- style="background-image: url('https://i.ibb.co/Qb8PZvL/yellow-and-and-blue-colored-pencils-1762851.jpg'); -->
 @if (!Auth::guest())
     <div class="wrapper">
         <!-- Main Header -->
