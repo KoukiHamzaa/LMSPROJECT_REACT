@@ -36,7 +36,7 @@
 </div>
 
 <!-- User namer Field -->
-<div class="form-group col-md-3 list-group-item disabled">
+<div class="form-group col-md-6 list-group-item disabled">
     {!! Form::label('user_id', 'Auther:') !!}
     <a href="/users/{!! $course->user['id'] !!}" target="_blank">
         <p class="text-capitalize text-success text-dark  ml-5">
@@ -44,6 +44,14 @@
             {!! $course->user['name'] !!}
         </p>
     </a>
+</div>
+
+<!-- Category Id Field -->
+<div class="form-group col-md-6 list-group-item disabled">
+<div class="mt-5">
+    {!! Form::label('category_id', 'Category name:') !!}
+    <a href="/categories/{!! $course->category['id'] !!}" target="_blank"><p class="h4 text-capitalize text-success"><i class="fa fa-link"  font-weight-bold" aria-hidden="true">{{ $course->category['name'] }}</i></p></a>
+</div>
 </div>
 
 @if(Auth::user()->role_id < 3)
@@ -115,17 +123,9 @@
 
 
 <!-- Description Field -->
-<div class="form-group col-md-9 list-group-item list-group-item-info">
+<div class="form-group col-md-12 list-group-item list-group-item-info">
     {!! Form::label('description', 'Description:') !!}
     <p>{{ $course->description }}</p>
-</div>
-
-<!-- Category Id Field -->
-<div class="form-group col-md-3 list-group-item disabled">
-<div class="mt-5">
-    {!! Form::label('category_id', 'Category name:') !!}
-    <a href="/categories/{!! $course->category['id'] !!}" target="_blank"><p class="h4 text-capitalize text-success"><i class="fa fa-link"  font-weight-bold" aria-hidden="true">{{ $course->category['name'] }}</i></p></a>
-</div>
 </div>
 
 <!-- About Instructor Field -->
