@@ -45,20 +45,22 @@
               </div>
             </li>  
             <!End-------------------->
-            <!Start-------------------->
             <li>
                     <i class="fa fa-pencil bg-maroon"></i>
                           <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 col-xs-12 col-sm-6 col-lg-8">
                             <div class="timeline-header text-primary">
-                                          <label for="category_name">Category Name</label>
+                                          <label for="category_id">Category Name</label>
                             </div>
-                                        <!-------------------->
+
                             <div class="timeline-body">
                                 <div class="from-group-sm">
-                                  <select	class="browser-default custom-select font-weight-bold" name="category_name" id="category_name">
-                                    @foreach($categories as $category)
-                                      <option class="font-weight-bold" value="{{$category->name}}"> {{$category->name}} </option>
-                                    @endforeach
+                                  <select	class="browser-default custom-select font-weight-bold" name="category_id" id="category_id">
+                                     @if(isset($course))
+                                    <option  class="font-weight-bold" value="{{ $course->category['id'] }}" > {{ $course->category['name'] }} </option>
+                                      @endif
+                                      @foreach($categories as $category)
+                                    <option class="font-weight-bold" value="{{$category->id}}"> {{$category->name}} </option>
+                                      @endforeach
                                   </select>
                                 </div>
                             </div>
@@ -246,6 +248,60 @@
 					</div>
               </div>
             </li> 
+            <!End-------------------->
+            <!Start-------------------->
+@if(Auth::check() AND Auth::user()->role_id < 3)
+            <li>
+                    <i class="fa fa-pencil bg-maroon"></i>
+                          <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 col-xs-12 col-sm-6 col-lg-8">
+                            <div class="timeline-header text-primary">
+                                          <label for="admin_status">Admin Status:</label>
+                            </div>
+                                        <!-------------------->
+                            <div class="timeline-body">
+                                <div class="from-group-sm">
+                                  <select	class="browser-default custom-select font-weight-bold"  name="admin_status" id="admin_status">
+                                             @if(isset($course))
+                                          <option class="font-weight-bold" value="{{ $course->admin_status }}">
+                                              @if( $course->admin_status == 1) on
+                                              @else off
+                                              @endif   
+                                         </option>
+                                              @endif
+                                        <option value="0" > Off </option>
+                                        <option value="1" > On </option>
+                                  </select>
+                                </div>
+                            </div>
+                         </div>
+            </li>  
+@endif
+          <!End-------------------->
+          <!Start-------------------->
+            <li>
+                    <i class="fa fa-pencil bg-maroon"></i>
+                          <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 col-xs-12 col-sm-6 col-lg-8">
+                            <div class="timeline-header text-primary">
+                                          <label for="creator_status">Course Creator Status:</label>
+                            </div>
+                                        <!-------------------->
+                            <div class="timeline-body">
+                                <div class="from-group-sm">
+                                  <select	class="browser-default custom-select font-weight-bold"  name="creator_status" id="creator_status">
+                                          @if(isset($course))
+                                          <option class="font-weight-bold" value="{{ $course->creator_status }}">
+                                            @if(isset($course) AND $course->creator_status == 1)  on
+                                            @else  off 
+                                            @endif  
+                                          </option>
+                                            @endif
+                                            <option value="0" > Off </option>
+                                            <option value="1" > On </option>
+                                  </select>
+                                </div>
+                            </div>
+                         </div>
+            </li>  
             <!End-------------------->
             <!Start-------------------->
             <li>

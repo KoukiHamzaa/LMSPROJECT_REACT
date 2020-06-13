@@ -19,6 +19,46 @@ class CourseController extends AppBaseController
     /** @var  CourseRepository */
     private $courseRepository;
 
+    public function approve(Request $request)
+    {
+    Course::where('id', $request->course_id)
+        ->update(['admin_status' => 1]);
+
+        Flash::sucess('cours approuvé avec succès !');
+        return redirect()->back();
+    }
+
+    public function disapprove(Request $request)
+    {
+    Course::where('id', $request->course_id)
+        ->update(['admin_status' => 0]);
+        
+        Flash::sucess('cours disapprove avec succès !');
+        return redirect()->back();
+    }
+
+    //===================================================
+
+    public function publish(Request $request)
+    {
+        Course::where('id', $request->course_id)
+        ->update(['creator_status' => 1]);
+        
+        Flash::sucess('cours publié avec succès !');
+        return redirect()->back();
+    }
+
+    public function unpublish(Request $request)
+    {
+        Course::where('id', $request->course_id)
+        ->update(['creator_status' => 0]);
+        
+        Flash::sucess('cours non publié avec succès !');
+        return redirect()->back();
+    }
+
+        //===================================================
+        
     public function __construct(CourseRepository $courseRepo)
     {
         $this->courseRepository = $courseRepo;
@@ -68,7 +108,7 @@ class CourseController extends AppBaseController
     {
         $input = $request->all();
         $input['user_id'] = Auth::user()->id;
-        $input['category_id'] = Auth::user()->id;
+        // $input['category_id'] = Auth::user()->id;
         // dd(Auth::user()->id);
 
         $course = $this->courseRepository->create($input);

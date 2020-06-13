@@ -20,7 +20,7 @@ class CreateCoursesTable extends Migration
 
             //create course section
             $table->integer('category_id');
-            $table->string('category_name');
+            // $table->string('category_name');
 
             $table->string('title');
             $table->string('sub_title');
@@ -30,6 +30,7 @@ class CreateCoursesTable extends Migration
             $table->string('photo')->nullable();
             $table->string('promo_video_url')->nullable();
             $table->string('tags')->nullable(); // it can be php, laravel, any thing like that 
+            
             $table->integer('creator_status')->default(0); //live: 1 , ,not live:0
             $table->integer('admin_status')->default(0); //live: 1 , ,not live:0
             //target student !! 
