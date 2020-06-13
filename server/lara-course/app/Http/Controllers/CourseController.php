@@ -24,7 +24,7 @@ class CourseController extends AppBaseController
     Course::where('id', $request->course_id)
         ->update(['admin_status' => 1]);
 
-        Flash::sucess('cours approuvé avec succès !');
+        Flash::success('cours approuvé avec succès !');
         return redirect()->back();
     }
 
@@ -33,32 +33,32 @@ class CourseController extends AppBaseController
     Course::where('id', $request->course_id)
         ->update(['admin_status' => 0]);
         
-        Flash::sucess('cours disapprove avec succès !');
+        Flash::success('cours disapprove avec succès !');
         return redirect()->back();
     }
 
     //===================================================
 
-    public function publish(Request $request)
+    public function publishCourse(Request $request)
     {
         Course::where('id', $request->course_id)
         ->update(['creator_status' => 1]);
         
-        Flash::sucess('cours publié avec succès !');
+        Flash::success('cours publié avec succès !');
         return redirect()->back();
     }
 
-    public function unpublish(Request $request)
+    public function unpublishCourse(Request $request)
     {
         Course::where('id', $request->course_id)
         ->update(['creator_status' => 0]);
         
-        Flash::sucess('cours non publié avec succès !');
+        Flash::success('cours non publié avec succès !');
         return redirect()->back();
     }
 
         //===================================================
-        
+
     public function __construct(CourseRepository $courseRepo)
     {
         $this->courseRepository = $courseRepo;
