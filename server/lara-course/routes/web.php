@@ -51,3 +51,5 @@ Route::resource('views', 'ViewController');
 Route::resource('roles', 'RoleController');
 
 Route::resource('coupons', 'CouponController');
+
+Route::resource('courseUsers', 'CourseUserController');

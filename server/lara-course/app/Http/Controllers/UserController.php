@@ -11,6 +11,7 @@ use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 use Illuminate\Support\Facades\DB;
+use App\Models\Course;
 
 class UserController extends AppBaseController
 {
@@ -82,8 +83,12 @@ class UserController extends AppBaseController
             return redirect(route('users.index'));
         }
 
+        //we send all the courses to user 
+        $courses = Course::where('user_id', $id)->get();
         DB::table('users')->where('id', $id)->increment('view_count');
-        return view('users.show')->with('user', $user);
+        return view('users.show')
+        ->with('courses', $courses)
+        ->with('user', $user);
     }
 
     /**

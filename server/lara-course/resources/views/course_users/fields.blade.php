@@ -10,6 +10,12 @@
     {!! Form::number('course_id', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Category Id Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('category_id', 'Category Id:') !!}
+    {!! Form::number('category_id', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- User Account Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('user_account_id', 'User Account Id:') !!}

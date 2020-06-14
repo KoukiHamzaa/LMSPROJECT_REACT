@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class CourseUserRepository
  * @package App\Repositories
- * @version May 20, 2020, 9:12 pm UTC
+ * @version June 14, 2020, 2:16 pm UTC
  *
  * @method CourseUser findWithoutFail($id, $columns = ['*'])
  * @method CourseUser find($id, $columns = ['*'])
@@ -22,6 +22,7 @@ class CourseUserRepository extends BaseRepository
     protected $fieldSearchable = [
         'user_id',
         'course_id',
+        'category_id',
         'user_account_id',
         'paid_data',
         'expiry_date',

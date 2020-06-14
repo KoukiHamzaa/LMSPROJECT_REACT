@@ -16,6 +16,12 @@
     <p>{{ $courseUser->course_id }}</p>
 </div>
 
+<!-- Category Id Field -->
+<div class="form-group">
+    {!! Form::label('category_id', 'Category Id:') !!}
+    <p>{{ $courseUser->category_id }}</p>
+</div>
+
 <!-- User Account Id Field -->
 <div class="form-group">
     {!! Form::label('user_account_id', 'User Account Id:') !!}

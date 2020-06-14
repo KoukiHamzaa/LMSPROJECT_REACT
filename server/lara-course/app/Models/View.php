@@ -62,5 +62,10 @@ class View extends Model
         // 'updated_at' => 'required'
     ];
 
+    public function role()
+    {
+        return $this->belongsTo('App\Models\Role');
+    }
+
     
 }

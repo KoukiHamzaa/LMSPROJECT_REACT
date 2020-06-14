@@ -5,9 +5,9 @@
             <!-- we change this item from Categories  to Courses -->
 </li>
 
-<!-- <li class="{{ Request::is('courseUsers*') ? 'active' : '' }}">
+<li class="{{ Request::is('courseUsers*') ? 'active' : '' }}">
     <a href="{{ route('courseUsers.index') }}"><i class="fa fa-edit"></i><span>Subscription</span></a>  
-</li> -->
+</li>
     <!-- we change this item from Course Users to Subscription -->
 
 
@@ -44,21 +44,28 @@
 
 
 
-<li class="{{ Request::is('users*') ? 'active' : '' }}">
-    <a href="{{ route('users.index') }}"><i class="fa fa-edit"></i><span>Users</span></a>
-</li>
+                <li class="{{ Request::is('users*') ? 'active' : '' }}">
+                    <a href="{{ route('users.index') }}"><i class="fa fa-edit"></i><span>Users</span></a>
+                </li>
+
 
 <li class="{{ Request::is('views*') ? 'active' : '' }}">
     <a href="{{ route('views.index') }}"><i class="fa fa-edit"></i><span>Views</span></a>
 </li>
 
-<li class="{{ Request::is('roles*') ? 'active' : '' }}">
-    <a href="{{ route('roles.index') }}"><i class="fa fa-edit"></i><span>Roles</span></a>
-</li>
+    @if(Auth::user()->role_id == 1 )
+    <li class="{{ Request::is('roles*') ? 'active' : '' }}">
+        <a href="{{ route('roles.index') }}"><i class="fa fa-edit"></i><span>Roles</span></a>
+    </li>
+    @endif
 @endif
 
 
 <!-- <li class="{{ Request::is('coupons*') ? 'active' : '' }}">
     <a href="{{ route('coupons.index') }}"><i class="fa fa-edit"></i><span>Coupons</span></a>
 </li> -->
+
+<li class="{{ Request::is('courseUsers*') ? 'active' : '' }}">
+    <a href="{{ route('courseUsers.index') }}"><i class="fa fa-edit"></i><span>Course Users</span></a>
+</li>
 

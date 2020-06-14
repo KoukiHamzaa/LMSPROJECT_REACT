@@ -16,7 +16,7 @@
                     @include('courses.show_fields_students')
                 @endif 
                     <br>
-                    <!-- <a href="{{ route('courses.index') }}" class="btn btn-default">Back</a> -->
+                    @include('users.table') 
                 </div>
             </div>
         </div>

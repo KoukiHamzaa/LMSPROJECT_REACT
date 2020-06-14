@@ -10,6 +10,7 @@ $factory->define(CourseUser::class, function (Faker $faker) {
     return [
         'user_id' => $faker->randomDigitNotNull,
         'course_id' => $faker->randomDigitNotNull,
+        'category_id' => $faker->randomDigitNotNull,
         'user_account_id' => $faker->randomDigitNotNull,
         'paid_data' => $faker->date('Y-m-d H:i:s'),
         'expiry_date' => $faker->date('Y-m-d H:i:s'),

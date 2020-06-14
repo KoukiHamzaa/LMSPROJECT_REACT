@@ -8,10 +8,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class CourseUser
  * @package App\Models
- * @version May 20, 2020, 9:12 pm UTC
+ * @version June 14, 2020, 2:16 pm UTC
  *
  * @property integer user_id
  * @property integer course_id
+ * @property integer category_id
  * @property integer user_account_id
  * @property string|\Carbon\Carbon paid_data
  * @property string|\Carbon\Carbon expiry_date
@@ -36,6 +37,7 @@ class CourseUser extends Model
     public $fillable = [
         'user_id',
         'course_id',
+        'category_id',
         'user_account_id',
         'paid_data',
         'expiry_date',
@@ -53,6 +55,7 @@ class CourseUser extends Model
         'id' => 'integer',
         'user_id' => 'integer',
         'course_id' => 'integer',
+        'category_id' => 'integer',
         'user_account_id' => 'integer',
         'paid_data' => 'datetime',
         'expiry_date' => 'datetime',
@@ -67,13 +70,8 @@ class CourseUser extends Model
      * @var array
      */
     public static $rules = [
-        'user_id' => 'required',
-        'course_id' => 'required',
-        'user_account_id' => 'required',
-        'paid_data' => 'required',
-        'expiry_date' => 'required',
-        'status' => 'required',
-        // 'created_at' => 'required',
-        // 'updated_at' => 'required'
+        'status' => 'required'
     ];
+
+    
 }

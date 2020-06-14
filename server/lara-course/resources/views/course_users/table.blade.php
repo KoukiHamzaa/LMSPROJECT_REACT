@@ -2,8 +2,9 @@
     <table class="table" id="courseUsers-table">
         <thead>
             <tr>
-        <th>User Id</th>
+                <th>User Id</th>
         <th>Course Id</th>
+        <th>Category Id</th>
         <th>User Account Id</th>
         <th>Paid Data</th>
         <th>Expiry Date</th>
@@ -16,8 +17,9 @@
         <tbody>
         @foreach($courseUsers as $courseUser)
             <tr>
-            <td>{{ $courseUser->user_id }}</td>
+                <td>{{ $courseUser->user_id }}</td>
             <td>{{ $courseUser->course_id }}</td>
+            <td>{{ $courseUser->category_id }}</td>
             <td>{{ $courseUser->user_account_id }}</td>
             <td>{{ $courseUser->paid_data }}</td>
             <td>{{ $courseUser->expiry_date }}</td>

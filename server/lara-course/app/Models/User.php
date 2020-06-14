@@ -88,5 +88,15 @@ class User extends Model
         return $this->hasOne(Course::class);
     }
 
+    public function role()
+    {
+        return $this->belongsTo('App\Models\Role');
+    }
+
+    public function courses()
+    {
+        return $this->belongsToMany('App\Models\Course');
+    }
+
     
 }
