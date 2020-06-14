@@ -83,10 +83,10 @@ class User extends Model
         'role_id' => 'required'
     ];
 
-    public function course()
-    {
-        return $this->hasOne(Course::class);
-    }
+    // public function course()
+    // {
+    //     return $this->hasOne(Course::class);
+    // }
 
     public function role()
     {
@@ -97,6 +97,7 @@ class User extends Model
     {
         return $this->belongsToMany('App\Models\Course');
     }
+
 
     
 }

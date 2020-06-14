@@ -72,6 +72,15 @@ class CourseUser extends Model
     public static $rules = [
         'status' => 'required'
     ];
+    
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 
+    public function course()
+    {
+        return $this->belongsTo('App\Models\Course');
+    }
     
 }

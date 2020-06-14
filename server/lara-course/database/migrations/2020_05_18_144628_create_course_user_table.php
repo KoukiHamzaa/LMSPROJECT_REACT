@@ -14,12 +14,12 @@ class CreateCourseUserTable extends Migration
     public function up()
     {
         Schema::create('course_user', function (Blueprint $table) {
-            $table->increments('id')->nullable();
-            $table->integer('user_id')->nullable();
+            $table->increments('id');
+            $table->integer('user_id');
             $table->integer('course_id')->nullable();
             $table->integer('category_id')->nullable();
             $table->integer('user_account_id')->nullable();
-            $table->dateTime('paid_data')->nullable();
+            $table->dateTime('paid_date')->nullable();
             $table->dateTime('expiry_date')->nullable();
             $table->string('plan')->nullable(); // monthly Or quarterly Or  yearly !! 
             $table->double('paid_amount')->nullable();

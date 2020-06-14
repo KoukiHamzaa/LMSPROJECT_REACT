@@ -47,7 +47,6 @@ class Course extends Model
     public $fillable = [
         'user_id',
         'category_id',
-        // 'category_name',
         'title',
         'sub_title',
         'description',
@@ -76,7 +75,6 @@ class Course extends Model
         'id' => 'integer',
         'user_id' => 'integer',
         'category_id' => 'integer',
-        // 'category_name' => 'string',
         'title' => 'string',
         'sub_title' => 'string',
         'description' => 'string',
@@ -105,7 +103,6 @@ class Course extends Model
     public static $rules = [
         // 'user_id' => 'required',
         // 'category_id' => 'required'
-        // 'category_name' => 'required',
         'title' => 'required',
         'sub_title' => 'required',
         'description' => 'required',
@@ -135,6 +132,14 @@ public function user()
 
 public function users()
 {
-    return $this->belongsToMany('App\Models\User');
+    return $this->belongsToMany('App\Models\User')
+        ->withPivot('paid_amount')
+        ->withPivot('paid_date')
+        ->withPivot('expiry_date')
+        ->withPivot('plan')
+        ->withPivot('created_at')
+        ->withPivot('user_account_id')
+        ->withPivot('category_id')
+        ;
 }
 }

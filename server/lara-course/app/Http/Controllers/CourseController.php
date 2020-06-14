@@ -136,9 +136,7 @@ class CourseController extends AppBaseController
         }
         
 
-        return view('courses.show')
-        ->with('course', $course)
-        ->with('course', $course);
+        return view('courses.show')->with('course', $course);
     }
 
     /**
