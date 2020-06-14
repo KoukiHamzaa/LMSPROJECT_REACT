@@ -27,14 +27,14 @@
              <div class="timeline-item">
 				<span class="time"><i class="fa fa-eye"></i> viwes :{{ $category->view_count }}</span>
                 <h3 class="timeline-header"> Photo uploaded</h3>
-					<div class="timeline-body">
+					<div class="timeline-body col-md-6">
 						<img class="margin" src="{{ $category->categories_photos }}" alt=" "width="230" height="180" >
 					</div>
+					@include('courses.table_category')	
              </div>
-            </li>
-			@include('courses.table_category')			
+            </li>	
+			<p></p>
+			<p></p>	
           </ul>
         </div>
 @endsection
-
-<!-- @include('courses.table_category') -->

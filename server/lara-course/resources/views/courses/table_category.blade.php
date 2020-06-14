@@ -1,6 +1,4 @@
-<li>
-	<i class="fa fa-camera bg-purple"></i>
-<div class="timeline-item col-md-12" style="margin-bottom: 1em;;">
+<div class="timeline-body-footer col-md-6">
     @foreach($courses as $course)
         <tr>
             <td width="80%">
@@ -51,4 +49,3 @@
         </tr>
     @endforeach
 </div>
-</li>
