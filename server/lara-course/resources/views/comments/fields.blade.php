@@ -16,6 +16,12 @@
     {!! Form::number('category_id', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Item Id Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('item_id', 'Item Id:') !!}
+    {!! Form::number('item_id', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Body Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('body', 'Body:') !!}

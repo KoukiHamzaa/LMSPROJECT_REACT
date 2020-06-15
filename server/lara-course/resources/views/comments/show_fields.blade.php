@@ -22,6 +22,12 @@
     <p>{{ $comment->category_id }}</p>
 </div>
 
+<!-- Item Id Field -->
+<div class="form-group">
+    {!! Form::label('item_id', 'Item Id:') !!}
+    <p>{{ $comment->item_id }}</p>
+</div>
+
 <!-- Body Field -->
 <div class="form-group">
     {!! Form::label('body', 'Body:') !!}

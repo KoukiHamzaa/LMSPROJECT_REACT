@@ -5,16 +5,18 @@
                 <th>User Id</th>
         <th>Course Id</th>
         <th>Category Id</th>
+        <th>Item Id</th>
         <th>Body</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
         <tbody>
-        @foreach($comments as $comment)
+        @foreach($course->comments as $comment)
             <tr>
                 <td>{{ $comment->user_id }}</td>
             <td>{{ $comment->course_id }}</td>
             <td>{{ $comment->category_id }}</td>
+            <td>{{ $comment->item_id }}</td>
             <td>{{ $comment->body }}</td>
                 <td>
                     {!! Form::open(['route' => ['comments.destroy', $comment->id], 'method' => 'delete']) !!}

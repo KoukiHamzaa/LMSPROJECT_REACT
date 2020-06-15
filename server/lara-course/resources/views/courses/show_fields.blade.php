@@ -52,8 +52,8 @@
 <div class="form-group col-md-3 list-group-item disabled">
     {!! Form::label('view_count', 'View Count:') !!}
     <p>
-        <i class="fa fa-eye" aria-hidden="true"></i>
-        {{ $course->view_count }}
+    <i class="fa fa-eye" aria-hidden="true"></i>
+    {{ $course->view_count }}
     </p>
 </div>
 <!-- ======================================== -->

@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -28,7 +29,7 @@
 				<span class="time"><i class="fa fa-eye"></i> viwes :{{ $category->view_count }}</span>
                 <h3 class="timeline-header"> Photo uploaded</h3>
 					<div class="timeline-body col-md-6">
-						<img class="margin" src="{{ $category->categories_photos }}" alt=" "width="230" height="180" >
+						<img class="margin" src="{{ $category->categories_photos }}" alt=" "width="400" height="400" >
 					</div>
 					@include('courses.table_category')	
              </div>

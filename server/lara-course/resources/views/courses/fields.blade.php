@@ -49,7 +49,7 @@
                     <i class="fa fa-pencil bg-maroon"></i>
                           <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 col-xs-12 col-sm-6 col-lg-8">
                             <div class="timeline-header text-primary">
-                                          <label for="category_id">Category Name</label>
+                             <label for="category_id">Category Name</label>
                             </div>
 
                             <div class="timeline-body">

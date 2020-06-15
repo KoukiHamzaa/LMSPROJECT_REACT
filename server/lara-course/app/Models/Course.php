@@ -142,4 +142,9 @@ public function users()
         ->withPivot('category_id')
         ;
 }
+
+public function comments()
+{
+    return $this->hasMany('App\Models\Comment');
+}
 }

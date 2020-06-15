@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class CommentRepository
  * @package App\Repositories
- * @version May 20, 2020, 9:10 pm UTC
+ * @version June 15, 2020, 12:00 am UTC
  *
  * @method Comment findWithoutFail($id, $columns = ['*'])
  * @method Comment find($id, $columns = ['*'])
@@ -23,6 +23,7 @@ class CommentRepository extends BaseRepository
         'user_id',
         'course_id',
         'category_id',
+        'item_id',
         'body'
     ];
 

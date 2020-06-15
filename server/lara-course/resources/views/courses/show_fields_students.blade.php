@@ -120,20 +120,6 @@
 
 @endif
 
-
-
-<!-- Description Field -->
-<div class="form-group col-md-12 list-group-item list-group-item-info">
-    {!! Form::label('description', 'Description:') !!}
-    <p>{{ $course->description }}</p>
-</div>
-
-<!-- About Instructor Field -->
-<div class="form-group col-md-12 list-group-item list-group-item-info">
-    {!! Form::label('about_instructor', 'About Instructor:') !!}
-    <p>{{ $course->about_instructor }}</p>
-</div>
-
 <!-- Playlist Url Field -->
 <div class="form-group col-md-6 list-group-item-warning">
     {!! Form::label('playlist_url', 'Playlist Url:') !!}<br>
@@ -144,15 +130,7 @@
 <!-- Photo Field -->
 <div class="form-group col-md-6 list-group-item-warning">
   {!! Form::label('photo', 'Photo:') !!}<br>
-    <!--x   <p>{{ $course->photo }}</p> -->
-    <!-- <img src="{{ $course->photo }}" class="img-fluid" alt="Responsive image rounded mb-0" width="400" height="200"> -->
     <img src="{{ $course->photo }}" class="card-img-top" alt="Card image cap" width="400" height="200">
-</div>
-
-<!-- Tags Field -->
-<div class="form-group col-md-8 list-group-item list-group-item-info">
-    {!! Form::label('tags', 'Tags:') !!}
-    <p>{{ $course->tags }}</p>
 </div>
 
 <!-- created time -->
@@ -163,12 +141,6 @@
 </div>
 </div>
 
-<!-- What Will Student Learn Field -->
-<div class="form-group col-md-8 list-group-item list-group-item-info">
-    {!! Form::label('what_will_student_learn', 'What Will Student Learn:') !!}
-    <p>{{ $course->what_will_student_learn }}</p>
-</div>
-
 <!-- created time -->
 <div class="form-group col-md-4 list-group-item disabled">
     <div class="mt-5">
@@ -176,21 +148,23 @@
         <p>{{ $course->updated_at->format('h:i a - D d M Y') }}</p>
     </div>
 </div>
-
-<!-- Target Student Field -->
-<div class="form-group col-md-12 list-group-item list-group-item-info">
-    {!! Form::label('target_student', 'Target Student:') !!}
-    <p>{{ $course->target_student }}</p>
+<br>
+<div class="col-md-">
+<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+  <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Description</a>
+  <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">About Instructor</a>
+  <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Tags</a>
+  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">What Will Student Learn</a>
+  <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Target Student</a>
+  <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Requirements</a>
 </div>
-
-<!-- Requirements Field -->
-<div class="form-group col-md-12 list-group-item list-group-item-info">
-    {!! Form::label('requirements', 'Requirements:') !!}
-    <p>{{ $course->requirements }}</p>
+<div class="tab-content" id="v-pills-tabContent">
+  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">{{ $course->description }}</div>
+  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">{{ $course->about_instructor }}</div>
+  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">{{ $course->tags }}</div>
+  <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">{{ $course->what_will_student_learn }}</div>
+  <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">{{ $course->target_student }}</div>
+  <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">{{ $course->requirements }}</div>
 </div>
-
-<!-- Subscriber Count Field
-<div class="form-group col-md-4 list-group-item disabled">
-    {!! Form::label('subscriber_count', 'Subscriber Count:') !!}
-    <p>{{ $course->subscriber_count }}</p>
-</div> -->
+</div>
+<br>

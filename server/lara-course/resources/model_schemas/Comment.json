@@ -44,6 +44,17 @@
         "inIndex": true
     },
     {
+        "name": "item_id",
+        "dbType": "integer,false",
+        "htmlType": null,
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
         "name": "body",
         "dbType": "text",
         "htmlType": "textarea",
@@ -67,9 +78,9 @@
     },
     {
         "name": "created_at",
-        "dbType": "datetime",
+        "dbType": "datetime:nullable",
         "htmlType": "date",
-        "validations": "required",
+        "validations": null,
         "searchable": false,
         "fillable": false,
         "primary": false,
@@ -78,9 +89,9 @@
     },
     {
         "name": "updated_at",
-        "dbType": "datetime",
+        "dbType": "datetime:nullable",
         "htmlType": "date",
-        "validations": "required",
+        "validations": null,
         "searchable": false,
         "fillable": false,
         "primary": false,

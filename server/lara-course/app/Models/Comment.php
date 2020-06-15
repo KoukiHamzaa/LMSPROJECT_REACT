@@ -8,11 +8,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Comment
  * @package App\Models
- * @version May 20, 2020, 9:10 pm UTC
+ * @version June 15, 2020, 12:00 am UTC
  *
  * @property integer user_id
  * @property integer course_id
  * @property integer category_id
+ * @property integer item_id
  * @property string body
  */
 class Comment extends Model
@@ -33,6 +34,7 @@ class Comment extends Model
         'user_id',
         'course_id',
         'category_id',
+        'item_id',
         'body'
     ];
 
@@ -46,6 +48,7 @@ class Comment extends Model
         'user_id' => 'integer',
         'course_id' => 'integer',
         'category_id' => 'integer',
+        'item_id' => 'integer',
         'body' => 'string'
     ];
 
@@ -56,10 +59,11 @@ class Comment extends Model
      */
     public static $rules = [
         'user_id' => 'required',
-        'body' => 'required',
-        // 'created_at' => 'required',
-        // 'updated_at' => 'required'
+        'body' => 'required'
     ];
-
+    public function course()
+    {
+        return $this->belongsTo('App\Models\Course');
+    }
     
 }

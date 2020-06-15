@@ -1,9 +1,3 @@
-<!-- Id Field -->
-<!-- <div class="form-group  col-md-6 ">
-    {!! Form::label('id', 'Id:') !!}
-    <p>{{ $user->id }}</p>
-</div> -->
-
 <!-- Name Field -->
 <div class="form-group  col-md-6">
     {!! Form::label('name', 'Name:') !!}
