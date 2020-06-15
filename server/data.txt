@@ -23,3 +23,9 @@ INSERT INTO `roles` (`id`, `name`, `deleted_at`, `created_at`, `updated_at`) VAL
 (2, 'Enseignant', NULL, '2020-06-14 10:30:08', '2020-06-14 10:30:08'),
 (3, 'Etudiant', NULL, '2020-06-14 10:30:19', '2020-06-14 10:30:19');
 
+INSERT INTO `comments` (`id`, `user_id`, `course_id`, `category_id`, `item_id`, `body`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(2, 1, 5, 1, 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan mauris neque, molestie congue nunc scelerisque sed. Morbi non urna non tortor porttitor vulputate non sit amet nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse mattis lorem vitae elit faucibus porttitor. Sed posuere id justo rutrum laoreet. Etiam dapibus in diam in molestie. Pellentesque nibh elit, tempus a tellus mollis, blandit dignissim massa. Vestibulum ut magna sem. Cras eu venenatis lacus. Integer nec consectetur nunc. Nunc scelerisque auctor velit, sed congue dolor dapibus vitae. Etiam ut metus sollicitudin, pharetra lorem id, imperdiet tortor. Etiam vel pretium mi. Nunc vulputate lacinia luctus. Nam fermentum volutpat libero et pellentesque. Sed pulvinar luctus condimentum.', NULL, '2020-06-25 10:37:38', '2020-06-15 12:16:13');
+
+INSERT INTO `course_user` (`id`, `user_id`, `course_id`, `category_id`, `user_account_id`, `paid_date`, `expiry_date`, `plan`, `paid_amount`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 1, 5, 1, 1, NULL, '2021-02-01 00:00:00', '200', 200, 1, NULL, '2020-06-15 12:26:53', '2020-06-15 12:26:53');
+
