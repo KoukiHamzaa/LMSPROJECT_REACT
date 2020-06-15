@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property integer course_id
  * @property integer category_id
  * @property integer user_account_id
- * @property string|\Carbon\Carbon paid_data
+ * @property string|\Carbon\Carbon paid_date
  * @property string|\Carbon\Carbon expiry_date
  * @property string plan
  * @property number paid_amount
@@ -39,7 +39,7 @@ class CourseUser extends Model
         'course_id',
         'category_id',
         'user_account_id',
-        'paid_data',
+        'paid_date',
         'expiry_date',
         'plan',
         'paid_amount',
@@ -57,7 +57,7 @@ class CourseUser extends Model
         'course_id' => 'integer',
         'category_id' => 'integer',
         'user_account_id' => 'integer',
-        'paid_data' => 'datetime',
+        'paid_date' => 'datetime',
         'expiry_date' => 'datetime',
         'plan' => 'string',
         'paid_amount' => 'float',

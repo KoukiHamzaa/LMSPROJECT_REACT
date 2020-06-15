@@ -24,13 +24,13 @@
 
 <!-- Paid Data Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('paid_data', 'Paid Data:') !!}
-    {!! Form::date('paid_data', null, ['class' => 'form-control','id'=>'paid_data']) !!}
+    {!! Form::label('paid_date', 'Paid Date:') !!}
+    {!! Form::date('paid_date', null, ['class' => 'form-control','id'=>'paid_date']) !!}
 </div>
 
 @push('scripts')
     <script type="text/javascript">
-        $('#paid_data').datetimepicker({
+        $('#paid_date').datetimepicker({
             format: 'YYYY-MM-DD HH:mm:ss',
             useCurrent: false
         })

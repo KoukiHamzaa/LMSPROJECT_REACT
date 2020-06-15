@@ -17,7 +17,7 @@
                 <td><a class="text-secondary font-weight-bold text-capitalize" href="mailto:{{$user->id}}"> {{ $user->email }}</a></td>
                 <td>{{ $user->gender }}</td>
                 <td>${!! $user->pivot->paid_amount !!}</td>
-            
+                @if(Auth::user()->id == $user->id || Auth::user()->role_id < 3)
                     <td>
                         {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
@@ -27,6 +27,7 @@
                         </div>
                         {!! Form::close() !!}
                     </td>
+                @endif
             </tr>
         @endforeach
         </tbody>

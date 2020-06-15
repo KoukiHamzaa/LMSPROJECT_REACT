@@ -6,7 +6,7 @@
         <th>Course Id</th>
         <th>Category Id</th>
         <th>User Account Id</th>
-        <th>Paid Data</th>
+        <th>Paid Date</th>
         <th>Expiry Date</th>
         <th>Plan</th>
         <th>Paid Amount</th>
@@ -21,7 +21,7 @@
             <td>{{ $courseUser->course_id }}</td>
             <td>{{ $courseUser->category_id }}</td>
             <td>{{ $courseUser->user_account_id }}</td>
-            <td>{{ $courseUser->paid_data }}</td>
+            <td>{{ $courseUser->paid_date }}</td>
             <td>{{ $courseUser->expiry_date }}</td>
             <td>{{ $courseUser->plan }}</td>
             <td>{{ $courseUser->paid_amount }}</td>

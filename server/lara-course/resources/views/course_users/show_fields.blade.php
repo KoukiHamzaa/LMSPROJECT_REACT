@@ -30,8 +30,8 @@
 
 <!-- Paid Data Field -->
 <div class="form-group">
-    {!! Form::label('paid_data', 'Paid Data:') !!}
-    <p>{{ $courseUser->paid_data }}</p>
+    {!! Form::label('paid_date', 'Paid Data:') !!}
+    <p>{{ $courseUser->paid_date }}</p>
 </div>
 
 <!-- Expiry Date Field -->

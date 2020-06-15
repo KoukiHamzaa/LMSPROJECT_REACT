@@ -58,12 +58,17 @@ class Comment extends Model
      * @var array
      */
     public static $rules = [
-        'user_id' => 'required',
+        // 'user_id' => 'required',
         'body' => 'required'
     ];
     public function course()
     {
         return $this->belongsTo('App\Models\Course');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
     }
     
 }

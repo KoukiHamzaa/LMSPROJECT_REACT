@@ -98,6 +98,11 @@ class User extends Model
         return $this->belongsToMany('App\Models\Course');
     }
 
+    public function comments()
+{
+    return $this->hasMany('App\Models\Comment');
+}
+
 
     
 }

@@ -15,7 +15,7 @@
         <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
-                    @include('comments.table')
+                    @include('comments.table-admin')
             </div>
         </div>
         <div class="text-center">
