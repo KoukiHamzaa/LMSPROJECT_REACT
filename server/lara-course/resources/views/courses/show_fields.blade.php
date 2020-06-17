@@ -2,7 +2,7 @@
 <div class="form-group col-xs-12 col-md-6">
     <div class="h1 text-primary text-uppercase"><u>{{ $course->title}}</u></div>
     <div>
-        <div class="h3 text-capitalize text-success font-weight-bold ml-5 mt-1 col-md-6">
+        <div class="h3 text-capitalize text-success font-weight-bold ml-5 mt-1 col-md-5">
              {{ $course->sub_title }}
         </div>
         <div class="h5 text-capitalize text-warning font-weight-bold ml-5 mt-1 ml-5 col-md-6">
@@ -11,7 +11,7 @@
     </div>
 </div>
 <!-- Actual Price Field -->
-<div class="form-group col-md-4  ">
+<div class="form-group col-md-3  ">
     <!-- <div>{!! Form::label('actual_price', 'Price:') !!}</div> -->
     <div class="h2 mb-0 rounded">
         <div class="bg-primary w-50">Price :{{ $course->actual_price -  $course->discount_price}}$</div>
@@ -23,18 +23,48 @@
     </div>
     <!-- <p>{{ $course->discount_price }}</p> -->
 </div>
+
+<!--start-- buy courses -->
 <div class="col-md-2">
-    <span class="time h6"><a class="text-dark" href="{{ route('courses.index') }}"> <i class="fa fa-angle-double-left"></i>Go back</a></span>
+    <span class="time h5 ml-5 font-weight-bold"><a class="text-dark" href="{{ route('courses.index') }}"> <i class="fa fa-angle-double-left"></i>Go back</a></span>
     <br>
     <div class="h3 mt-5 mb-5">
-    <a class="text-dark" href="">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            Buy Now
-    </a>
+    <form method="POST" action="{{ route('pay') }}" accept-charset="UTF-8" class="form-horizontal" role="form">
+        <div class="row" style="margin-bottom:40px;">
+			  <div class="col-md-8 col-md-offset-2">
+					@if(Auth::check())
+						<input type="hidden" name="email" value="{{Auth::user()->email}}"> {{-- required --}}
+					@else
+						<input class="form-control" type="email" placeholder="entrez votre email valide" name="email" value="" required="required"> {{-- required --}}
+					@endif
+					<input type="hidden" name="orderID" value="{{$course->id}}">
+					<input type="hidden" name="amount" value="{{ $course->actual_price }}"> {{-- required in kobo --}}
+					<input type="hidden" name="quantity" value="1">
+					<input type="hidden" name="currency" value="NGN">
+					<!-- <input type="hidden" name="metadata" value="{{ json_encode($array = ['key_name' => 'value',]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}} -->
+					<input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
+					{{ csrf_field() }} {{-- works only when using laravel 5.1, 5.2 --}}
+
+					 <input type="hidden" name="_token" value="{{ csrf_token() }}"> {{-- employ this in place of csrf_field only in laravel 5.0 --}}
+					 
+					<p>
+						 <button class="h3 mt-2 mr-5" type="submit" value="Pay Now!" style="background-color:transparent;border: none;width:150px">
+							  <i class="fa fa-shopping-cart" aria-hidden="true"></i>Buy Now	
+						 </button>
+						  
+						@if($course->discount_price &&  $course->discount_price > 0 ) 
+						<div class="text-dark" style="font-size: 9px;margin: 0;display: inline-block;">Garantie remboursement-24-h<br>{{ $finalPrice = $course->discount_price }}$</div>
+						@else
+						<div class="text-dark pt-0 mr-5" style="font-size: 9px;margin: 0;display: inline-block;">Garantie remboursement-24-h<br>{{ $finalPrice = $course->actual_price }}$</div>
+						@endif
+					  
+					</p>
+			  </div>
+        </div>
+	</form>
     </div>
-
 </div>
-
+<!--end-- buy courses -->
 <!-- User namer Field -->
 <div class="form-group col-md-3 list-group-item disabled">
     {!! Form::label('user_id', 'Auther:') !!}

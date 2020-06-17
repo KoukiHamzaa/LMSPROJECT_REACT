@@ -53,3 +53,7 @@ Route::resource('roles', 'RoleController');
 Route::resource('coupons', 'CouponController');
 
 Route::resource('courseUsers', 'CourseUserController');
+
+Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
+
+Route::post('/payment/callback', 'PaymentController@handleGatewayCallback')->name('paymentCallback');

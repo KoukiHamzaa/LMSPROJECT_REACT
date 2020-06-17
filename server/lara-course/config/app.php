@@ -146,7 +146,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        
         /*
          * Package Service Providers...
          */
@@ -164,6 +164,7 @@ return [
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
         \InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class, 
+        Unicodeveloper\Paystack\PaystackServiceProvider::class,
 
     ],
 
@@ -216,6 +217,7 @@ return [
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
         'Flash'     => Laracasts\Flash\Flash::class,
+        'Paystack' => Unicodeveloper\Paystack\Facades\Paystack::class,
 
     ],
 
