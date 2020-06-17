@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use App\Models\Course;
+use Auth;
 
 class CommentController extends AppBaseController
 {
@@ -56,12 +58,14 @@ class CommentController extends AppBaseController
     public function store(CreateCommentRequest $request)
     {
         $input = $request->all();
+        $input['user_id'] = Auth::user()->id;
+        // $input['course_id'] = Course::course()->id;
 
         $comment = $this->commentRepository->create($input);
 
-        Flash::success('Comment saved successfully.');
+        Flash::success('Commentaires ajoutés avec succès.');
 
-        return redirect(route('comments.index'));
+        return redirect()->back();
     }
 
     /**
@@ -76,7 +80,7 @@ class CommentController extends AppBaseController
         $comment = $this->commentRepository->findWithoutFail($id);
 
         if (empty($comment)) {
-            Flash::error('Comment not found');
+            Flash::error('Commentaire non trouvé');
 
             return redirect(route('comments.index'));
         }
@@ -96,7 +100,7 @@ class CommentController extends AppBaseController
         $comment = $this->commentRepository->findWithoutFail($id);
 
         if (empty($comment)) {
-            Flash::error('Comment not found');
+            Flash::error('Commentaire non trouvé');
 
             return redirect(route('comments.index'));
         }
@@ -117,14 +121,14 @@ class CommentController extends AppBaseController
         $comment = $this->commentRepository->findWithoutFail($id);
 
         if (empty($comment)) {
-            Flash::error('Comment not found');
+            Flash::error('Commentaire non trouvé');
 
             return redirect(route('comments.index'));
         }
 
         $comment = $this->commentRepository->update($request->all(), $id);
 
-        Flash::success('Comment updated successfully.');
+        Flash::success('Commentaire mis à jour avec succès.');
 
         return redirect(route('comments.index'));
     }
@@ -141,14 +145,14 @@ class CommentController extends AppBaseController
         $comment = $this->commentRepository->findWithoutFail($id);
 
         if (empty($comment)) {
-            Flash::error('Comment not found');
+            Flash::error('Commentaire non trouvé');
 
             return redirect(route('comments.index'));
         }
 
         $this->commentRepository->delete($id);
 
-        Flash::success('Comment deleted successfully.');
+        Flash::success('Commentaire supprimé avec succès.');
 
         return redirect(route('comments.index'));
     }

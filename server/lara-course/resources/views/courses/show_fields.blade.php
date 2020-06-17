@@ -26,7 +26,7 @@
 <div class="col-md-2">
     <span class="time h6"><a class="text-dark" href="{{ route('courses.index') }}"> <i class="fa fa-angle-double-left"></i>Go back</a></span>
     <br>
-    <div class="h3 mt-5">
+    <div class="h3 mt-5 mb-5">
     <a class="text-dark" href="">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             Buy Now

@@ -1,19 +1,19 @@
 @include('adminlte-templates::common.errors')
         <div class="box box-primary">
             <div class="box-body">
-                <div class="row">
+                <div class="col-lg-12">
                     {!! Form::open(['route' => 'comments.store']) !!}
-
+                       <!-- ============================================== -->
+                        <input type="hidden" name="course_id" value="{{$course->id}}" />
                         <!-- ============================================== -->
                         <!-- Body Field -->
-                        <div class="form-group col-sm-12">
-                            {!! Form::textarea('body', null, ['class' => 'form-control']) !!}
+                        <div class="form-group col-sm-8">
+                            {!! Form::textarea('body', null, ['class' => 'form-control', 'rows' => "4"]) !!}
                         </div>
 
                         <!-- Submit Field -->
                         <div class="form-group col-sm-12">
-                            {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-                            <a href="{{ route('comments.index') }}" class="btn btn-default">Cancel</a>
+                            {!! Form::submit('add comments', ['class' => 'btn btn-primary']) !!}
                         </div>
                         <!-- ============================================== -->
 

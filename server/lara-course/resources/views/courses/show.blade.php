@@ -11,11 +11,8 @@
             <div class="box-body">
                 <div class="row" style="padding-left: 20px">
                             @include('courses.show_fields')
-
-
-
 <!-- ==================================================================================================================== -->
-<ul class="nav nav-pills col-md-12 mb-3" id="pills-tab" role="tablist">
+<ul class="nav nav-pills col-md-12 mt-5" id="pills-tab" role="tablist" >
     @if(Auth::user()->role_id < 3 || Auth::user()->id == $course->user_id)
     <li class="nav-item">
         <a class="nav-link active text-bold" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Comments</a>
