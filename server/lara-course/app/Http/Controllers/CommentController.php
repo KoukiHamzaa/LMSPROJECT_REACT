@@ -82,7 +82,7 @@ class CommentController extends AppBaseController
         if (empty($comment)) {
             Flash::error('Commentaire non trouvé');
 
-            return redirect(route('comments.index'));
+            return redirect()->back();
         }
 
         return view('comments.show')->with('comment', $comment);
@@ -102,7 +102,7 @@ class CommentController extends AppBaseController
         if (empty($comment)) {
             Flash::error('Commentaire non trouvé');
 
-            return redirect(route('comments.index'));
+            return redirect()->back();
         }
 
         return view('comments.edit')->with('comment', $comment);
@@ -123,14 +123,15 @@ class CommentController extends AppBaseController
         if (empty($comment)) {
             Flash::error('Commentaire non trouvé');
 
-            return redirect(route('comments.index'));
+            return redirect()->back();
         }
 
         $comment = $this->commentRepository->update($request->all(), $id);
 
         Flash::success('Commentaire mis à jour avec succès.');
 
-        return redirect(route('comments.index'));
+        // return redirect()->back();
+        return redirect()->route('courses.show', ['id'=> $comment->course_id]);
     }
 
     /**
@@ -147,13 +148,13 @@ class CommentController extends AppBaseController
         if (empty($comment)) {
             Flash::error('Commentaire non trouvé');
 
-            return redirect(route('comments.index'));
+            return redirect()->back();
         }
 
         $this->commentRepository->delete($id);
 
         Flash::success('Commentaire supprimé avec succès.');
 
-        return redirect(route('comments.index'));
+        return redirect()->back();
     }
 }

@@ -1,7 +1,8 @@
-@include('adminlte-templates::common.errors')
-        <div class="box box-primary">
-            <div class="box-body">
-                <div class="col-lg-12">
+@if(Auth::check())
+        <div class="box box-primary col-md-12">
+            @include('adminlte-templates::common.errors')
+                         <div class="box-body " >
+                         <div class="">
                     {!! Form::open(['route' => 'comments.store']) !!}
                        <!-- ============================================== -->
                         <input type="hidden" name="course_id" value="{{$course->id}}" />
@@ -21,6 +22,7 @@
                 </div>
             </div>
         </div>
+@endif
 <div class="table-responsive">
     <table class="table" id="comments-table">
         <tbody>
@@ -32,7 +34,6 @@
                 <td>
                     {!! Form::open(['route' => ['comments.destroy', $comment->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{{ route('comments.show', [$comment->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                         <a href="{{ route('comments.edit', [$comment->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
                         {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                     </div>
