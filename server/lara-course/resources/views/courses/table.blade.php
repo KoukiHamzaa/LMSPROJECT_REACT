@@ -13,14 +13,14 @@
 							<p class="card-text">
 							{{ \Illuminate\Support\Str::limit($course->description, 150, $end='...') }}
 							</p> 
-							<h4 class="text-success font-weight-bold text-capitalize ">Course Created by <u>{!! $course->user['name'] !!}</u></h4>
-							<p class="text-muted font-weight-bold text-capitalize">Subscriber in this Course : {!!number_format($course->subscriber_count)!!} Student</p>
+							<h4 class="text-success font-weight-bold text-capitalize ">Cours créé par <u>{!! $course->user['name'] !!}</u></h4>
+							<p class="text-muted font-weight-bold text-capitalize">Abonné à ce cours : {!!number_format($course->subscriber_count)!!} Étudiant/e</p>
 
-							<h3 class="text-secondary font-weight-normal text-capitalize">price {!! $course->actual_price !!} $ </h3>
-							<h4 class="text-info font-weight-light text-capitalize">discount price {!! $course->discount_price !!} $ </h4>
+							<h3 class="text-secondary font-weight-normal text-capitalize">Prix {!! $course->actual_price !!} $ </h3>
+							<h4 class="text-info font-weight-light text-capitalize">prix bas {!! $course->discount_price !!} $ </h4>
 							@if(Auth::user()->role_id < 3)
 							<ul class="list-group list-group-flush">
-									<small class="text-muted">Views :{{ $course->id }}</small>
+									<small class="text-muted">Vues :{{ $course->id }}</small>
 							</ul>
 							@endif
 						</div>
@@ -30,13 +30,13 @@
 									<!-- <div class='btn-group'> -->
 									<div class="btn-toolbar">
 									@if(Auth::user()->role_id < 3)
-									<a href="{{ route('courses.show', [$course->id]) }}" class="btn btn-primary" >View Course</a>
+									<a href="{{ route('courses.show', [$course->id]) }}" class="btn btn-primary" >Voir le cours</a>
 									@else
-									<a href="{{ route('courses.show', [$course->id]) }}" class="btn btn-primary" >Join Course</a>
+									<a href="{{ route('courses.show', [$course->id]) }}" class="btn btn-primary" >Rejoignez le cours</a>
 									@endif 
 								@if(Auth::user()->role_id < 3)
 									<a href="{{ route('courses.edit', [$course->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-									{!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+									{!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Êtes-vous sûr?')"]) !!}
 								@endif 
 									</div>
 								{!! Form::close() !!}

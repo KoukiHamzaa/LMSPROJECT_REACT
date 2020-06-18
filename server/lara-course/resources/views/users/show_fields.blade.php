@@ -1,13 +1,13 @@
 <!-- Name Field -->
 <div class="form-group  col-md-6">
-    {!! Form::label('name', 'Name:') !!}
+    {!! Form::label('name', 'Nom:') !!}
     <p>{{ $user->name }}</p>
 </div>
 
 
 <!-- First Name Field -->
 <div class="form-group  col-md-4">
-    {!! Form::label('first_name', 'First Name:') !!}
+    {!! Form::label('first_name', 'Prénom:') !!}
     <p>{{ $user->first_name }}</p>
 </div>
 
@@ -18,30 +18,30 @@
 
     <!-- Go back Field -->
 <div class="col-md-1">
-    <span class="time h6"><a class="text-dark" href="{{ route('users.index') }}"> <i class="fa fa-angle-double-left"></i>Go back</a></span>
+    <span class="time h6"><a class="text-dark" href="{{ route('users.index') }}"> <i class="fa fa-angle-double-left"></i>Retourner</a></span>
 </div>
 
 <!-- Last Name Field -->
 <div class="form-group  col-md-6">
-    {!! Form::label('last_name', 'Last Name:') !!}
+    {!! Form::label('last_name', 'nom de famille:') !!}
     <p>{{ $user->last_name }}</p>
 </div>
 
 <!-- Gender Field -->
 <div class="form-group  col-md-6">
-    {!! Form::label('gender', 'Gender:') !!}
+    {!! Form::label('gender', 'Genre:') !!}
     <p>{{ $user->gender }}</p>
 </div>
 
 @if(Auth::check() && ((Auth::user()->user_id == $user->id) || (Auth::user()->role_id == 1)) ) 
 <!-- Date Of Birth Field -->
 <div class="form-group  col-md-6">
-    {!! Form::label('date_of_birth', 'Date Of Birth:') !!}
+    {!! Form::label('date_of_birth', 'Date de naissance:') !!}
     <p>{{ $user->date_of_birth}}</p>
 
 <!-- Role Id Field -->
 <div class="form-group  col-md-6">
-    {!! Form::label('role_id', 'Role:') !!}
+    {!! Form::label('role_id', 'Rôle:') !!}
     <p>{{ $user->role['name'] }}</p>
 </div>
 </div>
@@ -57,24 +57,24 @@
 @if(Auth::check() AND Auth::user()->role_id == 1 ) 
 <!-- Issubscribed Field -->
     <div class="form-group  col-md-6">
-        {!! Form::label('isSubscribed', 'iS Subscribed:') !!}
+        {!! Form::label('isSubscribed', 'Est abonné?:') !!}
         <p>{{ $user->isSubscribed }}</p>
     </div>
     <!-- Deleted At Field -->
     <div class="form-group  col-md-6">
-        {!! Form::label('deleted_at', 'Deleted At:') !!}
+        {!! Form::label('deleted_at', 'Supprimé à:') !!}
         <p>{{ $user->deleted_at}}</p>
     </div>
 
 <!-- Created At Field -->
 <div class="form-group  col-md-6">
-    {!! Form::label('created_at', 'Joined At:') !!}
+    {!! Form::label('created_at', 'Rejoint à:') !!}
     <p>{{ $user->created_at->format('h:i a - D d M Y') }}</p>
 </div>
 
 @endif
 <!-- Updated At Field -->
     <div class="form-group  col-md-6">
-        {!! Form::label('updated_at', 'Last Update:') !!}
+        {!! Form::label('updated_at', 'Dernière mise à jour:') !!}
         <p>{{ $user->updated_at->format('h:i a - D d M Y')}}</p>
 </div>

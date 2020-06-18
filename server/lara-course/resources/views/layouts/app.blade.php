@@ -66,7 +66,7 @@
             <nav class="navbar navbar-static-top" role="navigation">
                 <!-- Sidebar toggle button-->
                 <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-                    <span class="sr-only">Toggle navigation</span>  
+                    <span class="sr-only">Basculer la navigation</span>  
                 </a>
                 <!-- Navbar Right Menu -->
                 <div class="navbar-custom-menu">
@@ -98,12 +98,12 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                        <a href="#" class="btn btn-default btn-flat">Profil</a>
                                     </div>
                                     <div class="pull-right">
                                         <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            Sign out
+                                            Déconnexion
                                         </a>
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                             @csrf
@@ -130,7 +130,7 @@
                 <img src="https://www.n-3rd.com/wp-content/uploads/2019/09/cropped-n-3rd-logo-110-32x32.png" width="15" height="15" alt="icon_copyright">.
                 <!-- <img src="{{ url('/Icon Place/logo/n-3rd/cropped-n-3rd-logo-110-32x32.png') }}" width="15" height="15" alt="icon_copyright">. -->
                 <a href="https://www.n-3rd.com">N3RD</a>
-            </strong> All rights reserved.
+            </strong> Tous les droits sont réservés.
         </footer>
 
     </div>
@@ -142,7 +142,7 @@
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="sr-only">Basculer la navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -157,14 +157,14 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/home') }}">Accueil</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                    <li><a href="{{ url('/login') }}">Login</a></li>
-                    <li><a href="{{ url('/register') }}">Register</a></li>
+                    <li><a href="{{ url('/login') }}">Accueil</a></li>
+                    <li><a href="{{ url('/register') }}">S'inscrire</a></li>
                 </ul>
             </div>
         </div>

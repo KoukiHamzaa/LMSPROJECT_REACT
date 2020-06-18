@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Course
+        Cours
         </h1>
     </section>
     <div class="content">
@@ -15,11 +15,11 @@
 <ul class="nav nav-pills col-md-12 mt-5" id="pills-tab" role="tablist" >
     @if(Auth::user()->role_id < 3 || Auth::user()->id == $course->user_id)
     <li class="nav-item">
-        <a class="nav-link active text-bold" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Comments</a>
+        <a class="nav-link active text-bold" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">commentaires</a>
     </li>
     @endif
     <li class="nav-item">
-        <a class="nav-link text-bold" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Subscibers</a>
+        <a class="nav-link text-bold" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Les abonnés</a>
     </li>
 </ul>
 <br>

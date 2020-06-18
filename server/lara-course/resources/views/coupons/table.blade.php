@@ -2,19 +2,19 @@
     <table class="table" id="coupons-table">
         <thead>
             <tr>
-                <th>User Id</th>
-        <th>Course Id</th>
-        <th>Student Id</th>
-        <th>Category Id</th>
-        <th>User Account Id</th>
-        <th>Available On Course Page</th>
+                <th>Identifiant d'utilisateur</th>
+        <th>Identifiant du cours</th>
+        <th>Identifiant étudiant</th>
+        <th>Identifiant de catégorie</th>
+        <th>Identifiant du compte utilisateur</th>
+        <th>Disponible sur la page du cours</th>
         <th>Type</th>
-        <th>Price</th>
-        <th>Status</th>
-        <th>Deadline</th>
+        <th>Prix</th>
+        <th>Statut</th>
+        <th>Date limite</th>
         <th>Count Timer</th>
-        <th>Total Available</th>
-        <th>Total Remaining</th>
+        <th>Total disponible</th>
+        <th>Total restant</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -39,7 +39,7 @@
                     <div class='btn-group'>
                         <a href="{{ route('coupons.show', [$coupon->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                         <a href="{{ route('coupons.edit', [$coupon->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                        {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                        {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Êtes-vous sûr?')"]) !!}
                     </div>
                     {!! Form::close() !!}
                 </td>

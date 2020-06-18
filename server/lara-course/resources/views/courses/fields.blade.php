@@ -3,22 +3,22 @@
             <!Start-------------------->
             <li class="time-label">
                   <span class="bg-primary">
-                  Fill in all the important data please 
+                  Remplissez toutes les données importantes s'il vous plaît
                   </span>
             </li>
             <!End-------------------->
             <li class="time-label ">
                   <span class="bg-green ">
-                    First Section
+                  Première Partie
                   </span>
             </li>
             <!Start-------------------->
             <li>
               <i class="fa fa-pencil bg-yellow"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8">
-              <span class="time"><a href="http://127.0.0.1:8000/courses/"> <i class="fa fa-angle-double-left"></i>Go back</a></span>
+              <span class="time"><a href="http://127.0.0.1:8000/courses/"> <i class="fa fa-angle-double-left"></i>Retourner</a></span>
                 <div class="timeline-header text-primary">
-                {!! Form::label('title', 'Title:') !!}
+                {!! Form::label('title', 'Titre:') !!}
                 </div>
                                         <!-------------------->
                 <div class="timeline-body">
@@ -34,7 +34,7 @@
 				<i class="fa fa-pencil bg-purple"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
-							{!! Form::label('sub_title', 'Sub Title:') !!}
+							{!! Form::label('sub_title', 'Sous-titre:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
@@ -49,7 +49,7 @@
                     <i class="fa fa-pencil bg-maroon"></i>
                           <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 col-xs-12 col-sm-6 col-lg-8">
                             <div class="timeline-header text-primary">
-                             <label for="category_id">Category Name</label>
+                             <label for="category_id">Nom de catégorie</label>
                             </div>
 
                             <div class="timeline-body">
@@ -69,7 +69,7 @@
             <!End-------------------->
             <li class="time-label">
                   <span class="bg-green">
-                    Second Section
+                  Deuxième Partie
                   </span>
             </li>
             <!Start-------------------->
@@ -111,7 +111,7 @@
 				<i class="fa fa-pencil bg-maroon"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
-							        {!! Form::label('about_instructor', 'About Instructor:') !!}
+							        {!! Form::label('about_instructor', 'à propos de l'instructeur:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
@@ -124,7 +124,7 @@
             <!End-------------------->
             <li class="time-label">
                   <span class="bg-green">
-                    Third Section
+                  Troisième Partie
                   </span>
             </li>
             <!Start-------------------->
@@ -132,7 +132,7 @@
 				<i class="fa fa-pencil bg-maroon"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
-							            {!! Form::label('playlist_url', 'Playlist Url:') !!}
+							            {!! Form::label('playlist_url', 'URL de la playlist:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
@@ -164,7 +164,7 @@
 				<i class="fa fa-pencil bg-maroon"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
-							            {!! Form::label('promo_video_url', 'Promo Video Url:') !!}
+							            {!! Form::label('promo_video_url', 'URL de la vidéo promotionnelle:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
@@ -177,7 +177,7 @@
             <!End-------------------->
             <li class="time-label">
                   <span class="bg-green">
-                  Fourth  Section
+                  Quatrième Partie
                   </span>
             </li>
             <!Start-------------------->
@@ -185,7 +185,7 @@
 				<i class="fa fa-pencil bg-maroon"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
-							            {!! Form::label('tags', 'Tags:') !!}
+							            {!! Form::label('tags', 'Mots clés:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
@@ -201,7 +201,7 @@
 				<i class="fa fa-pencil bg-maroon"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
-							            {!! Form::label('what_will_student_learn', 'What Will Student Learn:') !!}
+							            {!! Form::label('what_will_student_learn', 'Qu'est-ce que l'élève apprendra:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
@@ -217,7 +217,7 @@
 				<i class="fa fa-pencil bg-maroon"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
-							            {!! Form::label('target_student', 'Target Student:') !!}
+							            {!! Form::label('target_student', 'Étudiant cible:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
@@ -230,7 +230,7 @@
             <!End-------------------->
             <li class="time-label">
                   <span class="bg-green">
-                  Last  Section
+                  Dernière Partie
                   </span>
             </li>
             <!Start-------------------->
@@ -238,7 +238,7 @@
 				<i class="fa fa-pencil bg-maroon"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
-							            {!! Form::label('requirements', 'Requirements:') !!}
+							            {!! Form::label('requirements', 'Exigences:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
@@ -255,7 +255,7 @@
                     <i class="fa fa-pencil bg-maroon"></i>
                           <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 col-xs-12 col-sm-6 col-lg-8">
                             <div class="timeline-header text-primary">
-                                          <label for="admin_status">Admin Status:</label>
+                                          <label for="admin_status">Statut d'administrateur:</label>
                             </div>
                                         <!-------------------->
                             <div class="timeline-body">
@@ -282,7 +282,7 @@
                     <i class="fa fa-pencil bg-maroon"></i>
                           <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 col-xs-12 col-sm-6 col-lg-8">
                             <div class="timeline-header text-primary">
-                                          <label for="creator_status">Course Creator Status:</label>
+                                          <label for="creator_status">Statut du créateur de cours:</label>
                             </div>
                                         <!-------------------->
                             <div class="timeline-body">
@@ -308,7 +308,7 @@
 				<i class="fa fa-pencil bg-maroon"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
-							            {!! Form::label('discount_price', 'Discount Price:') !!}
+							            {!! Form::label('discount_price', 'Prix bas:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
@@ -324,7 +324,7 @@
 				<i class="fa fa-pencil bg-maroon"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
-							            {!! Form::label('actual_price', 'Actual Price:') !!}
+							            {!! Form::label('actual_price', 'Prix actuel:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
@@ -337,7 +337,7 @@
             <!End-------------------->
             <li class="time-label">
                   <span class="bg-light">
-                  {!! Form::submit('Save', ['class' => 'btn btn-danger']) !!}
+                  {!! Form::submit('Enregistrer', ['class' => 'btn btn-danger']) !!}
                   </span>
             </li>
           </ul>

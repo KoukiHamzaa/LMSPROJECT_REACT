@@ -2,10 +2,10 @@
     <table class="table" id="items-table">
         <thead>
             <tr>
-                <th>User Id</th>
-        <th>Course Id</th>
-        <th>View Count</th>
-        <th>Url</th>
+                <th>Identifiant d'utilisateur</th>
+        <th>Identifiant du cours</th>
+        <th>Nombre de vues</th>
+        <th>URL</th>
         <th>Description</th>
                 <th colspan="3">Action</th>
             </tr>
@@ -23,7 +23,7 @@
                     <div class='btn-group'>
                         <a href="{{ route('items.show', [$item->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                         <a href="{{ route('items.edit', [$item->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                        {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                        {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Êtes-vous sûr?')"]) !!}
                     </div>
                     {!! Form::close() !!}
                 </td>

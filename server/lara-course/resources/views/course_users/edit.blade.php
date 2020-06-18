@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Course User
+        Utilisateur du cours
         </h1>
    </section>
    <div class="content">

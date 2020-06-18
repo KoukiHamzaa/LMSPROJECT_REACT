@@ -2,15 +2,15 @@
     <table class="table" id="courseUsers-table">
         <thead>
             <tr>
-                <th>User Id</th>
-        <th>Course Id</th>
-        <th>Category Id</th>
-        <th>User Account Id</th>
-        <th>Paid Date</th>
-        <th>Expiry Date</th>
+                <th>Identifiant</th>
+        <th>Identifiant de cours</th>
+        <th>Identifiant de catégorie</th>
+        <th>Identifiant du compte utilisateur</th>
+        <th>La date de paiement</th>
+        <th>Date d'expiration</th>
         <th>Plan</th>
-        <th>Paid Amount</th>
-        <th>Status</th>
+        <th>Montant payé</th>
+        <th>Statut</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -31,7 +31,7 @@
                     <div class='btn-group'>
                         <a href="{{ route('courseUsers.show', [$courseUser->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                         <a href="{{ route('courseUsers.edit', [$courseUser->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                        {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                        {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Êtes-vous sûr?')"]) !!}
                     </div>
                     {!! Form::close() !!}
                 </td>

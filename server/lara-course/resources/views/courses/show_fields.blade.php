@@ -6,7 +6,7 @@
              {{ $course->sub_title }}
         </div>
         <div class="h5 text-capitalize text-warning font-weight-bold ml-5 mt-1 ml-5 col-md-6">
-        -- Subscriber Count : {{ $course->subscriber_count }}
+        -- Nombre d'abonnés : {{ $course->subscriber_count }}
         </div>
     </div>
 </div>
@@ -14,7 +14,7 @@
 <div class="form-group col-md-3  ">
     <!-- <div>{!! Form::label('actual_price', 'Price:') !!}</div> -->
     <div class="h2 mb-0 rounded">
-        <div class="bg-primary w-50">Price :{{ $course->actual_price -  $course->discount_price}}$</div>
+        <div class="bg-primary w-50">Prix :{{ $course->actual_price -  $course->discount_price}}$</div>
         <!-- <i class="fa fa-shopping-cart" aria-hidden="true"></i> -->
 	</div>
 		<br>
@@ -26,7 +26,7 @@
 
 <!--start-- buy courses -->
 <div class="col-md-2">
-    <span class="time h5 ml-5 font-weight-bold"><a class="text-dark" href="{{ route('courses.index') }}"> <i class="fa fa-angle-double-left"></i>Go back</a></span>
+    <span class="time h5 ml-5 font-weight-bold"><a class="text-dark" href="{{ route('courses.index') }}"> <i class="fa fa-angle-double-left"></i>Retourner</a></span>
     <br>
     <div class="h3 mt-5 mb-5">
     <form method="POST" action="{{ route('pay') }}" accept-charset="UTF-8" class="form-horizontal" role="form">
@@ -41,7 +41,6 @@
 					<input type="hidden" name="amount" value="{{ $course->actual_price }}"> {{-- required in kobo --}}
 					<input type="hidden" name="quantity" value="1">
 					<input type="hidden" name="currency" value="NGN">
-					<!-- <input type="hidden" name="metadata" value="{{ json_encode($array = ['key_name' => 'value',]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}} -->
 					<input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
 					{{ csrf_field() }} {{-- works only when using laravel 5.1, 5.2 --}}
 
@@ -49,7 +48,7 @@
 					 
 					<p>
 						 <button class="h3 mt-2 mr-5" type="submit" value="Pay Now!" style="background-color:transparent;border: none;width:150px">
-							  <i class="fa fa-shopping-cart" aria-hidden="true"></i>Buy Now	
+							  <i class="fa fa-shopping-cart" aria-hidden="true"></i>Acheter maintenant
 						 </button>
 						  
 						@if($course->discount_price &&  $course->discount_price > 0 ) 

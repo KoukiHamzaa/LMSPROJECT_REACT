@@ -3,7 +3,7 @@
         <tr>
             <td width="80%">
                 <h4  style="margin-bottom: 0px;">
-            <i class="glyphicon glyphicon-education text-muted"></i>  Click here <i class="glyphicon glyphicon-hand-right"></i>     
+            <i class="glyphicon glyphicon-education text-muted"></i>  Cliquez ici <i class="glyphicon glyphicon-hand-right"></i>     
               &nbsp; <a href="{!! route('courses.show', [$course->id]) !!}" >
                      {!! $course->title !!}
                     </a>
@@ -12,10 +12,10 @@
                <i class="glyphicon glyphicon-user"></i> 
                &nbsp;  &nbsp; &nbsp;{{ $course->user['name'] }} 
               &nbsp;  &nbsp; &nbsp; <i class="glyphicon glyphicon-eye-open"></i> 
-               &nbsp; Views: {{ $course->view_count }} 
+               &nbsp; Vues: {{ $course->view_count }} 
 
             @if($course->subscriber_count > 0)
-            <i class="glyphicon glyphicon-education"> Students : {{ number_format($course->subscriber_count) }}
+            <i class="glyphicon glyphicon-education"> étudiants : {{ number_format($course->subscriber_count) }}
             @endif
 
            </div>
@@ -40,7 +40,7 @@
                 {!! Form::open(['route' => ['courses.destroy', $course->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
                    <a href="{!! route('courses.edit', [$course->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Êtes-vous sûr?')"]) !!}
                 </div>
                 {!! Form::close() !!}
                 @endif

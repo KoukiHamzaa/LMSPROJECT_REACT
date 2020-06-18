@@ -12,10 +12,10 @@
             <li>
 				  <i class="fa fa-user bg-blue"></i>
 				  <div class="timeline-item">
-					  <span class="time"><a href="http://127.0.0.1:8000/categories/"> <i class="fa fa-angle-double-left"></i>Go back</a></span>
+					  <span class="time"><a href="http://127.0.0.1:8000/categories/"> <i class="fa fa-angle-double-left"></i>Retourner</a></span>
 					  <h3 class="timeline-header">
 						<a href="http://127.0.0.1:8000/profile/">
-						<strong>Created By: </strong>
+						<strong>Créé par: </strong>
 							{{ strtoupper(Auth::user()->name) }}</a>
 					  </h3>
 					  <div class="timeline-body">
@@ -26,8 +26,8 @@
             <li>
              <i class="fa fa-camera bg-purple"></i>
              <div class="timeline-item">
-				<span class="time"><i class="fa fa-eye"></i> viwes :{{ $category->view_count }}</span>
-                <h3 class="timeline-header"> Photo uploaded</h3>
+				<span class="time"><i class="fa fa-eye"></i> vues :{{ $category->view_count }}</span>
+                <h3 class="timeline-header"> Photo téléchargée</h3>
 					<div class="timeline-body col-md-6">
 						<img class="margin" src="{{ $category->categories_photos }}" alt=" "width="400" height="400" >
 					</div>

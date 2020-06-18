@@ -1,24 +1,24 @@
 <!-- User Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('user_id', 'User Id:') !!}
+    {!! Form::label('user_id', 'Identifiant d'utilisateur:') !!}
     {!! Form::number('user_id', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Course Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('course_id', 'Course Id:') !!}
+    {!! Form::label('course_id', 'Identifiant du cours:') !!}
     {!! Form::number('course_id', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- View Count Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('view_count', 'View Count:') !!}
+    {!! Form::label('view_count', 'Nombre de vues:') !!}
     {!! Form::number('view_count', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Url Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('url', 'Url:') !!}
+    {!! Form::label('url', 'URL:') !!}
     {!! Form::text('url', null, ['class' => 'form-control']) !!}
 </div>
 
@@ -30,6 +30,6 @@
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+    {!! Form::submit('Enregistrer ', ['class' => 'btn btn-primary']) !!}
     <a href="{{ route('items.index') }}" class="btn btn-default">Cancel</a>
 </div>
