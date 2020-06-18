@@ -55,7 +55,7 @@ La spécification des besoins va nous permettre d’avoir une meilleure approche
 	(étudiant, savoir, enseignant) et les processus (apprendre, enseigner, former). De cela, il permet de faire des comparaisons entre les diverses situations pédagogiques  :
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[width=14cm,height=8.5cm]{LetriangledejeanHoussaye.jpg}
+		\includegraphics[width=14cm,height=10cm]{LetriangledejeanHoussaye.jpg}
 		\caption{ Le triangle de jean Houssaye.}
 		\label{fig: Le triangle de jean Houssaye}
 	\end{figure}
@@ -227,9 +227,31 @@ les critères réunies dans le mot INVEST, c’est à dire
  \bigskip
  
 
+\section{Architecture}
+Avant de se lancer dans la conception et le développement de tout système informatisé, il est
+important de préparer l’architecture de ce dernier. Le terme architecture est vaste puisqu’il y
+peut désignerl’architecture logique, l’architecture physique, architecture logicielle, etc. Dans
+ce paragraphe nous nous intéressons à l’architecture logique traduite par le diagramme de
+package en terme d’UML.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=18cm,height=10cm]{PackageDiagram1.jpg}
+	\caption{Diagrammes de Package.}
+	\label{fig:Diagrammes de Package}
+\end{figure}
+\FloatBarrier
 
-
-
+    \section{ Etude d’enchainement des programmes}
+Cette étape consiste à montrer les principaux modules développés pour la réalisation
+d’une application.
+Le menu général de notre application se présente selon le type de l’utilisateur.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=18cm,height=16cm]{Untitled-Project.jpg}
+	\caption{Enchainement des programmes.}
+	\label{fig:enchainement des programmes}
+\end{figure}
+\FloatBarrier 
 
 \section{Diagrammes des cas d'utilisation global}
 Le modèle des cas d’utilisation décrit les fonctionnalités d’un système d’un point de vue utilisateur, sous la forme d’actions et de réactions ; l’ensemble des fonctionnalités est déterminé en examinant les besoins fonctionnels de tous les utilisateurs potentiels.\\
@@ -239,13 +261,13 @@ Ainsi, pour construire notre modèle, nous allons organiser les cas d’utilisat
 Ce diagramme illustre le cas d’utilisation générale de notre système. Ces cas d’utilisation seront par la suite expliqués en détaille. (voir la figure \ref{fig:UseCaseAdmin}):
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=18cm,height=9cm]{Diagrammedecasdutilisationgénéra.jpg}
+  \includegraphics[width=18cm,height=14cm]{Diagrammedecasdutilisationgénéra.jpg}
   \caption{Les cas d'utilisation global.}
   \label{fig:UseCaseAdmin}
 \end{figure}
 \FloatBarrier
 
-     
+
 \section{Diagrammes de classes global}
 Le diagramme de classes est un schéma utilisé en génie logiciel pour présenter les classes et les interfaces des systèmes ainsi que les différentes relations entre celles ci. Ce diagramme fait
 partie de la partie statique d’UML car il fait abstraction des aspects temporels et dynamiques.
@@ -505,7 +527,7 @@ privilege &VARCHAR(20) &---&\\
 	\begin{itemize}
 		
 		\item \textit{\textbf{ Cours:}}
-		ca englobe toute les cours nécessaires au processus d'enseignement à distance
+	Toute les cours nécessaires au processus d'enseignement à distance
 	\end{itemize}
 	\begin{center}
 		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
@@ -608,7 +630,75 @@ view count	&INT(11)&---	& \\
 	\label{mTables  "Droits"}
 \end{table}
 
+\begin{table}[h]
+	
+	\begin{itemize}
+		
+		\item \textit{\textbf{ Email:}}c'est la classe qui contient tous les email des utilisateur .
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
+			
+			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
+			
+			IdEmail & VARCHAR(50) & PRIMARY KEY& \\
+			IdNom & VARCHAR(200) & ---& \\
+		\end{tabular}
+	\end{center}
+	\caption{Tables  "Email"}
+	\label{mTables  "Email"}
+\end{table}
+\begin{table}[h]
+	
+	\begin{itemize}
+		
+		\item \textit{\textbf{ Assister:}}c'est la classe qui contient les prix d'assister aux étudiant.
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
+			
+			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
+			
+			Prix-assister & Float & PRIMARY KEY& \\
+			
+		\end{tabular}
+	\end{center}
+	\caption{Tables  "Assister"}
+	\label{mTables  "Assister"}
+\end{table}
 
+\begin{table}[h]
+	
+	\begin{itemize}
+		
+		\item \textit{\textbf{ Note :}}c'est la classe qui contient les Notes des Etudiants
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
+			
+			\rowcolor{-blue!20!red}Champs & \begin{bf}Types \end{bf} & \begin{bf}Contraintes\end{bf} & \\
+			
+			Id-note & INT & PRIMARY KEY& \\
+			Type-note & VARCHAR(200) & ---& \\
+		\end{tabular}
+	\end{center}
+	\caption{Tables  "Note"}
+	\label{mTables  "Note"}
+\end{table}
+
+\FloatBarrier
+
+\section{Diagramme de déploiement}
+Le Diagramme de déploiement représente l’architecture 3-tiers de notre application. La
+Première partie représente l’utilisateur ainsi que son navigateur web. La partie serveur Web
+représente le lieu de traitements des requêtes. La partie SGBD présente le systéme de gestion
+de base de données "MySQL".
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=18cm,height=8cm]{DiagrammedeDéploiement.png}
+	\caption{Diagramme de déploiement.}
+	\label{fig:Diagramme de déploiement}
+\end{figure}
 \FloatBarrier
 
 \section{Conclusion}

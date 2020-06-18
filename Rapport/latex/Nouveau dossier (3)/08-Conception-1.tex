@@ -46,7 +46,7 @@ Ce premier sprint s’étale sur 18 jours et se décompose en trois items  \end{
 \clearpage
 
 \begin{table}[]
-	{\Large \color{cyan} Le backlog du sprint 2 est le suivant :}\\
+	{\Large \color{cyan} Le backlog du sprint 1 est le suivant :}\\
 	
 	\begin{tabular}{|l|l|l|l|}
 		\hline 
@@ -63,13 +63,13 @@ Ce premier sprint s’étale sur 18 jours et se décompose en trois items  \end{
 	\end{tabular}
 	
 	
-	\caption{Tables Backlog du sprint 2}
-	\label{Tables Backlog du sprint 2}
+	\caption{Tables Backlog du sprint 1}
+	\label{Tables Backlog du sprint 1}
 \end{table}
 % \section{end_tableau}
 
 \begin{table}[h]
-	{\Large \color{cyan} les user stories de sprint 2:}\\
+	{\Large \color{cyan} les user stories de sprint 1:}\\
 	
 	\begin{center}
 		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
@@ -87,8 +87,8 @@ Ce premier sprint s’étale sur 18 jours et se décompose en trois items  \end{
 			
 		\end{tabular}
 	\end{center}
-	\caption{Tables  "les user stories de sprint 2"}
-	\label{les user stories de sprint 2}
+	\caption{Tables  "les user stories de sprint 1"}
+	\label{les user stories de sprint 1}
 \end{table}
 		
 
@@ -149,21 +149,25 @@ Ce premier sprint s’étale sur 18 jours et se décompose en trois items  \end{
 	\label{fig:Diagramme de séquence système d' authentification }
 \end{figure}
 \FloatBarrier
-
-\subsubsection{ Interface : Gérer le profil  }
+Pour s’authentifier, un administrateur doit saisir son login et son mot de passe, si les
+données saisies sont correctes alors sa session sera ouverte et il sera redirigé automatiquement au dashboard dela plateforme. Si les données sont erronées alors un message d’erreur
+apparaîtra lui demandant de saisir de nouveau le login et le mot de passe corrects.
+\clearpage
+\subsubsection{ Interface : Authentification  }
 
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=17cm,height=8cm]{20.png}
-	\caption{Interface : Gérer le profil .}
-	\label{fig:Interface : Gérer le profil }
+	\caption{Interface : Inscription .}
+	\label{fig:Interface : inscription }
 \end{figure}
 \FloatBarrier
+
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=17cm,height=9cm]{21.png}
-	\caption{Interface : Gérer le profil .}
+	\includegraphics[width=10cm,height=6.2cm]{Ulearning.png}
+	\caption{Interface : Authentification .}
 	\label{fig:Interface : Gérer le profil }
 \end{figure}
 \FloatBarrier
@@ -218,35 +222,60 @@ Ce premier sprint s’étale sur 18 jours et se décompose en trois items  \end{
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=17cm,height=13cm]{OperaSnapshot.png}
+	\includegraphics[width=17cm,height=11cm]{OperaSnapshot.png}
 	\caption{Interface : Gérer le profil .}
 	\label{fig:Interface : Gérer le profil }
 \end{figure}
 \FloatBarrier
 
-
-
-
-
-
-
-
-
-
 \clearpage
-\subsection{item 3 : Modification de rôle}
+\subsection{item 3 : Gestion des rôles utilisateurs}
+\subsubsection{Diagrammes de séquence système }
+
+La figure ci-dessous, décrit les opérations relatives à la gestion des rôles utilisateurs.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=13cm,height=12cm]{gestiondesrôlesutilisateurs.jpg}
+	\caption{Diagramme de cas d' utilisation gestion des rôles utilisateurs .}
+	\label{fig:Diagramme de cas d utilisation gestion des rôles utilisateurs }
+\end{figure}
+\FloatBarrier
+Ce diagramme de cas d’utilisation illustre les différentes opérations que l’administration peut effectuer pour gérer les rôles utilisateurs. L’administrateur doit s’authentifier
+pour accéder à son espace. Il peut consulter la liste des rôles utilisateurs. Il peut aussi
+ajouter, modifier ou supprimer un rôle. Toute opération effectuée, est enregistrée dans le
+journal des opérations.
+\clearpage
 \subsubsection{Diagrammes de séquence système }
 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{Diagséquencesystèmedemodificationderôleutilisateur.jpg}
+	\includegraphics[width=13cm,height=15cm]{Diagséquencesystèmedemodificationderôleutilisateur.jpg}
 	\caption{Diagramme de séquence système de modification de rôle utilisateur .}
 	\label{fig:Diagramme de séquence système de modification de rôle utilisateur }
 \end{figure}
 \FloatBarrier
+
+Pour modifier un rôle, l’administrateur consulte, tout d’abord, la liste des rôles qui
+existent. Puis il peut choisir un rôle parmi la liste et met à jour les différents champs. Si
+les valeurs des champs sont valides alors le rôle est mis à jour. Sinon si les valeurs ne sont
+pas valides alors un message d’erreur apparaîtra à l’administrateur pour l’avertir.
 \clearpage
-\subsubsection{ Interface : Gérer le profil  }
+\subsubsection{ Interface : Modification de rôle  }
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=13cm,height=10cm]{FGH.png}
+	\caption{Interface : Modification un rôle d'un utilisateur.}
+	\label{fig:Modification de rôle1}
+\end{figure}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=13cm,height=4cm]{QVI.png}
+	\caption{Interface : Modification, Ajouter un rôle .}
+	\label{fig:2 }
+\end{figure}
+\FloatBarrier
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=13cm,height=10cm]{3.png}
@@ -600,6 +629,13 @@ un administrateur .\\
 Après avoir s’authentifié, ces derniers peuvent ajouter ou supprimer un utilisateur.\\
 Pour l’ajout d’un utilisateur, le système doit vérifier la validation des informations saisies.\\
  Au cas où une information n’est pas valide, le système réaffiche l’interface d’ajout d’un utilisateur.
+ \begin{figure}[ht]
+ 	\centering
+ 	\includegraphics[width=13cm,height=6cm]{SDFI.png}
+ 	\caption{Diagramme d'activités « d'inscription d'un étudiant» .}
+ 	\label{fig:Diagramme d' activités  d' inscription d'un étudiant   }
+ \end{figure}
+ \FloatBarrier
 \clearpage
 \subsection{item 2 : Inscription et réinscription d'un étudiant}
 \subsubsection{Diagramme de séquence « d' inscription d' un étudiant » }
@@ -725,43 +761,8 @@ Cela consiste en un graphe dont les nœuds sont des objets et les arcs (numérot
 
 
 \clearpage
-\subsubsection{ Interface : Gérer le profil  }
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=16cm,height=10cm]{12.png}
-	\caption{Diagramme de séque de rôle utilisateur .}
-	\label{fig:Diagramme de séon de rôle utilisateur }
-\end{figure}
-\FloatBarrier
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=16cm,height=10cm]{13.png}
-	\caption{Diagramme de séque e rôle utilisateur .}
-	\label{fig:Diagramme d séo rôle utilisateur }
-\end{figure}
-\FloatBarrier
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=14cm,height=5cm]{5.png}
-	\caption{Diagramme de séque e rôle utilisateur .}
-	\label{fig:Diagrammde séo rôle utilisateur }
-\end{figure}
-\FloatBarrier
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=14cm,height=5cm]{9.png}
-	\caption{Diagramme de séque e rôe utilisateur .}
-	\label{fig:Diagrammde séo rôle utlisateur }
-\end{figure}
-\FloatBarrier
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=14cm,height=5cm]{6.png}
-	\caption{Diagramme de séque e rôe utilisteur .}
-	\label{fig:Diagrammde séo rôle utlisater }
-\end{figure}
-\FloatBarrier
+
 \clearpage
 
 \section{Sprint 3 : Enseignants }
