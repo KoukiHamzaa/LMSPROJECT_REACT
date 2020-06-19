@@ -263,13 +263,13 @@
                                   <select	class="browser-default custom-select font-weight-bold"  name="admin_status" id="admin_status">
                                              @if(isset($course))
                                           <option class="font-weight-bold" value="{{ $course->admin_status }}">
-                                              @if( $course->admin_status == 1) on
-                                              @else off
+                                              @if( $course->admin_status == 1) Approuver
+                                              @else Refuser
                                               @endif   
                                          </option>
                                               @endif
-                                        <option value="0" > Off </option>
-                                        <option value="1" > On </option>
+                                        <option value="0" > Refuser </option>
+                                        <option value="1" > Approuver </option>
                                   </select>
                                 </div>
                             </div>
@@ -290,13 +290,13 @@
                                   <select	class="browser-default custom-select font-weight-bold"  name="creator_status" id="creator_status">
                                           @if(isset($course))
                                           <option class="font-weight-bold" value="{{ $course->creator_status }}">
-                                            @if(isset($course) AND $course->creator_status == 1)  on
-                                            @else  off 
+                                            @if(isset($course) AND $course->creator_status == 1)  Publier
+                                            @else  Supprimer 
                                             @endif  
                                           </option>
                                             @endif
-                                            <option value="0" > Off </option>
-                                            <option value="1" > On </option>
+                                            <option value="0" > Supprimer  </option>
+                                            <option value="1" > Publier </option>
                                   </select>
                                 </div>
                             </div>
