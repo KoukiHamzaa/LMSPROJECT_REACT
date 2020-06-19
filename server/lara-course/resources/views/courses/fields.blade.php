@@ -111,7 +111,7 @@
 				<i class="fa fa-pencil bg-maroon"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
-							        {!! Form::label('about_instructor', 'à propos de l'instructeur:') !!}
+							        {!! Form::label('about_instructor', 'à propos de l instructeur:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
@@ -201,7 +201,7 @@
 				<i class="fa fa-pencil bg-maroon"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
-							            {!! Form::label('what_will_student_learn', 'Qu'est-ce que l'élève apprendra:') !!}
+							            {!! Form::label('what_will_student_learn', 'Qu est-ce que l élève apprendra:') !!}
 					</div>
 												<!-------------------->
 					<div class="timeline-body">

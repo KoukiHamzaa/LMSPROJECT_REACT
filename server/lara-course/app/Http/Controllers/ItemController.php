@@ -60,7 +60,7 @@ class ItemController extends AppBaseController
 
         $item = $this->itemRepository->create($input);
 
-        Flash::success('Item saved successfully.');
+        Flash::success('Élément enregistré avec succès.');
 
         return redirect(route('items.index'));
     }
@@ -77,7 +77,7 @@ class ItemController extends AppBaseController
         $item = $this->itemRepository->findWithoutFail($id);
 
         if (empty($item)) {
-            Flash::error('Item not found');
+            Flash::error('Objet non-trouvé');
 
             return redirect(route('items.index'));
         }
@@ -98,7 +98,7 @@ class ItemController extends AppBaseController
         $item = $this->itemRepository->findWithoutFail($id);
 
         if (empty($item)) {
-            Flash::error('Item not found');
+            Flash::error('Objet non-trouvé');
 
             return redirect(route('items.index'));
         }
@@ -119,14 +119,14 @@ class ItemController extends AppBaseController
         $item = $this->itemRepository->findWithoutFail($id);
 
         if (empty($item)) {
-            Flash::error('Item not found');
+            Flash::error('Objet non-trouvé');
 
             return redirect(route('items.index'));
         }
 
         $item = $this->itemRepository->update($request->all(), $id);
 
-        Flash::success('Item updated successfully.');
+        Flash::success('Élément mis à jour avec succès.');
 
         return redirect(route('items.index'));
     }
@@ -143,14 +143,14 @@ class ItemController extends AppBaseController
         $item = $this->itemRepository->findWithoutFail($id);
 
         if (empty($item)) {
-            Flash::error('Item not found');
+            Flash::error('Objet non-trouvé');
 
             return redirect(route('items.index'));
         }
 
         $this->itemRepository->delete($id);
 
-        Flash::success('Item deleted successfully.');
+        Flash::success('Élément supprimé avec succès.');
 
         return redirect(route('items.index'));
     }

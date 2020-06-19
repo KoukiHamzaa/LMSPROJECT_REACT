@@ -130,7 +130,7 @@ class CourseController extends AppBaseController
         $course = $this->courseRepository->findWithoutFail($id);
 
         if (empty($course)) {
-            Flash::error('Course not found');
+            Flash::error('Cours non trouvé');
             
             return redirect(route('courses.index'));
         }
@@ -146,18 +146,42 @@ class CourseController extends AppBaseController
      *
      * @return Response
      */
+    // public function edit($id)
+    // {
+    //     $course = $this->courseRepository->findWithoutFail($id);
+
+    //     if (empty($course)) {
+    //         Flash::error('Cours non trouvé');
+
+    //         return redirect(route('courses.index'));
+    //     }
+
+    //     return view('courses.edit')->with('course', $course);
+    // }
+
     public function edit($id)
     {
         $course = $this->courseRepository->findWithoutFail($id);
-
+		
+        $categories = Category::all();
+        $mainCourses = Course::where('user_id',Auth::user()->id)
+        ->where( 'admin_status', 1)
+        ->where( 'creator_status', 1)
+        ->get();
+		
+		
         if (empty($course)) {
-            Flash::error('Course not found');
+            Flash::error('Cours non trouvé');
 
             return redirect(route('courses.index'));
         }
 
-        return view('courses.edit')->with('course', $course);
+        return view('courses.edit')->with('course', $course)
+		        ->with('categories', $categories)
+        ->with( 'mainCourses', $mainCourses);
     }
+	
+
 
     /**
      * Update the specified Course in storage.
@@ -172,14 +196,14 @@ class CourseController extends AppBaseController
         $course = $this->courseRepository->findWithoutFail($id);
 
         if (empty($course)) {
-            Flash::error('Course not found');
+            Flash::error('Cours non trouvé');
 
             return redirect(route('courses.index'));
         }
 
-        $course = $this->courseRepository->update($request->all(), $id);
+       $course = $this->courseRepository->update($request->all(), $id);
 
-        Flash::success('Course updated successfully.');
+        Flash::success('Cours mis à jour avec succès.');
 
         return redirect(route('courses.index'));
     }
@@ -196,14 +220,14 @@ class CourseController extends AppBaseController
         $course = $this->courseRepository->findWithoutFail($id);
 
         if (empty($course)) {
-            Flash::error('Course not found');
+            Flash::error('Cours non trouvé');
 
             return redirect(route('courses.index'));
         }
 
         $this->courseRepository->delete($id);
 
-        Flash::success('Course deleted successfully.');
+        Flash::success('Le cours a bien été supprimé.');
 
         return redirect(route('courses.index'));
     }
