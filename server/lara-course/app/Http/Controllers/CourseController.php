@@ -128,6 +128,7 @@ class CourseController extends AppBaseController
     public function show($id)
     {
         $course = $this->courseRepository->findWithoutFail($id);
+        // dd($course);
 
         if (empty($course)) {
             Flash::error('Course not found');
