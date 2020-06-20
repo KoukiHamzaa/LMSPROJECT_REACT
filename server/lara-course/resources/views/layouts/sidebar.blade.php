@@ -11,12 +11,12 @@
             </div>
             <div class="pull-left info">
                 @if (Auth::guest())
-                <p>InfyOm</p>
+                <p></p>
                 @else
                     @if(Auth::user()->role_id == 1)
                             <p><div class="role_center">© Administrateur</div> <br/> {{ Auth::user()->name}}</p>
                         @elseif(Auth::user()->role_id == 2)
-                            <p><div class="role_center">© Modérateur</div> <br/>  {{ Auth::user()->name}}</p>
+                            <p><div class="role_center">© Instructeur</div> <br/>  {{ Auth::user()->name}}</p>
                         @elseif(Auth::user()->role_id == 3)
                             <p><div class="role_center">© Instructeur</div> <br/>  {{ Auth::user()->name}}</p>
                         @else 

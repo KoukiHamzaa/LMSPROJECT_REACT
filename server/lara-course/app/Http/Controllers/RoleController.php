@@ -59,7 +59,7 @@ class RoleController extends AppBaseController
 
         $role = $this->roleRepository->create($input);
 
-        Flash::success('Role saved successfully.');
+        Flash::success('Rôle enregistré avec succès.');
 
         return redirect(route('roles.index'));
     }
@@ -76,7 +76,7 @@ class RoleController extends AppBaseController
         $role = $this->roleRepository->findWithoutFail($id);
 
         if (empty($role)) {
-            Flash::error('Role not found');
+            Flash::error('Rôle enregistré avec succès');
 
             return redirect(route('roles.index'));
         }
@@ -96,7 +96,7 @@ class RoleController extends AppBaseController
         $role = $this->roleRepository->findWithoutFail($id);
 
         if (empty($role)) {
-            Flash::error('Role not found');
+            Flash::error('Rôle enregistré avec succès');
 
             return redirect(route('roles.index'));
         }
@@ -117,14 +117,14 @@ class RoleController extends AppBaseController
         $role = $this->roleRepository->findWithoutFail($id);
 
         if (empty($role)) {
-            Flash::error('Role not found');
+            Flash::error('Rôle enregistré avec succès');
 
             return redirect(route('roles.index'));
         }
 
         $role = $this->roleRepository->update($request->all(), $id);
 
-        Flash::success('Role updated successfully.');
+        Flash::success('Rôle mis à jour avec succès.');
 
         return redirect(route('roles.index'));
     }
@@ -141,14 +141,14 @@ class RoleController extends AppBaseController
         $role = $this->roleRepository->findWithoutFail($id);
 
         if (empty($role)) {
-            Flash::error('Role not found');
+            Flash::error('Rôle enregistré avec succès');
 
             return redirect(route('roles.index'));
         }
 
         $this->roleRepository->delete($id);
 
-        Flash::success('Role deleted successfully.');
+        Flash::success('Rôle supprimé avec succès.');
 
         return redirect(route('roles.index'));
     }

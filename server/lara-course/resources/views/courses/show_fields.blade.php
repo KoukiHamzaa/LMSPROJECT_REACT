@@ -91,21 +91,21 @@
     {!! Form::label('creator_status', 'Creator Status:') !!}
     <p>
         @if($course->creator_status == 1)
-        published 
+        Publier 
             @if(Auth::user()->role_id < 3 || Auth::user()->id == $course->user_id)
         | 
             {!! Form::open(['route' => ['courses.unpublishCourse', $course->id], 'method' => 'post']) !!}
                 <input type="hidden" name="course_id" value="{{$course->id}}" />
-            {!! Form::button('<i class="glyphicon glyphicon-thumbs-up"></i>  Click to Unpublish ', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Voulez-vous vraiment annuler la publication?')"]) !!}
+            {!! Form::button('<i class="glyphicon glyphicon-thumbs-up"></i>  Cliquer pour Supprimer ', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Voulez-vous vraiment annuler la publication?')"]) !!}
             {!! Form::close() !!}
             @endif
         @else
-        Unpublish 
+        Supprimer 
         @if((Auth::check()) && (Auth::user()->role_id < 3 ) && ( Auth::user()->id == $course->user_id ))
         | 
             {!! Form::open(['route' => ['courses.publishCourse', $course->id], 'method' => 'post']) !!}
                 <input type="hidden" name="course_id" value="{{$course->id}}" />
-            {!! Form::button('<i class="glyphicon glyphicon-thumbs-up"></i>  Click to Publish ', ['type' => 'submit', 'class' => 'btn btn-success btn-xs', 'onclick' => "return confirm('Voulez-vous vraiment publier?')"]) !!}
+            {!! Form::button('<i class="glyphicon glyphicon-thumbs-up"></i>  Cliquer pour Publier ', ['type' => 'submit', 'class' => 'btn btn-success btn-xs', 'onclick' => "return confirm('Voulez-vous vraiment publier?')"]) !!}
             {!! Form::close() !!}
             @endif
         @endif
@@ -117,12 +117,12 @@
     {!! Form::label('admin_status', 'Admin Status:') !!}
     <p>
         @if($course->admin_status == 1) 
-        Approve 
+        Approuver 
               @if(Auth::user()->role_id < 2)
         | 
             {!! Form::open(['route' => ['courses.disapprove', $course->id], 'method' => 'post']) !!}
                 <input type="hidden" name="course_id" value="{{$course->id}}" />
-            {!! Form::button('<i class="glyphicon glyphicon-thumbs-up"></i>  Click to disapprove ', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Voulez-vous vraiment refuser? ? ')"]) !!}
+            {!! Form::button('<i class="glyphicon glyphicon-thumbs-up"></i>  Cliquez pour refuser ', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Voulez-vous vraiment refuser? ? ')"]) !!}
             {!! Form::close() !!}
              @endif
         @else
@@ -131,7 +131,7 @@
         | 
             {!! Form::open(['route' => ['courses.approve', $course->id], 'method' => 'post']) !!}
                 <input type="hidden" name="course_id" value="{{$course->id}}" />
-            {!! Form::button('<i class="glyphicon glyphicon-thumbs-up"></i>  Click to Approve ', ['type' => 'submit', 'class' => 'btn btn-success btn-xs', 'onclick' => "return confirm('êtes-vous sûr de vouloir approuver ? ')"]) !!}
+            {!! Form::button('<i class="glyphicon glyphicon-thumbs-up"></i>   Cliquez pour  Approuver ', ['type' => 'submit', 'class' => 'btn btn-success btn-xs', 'onclick' => "return confirm('êtes-vous sûr de vouloir approuver ? ')"]) !!}
             {!! Form::close() !!}
             @endif
         @endif

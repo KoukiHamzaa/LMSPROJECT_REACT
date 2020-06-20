@@ -61,7 +61,7 @@ class UserController extends AppBaseController
 
         $user = $this->userRepository->create($input);
 
-        Flash::success('User saved successfully.');
+        Flash::success('L utilisateur a été enregistré avec succès.');
 
         return redirect(route('users.index'));
     }
@@ -78,7 +78,7 @@ class UserController extends AppBaseController
         $user = $this->userRepository->findWithoutFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Utilisateur non trouvé');
 
             return redirect(route('users.index'));
         }
@@ -103,7 +103,7 @@ class UserController extends AppBaseController
         $user = $this->userRepository->findWithoutFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Utilisateur non trouvé');
 
             return redirect(route('users.index'));
         }
@@ -124,14 +124,14 @@ class UserController extends AppBaseController
         $user = $this->userRepository->findWithoutFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Utilisateur non trouvé');
 
             return redirect(route('users.index'));
         }
 
         $user = $this->userRepository->update($request->all(), $id);
 
-        Flash::success('User updated successfully.');
+        Flash::success('L utilisateur a été mis à jour avec succès.');
 
         return redirect(route('users.index'));
     }
@@ -148,14 +148,14 @@ class UserController extends AppBaseController
         $user = $this->userRepository->findWithoutFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Utilisateur non trouvé');
 
             return redirect(route('users.index'));
         }
 
         $this->userRepository->delete($id);
 
-        Flash::success('User deleted successfully.');
+        Flash::success('L utilisateur a bien été supprimé.');
 
         return redirect(route('users.index'));
     }

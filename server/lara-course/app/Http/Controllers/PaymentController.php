@@ -86,7 +86,7 @@ class PaymentController extends AppBaseController
 
         $payment = $this->paymentRepository->create($input);
 
-        Flash::success('Payment saved successfully.');
+        Flash::success('Paiement enregistré avec succès.');
 
         return redirect(route('payments.index'));
     }
@@ -103,7 +103,7 @@ class PaymentController extends AppBaseController
         $payment = $this->paymentRepository->findWithoutFail($id);
 
         if (empty($payment)) {
-            Flash::error('Payment not found');
+            Flash::error('Paiement introuvable');
 
             return redirect(route('payments.index'));
         }
@@ -123,7 +123,7 @@ class PaymentController extends AppBaseController
         $payment = $this->paymentRepository->findWithoutFail($id);
 
         if (empty($payment)) {
-            Flash::error('Payment not found');
+            Flash::error('Paiement introuvable');
 
             return redirect(route('payments.index'));
         }
@@ -144,14 +144,14 @@ class PaymentController extends AppBaseController
         $payment = $this->paymentRepository->findWithoutFail($id);
 
         if (empty($payment)) {
-            Flash::error('Payment not found');
+            Flash::error('Paiement introuvable');
 
             return redirect(route('payments.index'));
         }
 
         $payment = $this->paymentRepository->update($request->all(), $id);
 
-        Flash::success('Payment updated successfully.');
+        Flash::success('Paiement mis à jour avec succès.');
 
         return redirect(route('payments.index'));
     }
@@ -168,14 +168,14 @@ class PaymentController extends AppBaseController
         $payment = $this->paymentRepository->findWithoutFail($id);
 
         if (empty($payment)) {
-            Flash::error('Payment not found');
+            Flash::error('Paiement introuvable');
 
             return redirect(route('payments.index'));
         }
 
         $this->paymentRepository->delete($id);
 
-        Flash::success('Payment deleted successfully.');
+        Flash::success('Paiement supprimé avec succès.');
 
         return redirect(route('payments.index'));
     }

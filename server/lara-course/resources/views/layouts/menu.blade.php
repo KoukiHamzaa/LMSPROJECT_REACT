@@ -13,7 +13,7 @@
 
 
 <li class="{{ Request::is('courses*') ? 'active' : '' }}">
-    <a href="#"><i class="fa fa-list"></i><span>Mes cours</span></a>
+    <a href="" class="disabled button" style="pointer-events: none;cursor: default;text-decoration: inherit;"><i class="fa fa-list"></i><span>Mes cours</span></a>
                         <!---start_List----->
         <li class="{{ Request::is('courses*') ? 'active' : '' }} ml-5"}>
             <a href="{{ route('courses.index') }}"><i class="fa fa-edit"></i><span>Cours</span></a>
@@ -40,20 +40,25 @@
 </li>
 @endif
 
+<!-- <div class="d-none">
 <li class="{{ Request::is('items*') ? 'active' : '' }}">
     <a href="{{ route('items.index') }}"><i class="fa fa-edit"></i><span>Articles</span></a>
 </li>
+</div> -->
 
 
 
-                <li class="{{ Request::is('users*') ? 'active' : '' }}">
-                    <a href="{{ route('users.index') }}"><i class="fa fa-edit"></i><span>Utilisatrices</span></a>
-                </li>
+<li class="{{ Request::is('users*') ? 'active' : '' }}">
+     <a href="{{ route('users.index') }}"><i class="fa fa-edit"></i><span>Utilisateur</span></a>
+</li>
 
 
+<div class="d-none">
 <li class="{{ Request::is('views*') ? 'active' : '' }}">
     <a href="{{ route('views.index') }}"><i class="fa fa-edit"></i><span>Vues</span></a>
 </li>
+</div>
+
 
     @if(Auth::user()->role_id == 1 )
     <li class="{{ Request::is('roles*') ? 'active' : '' }}">
@@ -67,7 +72,9 @@
     <a href="{{ route('coupons.index') }}"><i class="fa fa-edit"></i><span>Coupons</span></a>
 </li> -->
 
+
+@if(Auth::user()->role_id == 1 )
 <li class="{{ Request::is('courseUsers*') ? 'active' : '' }}">
     <a href="{{ route('courseUsers.index') }}"><i class="fa fa-edit"></i><span>Utilisateurs du cours</span></a>
 </li>
-
+@endif
