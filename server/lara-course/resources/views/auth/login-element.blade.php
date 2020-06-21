@@ -1,7 +1,7 @@
  <div class="login-box-body">
 
      <div class="social-auth-links text-center">
-     <p class="login-box-msg">Or Enter your login details</p>
+     <p class="login-box-msg">Entrez vos informations de connexion</p>
 
      <form method="post" action="{{ url('/login') }}">
          {!! csrf_field() !!}
@@ -30,19 +30,19 @@
              <div class="col-xs-8">
                  <div class="checkbox icheck">
                      <label>
-                         <input type="checkbox" name="remember"> Remember Me
+                         <input type="checkbox" name="remember"> Souviens-toi de moi
                      </label>
                  </div>
              </div>
              <!-- /.col -->
              <div class="col-xs-4">
-                 <button type="submit" class="btn btn-danger btn-block btn-flat">Sign In</button>
+                 <button type="submit" class="btn btn-danger btn-block btn-flat">Se connecter</button>
              </div>
              <!-- /.col -->
          </div>
      </form>
 
-     <a href="{{ url('/password/reset') }}">Forgot password</a> |
-     <a href="{{ url('/register') }}" class="text-center">Signup</a>
+     <a href="{{ url('/password/reset') }}">Mot de passe oublié</a> |
+     <a href="{{ url('/register') }}" class="text-center">S'inscrire</a>
 
  </div>

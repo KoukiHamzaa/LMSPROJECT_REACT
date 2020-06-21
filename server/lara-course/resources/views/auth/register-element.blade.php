@@ -1,21 +1,21 @@
 <div class="register-box">
     {{-- <div class="register-logo">
-        <a href="{{ url('/home') }}"><b>Braintem </b>Online School</a>
+        <a href="{{ url('/home') }}"><b>Braintem </b>École en ligne</a>
 </div> --}}
 
 <div class="register-box-body">
 
     <div class="social-auth-links text-center">
         <a href="/login/facebook" class="btn btn-block btn-social btn-facebook btn-flat">
-            <i class="fa fa-facebook"></i> Sign in with
+            <i class="fa fa-facebook"></i> Se connecter avec
             Facebook</a>
         <br />
 
         <a href="/login/google" class="btn btn-block btn-social btn-google btn-flat">
-            <i class="fa fa-google"></i> Sign in with Google</a>
+            <i class="fa fa-google"></i> Connectez-vous avec Google</a>
     </div>
 
-    <p class="login-box-msg">Or Create a new account</p>
+    <p class="login-box-msg">Ou créez un nouveau compte</p>
     <form method="post" action="{{ url('/register') }}">
 
         {!! csrf_field() !!}
@@ -68,19 +68,19 @@
             <div class="col-xs-8">
                 <div class="checkbox icheck">
                     <label>
-                        <input type="checkbox"> I agree to the <a href="#">terms</a>
+                        <input type="checkbox"> J'accepte les <a href="#">conditions</a>
                     </label>
                 </div>
             </div>
             <!-- /.col -->
             <div class="col-xs-4">
-                <button type="submit" class="btn btn-danger btn-block btn-flat">Register</button>
+                <button type="submit" class="btn btn-danger btn-block btn-flat">S'inscrire</button>
             </div>
             <!-- /.col -->
         </div>
     </form>
 
-    <a href="{{ url('/login') }}" class="text-center">Already an account? Login instead.</a>
+    <a href="{{ url('/login') }}" class="text-center">Déjà un compte? Connectez-vous à la place.</a>
 </div>
 <!-- /.form-box -->
 </div>

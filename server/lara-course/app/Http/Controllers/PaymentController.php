@@ -100,8 +100,13 @@ class PaymentController extends AppBaseController
                 'course_id' => $paymentDetails['data']['metadata']['course_id'],
                  'status' => 1,
                 'paid_amount' => ($paymentDetails['data']['amount']),
+<<<<<<< HEAD
                // 'paid_date'  =>($paymentDetails['data']['paid_at']),
                 'category_id'=>($paymentDetails['data']['metadata']['category_id']),
+=======
+              //  'paid_date'  =>($paymentDetails['data']['paid_at']),
+              'category_id'=>($paymentDetails['data']['metadata']['category_id']),
+>>>>>>> da1fc7557616d312fbeefdf6926b602a6311e538
                 //'user_account_id'=>($paymentDetails['data']['user_account_id']),
               ]);
 

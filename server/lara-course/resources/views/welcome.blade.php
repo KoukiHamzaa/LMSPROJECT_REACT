@@ -49,7 +49,7 @@
          <ul class="navbar-nav mr-auto container-fluid">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-list-ul"></i> Categories
+                    <i class="fas fa-list-ul"></i> Les catégories
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 					@foreach($categories as $category)
@@ -59,8 +59,8 @@
             </li>
 		</ul>
 
-        <a data-toggle="modal" data-target="#loginModal"class="nav-link btn btn-outline-dark" href="/login">Login</a>
-		<a data-toggle="modal" data-target="#registerModal" class="nav-link btn btn-danger mx-2" href="/register">Signup</a> 
+        <a data-toggle="modal" data-target="#loginModal"class="nav-link btn btn-outline-dark" href="/login">S'identifier</a>
+		<a data-toggle="modal" data-target="#registerModal" class="nav-link btn btn-danger mx-2" href="/register">S'inscrire</a> 
     </div>
 </nav>
 
@@ -72,8 +72,8 @@
                        <div class="media">
                             <i class="far fa-play-circle mr-3 display-4" ></i>
                             <div class="media-body">
-                              <h5 class="mt-0">Fresh Courses</h5>
-                              Choose from 100s of videos with new additions published every month
+                              <h5 class="mt-0">Cours frais</h5>
+                              Choisissez parmi des centaines de vidéos avec de nouveaux ajouts publiés chaque mois
                             </div>
                           </div>
                    </div>
@@ -82,8 +82,8 @@
                         <div class="media">
                              <i class="fas fa-ribbon mr-3 display-4" ></i>
                              <div class="media-body">
-                               <h5 class="mt-0">Trusted Instructors</h5>
-                               Take courses taught by industry experts around the world
+                               <h5 class="mt-0">Instructeurs de confiance</h5>
+                               Suivez des cours dispensés par des experts de l'industrie du monde entier
                              </div>
                            </div>
                     </div>
@@ -92,8 +92,8 @@
                         <div class="media">
                              <i class="fas fa-spinner mr-3 display-4" ></i>
                              <div class="media-body">
-                               <h5 class="mt-0">Flexible Learning</h5>
-                               Learn on your terms with lifetime course access and the Udemy mobile app
+                               <h5 class="mt-0">Apprentissage flexible</h5>
+                               Apprenez à vos conditions avec l'accès aux cours à vie 
                              </div>
                            </div>
                     </div>
@@ -102,7 +102,7 @@
 </div>
 <div class="container mt-5 text-center" >
            <h3>
-                <small class="text-muted">Top Courses</small>
+                <small class="text-muted">Meilleurs cours</small>
             </h3>
             <div class="card-columns row" >
                   @foreach($courses as $course)
@@ -136,7 +136,7 @@
                           @endif
 						                </small>
                            <div style="float:right;" >
-                          <a href="{{ url('/register') }}" class="btn btn-lg btn-danger" >Enroll Now</a>
+                          <a href="{{ url('/register') }}" class="btn btn-lg btn-danger" >Inscrivez-vous maintenant</a>
                            </div>
                          </p>
                       </div>
@@ -162,7 +162,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="loginModalLabel">Login</h4>
+        <h4 class="modal-title" id="loginModalLabel">S'identifier</h4>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		 </button>
@@ -178,7 +178,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="registerModalLabel">Signup</h4>
+        <h4 class="modal-title" id="registerModalLabel">S'inscrire</h4>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		 </button>
@@ -203,17 +203,19 @@
   </script>
 
   <!--Start of Tawk.to Script-->
+<!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
 s1.async=true;
-s1.src='https://embed.tawk.to/5c9dd6a71de11b6e3b05cd12/default';
+s1.src='https://embed.tawk.to/5eee84904a7c6258179b0696/default';
 s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+<!--End of Tawk.to Script-->
 </body>
-</html> 
+</html>
