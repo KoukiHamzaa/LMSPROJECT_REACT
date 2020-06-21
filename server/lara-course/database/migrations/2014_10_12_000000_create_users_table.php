@@ -18,13 +18,16 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('paystack_authorization_code')->nullable();
+            $table->string('paystack_customer_code')->nullable();
             $table->string('gender')->nullable()->default('Male');
             $table->date('date_of_birth')->nullable();
             $table->tinyInteger('isSubscribed')->nullable()->default(0);
             $table->string('email')->unique();
             $table->string('password');
             $table->integer('view_count')->default(0); // counting views :D   
-            $table->integer('role_id')->default(4);
+            $table->integer('role_id')->default(1);
             
             $table->softDeletes();
             $table->rememberToken();

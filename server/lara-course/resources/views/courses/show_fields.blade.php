@@ -14,12 +14,12 @@
 <div class="form-group col-md-3  ">
     <!-- <div>{!! Form::label('actual_price', 'Price:') !!}</div> -->
     <div class="h2 mb-0 rounded">
-        <div class="bg-primary w-50">Prix :{{ $course->actual_price -  $course->discount_price}}$</div>
+        <div class="bg-primary w-50">Prix :{{ $course->actual_price -  $course->discount_price}}Dt</div>
         <!-- <i class="fa fa-shopping-cart" aria-hidden="true"></i> -->
 	</div>
 		<br>
     <div class="h3 mt-50 mt-0 rounded">
-      <div class="bg-warning w-25"><del>{{ $course->actual_price }}$</del></div>
+      <div class="bg-warning w-25"><del>{{ $course->actual_price }}Dt</del></div>
     </div>
     <!-- <p>{{ $course->discount_price }}</p> -->
 </div>
@@ -40,23 +40,24 @@
 					<input type="hidden" name="orderID" value="{{$course->id}}">
 					<input type="hidden" name="amount" value="{{ $course->actual_price }}"> {{-- required in kobo --}}
 					<input type="hidden" name="quantity" value="1">
-					<input type="hidden" name="currency" value="NGN">
-					<input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
+					<input type="hidden" name="currency" value="DT">
+                    <input type="hidden" name="metadata" value="{{ json_encode($array = ['course_id' => $course->id,'custmer_email' => $course->user['email'],]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
+                    <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
 					{{ csrf_field() }} {{-- works only when using laravel 5.1, 5.2 --}}
 
 					 <input type="hidden" name="_token" value="{{ csrf_token() }}"> {{-- employ this in place of csrf_field only in laravel 5.0 --}}
 					 
 					<p>
+@if(Auth::user()->role_id == 3)
 						 <button class="h3 mt-2 mr-5" type="submit" value="Pay Now!" style="background-color:transparent;border: none;width:150px">
 							  <i class="fa fa-shopping-cart" aria-hidden="true"></i>Acheter maintenant
 						 </button>
-						  
 						@if($course->discount_price &&  $course->discount_price > 0 ) 
 						<div class="text-dark" style="font-size: 9px;margin: 0;display: inline-block;">Garantie remboursement-24-h<br>{{ $finalPrice = $course->discount_price }}$</div>
 						@else
 						<div class="text-dark pt-0 mr-5" style="font-size: 9px;margin: 0;display: inline-block;">Garantie remboursement-24-h<br>{{ $finalPrice = $course->actual_price }}$</div>
 						@endif
-					  
+@endif
 					</p>
 			  </div>
         </div>
@@ -218,8 +219,8 @@
     <p>{{ $course->requirements }}</p>
 </div>
 
-<!-- Subscriber Count Field
-<div class="form-group col-md-4 list-group-item disabled">
+ 
+{{--<div class="form-group col-md-4 list-group-item disabled">
     {!! Form::label('subscriber_count', 'Subscriber Count:') !!}
     <p>{{ $course->subscriber_count }}</p>
-</div> -->
+</div>--}}
