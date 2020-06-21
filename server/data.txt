@@ -1,6 +1,5 @@
-INSERT INTO `users` (`id`, `name`, `first_name`, `last_name`, `gender`, `date_of_birth`, `isSubscribed`, `email`, `password`, `view_count`, `role_id`, `deleted_at`, `remember_token`, `created_at`, `updated_at`) VALUES
-(3, 'KHAWLA', NULL, NULL, 'Male', NULL, 0, 'khalfi@example.com', '$2y$10$7XUgA9HzRQkmlfGaMQWGGeXTK7auG3EMfS/SNfZBJo34k2VUH3Usu', 0, 1, NULL, NULL, '2020-06-18 07:21:25', '2020-06-18 07:21:25'),
-(4, 'Kouki', NULL, NULL, 'Male', NULL, 0, 'kouki@example.com', '$2y$10$u33tb9XVS.f.TiPGtRuHkeK06sQETewwBdPT7h2LIx6EtnL2p7.WO', 0, 1, NULL, NULL, '2020-06-18 07:22:01', '2020-06-18 07:22:01');
+INSERT INTO `users` (`id`, `name`, `first_name`, `last_name`, `phone`, `paystack_authorization_code`, `paystack_customer_code`, `gender`, `date_of_birth`, `isSubscribed`, `email`, `password`, `view_count`, `role_id`, `deleted_at`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'KOUKI', NULL, NULL, NULL, NULL, NULL, 'Male', NULL, 0, 'kouki@example.com', '$2y$10$Z0Jxk8TohB4UXN5nE9xUueJgOZNjiISBMWCUegdwoA54tmjRDOMb.', 0, 3, NULL, NULL, '2020-06-20 22:45:20', '2020-06-20 22:45:20');
 
 
 INSERT INTO `categories` (`id`, `name`, `description`, `categories_photos`, `view_count`, `deleted_at`, `created_at`, `updated_at`) VALUES
