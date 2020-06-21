@@ -107,11 +107,7 @@
 				<i class="fa fa-pencil bg-maroon"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
-<<<<<<< HEAD
-							        {!! Form::label('about_instructor', 'about instructor:') !!}
-=======
 							        {!! Form::label('about_instructor', 'à propos de l instructeur:') !!}
->>>>>>> 43e4d5d0a36025b5e73eebd54741a37886d15f9c
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
@@ -201,11 +197,7 @@
 				<i class="fa fa-pencil bg-maroon"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8 ">
 					<div class="timeline-header text-primary">
-<<<<<<< HEAD
-							            {!! Form::label('what_will_student_learn', 'what will student learn:') !!}
-=======
 							            {!! Form::label('what_will_student_learn', 'Qu est-ce que l élève apprendra:') !!}
->>>>>>> 43e4d5d0a36025b5e73eebd54741a37886d15f9c
 					</div>
 												<!-------------------->
 					<div class="timeline-body">
@@ -295,11 +287,11 @@
                                           @if(isset($course))
                                           <option class="font-weight-bold" value="{{ $course->creator_status }}">
                                             @if(isset($course) AND $course->creator_status == 1)  Publier
-                                            @else  Supprimer 
+                                            @else  Casher 
                                             @endif  
                                           </option>
                                             @endif
-                                            <option value="0" > Supprimer  </option>
+                                            <option value="0" > Casher  </option>
                                             <option value="1" > Publier </option>
                                   </select>
                                 </div>
