@@ -46,7 +46,7 @@ class PaymentController extends AppBaseController
     {
         $paymentDetails = Paystack::getPaymentData();
 
-       //dd($paymentDetails);
+      // dd($paymentDetails);
 
     //redirect when failed
         if($paymentDetails['data']['status'] != 'success'){
@@ -81,24 +81,27 @@ class PaymentController extends AppBaseController
                 }
             }
       }
+
       //update payements table
             Payment::create([
                 'user_id' =>$user_id,
                 'course_id' => $paymentDetails['data']['metadata']['course_id'],
                 'amount' => ($paymentDetails['data']['amount']),
-                'status' =>'succès',
+                // 'status' =>'succès',
+                'status' =>($paymentDetails['data']['status']),
                 'mode_of_payment' =>$paymentDetails['data']['channel'],
                 'payment_processor' => 'paystack',
             ]);
 
+            
             //update CourseUser table
             CourseUser::create([
                 'user_id' =>$user_id,
                 'course_id' => $paymentDetails['data']['metadata']['course_id'],
-                'status' => 1,
+                 'status' => 1,
                 'paid_amount' => ($paymentDetails['data']['amount']),
-              //  'paid_date'  =>($paymentDetails['data']['paid_at']),
-              'category_id'=>($paymentDetails['data']['metadata']['category_id']),
+               // 'paid_date'  =>($paymentDetails['data']['paid_at']),
+                'category_id'=>($paymentDetails['data']['metadata']['category_id']),
                 //'user_account_id'=>($paymentDetails['data']['user_account_id']),
               ]);
 
