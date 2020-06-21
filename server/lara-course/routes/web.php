@@ -58,4 +58,4 @@ Route::resource('courseUsers', 'CourseUserController');
 
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 
-Route::post('/payment/callback', 'PaymentController@handleGatewayCallback')->name('paymentCallback');
+Route::get('/payment/callback', 'PaymentController@handleGatewayCallback')->name('paymentCallback');
