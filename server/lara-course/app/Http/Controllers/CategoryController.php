@@ -112,6 +112,8 @@ class CategoryController extends AppBaseController
         return view('categories.edit')->with('category', $category);
     }
 
+    
+
     /**
      * Update the specified Category in storage.
      *
