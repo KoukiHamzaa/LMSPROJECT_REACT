@@ -98,7 +98,7 @@ class PaymentController extends AppBaseController
                 'status' => 1,
                 'paid_amount' => ($paymentDetails['data']['amount']),
               //  'paid_date'  =>($paymentDetails['data']['paid_at']),
-                //'category_id'=>($paymentDetails['data']['category_id']),
+              'category_id'=>($paymentDetails['data']['metadata']['category_id']),
                 //'user_account_id'=>($paymentDetails['data']['user_account_id']),
               ]);
 

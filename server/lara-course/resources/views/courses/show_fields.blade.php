@@ -41,7 +41,7 @@
 					<input type="hidden" name="amount" value="{{ $course->actual_price }}"> {{-- required in kobo --}}
 					<input type="hidden" name="quantity" value="1">
 					<input type="hidden" name="currency" value="DT">
-                    <input type="hidden" name="metadata" value="{{ json_encode($array = ['course_id' => $course->id,'custmer_email' => $course->user['email'],]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
+                    <input type="hidden" name="metadata" value="{{ json_encode($array = ['course_id' => $course->id,'custmer_email' => $course->user['email'],'category_id' =>$course->category_id,]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
                     <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
 					{{ csrf_field() }} {{-- works only when using laravel 5.1, 5.2 --}}
 
