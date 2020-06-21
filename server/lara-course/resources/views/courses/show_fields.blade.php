@@ -38,26 +38,26 @@
 						<input class="form-control" type="email" placeholder="entrez votre email valide" name="email" value="" required="required"> {{-- required --}}
 					@endif
 					<input type="hidden" name="orderID" value="{{$course->id}}">
-					<input type="hidden" name="amount" value="{{ $course->actual_price }}"> {{-- required in kobo --}}
+					<input type="hidden" name="amount" value="{{ $course->actual_price  - $course->discount_price }}"> {{-- required in kobo --}}
 					<input type="hidden" name="quantity" value="1">
 					<input type="hidden" name="currency" value="DT">
-                    <input type="hidden" name="metadata" value="{{ json_encode($array = ['course_id' => $course->id,'custmer_email' => $course->user['email'],]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
+                    <input type="hidden" name="metadata" value="{{ json_encode($array = ['course_id' => $course->id,'custmer_email' => $course->user['email'],'category_id' =>$course->category_id,]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
                     <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
 					{{ csrf_field() }} {{-- works only when using laravel 5.1, 5.2 --}}
 
 					 <input type="hidden" name="_token" value="{{ csrf_token() }}"> {{-- employ this in place of csrf_field only in laravel 5.0 --}}
 					 
 					<p>
-@if(Auth::user()->role_id == 3)
+
 						 <button class="h3 mt-2 mr-5" type="submit" value="Pay Now!" style="background-color:transparent;border: none;width:150px">
 							  <i class="fa fa-shopping-cart" aria-hidden="true"></i>Acheter maintenant
 						 </button>
-						@if($course->discount_price &&  $course->discount_price > 0 ) 
-						<div class="text-dark" style="font-size: 9px;margin: 0;display: inline-block;">Garantie remboursement-24-h<br>{{ $finalPrice = $course->discount_price }}$</div>
+						@if($course->discount_price  > 0 ) 
+						<div class="text-dark" style="font-size: 9px;margin: 0;display: inline-block;">Garantie remboursement-24-h<br>{{ $course->actual_price -  $course->discount_price }}$</div>
 						@else
-						<div class="text-dark pt-0 mr-5" style="font-size: 9px;margin: 0;display: inline-block;">Garantie remboursement-24-h<br>{{ $finalPrice = $course->actual_price }}$</div>
+						<div class="text-dark pt-0 mr-5" style="font-size: 9px;margin: 0;display: inline-block;">Garantie remboursement-24-h<br>{{ $course->actual_price }}$</div>
 						@endif
-@endif
+
 					</p>
 			  </div>
         </div>
