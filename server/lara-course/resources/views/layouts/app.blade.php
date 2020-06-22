@@ -161,7 +161,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     <li><a href="{{ url('/login') }}">Accueil</a></li>
-                    <li><a href="{{ url('/register') }}">S'inscrire</a></li>
+                    <li><a href="{{ url('/register') }}"  target="_blank">S'inscrire</a></li>
                 </ul>
             </div>
         </div>
