@@ -26,10 +26,11 @@
         </li>
         <!---start_List----->
 </li>
-
+@if(Auth::user()->role_id < 1)
 <li class="{{ Request::is('payments*') ? 'active' : '' }}">
     <a href="{{ route('payments.index') }}"><i class="fa fa-edit"></i><span>Paiements</span></a>
 </li>
+@endif
 {{-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- Admin Section -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --}}
 
 @if(Auth::user()->role_id < 3)

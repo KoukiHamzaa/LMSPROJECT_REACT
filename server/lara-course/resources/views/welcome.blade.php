@@ -179,7 +179,6 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="">
         </h4>
         <a href="{{ url('/register') }}" target="_blank">S'inscrire</a>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">

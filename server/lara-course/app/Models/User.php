@@ -86,8 +86,8 @@ class User extends Model
     public static $rules = [
         'name' => 'required',
         'email' => 'required',
-        'password' => 'required',
-        'view_count' => 'required',
+        // 'password' => 'required',
+        // 'view_count' => 'required',
         'role_id' => 'required'
     ];
 

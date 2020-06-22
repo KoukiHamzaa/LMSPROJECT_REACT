@@ -1,5 +1,5 @@
 <!-- Name Field -->
-<div class="form-group  col-md-6">
+<div class="form-group  col-md-5">
     {!! Form::label('name', 'Nom:') !!}
     <p>{{ $user->name }}</p>
 </div>
@@ -19,6 +19,16 @@
     <!-- Go back Field -->
 <div class="col-md-1">
     <span class="time h6"><a class="text-dark" href="{{ route('users.index') }}"> <i class="fa fa-angle-double-left"></i>Retourner</a></span>
+</div>
+
+<div class="col-md-1">
+@if(Auth::check() AND (Auth::user()->id == $user->id || Auth::user()->role_id == 1 ) )
+    {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'delete']) !!}
+            <div class='btn-group'>
+                <a href="{{ route('users.edit', [$user->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
+            </div>
+    {!! Form::close() !!}
+@endif
 </div>
 
 <!-- Last Name Field -->

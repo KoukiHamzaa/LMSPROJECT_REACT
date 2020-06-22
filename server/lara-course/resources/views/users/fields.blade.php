@@ -1,6 +1,6 @@
 <!-- Name Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('name', 'Nom:') !!}
+    {!! Form::label('name', 'Nom d utilisateur:') !!}
     {!! Form::text('name', null, ['class' => 'form-control']) !!}
 </div>
 
@@ -28,6 +28,7 @@
     {!! Form::date('date_of_birth', null, ['class' => 'form-control','id'=>'date_of_birth']) !!}
 </div>
 
+<div>
 @push('scripts')
     <script type="text/javascript">
         $('#date_of_birth').datetimepicker({
@@ -38,7 +39,7 @@
 @endpush
 
 <!-- Issubscribed Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-6 mb-5">
     {!! Form::label('isSubscribed', 'Est abonné ?:') !!}
     <label class="checkbox-inline">
         {!! Form::hidden('isSubscribed', 0) !!}
@@ -48,28 +49,19 @@
 
 
 <!-- Email Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-12" style="max-width:51%">
     {!! Form::label('email', 'Email:') !!}
     {!! Form::email('email', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Password Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('password', 'Mot de passe:') !!}
-    {!! Form::password('password', ['class' => 'form-control']) !!}
-</div>
 
-<!-- View Count Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('view_count', 'Nombre de vues:') !!}
-    {!! Form::number('view_count', null, ['class' => 'form-control']) !!}
-</div>
-
+@if(Auth::user()->role_id == 1)
 <!-- Role Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('role_id', 'Identifiant de rôle:') !!}
     {!! Form::number('role_id', null, ['class' => 'form-control']) !!}
 </div>
+@endif
 
 <!-- Remember Token Field -->
 <div class="form-group col-sm-6">
