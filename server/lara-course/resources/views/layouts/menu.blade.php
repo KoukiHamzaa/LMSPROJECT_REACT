@@ -47,10 +47,11 @@
 </div> -->
 
 
-
+@if(Auth::user()->role_id == 1)
 <li class="{{ Request::is('users*') ? 'active' : '' }}">
-     <a href="{{ route('users.index') }}"><i class="fa fa-edit"></i><span>Utilisateur</span></a>
+     <a href="{{ route('users.index') }}"><i class="fa fa-edit"></i><span>Liste d Utilisateurs</span></a>
 </li>
+@endif
 
 
 <div class="d-none">

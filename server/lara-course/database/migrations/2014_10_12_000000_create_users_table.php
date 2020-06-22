@@ -18,7 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
-            $table->string('phone')->nullable();
+            // $table->string('phone')->nullable();
+            $table->string('image')->default("http://placehold.jp/230x180.png");
             $table->string('paystack_authorization_code')->nullable();
             $table->string('paystack_customer_code')->nullable();
             $table->string('gender')->nullable()->default('Male');
