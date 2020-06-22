@@ -60,7 +60,8 @@
 		</ul>
 
         <a data-toggle="modal" data-target="#loginModal"class="nav-link btn btn-outline-dark" href="/login">S'identifier</a>
-		<a data-toggle="modal" data-target="#registerModal" class="nav-link btn btn-danger mx-2" href="/register">S'inscrire</a> 
+		<!-- <a data-toggle="modal" data-target="#registerModal" class="nav-link btn btn-danger mx-2" href="/register">S'inscrire</a>  -->
+    <a href="{{ url('/register') }}" class="nav-link btn btn-danger mx-2" href="/register">S'inscrire</a> 
     </div>
 </nav>
 
@@ -174,17 +175,18 @@
   </div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel">
+<div class="modal fade" id="" tabindex="-1" role="dialog" aria-labelledby="">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="registerModalLabel">S'inscrire</h4>
+        <h4 class="modal-title" id="">
+        </h4>
+        <a href="{{ url('/register') }}" target="_blank">S'inscrire</a>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		 </button>
+		      </button>
       </div>
       <div class="modal-body">
-        @include('auth.register-element') 
+        <!-- @include('auth.register-element')  -->
       </div>
     </div>
   </div>
