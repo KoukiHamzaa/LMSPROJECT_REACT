@@ -18,7 +18,11 @@
 
     <!-- Go back Field -->
 <div class="col-md-1">
+@if(Auth::user()->id < 3)
+    <span class="time h6"><a class="text-dark" href="{{ route('courses.index') }}"> <i class="fa fa-angle-double-left"></i>Retourner</a></span>
+    @else
     <span class="time h6"><a class="text-dark" href="{{ route('users.index') }}"> <i class="fa fa-angle-double-left"></i>Retourner</a></span>
+    @endif
 </div>
 
 <div class="col-md-1">
