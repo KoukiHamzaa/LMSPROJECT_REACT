@@ -88,7 +88,7 @@ class User extends Model
         'email' => 'required',
         // 'password' => 'required',
         // 'view_count' => 'required',
-        'role_id' => 'required'
+        // 'role_id' => 'required'
     ];
 
     // public function course()

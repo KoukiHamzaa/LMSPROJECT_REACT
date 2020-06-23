@@ -126,14 +126,14 @@ class UserController extends AppBaseController
         if (empty($user)) {
             Flash::error('Utilisateur non trouvé');
 
-            return redirect(route('users.index'));
+            return redirect(route('courses.index'));
         }
 
         $user = $this->userRepository->update($request->all(), $id);
 
         Flash::success('L utilisateur a été mis à jour avec succès.');
 
-        return redirect(route('users.index'));
+        return redirect(route('courses.index'));
     }
 
     /**

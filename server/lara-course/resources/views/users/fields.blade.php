@@ -38,6 +38,7 @@
     </script>
 @endpush
 
+@if(Auth::user()->role_id == 1)
 <!-- Issubscribed Field -->
 <div class="form-group col-sm-6 mb-5">
     {!! Form::label('isSubscribed', 'Est abonné ?:') !!}
@@ -46,6 +47,7 @@
         {!! Form::checkbox('isSubscribed', '1', null) !!}
     </label>
 </div>
+@endif
 
 
 <!-- Email Field -->
@@ -54,11 +56,13 @@
     {!! Form::email('email', null, ['class' => 'form-control']) !!}
 </div>
 
+@if(Auth::user()->id == $user->id)
 <!-- Password Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('password', 'Mot de passe:') !!}
     {!! Form::password('password', ['class' => 'form-control']) !!}
 </div>
+@endif
 
 @if(Auth::user()->role_id == 1)
 <!-- Role Id Field -->
@@ -70,6 +74,7 @@
 
 <!-- Remember Token Field -->
 <div class="form-group col-sm-6">
+<?php $image =  $user->image ?>
     {!! Form::label('image', 'Image:') !!}
     {!! Form::text('image', null, ['class' => 'form-control']) !!}
 </div>
