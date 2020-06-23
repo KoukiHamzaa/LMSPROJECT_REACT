@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->date('date_of_birth')->nullable();
             $table->tinyInteger('isSubscribed')->nullable()->default(0);
             $table->string('email')->unique();
-            $table->string('password');
+            $table->string('password')->nullable()->default('123456789');
             $table->integer('view_count')->default(0); // counting views :D   
             $table->integer('role_id')->default(1);
             
