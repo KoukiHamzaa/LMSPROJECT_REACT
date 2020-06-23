@@ -6,17 +6,17 @@ A level-1 auxiliary file: 01-Dedicace.aux
 A level-1 auxiliary file: 01-Dedicace-2.aux
 A level-1 auxiliary file: 02-Remerciements.aux
 A level-1 auxiliary file: 03-Resume.aux
-A level-1 auxiliary file: 04-Acronymes.aux
 A level-1 auxiliary file: 05-Introduction.aux
 A level-1 auxiliary file: 06-Contexte.aux
 A level-1 auxiliary file: 07-Analyse.aux
-A level-1 auxiliary file: 08-Conception.aux
+A level-1 auxiliary file: 08-Conception-1.aux
 A level-1 auxiliary file: 09-Realisation.aux
+A level-1 auxiliary file: 10-Conclusion.aux
 The style file: ieeetr.bst
 Database file #1: references.bib
 You've used 13 entries,
             1876 wiz_defined-function locations,
-            550 strings with 6122 characters,
+            550 strings with 6125 characters,
 and the built_in function-call counts, 1792 in all, are:
 = -- 182
 > -- 52

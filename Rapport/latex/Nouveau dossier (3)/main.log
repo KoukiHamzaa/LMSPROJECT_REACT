@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.1)  18 JUN 2020 09:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.1)  23 JUN 2020 10:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -614,18 +614,6 @@ LaTeX Warning: Label `tab: first-table' multiply defined.
 LaTeX Warning: Label `sec:conception' multiply defined.
 
 
-LaTeX Warning: Label `fig:Interface : G\IeC {\'e}rer le profil ' multiply defin
-ed.
-
-
-LaTeX Warning: Label `fig:Diagramme de s\IeC {\'e}quence syst\IeC {\`e}me de mo
-dification de r\IeC {\^o}le utilisateur ' multiply defined.
-
-
-LaTeX Warning: Label `fig:Diagramme de s\IeC {\'e}quence syst\IeC {\`e}me de mo
-dification de r\IeC {\^o}le utilisateur ' multiply defined.
-
-
 LaTeX Warning: Label `fig:Diagramme d' activit\IeC {\'e}s d' inscription d'un \
 IeC {\'e}tudiant ' multiply defined.
 
@@ -633,43 +621,7 @@ IeC {\'e}tudiant ' multiply defined.
 LaTeX Warning: Label `sec:conception' multiply defined.
 
 
-LaTeX Warning: Label `fig:Diagramme de s\IeC {\'e}on de r\IeC {\^o}le utilisate
-ur ' multiply defined.
-
-
-LaTeX Warning: Label `fig:Diagramme de s\IeC {\'e}on de r\IeC {\^o}le utilisate
-ur ' multiply defined.
-
-
-LaTeX Warning: Label `fig:Diagramme de s\IeC {\'e}on de r\IeC {\^o}le utilisate
-ur ' multiply defined.
-
-
-LaTeX Warning: Label `fig:Diagramme de s\IeC {\'e}on de r\IeC {\^o}le utilisate
-ur ' multiply defined.
-
-
 LaTeX Warning: Label `sec:conception' multiply defined.
-
-
-LaTeX Warning: Label `fig:Interface : G\IeC {\'e}rer le profil ' multiply defin
-ed.
-
-
-LaTeX Warning: Label `fig:Interface : G\IeC {\'e}rer le profil ' multiply defin
-ed.
-
-
-LaTeX Warning: Label `fig:Interface : G\IeC {\'e}rer le profil ' multiply defin
-ed.
-
-
-LaTeX Warning: Label `fig:Interface : G\IeC {\'e}rer le profil ' multiply defin
-ed.
-
-
-LaTeX Warning: Label `fig:Interface : G\IeC {\'e}rer le profil ' multiply defin
-ed.
 
 ) (./09-Realisation.aux) (./10-Conclusion.aux
 
@@ -756,7 +708,7 @@ LaTeX Info: Redefining \nameref on input line 210.
 \openout2 = `sansnom-3.aux'.
 
  (./sansnom-3.tex
-<logo-ensak.png, id=478, 225.84375pt x 225.84375pt>
+<logo-ensak.png, id=430, 225.84375pt x 225.84375pt>
 File: logo-ensak.png Graphic file (type png)
 <use logo-ensak.png>
 Package pdftex.def Info: logo-ensak.png  used on input line 6.
@@ -771,14 +723,11 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 9.
 (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<uni.png, id=479, 301.125pt x 301.125pt>
+<uni.png, id=431, 301.125pt x 301.125pt>
 File: uni.png Graphic file (type png)
 <use uni.png>
 Package pdftex.def Info: uni.png  used on input line 20.
 (pdftex.def)             Requested size: 56.90189pt x 71.13196pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [1
 
 
@@ -786,8 +735,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 g> <./uni.png>])
 \openout2 = `01-Dedicace.aux'.
 
- (./01-Dedicace.texpdfTeX warning (ext4): destination with the same identifier 
-(name{page.1}) has been already used, duplicate ignored
+
+(./01-Dedicace.texpdfTeX warning (ext4): destination with the same identifier (
+name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.26 \clearpage
@@ -825,25 +775,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
 
 
-]
-Underfull \vbox (badness 1281) has occurred while \output is active []
+] [5]
+Underfull \vbox (badness 2521) has occurred while \output is active []
 
- [5]
-[6]
-Overfull \hbox (15.10269pt too wide) in paragraph at lines 103--103
- [][] [][][]\T1/cmr/m/n/12 Description : Dia-gramme de sé-quences consul-ter ag
-enda 
- []
-
-
-Underfull \vbox (badness 1953) has occurred while \output is active []
-
- [7])
+ [6]
+[7])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
-
-[8] (./main.lof [9
+ [8] (./main.lof [9
 
 
 ] [10])
@@ -859,14 +799,14 @@ Underfull \vbox (badness 1953) has occurred while \output is active []
  [13]
 \openout2 = `05-Introduction.aux'.
 
- (./05-Introduction.tex
-[14
+
+(./05-Introduction.tex [14
 
 
 
 
 ]
-<images/Ulearn.png, id=905, 200.75pt x 200.75pt>
+<images/Ulearn.png, id=830, 200.75pt x 200.75pt>
 File: images/Ulearn.png Graphic file (type png)
 <use images/Ulearn.png>
 Package pdftex.def Info: images/Ulearn.png  used on input line 88.
@@ -882,7 +822,7 @@ Overfull \hbox (2.13808pt too wide) in paragraph at lines 4--9
 a-vail dans son contexte
  []
 
-<images/Sanstllitre1.png, id=912, 298.716pt x 181.8795pt>
+<images/Sanstllitre1.png, id=837, 298.716pt x 181.8795pt>
 File: images/Sanstllitre1.png Graphic file (type png)
 <use images/Sanstllitre1.png>
 Package pdftex.def Info: images/Sanstllitre1.png  used on input line 12.
@@ -892,7 +832,7 @@ Package pdftex.def Info: images/Sanstllitre1.png  used on input line 12.
 
 
  <./images/Sanstllitre1.png>]
-<images/sqli_logo.png, id=918, 286.06876pt x 208.78pt>
+<images/sqli_logo.png, id=843, 286.06876pt x 208.78pt>
 File: images/sqli_logo.png Graphic file (type png)
 <use images/sqli_logo.png>
 Package pdftex.def Info: images/sqli_logo.png  used on input line 24.
@@ -936,13 +876,13 @@ Overfull \hbox (7.90022pt too wide) in paragraph at lines 127--168
 [20
 
 ]
-<images/scrum.png, id=943, 612.03656pt x 280.04625pt>
+<images/scrum.png, id=869, 612.03656pt x 280.04625pt>
 File: images/scrum.png Graphic file (type png)
 <use images/scrum.png>
 Package pdftex.def Info: images/scrum.png  used on input line 194.
 (pdftex.def)             Requested size: 426.78836pt x 176.41296pt.
  [21 <./images/scrum.png>]
-<images/RôlesScrum.jpg, id=948, 414.348pt x 210.7875pt>
+<images/RôlesScrum.jpg, id=874, 414.348pt x 210.7875pt>
 File: images/RôlesScrum.jpg Graphic file (type jpg)
 <use images/RôlesScrum.jpg>
 Package pdftex.def Info: images/RôlesScrum.jpg  used on input line 216.
@@ -950,7 +890,7 @@ Package pdftex.def Info: images/RôlesScrum.jpg  used on input line 216.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 225.
  [22 <./images/RôlesScrum.jpg>]
-<images/LesévènementsScrum.png, id=954, 468.5505pt x 366.168pt>
+<images/LesévènementsScrum.png, id=880, 468.5505pt x 366.168pt>
 File: images/LesévènementsScrum.png Graphic file (type png)
 <use images/LesévènementsScrum.png>
 Package pdftex.def Info: images/LesévènementsScrum.png  used on input line 250.
@@ -962,7 +902,7 @@ LaTeX Font Info:    Try loading font information for T1+cmss on input line 256.
 (c:/texlive/2019/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [23 <./images/LesévènementsScrum.png>] [24]
-<images/gantt.PNG, id=971, 785.334pt x 437.83575pt>
+<images/gantt.PNG, id=897, 785.334pt x 437.83575pt>
 File: images/gantt.PNG Graphic file (type png)
 <use images/gantt.PNG>
 Package pdftex.def Info: images/gantt.PNG  used on input line 293.
@@ -979,7 +919,7 @@ Overfull \hbox (22.9813pt too wide) in paragraph at lines 293--294
 
  (./07-Analyse.tex
 Chapitre 2.
-<images/Sanstllitre2.png, id=981, 216.20775pt x 270.41025pt>
+<images/Sanstllitre2.png, id=906, 216.20775pt x 270.41025pt>
 File: images/Sanstllitre2.png Graphic file (type png)
 <use images/Sanstllitre2.png>
 Package pdftex.def Info: images/Sanstllitre2.png  used on input line 8.
@@ -989,7 +929,7 @@ Package pdftex.def Info: images/Sanstllitre2.png  used on input line 8.
 
 
  <./images/Sanstllitre2.png>]
-<images/LetriangledejeanHoussaye.jpg, id=986, 375.4025pt x 230.8625pt>
+<images/LetriangledejeanHoussaye.jpg, id=911, 375.4025pt x 230.8625pt>
 File: images/LetriangledejeanHoussaye.jpg Graphic file (type jpg)
 <use images/LetriangledejeanHoussaye.jpg>
 Package pdftex.def Info: images/LetriangledejeanHoussaye.jpg  used on input lin
@@ -1004,7 +944,7 @@ la re-la-tion Savoir-Enseignant,
  []
 
 [29 <./images/LetriangledejeanHoussaye.jpg>]
-<images/profiles.jpg, id=996, 633.36626pt x 472.76625pt>
+<images/profiles.jpg, id=921, 633.36626pt x 472.76625pt>
 File: images/profiles.jpg Graphic file (type jpg)
 <use images/profiles.jpg>
 Package pdftex.def Info: images/profiles.jpg  used on input line 90.
@@ -1019,51 +959,51 @@ Overfull \hbox (38.47443pt too wide) in paragraph at lines 100--131
  [][] 
  []
 
+<images/DiagrammeCom.jpg, id=923, 783.92876pt x 486.81876pt>
+File: images/DiagrammeCom.jpg Graphic file (type jpg)
+<use images/DiagrammeCom.jpg>
+Package pdftex.def Info: images/DiagrammeCom.jpg  used on input line 136.
+(pdftex.def)             Requested size: 369.89394pt x 199.16614pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30
 
- <./images/profiles.jpg>] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 188--192
-
- []
-
-[32
+ <./images/profiles.jpg>] [31 <./images/DiagrammeCom.jpg>] [32
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
+Underfull \hbox (badness 10000) in paragraph at lines 195--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--200
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--207
 
  []
 
 [33]
-<images/PackageDiagram1.jpg, id=1022, 1166.3575pt x 754.82pt>
+<images/PackageDiagram1.jpg, id=943, 1166.3575pt x 754.82pt>
 File: images/PackageDiagram1.jpg Graphic file (type jpg)
 <use images/PackageDiagram1.jpg>
-Package pdftex.def Info: images/PackageDiagram1.jpg  used on input line 238.
-(pdftex.def)             Requested size: 512.16666pt x 284.51955pt.
-
-Overfull \hbox (51.44542pt too wide) in paragraph at lines 238--239
- [][] 
- []
-
-<images/Untitled-Project.jpg, id=1023, 1204.5pt x 1703.36375pt>
+Package pdftex.def Info: images/PackageDiagram1.jpg  used on input line 245.
+(pdftex.def)             Requested size: 227.60786pt x 142.25401pt.
+<images/Untitled-Project.jpg, id=944, 1204.5pt x 1703.36375pt>
 File: images/Untitled-Project.jpg Graphic file (type jpg)
 <use images/Untitled-Project.jpg>
-Package pdftex.def Info: images/Untitled-Project.jpg  used on input line 250.
+Package pdftex.def Info: images/Untitled-Project.jpg  used on input line 257.
 (pdftex.def)             Requested size: 512.17223pt x 455.23595pt.
 
-Overfull \hbox (51.45099pt too wide) in paragraph at lines 250--251
+Overfull \hbox (51.45099pt too wide) in paragraph at lines 257--258
  [][] 
  []
 
@@ -1071,38 +1011,38 @@ Overfull \hbox (51.45099pt too wide) in paragraph at lines 250--251
 Underfull \vbox (badness 5417) has occurred while \output is active []
 
  [35 <./images/Untitled-Project.jpg>]
-<images/Diagrammedecasdutilisationgénéra.jpg, id=1033, 1316.92pt x 805.0075pt>
+<images/Diagrammedecasdutilisationgénéra.jpg, id=960, 1316.92pt x 805.0075pt>
 File: images/Diagrammedecasdutilisationgénéra.jpg Graphic file (type jpg)
 <use images/Diagrammedecasdutilisationgénéra.jpg>
 Package pdftex.def Info: images/Diagrammedecasdutilisationgénéra.jpg  used on i
-nput line 264.
+nput line 271.
 (pdftex.def)             Requested size: 512.14993pt x 398.3387pt.
 
-Overfull \hbox (51.4287pt too wide) in paragraph at lines 264--265
+Overfull \hbox (51.4287pt too wide) in paragraph at lines 271--272
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--278
+Underfull \hbox (badness 10000) in paragraph at lines 279--285
 
  []
 
 [36 <./images/Diagrammedecasdutilisationgénéra.jpg>]
-<images/Larelation.jpg, id=1040, 564.30824pt x 331.2375pt>
+<images/Larelation.jpg, id=967, 564.30824pt x 331.2375pt>
 File: images/Larelation.jpg Graphic file (type jpg)
 <use images/Larelation.jpg>
-Package pdftex.def Info: images/Larelation.jpg  used on input line 299.
+Package pdftex.def Info: images/Larelation.jpg  used on input line 306.
 (pdftex.def)             Requested size: 369.89583pt x 193.47748pt.
  [37 <./images/Larelation.jpg>]
-<images/DiagrammedeclasseClassDiagram.jpg, id=1046, 1663.21375pt x 1337.99875pt
->
+<images/DiagrammedeclasseClassDiagram.jpg, id=973, 1663.21375pt x 1337.99875pt>
+
 File: images/DiagrammedeclasseClassDiagram.jpg Graphic file (type jpg)
 <use images/DiagrammedeclasseClassDiagram.jpg>
 Package pdftex.def Info: images/DiagrammedeclasseClassDiagram.jpg  used on inpu
-t line 310.
+t line 317.
 (pdftex.def)             Requested size: 512.13945pt x 455.24022pt.
 
-Overfull \hbox (51.41821pt too wide) in paragraph at lines 310--311
+Overfull \hbox (51.41821pt too wide) in paragraph at lines 317--318
  [][] 
  []
 
@@ -1136,14 +1076,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [42
 
 ]
-<images/DiagrammedeDéploiement.png, id=1070, 637.78275pt x 231.86626pt>
+<images/DiagrammedeDéploiement.png, id=997, 637.78275pt x 231.86626pt>
 File: images/DiagrammedeDéploiement.png Graphic file (type png)
 <use images/DiagrammedeDéploiement.png>
 Package pdftex.def Info: images/DiagrammedeDéploiement.png  used on input line 
-698.
+705.
 (pdftex.def)             Requested size: 512.17325pt x 227.62715pt.
 
-Overfull \hbox (51.45201pt too wide) in paragraph at lines 698--699
+Overfull \hbox (51.45201pt too wide) in paragraph at lines 705--706
  [][] 
  []
 
@@ -1152,7 +1092,7 @@ Overfull \hbox (51.45201pt too wide) in paragraph at lines 698--699
 
  (./08-Conception-1.tex
 Chapitre 3.
-<images/Sanstfjitre.png, id=1075, 357.7365pt x 299.31825pt>
+<images/Sanstfjitre.png, id=1002, 357.7365pt x 299.31825pt>
 File: images/Sanstfjitre.png Graphic file (type png)
 <use images/Sanstfjitre.png>
 Package pdftex.def Info: images/Sanstfjitre.png  used on input line 11.
@@ -1162,31 +1102,31 @@ Package pdftex.def Info: images/Sanstfjitre.png  used on input line 11.
 
 
  <./images/Sanstfjitre.png>]
-<images/Décompositionsprint1enItems.png, id=1081, 431.211pt x 308.352pt>
+<images/Décompositionsprint1enItems.png, id=1007, 431.211pt x 308.352pt>
 File: images/Décompositionsprint1enItems.png Graphic file (type png)
 <use images/Décompositionsprint1enItems.png>
 Package pdftex.def Info: images/Décompositionsprint1enItems.png  used on input 
-line 41.
+line 40.
 (pdftex.def)             Requested size: 369.8999pt x 284.5342pt.
  [45
 
  <./images/Décompositionsprint1enItems.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 48.
+               Default added (so using `tbp') on input line 47.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
 
-Overfull \hbox (47.16049pt too wide) in paragraph at lines 51--64
+Overfull \hbox (47.16049pt too wide) in paragraph at lines 50--63
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
@@ -1194,667 +1134,572 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [46]
-<images/DiagrammedeCasdutilisationSauthentifier.png, id=1090, 904.37875pt x 482
+<images/DiagrammedeCasdutilisationSauthentifier.png, id=1016, 904.37875pt x 482
 .80376pt>
 File: images/DiagrammedeCasdutilisationSauthentifier.png Graphic file (type png
 )
 <use images/DiagrammedeCasdutilisationSauthentifier.png>
 Package pdftex.def Info: images/DiagrammedeCasdutilisationSauthentifier.png  us
-ed on input line 103.
+ed on input line 102.
 (pdftex.def)             Requested size: 369.87311pt x 284.53497pt.
-
-
-Package hyperref Warning: bookmark level for unknown subsubsubsection defaults 
-to 0.
-
-[47
+ [47
 
 
  <./images/DiagrammedeCasdutilisationSauthentifier.png>]
-
-Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 144.
-
-<images/Diagrséquencesystèmeauthentification.jpg, id=1098, 936.49875pt x 875.27
+<images/Diagrséquencesystèmeauthentification.jpg, id=1024, 936.49875pt x 875.27
 pt>
 File: images/Diagrséquencesystèmeauthentification.jpg Graphic file (type jpg)
 <use images/Diagrséquencesystèmeauthentification.jpg>
 Package pdftex.def Info: images/Diagrséquencesystèmeauthentification.jpg  used 
-on input line 147.
+on input line 146.
 (pdftex.def)             Requested size: 369.89151pt x 284.52615pt.
-[48 <./images/Diagrséquencesystèmeauthentification.jpg>]
+ [48 <./images/Diagrséquencesystèmeauthentification.jpg>]
+<images/inscription.png, id=1036, 449.68pt x 446.66875pt>
+File: images/inscription.png Graphic file (type png)
+<use images/inscription.png>
+Package pdftex.def Info: images/inscription.png  used on input line 160.
+(pdftex.def)             Requested size: 284.54184pt x 176.40836pt.
+<images/identif.png, id=1037, 1194.4625pt x 684.5575pt>
+File: images/identif.png Graphic file (type png)
+<use images/identif.png>
+Package pdftex.def Info: images/identif.png  used on input line 171.
+(pdftex.def)             Requested size: 483.69998pt x 227.61772pt.
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 156.
-
-<images/20.png, id=1110, 1877.0125pt x 908.39375pt>
-File: images/20.png Graphic file (type png)
-<use images/20.png>
-Package pdftex.def Info: images/20.png  used on input line 161.
-(pdftex.def)             Requested size: 483.68697pt x 227.61073pt.
-
-Overfull \hbox (22.96573pt too wide) in paragraph at lines 161--162
+Overfull \hbox (22.97874pt too wide) in paragraph at lines 171--172
  [][] 
  []
 
-<images/Ulearning.png, id=1111, 506.89375pt x 464.73625pt>
-File: images/Ulearning.png Graphic file (type png)
-<use images/Ulearning.png>
-Package pdftex.def Info: images/Ulearning.png  used on input line 169.
-(pdftex.def)             Requested size: 284.53148pt x 176.40305pt.
 [49
 
- <./images/20.png> <./images/Ulearning.png>]
-<images/CasutilisationGérprofil.jpg, id=1118, 954.56625pt x 663.47874pt>
+ <./images/inscription.png> <./images/identif.png>]
+<images/CasutilisationGérprofil.jpg, id=1044, 954.56625pt x 663.47874pt>
 File: images/CasutilisationGérprofil.jpg Graphic file (type jpg)
 <use images/CasutilisationGérprofil.jpg>
 Package pdftex.def Info: images/CasutilisationGérprofil.jpg  used on input line
- 181.
+ 188.
 (pdftex.def)             Requested size: 369.87604pt x 284.531pt.
  [50
 
  <./images/CasutilisationGérprofil.jpg>]
-<images/OperaSnapshot.png, id=1127, 1118.9805pt x 490.83376pt>
-File: images/OperaSnapshot.png Graphic file (type png)
-<use images/OperaSnapshot.png>
-Package pdftex.def Info: images/OperaSnapshot.png  used on input line 225.
-(pdftex.def)             Requested size: 483.6963pt x 312.98663pt.
+<images/editprofparetud.png, id=1053, 1127.412pt x 545.6385pt>
+File: images/editprofparetud.png Graphic file (type png)
+<use images/editprofparetud.png>
+Package pdftex.def Info: images/editprofparetud.png  used on input line 232.
+(pdftex.def)             Requested size: 483.69394pt x 312.98206pt.
 
-Overfull \hbox (22.97507pt too wide) in paragraph at lines 225--226
+Overfull \hbox (22.9727pt too wide) in paragraph at lines 232--233
  [][] 
  []
 
-[51 <./images/OperaSnapshot.png>]
-<images/gestiondesrôlesutilisateurs.jpg, id=1134, 915.42pt x 574.145pt>
-File: images/gestiondesrôlesutilisateurs.jpg Graphic file (type jpg)
-<use images/gestiondesrôlesutilisateurs.jpg>
-Package pdftex.def Info: images/gestiondesrôlesutilisateurs.jpg  used on input 
-line 238.
-(pdftex.def)             Requested size: 369.87704pt x 341.44092pt.
- [52
-
- <./images/gestiondesrôlesutilisateurs.jpg>]
-<images/Diagséquencesystèmedemodificationderôleutilisateur.jpg, id=1139, 933.48
-75pt x 925.4575pt>
-File: images/Diagséquencesystèmedemodificationderôleutilisateur.jpg Graphic fil
-e (type jpg)
-<use images/Diagséquencesystèmedemodificationderôleutilisateur.jpg>
-Package pdftex.def Info: images/Diagséquencesystèmedemodificationderôleutilisat
-eur.jpg  used on input line 253.
-(pdftex.def)             Requested size: 369.8844pt x 426.78883pt.
- [53
-
- <./images/Diagséquencesystèmedemodificationderôleutilisateur.jpg>]
-<images/FGH.png, id=1144, 1856.9375pt x 901.3675pt>
-File: images/FGH.png Graphic file (type png)
-<use images/FGH.png>
-Package pdftex.def Info: images/FGH.png  used on input line 267.
-(pdftex.def)             Requested size: 369.8792pt x 284.52367pt.
-<images/QVI.png, id=1145, 1854.93pt x 426.59375pt>
-File: images/QVI.png Graphic file (type png)
-<use images/QVI.png>
-Package pdftex.def Info: images/QVI.png  used on input line 274.
-(pdftex.def)             Requested size: 369.87558pt x 113.80838pt.
-<images/3.png, id=1146, 308.352pt x 331.83975pt>
-File: images/3.png Graphic file (type png)
-<use images/3.png>
-Package pdftex.def Info: images/3.png  used on input line 281.
-(pdftex.def)             Requested size: 369.89351pt x 284.54622pt.
-
-[54
-
- <./images/FGH.png> <./images/QVI.png>]
-<images/18.png, id=1154, 1877.0125pt x 908.39375pt>
-File: images/18.png Graphic file (type png)
-<use images/18.png>
-Package pdftex.def Info: images/18.png  used on input line 288.
-(pdftex.def)             Requested size: 369.86816pt x 284.52382pt.
- [55 <./images/3.png>] [56 <./images/18.png>]
-<images/Décompositionsprint2enItems.png, id=1164, 504.6855pt x 335.45325pt>
+[51 <./images/editprofparetud.png>]
+<images/Décompositionsprint2enItems.png, id=1062, 504.6855pt x 335.45325pt>
 File: images/Décompositionsprint2enItems.png Graphic file (type png)
 <use images/Décompositionsprint2enItems.png>
 Package pdftex.def Info: images/Décompositionsprint2enItems.png  used on input 
-line 322.
+line 271.
 (pdftex.def)             Requested size: 369.90361pt x 284.5377pt.
- [57
-
+ [52
 
  <./images/Décompositionsprint2enItems.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 332.
+               Default added (so using `tbp') on input line 281.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
 
-Overfull \hbox (47.16049pt too wide) in paragraph at lines 335--348
+Overfull \hbox (47.16049pt too wide) in paragraph at lines 284--297
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[58]
-<images/Diagrammedecasdutilisationdétailléadministr.jpg, id=1173, 1377.145pt x 
+[53]
+<images/Diagrammedecasdutilisationdétailléadministr.jpg, id=1071, 1377.145pt x 
 905.3825pt>
 File: images/Diagrammedecasdutilisationdétailléadministr.jpg Graphic file (type
  jpg)
 <use images/Diagrammedecasdutilisationdétailléadministr.jpg>
 Package pdftex.def Info: images/Diagrammedecasdutilisationdétailléadministr.jpg
-  used on input line 388.
-(pdftex.def)             Requested size: 369.87987pt x 284.52007pt.
- [59
+  used on input line 338.
+(pdftex.def)             Requested size: 483.68906pt x 455.24591pt.
+
+Overfull \hbox (22.96782pt too wide) in paragraph at lines 338--339
+ [][] 
+ []
+
+[54
 
 
+ <./images/Diagrammedecasdutilisationdétailléadministr.jpg>] [55
 
- <./images/Diagrammedecasdutilisationdétailléadministr.jpg>]
-
-Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 460.
-
-<images/DiagrammesdeséquenceducasdutilisationModifierunutilisa.jpg, id=1178, 13
+]
+<images/DiagrammesdeséquenceducasdutilisationModifierunutilisa.jpg, id=1087, 13
 16.92pt x 839.135pt>
 File: images/DiagrammesdeséquenceducasdutilisationModifierunutilisa.jpg Graphic
  file (type jpg)
 <use images/DiagrammesdeséquenceducasdutilisationModifierunutilisa.jpg>
 Package pdftex.def Info: images/DiagrammesdeséquenceducasdutilisationModifierun
-utilisa.jpg  used on input line 463.
-(pdftex.def)             Requested size: 369.88048pt x 284.52106pt.
-[60]
-Underfull \hbox (badness 10000) in paragraph at lines 475--479
+utilisa.jpg  used on input line 380.
+(pdftex.def)             Requested size: 398.33437pt x 369.88635pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--397
 
  []
 
-[61 <./images/DiagrammesdeséquenceducasdutilisationModifierunutilisa.jpg>]
+[56
 
-Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 499.
-
-<images/DiagrammedeséquenceducasdutilisationSupprimerunutilisateur.jpg, id=1203
+ <./images/DiagrammesdeséquenceducasdutilisationModifierunutilisa.jpg>]
+<images/DiagrammedeséquenceducasdutilisationSupprimerunutilisateur.jpg, id=1092
 , 1306.8825pt x 945.5325pt>
 File: images/DiagrammedeséquenceducasdutilisationSupprimerunutilisateur.jpg Gra
 phic file (type jpg)
 <use images/DiagrammedeséquenceducasdutilisationSupprimerunutilisateur.jpg>
 Package pdftex.def Info: images/DiagrammedeséquenceducasdutilisationSupprimerun
-utilisateur.jpg  used on input line 502.
-(pdftex.def)             Requested size: 369.873pt x 284.5276pt.
-[62 <./images/DiagrammedeséquenceducasdutilisationSupprimerunutilisateur.jpg>]
+utilisateur.jpg  used on input line 419.
+(pdftex.def)             Requested size: 398.32938pt x 284.5276pt.
 
-Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 533.
-
-<images/DiagrammesdeséquenceducasdutilisationAjouterunutilisateur.jpg, id=1216,
+[57 <./images/DiagrammedeséquenceducasdutilisationSupprimerunutilisateur.jpg>]
+<images/DiagrammesdeséquenceducasdutilisationAjouterunutilisateur.jpg, id=1107,
  1266.7325pt x 955.57pt>
 File: images/DiagrammesdeséquenceducasdutilisationAjouterunutilisateur.jpg Grap
 hic file (type jpg)
 <use images/DiagrammesdeséquenceducasdutilisationAjouterunutilisateur.jpg>
 Package pdftex.def Info: images/DiagrammesdeséquenceducasdutilisationAjouterunu
-tilisateur.jpg  used on input line 536.
-(pdftex.def)             Requested size: 369.87509pt x 284.51524pt.
-[63] [64 <./images/DiagrammesdeséquenceducasdutilisationAjouterunutilisateur.jp
-g>]
+tilisateur.jpg  used on input line 453.
+(pdftex.def)             Requested size: 369.87509pt x 213.39008pt.
 
-Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 574.
+[58
 
-<images/Diagrammedeséquencedajoutdunprofesseur.jpg, id=1237, 933.4875pt x 975.6
-45pt>
-File: images/Diagrammedeséquencedajoutdunprofesseur.jpg Graphic file (type jpg)
+ <./images/DiagrammesdeséquenceducasdutilisationAjouterunutilisateur.jpg>]
+[59
 
-<use images/Diagrammedeséquencedajoutdunprofesseur.jpg>
-Package pdftex.def Info: images/Diagrammedeséquencedajoutdunprofesseur.jpg  use
-d on input line 577.
-(pdftex.def)             Requested size: 369.8844pt x 284.52272pt.
-
-Overfull \hbox (0.14546pt too wide) in paragraph at lines 590--593
-[]\T1/cmr/bx/it/12 Objectif : \T1/cmr/m/n/12 Per-mettre à l'ad-mi-nis-tra-tion 
-d'ajou-ter toutes les in-for-ma-tions concer-
- []
-
-[65 <./images/Diagrammedeséquencedajoutdunprofesseur.jpg>]
-
-Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 617.
-
-<images/DiagrammeactivitésGérerlesutilisateurs.jpg, id=1250, 1167.36125pt x 805
+]
+<images/DiagrammeactivitésGérerlesutilisateurs.jpg, id=1136, 1167.36125pt x 805
 .0075pt>
 File: images/DiagrammeactivitésGérerlesutilisateurs.jpg Graphic file (type jpg)
 
 <use images/DiagrammeactivitésGérerlesutilisateurs.jpg>
 Package pdftex.def Info: images/DiagrammeactivitésGérerlesutilisateurs.jpg  use
-d on input line 620.
+d on input line 496.
 (pdftex.def)             Requested size: 369.87605pt x 284.52061pt.
-[66]
-<images/SDFI.png, id=1262, 1842.885pt x 562.1pt>
+
+
+Package hyperref Warning: bookmark level for unknown subsubsubsection defaults 
+to 0.
+
+<images/SDFI.png, id=1137, 1842.885pt x 562.1pt>
 File: images/SDFI.png Graphic file (type png)
 <use images/SDFI.png>
-Package pdftex.def Info: images/SDFI.png  used on input line 634.
+Package pdftex.def Info: images/SDFI.png  used on input line 510.
 (pdftex.def)             Requested size: 369.864pt x 170.7155pt.
- [67 <./images/DiagrammeactivitésGérerlesutilisateurs.jpg>] [68 <./images/SDFI.
-png>]
+[60
+
+ <./images/DiagrammeactivitésGérerlesutilisateurs.jpg>] [61 <./images/SDFI.png>
+]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 640.
+(hyperref)                than one, level fixed on input line 516.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 641.
+(hyperref)                than one, level fixed on input line 517.
 
-<images/Diagrammeséquencenscriptiétudiant.jpg, id=1272, 1029.8475pt x 1140.26pt
+<images/Diagrammeséquencenscriptiétudiant.jpg, id=1148, 1029.8475pt x 1140.26pt
 >
 File: images/Diagrammeséquencenscriptiétudiant.jpg Graphic file (type jpg)
 <use images/Diagrammeséquencenscriptiétudiant.jpg>
 Package pdftex.def Info: images/Diagrammeséquencenscriptiétudiant.jpg  used on 
-input line 644.
+input line 520.
 (pdftex.def)             Requested size: 369.88054pt x 284.52493pt.
 
-Overfull \hbox (0.14546pt too wide) in paragraph at lines 656--659
+Overfull \hbox (0.14546pt too wide) in paragraph at lines 532--535
 []\T1/cmr/bx/it/12 Objectif : \T1/cmr/m/n/12 Per-mettre à l'ad-mi-nis-tra-tion 
 d'ajou-ter toutes les in-for-ma-tions concer-
  []
 
-[69
+[62
 
  <./images/Diagrammeséquencenscriptiétudiant.jpg>]
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 693.
+(hyperref)                than one, level fixed on input line 569.
 
-<images/Diagrammeactivitésinscriptioun.jpg, id=1278, 1391.1975pt x 1066.98625pt
+<images/Diagrammeactivitésinscriptioun.jpg, id=1155, 1391.1975pt x 1066.98625pt
 >
 File: images/Diagrammeactivitésinscriptioun.jpg Graphic file (type jpg)
 <use images/Diagrammeactivitésinscriptioun.jpg>
 Package pdftex.def Info: images/Diagrammeactivitésinscriptioun.jpg  used on inp
-ut line 696.
+ut line 572.
 (pdftex.def)             Requested size: 369.87558pt x 284.52463pt.
-[70 <./images/Diagrammeactivitésinscriptioun.jpg>]
+[63 <./images/Diagrammeactivitésinscriptioun.jpg>]
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 716.
+(hyperref)                than one, level fixed on input line 592.
 
-<images/Diagrammecollaborationréinscriptiondunétudiant.jpg, id=1289, 1357.07pt 
+<images/Diagrammecollaborationréinscriptiondunétudiant.jpg, id=1165, 1357.07pt 
 x 664.4825pt>
 File: images/Diagrammecollaborationréinscriptiondunétudiant.jpg Graphic file (t
 ype jpg)
 <use images/Diagrammecollaborationréinscriptiondunétudiant.jpg>
 Package pdftex.def Info: images/Diagrammecollaborationréinscriptiondunétudiant.
-jpg  used on input line 719.
+jpg  used on input line 595.
 (pdftex.def)             Requested size: 369.8719pt x 284.52548pt.
-[71]
+[64]
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 732.
+(hyperref)                than one, level fixed on input line 608.
 
-<images/Diagrammedactivitésdaffectationdesnotesétudiant.jpg, id=1294, 1086.0575
+<images/Diagrammedactivitésdaffectationdesnotesétudiant.jpg, id=1170, 1086.0575
 pt x 1137.24875pt>
 File: images/Diagrammedactivitésdaffectationdesnotesétudiant.jpg Graphic file (
 type jpg)
 <use images/Diagrammedactivitésdaffectationdesnotesétudiant.jpg>
 Package pdftex.def Info: images/Diagrammedactivitésdaffectationdesnotesétudiant
-.jpg  used on input line 735.
+.jpg  used on input line 611.
 (pdftex.def)             Requested size: 369.8844pt x 284.51973pt.
-[72 <./images/Diagrammecollaborationréinscriptiondunétudiant.jpg>] [73 <./image
-s/Diagrammedactivitésdaffectationdesnotesétudiant.jpg>]
-<images/Décompositionsprint3enItems.png, id=1304, 507.0945pt x 335.45325pt>
+[65 <./images/Diagrammecollaborationréinscriptiondunétudiant.jpg>]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 639.
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 640.
+
+<images/gestiondesrôlesutilisateurs.jpg, id=1175, 915.42pt x 574.145pt>
+File: images/gestiondesrôlesutilisateurs.jpg Graphic file (type jpg)
+<use images/gestiondesrôlesutilisateurs.jpg>
+Package pdftex.def Info: images/gestiondesrôlesutilisateurs.jpg  used on input 
+line 645.
+(pdftex.def)             Requested size: 369.87704pt x 341.44092pt.
+[66 <./images/Diagrammedactivitésdaffectationdesnotesétudiant.jpg>] [67 <./imag
+es/gestiondesrôlesutilisateurs.jpg>]
+<images/Diagséquencesystèmedemodificationderôleutilisateur.jpg, id=1185, 933.48
+75pt x 925.4575pt>
+File: images/Diagséquencesystèmedemodificationderôleutilisateur.jpg Graphic fil
+e (type jpg)
+<use images/Diagséquencesystèmedemodificationderôleutilisateur.jpg>
+Package pdftex.def Info: images/Diagséquencesystèmedemodificationderôleutilisat
+eur.jpg  used on input line 660.
+(pdftex.def)             Requested size: 369.8844pt x 426.78883pt.
+ [68
+
+ <./images/Diagséquencesystèmedemodificationderôleutilisateur.jpg>]
+<images/FGHt.png, id=1190, 1128.01425pt x 540.21825pt>
+File: images/FGHt.png Graphic file (type png)
+<use images/FGHt.png>
+Package pdftex.def Info: images/FGHt.png  used on input line 674.
+(pdftex.def)             Requested size: 369.8878pt x 284.54204pt.
+<images/QVI.png, id=1191, 1871.99374pt x 900.36375pt>
+File: images/QVI.png Graphic file (type png)
+<use images/QVI.png>
+Package pdftex.def Info: images/QVI.png  used on input line 681.
+(pdftex.def)             Requested size: 369.87897pt x 113.80913pt.
+ [69
+
+ <./images/FGHt.png> <./images/QVI.png>]
+<images/Décompositionsprint3enItems.png, id=1197, 507.0945pt x 335.45325pt>
 File: images/Décompositionsprint3enItems.png Graphic file (type png)
 <use images/Décompositionsprint3enItems.png>
 Package pdftex.def Info: images/Décompositionsprint3enItems.png  used on input 
-line 793.
+line 715.
 (pdftex.def)             Requested size: 369.90508pt x 284.5377pt.
- [74
 
+[70
 
  <./images/Décompositionsprint3enItems.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 805.
+               Default added (so using `tbp') on input line 727.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 806--807
+Underfull \hbox (badness 10000) in paragraph at lines 728--729
 
  []
 
 
-Overfull \hbox (47.16049pt too wide) in paragraph at lines 808--820
+Overfull \hbox (47.16049pt too wide) in paragraph at lines 730--742
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 837--838
+Underfull \hbox (badness 10000) in paragraph at lines 759--760
 
  []
 
 
-Overfull \hbox (48.37148pt too wide) in paragraph at lines 840--852
+Overfull \hbox (48.37148pt too wide) in paragraph at lines 762--774
  [] 
  []
 
-[75
+[71
 
 ]
-<images/DiagrammedecasutilisationdétailléProfesseur.jpg, id=1313, 1236.62pt x 8
+<images/DiagrammedecasutilisationdétailléProfesseur.jpg, id=1207, 1236.62pt x 8
 65.2325pt>
 File: images/DiagrammedecasutilisationdétailléProfesseur.jpg Graphic file (type
  jpg)
 <use images/DiagrammedecasutilisationdétailléProfesseur.jpg>
 Package pdftex.def Info: images/DiagrammedecasutilisationdétailléProfesseur.jpg
-  used on input line 868.
+  used on input line 790.
 (pdftex.def)             Requested size: 369.87558pt x 284.52423pt.
 
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 875.
+(hyperref)                than one, level fixed on input line 797.
 
-<images/CasutilisationGérerlescours.jpg, id=1314, 1045.9075pt x 815.045pt>
+<images/CasutilisationGérerlescours.jpg, id=1208, 1045.9075pt x 815.045pt>
 File: images/CasutilisationGérerlescours.jpg Graphic file (type jpg)
 <use images/CasutilisationGérerlescours.jpg>
 Package pdftex.def Info: images/CasutilisationGérerlescours.jpg  used on input 
-line 878.
+line 800.
 (pdftex.def)             Requested size: 369.88737pt x 284.52382pt.
-[76
+[72
 
 
  <./images/DiagrammedecasutilisationdétailléProfesseur.jpg>]
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 913.
+(hyperref)                than one, level fixed on input line 835.
 
-<images/DiagrammedeséquenceGererlescours.jpg, id=1319, 1246.6575pt x 909.3975pt
+<images/DiagrammedeséquenceGererlescours.jpg, id=1215, 1246.6575pt x 909.3975pt
 >
 File: images/DiagrammedeséquenceGererlescours.jpg Graphic file (type jpg)
 <use images/DiagrammedeséquenceGererlescours.jpg>
 Package pdftex.def Info: images/DiagrammedeséquenceGererlescours.jpg  used on i
-nput line 916.
+nput line 838.
 (pdftex.def)             Requested size: 369.8913pt x 284.53293pt.
-[77 <./images/CasutilisationGérerlescours.jpg>]
+[73 <./images/CasutilisationGérerlescours.jpg>]
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 927.
+(hyperref)                than one, level fixed on input line 849.
 
-<images/DiagrammeactivitésGérerlescou.jpg, id=1329, 1448.41125pt x 856.19875pt>
+<images/DiagrammeactivitésGérerlescou.jpg, id=1225, 1448.41125pt x 856.19875pt>
 
 File: images/DiagrammeactivitésGérerlescou.jpg Graphic file (type jpg)
 <use images/DiagrammeactivitésGérerlescou.jpg>
 Package pdftex.def Info: images/DiagrammeactivitésGérerlescou.jpg  used on inpu
-t line 930.
+t line 852.
 (pdftex.def)             Requested size: 369.88145pt x 284.5192pt.
-[78 <./images/DiagrammedeséquenceGererlescours.jpg>]
+[74 <./images/DiagrammedeséquenceGererlescours.jpg>]
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 946.
+(hyperref)                than one, level fixed on input line 868.
 
-<images/Diagrammedeséquencesupprimerunematière.jpg, id=1335, 933.4875pt x 808.0
+<images/Diagrammedeséquencesupprimerunematière.jpg, id=1230, 933.4875pt x 808.0
 1875pt>
 File: images/Diagrammedeséquencesupprimerunematière.jpg Graphic file (type jpg)
 
 <use images/Diagrammedeséquencesupprimerunematière.jpg>
 Package pdftex.def Info: images/Diagrammedeséquencesupprimerunematière.jpg  use
-d on input line 949.
+d on input line 871.
 (pdftex.def)             Requested size: 369.8844pt x 284.52458pt.
-[79 <./images/DiagrammeactivitésGérerlescou.jpg>] [80 <./images/Diagrammedeséqu
+[75 <./images/DiagrammeactivitésGérerlescou.jpg>] [76 <./images/Diagrammedeséqu
 encesupprimerunematière.jpg>]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 973.
+(hyperref)                than one, level fixed on input line 895.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 975.
+(hyperref)                than one, level fixed on input line 897.
 
-<images/CasdutilisationGérerlestestslesexamens.jpg, id=1344, 1287.81125pt x 793
+<images/CasdutilisationGérerlestestslesexamens.jpg, id=1239, 1287.81125pt x 793
 .96625pt>
 File: images/CasdutilisationGérerlestestslesexamens.jpg Graphic file (type jpg)
 
 <use images/CasdutilisationGérerlestestslesexamens.jpg>
 Package pdftex.def Info: images/CasdutilisationGérerlestestslesexamens.jpg  use
-d on input line 978.
+d on input line 900.
 (pdftex.def)             Requested size: 369.87933pt x 284.53133pt.
-[81
+[77
 
  <./images/CasdutilisationGérerlestestslesexamens.jpg>]
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1004.
+(hyperref)                than one, level fixed on input line 926.
 
-<images/DiagrammeactivitésGérerlestestslesexamens.jpg, id=1352, 675.52374pt x 1
+<images/DiagrammeactivitésGérerlestestslesexamens.jpg, id=1248, 675.52374pt x 1
 046.91125pt>
 File: images/DiagrammeactivitésGérerlestestslesexamens.jpg Graphic file (type j
 pg)
 <use images/DiagrammeactivitésGérerlestestslesexamens.jpg>
 Package pdftex.def Info: images/DiagrammeactivitésGérerlestestslesexamens.jpg  
-used on input line 1007.
+used on input line 929.
 (pdftex.def)             Requested size: 369.88998pt x 284.52286pt.
-[82 <./images/DiagrammeactivitésGérerlestestslesexamens.jpg>]
+[78 <./images/DiagrammeactivitésGérerlestestslesexamens.jpg>]
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1020.
+(hyperref)                than one, level fixed on input line 942.
 
-<images/14.png, id=1358, 944.328pt x 481.8pt>
-File: images/14.png Graphic file (type png)
-<use images/14.png>
-Package pdftex.def Info: images/14.png  used on input line 1023.
-(pdftex.def)             Requested size: 455.24637pt x 284.53154pt.
-<images/15.png, id=1359, 1497.595pt x 745.78625pt>
-File: images/15.png Graphic file (type png)
-<use images/15.png>
-Package pdftex.def Info: images/15.png  used on input line 1030.
-(pdftex.def)             Requested size: 483.69623pt x 256.06752pt.
+[79
 
-Overfull \hbox (22.97499pt too wide) in paragraph at lines 1030--1031
- [][] 
- []
-
-[83
-
- <./images/14.png>]
-<images/16.png, id=1364, 1513.655pt x 725.71124pt>
-File: images/16.png Graphic file (type png)
-<use images/16.png>
-Package pdftex.def Info: images/16.png  used on input line 1037.
-(pdftex.def)             Requested size: 483.6866pt x 256.07347pt.
-
-Overfull \hbox (22.96536pt too wide) in paragraph at lines 1037--1038
- [][] 
- []
-
-[84 <./images/15.png> <./images/16.png>]
-<images/17.png, id=1372, 1575.8875pt x 453.695pt>
-File: images/17.png Graphic file (type png)
-<use images/17.png>
-Package pdftex.def Info: images/17.png  used on input line 1044.
-(pdftex.def)             Requested size: 455.24031pt x 170.71672pt.
-<images/Sansrttitgdhgre.png, id=1373, 836.52525pt x 446.8695pt>
-File: images/Sansrttitgdhgre.png Graphic file (type png)
-<use images/Sansrttitgdhgre.png>
-Package pdftex.def Info: images/Sansrttitgdhgre.png  used on input line 1051.
-(pdftex.def)             Requested size: 455.25262pt x 284.54312pt.
- [85
-
- <./images/17.png>] [86 <./images/Sansrttitgdhgre.png>]
-<images/Décompositionsprint4enItems.png, id=1384, 522.15076pt x 335.45325pt>
+]
+<images/Décompositionsprint4enItems.png, id=1259, 522.15076pt x 335.45325pt>
 File: images/Décompositionsprint4enItems.png Graphic file (type png)
 <use images/Décompositionsprint4enItems.png>
 Package pdftex.def Info: images/Décompositionsprint4enItems.png  used on input 
-line 1084.
+line 973.
 (pdftex.def)             Requested size: 369.90103pt x 284.5377pt.
- [87
+ [80
 
  <./images/Décompositionsprint4enItems.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1093.
+               Default added (so using `tbp') on input line 982.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1094--1095
+Underfull \hbox (badness 10000) in paragraph at lines 983--984
 
  []
 
-
-Overfull \hbox (47.16049pt too wide) in paragraph at lines 1096--1108
-[][] 
- []
-
-
-Overfull \hbox (48.37148pt too wide) in paragraph at lines 1128--1140
- [] 
- []
-
-[88
+[81
 
 ]
-<images/DiagrammedecasdutilisationdétailléÉtudiant.jpg, id=1393, 1357.07pt x 84
-5.1575pt>
+<images/DiagrammedecasdutilisationdétailléÉtudiant.jpg, id=1269, 1156.32pt x 63
+4.37pt>
 File: images/DiagrammedecasdutilisationdétailléÉtudiant.jpg Graphic file (type 
 jpg)
 <use images/DiagrammedecasdutilisationdétailléÉtudiant.jpg>
 Package pdftex.def Info: images/DiagrammedecasdutilisationdétailléÉtudiant.jpg 
- used on input line 1154.
-(pdftex.def)             Requested size: 369.8719pt x 284.52551pt.
+ used on input line 1030.
+(pdftex.def)             Requested size: 483.69261pt x 284.5346pt.
+
+Overfull \hbox (22.97137pt too wide) in paragraph at lines 1030--1031
+ [][] 
+ []
+
+[82
 
 
-Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1166.
-
-<images/dliensapprentissage.jpg, id=1394, 933.4875pt x 517.935pt>
+ <./images/DiagrammedecasdutilisationdétailléÉtudiant.jpg>]
+<images/dliensapprentissage.jpg, id=1276, 933.4875pt x 387.4475pt>
 File: images/dliensapprentissage.jpg Graphic file (type jpg)
 <use images/dliensapprentissage.jpg>
-Package pdftex.def Info: images/dliensapprentissage.jpg  used on input line 117
+Package pdftex.def Info: images/dliensapprentissage.jpg  used on input line 108
 1.
-(pdftex.def)             Requested size: 369.8844pt x 284.54109pt.
-[89
+(pdftex.def)             Requested size: 369.8844pt x 199.16818pt.
+<images/eyjgkjo.png, id=1277, 1156.32pt x 741.36975pt>
+File: images/eyjgkjo.png Graphic file (type png)
+<use images/eyjgkjo.png>
+Package pdftex.def Info: images/eyjgkjo.png  used on input line 1095.
+(pdftex.def)             Requested size: 483.69261pt x 199.1657pt.
 
+Overfull \hbox (22.97137pt too wide) in paragraph at lines 1095--1096
+ [][] 
+ []
 
- <./images/DiagrammedecasdutilisationdétailléÉtudiant.jpg>] [90 <./images/dlien
-sapprentissage.jpg>]
+[83 <./images/dliensapprentissage.jpg>]
+<images/eyooogkjo.png, id=1290, 1156.32pt x 576.9555pt>
+File: images/eyooogkjo.png Graphic file (type png)
+<use images/eyooogkjo.png>
+Package pdftex.def Info: images/eyooogkjo.png  used on input line 1106.
+(pdftex.def)             Requested size: 483.69261pt x 170.711pt.
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1182.
+Overfull \hbox (22.97137pt too wide) in paragraph at lines 1106--1107
+ [][] 
+ []
 
+[84 <./images/eyjgkjo.png> <./images/eyooogkjo.png>]
+<images/qgbmb.png, id=1298, 1108.74225pt x 539.616pt>
+File: images/qgbmb.png Graphic file (type png)
+<use images/qgbmb.png>
+Package pdftex.def Info: images/qgbmb.png  used on input line 1122.
+(pdftex.def)             Requested size: 483.70319pt x 312.98573pt.
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1183.
+Overfull \hbox (22.98195pt too wide) in paragraph at lines 1122--1123
+ [][] 
+ []
 
-<images/diagrammedeséquencesconsulteragendadeslivrable.jpg, id=1404, 658.46pt x
+<images/screencapture-127-0-0-1-8000-courses-12-2020-06-22-12_20_28.png, id=129
+9, 1156.32pt x 1512.852pt>
+File: images/screencapture-127-0-0-1-8000-courses-12-2020-06-22-12_20_28.png Gr
+aphic file (type png)
+<use images/screencapture-127-0-0-1-8000-courses-12-2020-06-22-12_20_28.png>
+Package pdftex.def Info: images/screencapture-127-0-0-1-8000-courses-12-2020-06
+-22-12_20_28.png  used on input line 1137.
+(pdftex.def)             Requested size: 483.69261pt x 569.04944pt.
+
+Overfull \hbox (22.97137pt too wide) in paragraph at lines 1137--1138
+ [][] 
+ []
+
+[85
+
+ <./images/qgbmb.png>] [86 <./images/screencapture-127-0-0-1-8000-courses-12-20
+20-06-22-12_20_28.png>]
+<images/mimi.png, id=1310, 733.74126pt x 713.66624pt>
+File: images/mimi.png Graphic file (type png)
+<use images/mimi.png>
+Package pdftex.def Info: images/mimi.png  used on input line 1146.
+(pdftex.def)             Requested size: 483.69974pt x 398.33272pt.
+
+Overfull \hbox (22.9785pt too wide) in paragraph at lines 1146--1147
+ [][] 
+ []
+
+<images/screencapture-localfhdhost-8000-courses-10-2020-06-22-12_43_22.png, id=
+1311, 1156.32pt x 2172.918pt>
+File: images/screencapture-localfhdhost-8000-courses-10-2020-06-22-12_43_22.png
+ Graphic file (type png)
+<use images/screencapture-localfhdhost-8000-courses-10-2020-06-22-12_43_22.png>
+
+Package pdftex.def Info: images/screencapture-localfhdhost-8000-courses-10-2020
+-06-22-12_43_22.png  used on input line 1154.
+(pdftex.def)             Requested size: 483.69261pt x 569.05672pt.
+
+Overfull \hbox (22.97137pt too wide) in paragraph at lines 1154--1155
+ [][] 
+ []
+
+[87
+
+ <./images/mimi.png>] [88 <./images/screencapture-localfhdhost-8000-courses-10-
+2020-06-22-12_43_22.png>]
+<images/diagrammedeséquencesconsulteragendadeslivrable.jpg, id=1322, 658.46pt x
  397.485pt>
 File: images/diagrammedeséquencesconsulteragendadeslivrable.jpg Graphic file (t
 ype jpg)
 <use images/diagrammedeséquencesconsulteragendadeslivrable.jpg>
 Package pdftex.def Info: images/diagrammedeséquencesconsulteragendadeslivrable.
-jpg  used on input line 1188.
-(pdftex.def)             Requested size: 369.89053pt x 284.5332pt.
-[91
+jpg  used on input line 1174.
+(pdftex.def)             Requested size: 369.89053pt x 113.81206pt.
+ [89
+
 
  <./images/diagrammedeséquencesconsulteragendadeslivrable.jpg>]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1198.
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1199.
-
-<images/DiagrammedeséquencePasserlesexamens.jpg, id=1409, 1184.425pt x 808.0187
-5pt>
-File: images/DiagrammedeséquencePasserlesexamens.jpg Graphic file (type jpg)
-<use images/DiagrammedeséquencePasserlesexamens.jpg>
-Package pdftex.def Info: images/DiagrammedeséquencePasserlesexamens.jpg  used o
-n input line 1204.
-(pdftex.def)             Requested size: 369.87889pt x 284.52458pt.
-<images/Diagrammedactivitédunapprenantsurlespace.jpg, id=1410, 1216.545pt x 845
+<images/Diagrammedactivitédunapprenantsurlespace.jpg, id=1327, 1216.545pt x 845
 .1575pt>
 File: images/Diagrammedactivitédunapprenantsurlespace.jpg Graphic file (type jp
 g)
 <use images/Diagrammedactivitédunapprenantsurlespace.jpg>
 Package pdftex.def Info: images/Diagrammedactivitédunapprenantsurlespace.jpg  u
-sed on input line 1217.
+sed on input line 1188.
 (pdftex.def)             Requested size: 369.8855pt x 284.52551pt.
-[92
+) [90
 
- <./images/DiagrammedeséquencePasserlesexamens.jpg>]
-
-Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1229.
-
-[93 <./images/Diagrammedactivitédunapprenantsurlespace.jpg>]
-<images/Sae.png, id=1419, 891.33pt x 333.6465pt>
-File: images/Sae.png Graphic file (type png)
-<use images/Sae.png>
-Package pdftex.def Info: images/Sae.png  used on input line 1234.
-(pdftex.def)             Requested size: 483.70474pt x 227.62498pt.
-
-Overfull \hbox (22.9835pt too wide) in paragraph at lines 1234--1235
- [][] 
- []
-
-<images/Santrmkmkmke.png, id=1420, 1050.324pt x 363.759pt>
-File: images/Santrmkmkmke.png Graphic file (type png)
-<use images/Santrmkmkmke.png>
-Package pdftex.def Info: images/Santrmkmkmke.png  used on input line 1242.
-(pdftex.def)             Requested size: 483.69981pt x 227.62634pt.
-
-Overfull \hbox (22.97858pt too wide) in paragraph at lines 1242--1243
- [][] 
- []
-
-[94
-
- <./images/Sae.png>]
-<images/Sanstidgsfdghjtre.png, id=1425, 885.3075pt x 413.74574pt>
-File: images/Sanstidgsfdghjtre.png Graphic file (type png)
-<use images/Sanstidgsfdghjtre.png>
-Package pdftex.def Info: images/Sanstidgsfdghjtre.png  used on input line 1251.
-
-(pdftex.def)             Requested size: 483.70555pt x 227.624pt.
-
-Overfull \hbox (22.98431pt too wide) in paragraph at lines 1251--1252
- [][] 
- []
-
-[95 <./images/Santrmkmkmke.png> <./images/Sanstidgsfdghjtre.png>]
-<images/Sanstisdfgtre.png, id=1430, 863.02425pt x 426.393pt>
-File: images/Sanstisdfgtre.png Graphic file (type png)
-<use images/Sanstisdfgtre.png>
-Package pdftex.def Info: images/Sanstisdfgtre.png  used on input line 1259.
-(pdftex.def)             Requested size: 483.69852pt x 227.62027pt.
-
-Overfull \hbox (22.97728pt too wide) in paragraph at lines 1259--1260
- [][] 
- []
-
-<images/Sasdfghre.png, id=1431, 829.29825pt x 390.258pt>
-File: images/Sasdfghre.png Graphic file (type png)
-<use images/Sasdfghre.png>
-Package pdftex.def Info: images/Sasdfghre.png  used on input line 1269.
-(pdftex.def)             Requested size: 483.70128pt x 227.62413pt.
-
-Overfull \hbox (22.98004pt too wide) in paragraph at lines 1269--1270
- [][] 
- []
-
-[96
-
- <./images/Sanstisdfgtre.png>] [97 <./images/Sasdfghre.png>]) [98
-
-]
+ <./images/Diagrammedactivitédunapprenantsurlespace.jpg>]
 \openout2 = `09-Realisation.aux'.
 
 
 (./09-Realisation.tex
 Chapitre 4.
-<images/Sansuitre.png, id=1445, 306.54526pt x 171.64125pt>
+<images/Sansuitre.png, id=1333, 306.54526pt x 171.64125pt>
 File: images/Sansuitre.png Graphic file (type png)
 <use images/Sansuitre.png>
 Package pdftex.def Info: images/Sansuitre.png  used on input line 13.
 (pdftex.def)             Requested size: 341.4433pt x 199.16943pt.
-[99
+[91
 
 
 
@@ -1863,7 +1708,7 @@ Overfull \hbox (31.0231pt too wide) in paragraph at lines 31--45
  [] 
  []
 
-<images/VisualStudioCode.png, id=1452, 1204.5pt x 1204.5pt>
+<images/VisualStudioCode.png, id=1340, 1204.5pt x 1204.5pt>
 File: images/VisualStudioCode.png Graphic file (type png)
 <use images/VisualStudioCode.png>
 Package pdftex.def Info: images/VisualStudioCode.png  used on input line 61.
@@ -1872,15 +1717,15 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 71.
 (c:/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<images/maxresdefault.jpg, id=1458, 1284.8pt x 722.7pt>
+<images/maxresdefault.jpg, id=1346, 1284.8pt x 722.7pt>
 File: images/maxresdefault.jpg Graphic file (type jpg)
 <use images/maxresdefault.jpg>
 Package pdftex.def Info: images/maxresdefault.jpg  used on input line 76.
 (pdftex.def)             Requested size: 199.16154pt x 142.26576pt.
- [100
+ [92
 
  <./images/VisualStudioCode.png>]
-<images/mysql.jpg, id=1471, 1606.0pt x 1606.0pt>
+<images/mysql.jpg, id=1361, 1606.0pt x 1606.0pt>
 File: images/mysql.jpg Graphic file (type jpg)
 <use images/mysql.jpg>
 Package pdftex.def Info: images/mysql.jpg  used on input line 89.
@@ -1891,45 +1736,45 @@ Underfull \hbox (badness 6592) in paragraph at lines 96--96
 le plus po-pu-laire [][]$\T1/cmtt/m/n/10 https : / / www .
  []
 
-<images/xampplogo.jpg, id=1475, 555.0336pt x 224.7597pt>
+<images/xampplogo.jpg, id=1365, 555.0336pt x 224.7597pt>
 File: images/xampplogo.jpg Graphic file (type jpg)
 <use images/xampplogo.jpg>
 Package pdftex.def Info: images/xampplogo.jpg  used on input line 109.
 (pdftex.def)             Requested size: 113.80803pt x 56.90312pt.
-[101 <./images/maxresdefault.jpg> <./images/mysql.jpg>]
-<images/unnamed.jpg, id=1493, 401.5pt x 401.5pt>
+[93 <./images/maxresdefault.jpg> <./images/mysql.jpg>]
+<images/unnamed.jpg, id=1383, 401.5pt x 401.5pt>
 File: images/unnamed.jpg Graphic file (type jpg)
 <use images/unnamed.jpg>
 Package pdftex.def Info: images/unnamed.jpg  used on input line 123.
 (pdftex.def)             Requested size: 113.80992pt x 85.35896pt.
-<images/HTML5.png, id=1495, 225.84375pt x 225.84375pt>
+<images/HTML5.png, id=1385, 225.84375pt x 225.84375pt>
 File: images/HTML5.png Graphic file (type png)
 <use images/HTML5.png>
 Package pdftex.def Info: images/HTML5.png  used on input line 148.
 (pdftex.def)             Requested size: 85.35973pt x 71.13081pt.
- [102 <./images/xampplogo.jpg> <./images/unnamed.jpg>]
+ [94 <./images/xampplogo.jpg> <./images/unnamed.jpg>]
 Overfull \hbox (4.47214pt too wide) in paragraph at lines 159--160
 []\T1/cmr/m/n/12 Certains mo-dules com-mencent avec leur propre ver-sion et con
 trôle de ni-veau (exemple :
  []
 
-<images/css.png, id=1505, 702.625pt x 437.635pt>
+<images/css.png, id=1394, 702.625pt x 437.635pt>
 File: images/css.png Graphic file (type png)
 <use images/css.png>
 Package pdftex.def Info: images/css.png  used on input line 164.
 (pdftex.def)             Requested size: 85.3513pt x 71.13153pt.
-<images/bootstrap.png, id=1508, 827.09pt x 413.545pt>
+<images/bootstrap.png, id=1397, 827.09pt x 413.545pt>
 File: images/bootstrap.png Graphic file (type png)
 <use images/bootstrap.png>
 Package pdftex.def Info: images/bootstrap.png  used on input line 179.
 (pdftex.def)             Requested size: 85.35149pt x 71.12834pt.
-[103 <./images/HTML5.png> <./images/css.png>]
-<images/git.jpg, id=1521, 513.92pt x 286.06876pt>
+[95 <./images/HTML5.png> <./images/css.png>]
+<images/git.jpg, id=1410, 513.92pt x 286.06876pt>
 File: images/git.jpg Graphic file (type jpg)
 <use images/git.jpg>
 Package pdftex.def Info: images/git.jpg  used on input line 203.
 (pdftex.def)             Requested size: 170.71548pt x 85.35858pt.
-<images/lms.png, id=1522, 1261.71375pt x 547.04375pt>
+<images/lms.png, id=1411, 1261.71375pt x 547.04375pt>
 File: images/lms.png Graphic file (type png)
 <use images/lms.png>
 Package pdftex.def Info: images/lms.png  used on input line 211.
@@ -1939,8 +1784,8 @@ Overfull \hbox (22.97046pt too wide) in paragraph at lines 211--212
  [][] 
  []
 
-[104 <./images/bootstrap.png> <./images/git.jpg>]
-<images/6_github.png, id=1530, 1245.65375pt x 544.0325pt>
+[96 <./images/bootstrap.png> <./images/git.jpg>]
+<images/6_github.png, id=1420, 1245.65375pt x 544.0325pt>
 File: images/6_github.png Graphic file (type png)
 <use images/6_github.png>
 Package pdftex.def Info: images/6_github.png  used on input line 218.
@@ -1950,42 +1795,42 @@ Overfull \hbox (22.97198pt too wide) in paragraph at lines 218--219
  [][] 
  []
 
-[105 <./images/lms.png> <./images/6_github.png>]
-<images/php.png, id=1538, 307.1475pt x 165.61874pt>
+[97 <./images/lms.png> <./images/6_github.png>]
+<images/php.png, id=1428, 307.1475pt x 165.61874pt>
 File: images/php.png Graphic file (type png)
 <use images/php.png>
 Package pdftex.def Info: images/php.png  used on input line 240.
 (pdftex.def)             Requested size: 85.35863pt x 71.13127pt.
-<images/laravel.png, id=1542, 604.2575pt x 302.12875pt>
+<images/laravel.png, id=1432, 604.2575pt x 302.12875pt>
 File: images/laravel.png Graphic file (type png)
 <use images/laravel.png>
 Package pdftex.def Info: images/laravel.png  used on input line 256.
 (pdftex.def)             Requested size: 85.35153pt x 71.12935pt.
-<images/Infyom.png, id=1546, 2134.97626pt x 790.955pt>
+<images/Infyom.png, id=1436, 2134.97626pt x 790.955pt>
 File: images/Infyom.png Graphic file (type png)
 <use images/Infyom.png>
 Package pdftex.def Info: images/Infyom.png  used on input line 273.
 (pdftex.def)             Requested size: 142.23149pt x 85.35187pt.
- [106
+ [98
 
  <./images/php.png> <./images/laravel.png>]
-<images/LaTeX.png, id=1561, 2007.5pt x 836.12375pt>
+<images/LaTeX.png, id=1451, 2007.5pt x 836.12375pt>
 File: images/LaTeX.png Graphic file (type png)
 <use images/LaTeX.png>
 Package pdftex.def Info: images/LaTeX.png  used on input line 290.
 (pdftex.def)             Requested size: 85.34059pt x 56.90158pt.
-) [107 <./images/Infyom.png (PNG copy)> <./images/LaTeX.png>]
+) [99 <./images/Infyom.png (PNG copy)> <./images/LaTeX.png>]
 \openout2 = `10-Conclusion.aux'.
 
 
 (./10-Conclusion.tex
-<images/Processusactueldedéveloppement.png, id=1569, 468.5505pt x 140.32425pt>
+<images/Processusactueldedéveloppement.png, id=1459, 468.5505pt x 140.32425pt>
 File: images/Processusactueldedéveloppement.png Graphic file (type png)
 <use images/Processusactueldedéveloppement.png>
 Package pdftex.def Info: images/Processusactueldedéveloppement.png  used on inp
 ut line 18.
 (pdftex.def)             Requested size: 199.1635pt x 113.81189pt.
-) [108
+) [100
 
 
 
@@ -2044,13 +1889,13 @@ Underfull \hbox (badness 4673) in paragraph at lines 57--62
 / index . php ? title = Bootstrap % 20(front-[]end %
  []
 
-[109
+[101
 
 
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 248.
- [110]
+ [102]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 248.
  (./main.aux (./sansnom-3.aux) (./01-Dedicace.aux)
 (./01-Dedicace-2.aux) (./02-Remerciements.aux) (./03-Resume.aux)
@@ -2058,22 +1903,28 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 248.
 (./08-Conception-1.aux) (./09-Realisation.aux) (./10-Conclusion.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 248.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 248.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1B60D1FCBC3C96CBF547ED78F836F72E;11501.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 7C4E97C4BC6B6A54F13F80252B38EBAB;10117
+(rerunfilecheck)             After:  42573BF8DD86A9577EFF32D6A083255E;9875.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 248.
  ) 
 Here is how much of TeX's memory you used:
- 13125 strings out of 492623
- 201218 string characters out of 6133291
- 331032 words of memory out of 5000000
- 16126 multiletter control sequences out of 15000+600000
+ 13066 strings out of 492623
+ 200361 string characters out of 6133291
+ 331411 words of memory out of 5000000
+ 16093 multiletter control sequences out of 15000+600000
  31212 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,16n,48p,767b,758s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,16n,48p,767b,752s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -2150,6 +2001,42 @@ sses} has been referenced but does not exist, replaced by a fixed one
 pdfTeX warning (dest): name{cite.wiki\\penalty\040\\@M\040\040:sqli} has been r
 eferenced but does not exist, replaced by a fixed one
 
+pdfTeX warning (dest): name{table.caption.92} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.80} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.70} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.109} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.107} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.91} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.78} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.68} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.110} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.108} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsubsection.3.2.1.6.1} has been referenced but
+ does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.3.2.1.6} has been referenced but does
+ not exist, replaced by a fixed one
+
 {c:/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texliv
 e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2019/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2019/texmf-dist/
@@ -2172,10 +2059,10 @@ type1/public/cm-super/sfti1200.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publ
 ic/cm-super/sfti1440.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-supe
 r/sftt1000.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1200
 .pfb>
-Output written on main.pdf (111 pages, 8019516 bytes).
+Output written on main.pdf (103 pages, 9611762 bytes).
 PDF statistics:
- 1801 PDF objects out of 2073 (max. 8388607)
- 1543 compressed objects within 16 object streams
- 467 named destinations out of 1000 (max. 500000)
- 1370 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1690 PDF objects out of 1728 (max. 8388607)
+ 1446 compressed objects within 15 object streams
+ 447 named destinations out of 1000 (max. 500000)
+ 1239 words of extra memory for PDF output out of 10000 (max. 10000000)
 

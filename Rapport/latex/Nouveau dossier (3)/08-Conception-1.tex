@@ -24,7 +24,6 @@ Ce premier sprint s’étale sur 18 jours et se décompose en trois items  \end{
 \begin{itemize}[label=$\diamond$]
 	\item Authentification
 	\item Gérer le profil
-	\item Modification de rôle
 \end{itemize}
 \medskip
 \medskip
@@ -106,9 +105,9 @@ Ce premier sprint s’étale sur 18 jours et se décompose en trois items  \end{
 \end{figure}
 \FloatBarrier
 
-\subsubsubsection{Description détaillée des cas d’utilisations}
 
 
+{\Large \color{cyan} Description détaillée:}
 
 
 \begin{itemize}
@@ -158,19 +157,27 @@ apparaîtra lui demandant de saisir de nouveau le login et le mot de passe corre
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=17cm,height=8cm]{20.png}
+	\includegraphics[width=10cm,height=6.2cm]{inscription.png}
 	\caption{Interface : Inscription .}
 	\label{fig:Interface : inscription }
 \end{figure}
 \FloatBarrier
+Un nouveau utilisateur doit créer un compte, pour s’inscrire il remplit le formulaire et
+choisit un mot de passe. 
+
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=10cm,height=6.2cm]{Ulearning.png}
+	\includegraphics[width=17cm,height=8cm]{identif.png}
 	\caption{Interface : Authentification .}
-	\label{fig:Interface : Gérer le profil }
+	\label{fig:Interface : Authentification }
 \end{figure}
 \FloatBarrier
+Si les coordonnés de l’utilisateur sont erronées, le système affiche un message d’erreur et
+l’invite à ressaisir ses coordonnés.
+Sinon l’utilisateur est redirigé vers sa page d’accueil, dans lequel on trouve un menu de tous les
+modules de l’application et chacun de ces modules contient un ensemble des fonctionnalités
+sous forme des sous menus relatifs à ce module.
 \clearpage
 \subsection{item 2 : Gérer le profil}
 \subsubsection{Diagramme de cas d’utilisation }
@@ -184,7 +191,7 @@ apparaîtra lui demandant de saisir de nouveau le login et le mot de passe corre
 \end{figure}
 \FloatBarrier
 
-
+{\Large \color{cyan} Description détaillée:}
 \begin{itemize}
 	
 	\item[$\bullet$] \textbf{Cas d’utilisation Gérer le profil :} permet à l’acteur de mettre à jour ses informations.
@@ -222,74 +229,16 @@ apparaîtra lui demandant de saisir de nouveau le login et le mot de passe corre
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=17cm,height=11cm]{OperaSnapshot.png}
+	\includegraphics[width=17cm,height=11cm]{editprofparetud.png}
 	\caption{Interface : Gérer le profil .}
-	\label{fig:Interface : Gérer le profil }
+	\label{fig:Interface : Gérer le profi }
 \end{figure}
 \FloatBarrier
-
-\clearpage
-\subsection{item 3 : Gestion des rôles utilisateurs}
-\subsubsection{Diagrammes de séquence système }
-
-La figure ci-dessous, décrit les opérations relatives à la gestion des rôles utilisateurs.
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=13cm,height=12cm]{gestiondesrôlesutilisateurs.jpg}
-	\caption{Diagramme de cas d' utilisation gestion des rôles utilisateurs .}
-	\label{fig:Diagramme de cas d utilisation gestion des rôles utilisateurs }
-\end{figure}
-\FloatBarrier
-Ce diagramme de cas d’utilisation illustre les différentes opérations que l’administration peut effectuer pour gérer les rôles utilisateurs. L’administrateur doit s’authentifier
-pour accéder à son espace. Il peut consulter la liste des rôles utilisateurs. Il peut aussi
-ajouter, modifier ou supprimer un rôle. Toute opération effectuée, est enregistrée dans le
-journal des opérations.
-\clearpage
-\subsubsection{Diagrammes de séquence système }
+Après activation de son compte. L’utilisateur peut maintenant se connecter pour ouvrir sa session.
+Lorsque ses informations de connexion sont validées, l’utilisateur sera redirigé vers
+l’interface de son profil avec l’avatar par défaut et aucune formation pour le moment (il peut modifier son profile) .
 
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=13cm,height=15cm]{Diagséquencesystèmedemodificationderôleutilisateur.jpg}
-	\caption{Diagramme de séquence système de modification de rôle utilisateur .}
-	\label{fig:Diagramme de séquence système de modification de rôle utilisateur }
-\end{figure}
-\FloatBarrier
-
-Pour modifier un rôle, l’administrateur consulte, tout d’abord, la liste des rôles qui
-existent. Puis il peut choisir un rôle parmi la liste et met à jour les différents champs. Si
-les valeurs des champs sont valides alors le rôle est mis à jour. Sinon si les valeurs ne sont
-pas valides alors un message d’erreur apparaîtra à l’administrateur pour l’avertir.
-\clearpage
-\subsubsection{ Interface : Modification de rôle  }
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=13cm,height=10cm]{FGH.png}
-	\caption{Interface : Modification un rôle d'un utilisateur.}
-	\label{fig:Modification de rôle1}
-\end{figure}
-\FloatBarrier
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=13cm,height=4cm]{QVI.png}
-	\caption{Interface : Modification, Ajouter un rôle .}
-	\label{fig:2 }
-\end{figure}
-\FloatBarrier
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=13cm,height=10cm]{3.png}
-	\caption{Diagramme de séquence système de modification de rôle utilisateur .}
-	\label{fig:Diagramme de séquence système de modification de rôle utilisateur }
-\end{figure}
-\FloatBarrier
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=13cm,height=10cm]{18.png}
-	\caption{Diagramme de séquence système de modification de rôle utilisateur .}
-	\label{fig:Diagramme de séquence système de modification de rôle utilisateur }
-\end{figure}
-\FloatBarrier
 \clearpage
 
 
@@ -376,27 +325,28 @@ Ce premier sprint s’étale sur 26 jours et se décompose en deux items \end{fq
 \end{table}
 
 
-\clearpage
 
 \clearpage
+
+
  
 \subsection{item 1 : Gérer les utilisateurs}
 \subsubsection{Diagramme de cas d’utilisation  détaillé «administrer du site de téléformation» }
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{Diagrammedecasdutilisationdétailléadministr.jpg}
+	\includegraphics[width=17cm,height=16cm]{Diagrammedecasdutilisationdétailléadministr.jpg}
 	\caption{Diagramme de cas d' utilisation  détaillé «administrer» .}
 	\label{fig:Diagramme de cas d' utilisation  détaillé administrer  }
 \end{figure}
 \FloatBarrier
+\clearpage
+{\Large \color{cyan} Description détaillée des cas d’utilisations : gérer les composants de plate-forme}
 
-\subsubsubsection{Description détaillée des cas d’utilisations}
 L'administrateur a comme rôle principale de gérer toutes les taches de la plateforme; gestion des enseignants, étudiants ,matières....ainsi que les affectations des
 enseignants.\\
 L'administrateur peut ajouter, supprimer ou modifier les différentes informations des étudiants d'une manière permanente.\\
-L'administrateur peux dérer des droits et des erreures .
-
+L'administrateur peux dérer des droits et des erreures et il donne le droit à l'enseignant pour publier leur cours après  consulat  de leur contenu .
 \begin{itemize}
       \item[$\bullet$] \textbf{Cas d’utilisation Gérer le profil :} permet à l’acteur de mettre à jour la plateforme. 
 	\medskip
@@ -422,50 +372,18 @@ scénario nominal
 			\item  Le système informe l’acteur que les mis à jour sont erronées, garde l’état de la plateforme 
 		\end{enumerate}
 	\end{itemize}
-\end{itemize}	
-\bigskip
-
-
-
-
-
-\subsubsubsection{Description détaillée des cas d’utilisations}
-\begin{itemize}
-	\item[$\bullet$] \textbf{Cas d’utilisation Gérer les utilisateurs :} 
-	\medskip
-	\begin{itemize}
-		\item \textit{\textbf{Objectif :}} permet à l’acteur d’ajouter et de supprimer un utilisateur. 
-		
-		\item \textit{\textbf{Acteur :}} Administrateur
-		
-		\item \textit{\textbf{Pré-condition  :}} L‘acteur doit être connecté.
-		\item \textit{\textbf{Post-conditions   :}}
-		\item \textit{\textbf{Scénario nominal :}}
-		\begin{enumerate}
-			\item Le système affiche un formulaire d’inscription à l’acteur. 
-			\item L’acteur saisit les informations du nouvel utilisateur et lui affecter un rôle. 
-			\item    Le système vérifie la validité des informations saisies. 
-			\item  Le système enregistre ces informations dans la base de données.  
-			\item Le système notifie l’acteur du bon déroulement de l’inscription..
-		\end{enumerate}
-		\item \textit{\textbf{Scénario alternative :}} \\
-les informations sont manquantes ou incorrectes: ce scénario commence au point 03 du
-scénario nominal.
-		\begin{enumerate}
-			\item  Le système informe l’acteur que les données saisies sont erronées et le scénario reprend au point 02 du scénario nominal.
-		\end{enumerate}
-	\end{itemize}
-\end{itemize}	
-\bigskip
+\end{itemize}
+\clearpage	
 \subsubsection{Diagrammes de séquence du cas d' utilisation "Modifier un utilisateur" }
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{DiagrammesdeséquenceducasdutilisationModifierunutilisa.jpg}
+	\includegraphics[width=14cm,height=13cm]{DiagrammesdeséquenceducasdutilisationModifierunutilisa.jpg}
 	\caption{Diagrammes de séquence du cas d' utilisation "Modifier un utilisateur"  .}
 	\label{fig:Diagrammes de séquence du cas d' utilisation Modifier un utilisateur }
 \end{figure}
 \FloatBarrier
-\subsubsubsection{Description détaillée des cas d’utilisations}
+
+{\Large \color{cyan} Description détaillée: "Modifier un utilisateur"}
 \begin{itemize}
 	\item[$\bullet$] \textbf{Cas d’utilisation "Modifier un utilisateur" :} 
 	\medskip
@@ -495,16 +413,16 @@ scénario nominal.
 		\end{enumerate}
 	\end{itemize}
 \end{itemize}	
-\bigskip
 \subsubsection{Diagramme de séquence du cas d' utilisation "Supprimer un utilisateur" }
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{DiagrammedeséquenceducasdutilisationSupprimerunutilisateur.jpg}
+	\includegraphics[width=14cm,height=10cm]{DiagrammedeséquenceducasdutilisationSupprimerunutilisateur.jpg}
 	\caption{ Diagramme de séquence du cas d' utilisation "Supprimer un utilisateur"  .}
 	\label{fig: Diagramme de séquence du cas d' utilisation Supprimer un utilisateur  }
 \end{figure}
 \FloatBarrier
-\subsubsubsection{Description détaillée des cas d’utilisations}
+\clearpage	
+{\Large \color{cyan} Description détaillée: "Supprimer un utilisateur"}
 \begin{itemize}
 	\item[$\bullet$] \textbf{Cas d’utilisation "Supprimer un utilisateur" :} 
 	\medskip
@@ -529,16 +447,16 @@ scénario nominal.
 		\end{enumerate}
 	\end{itemize}
 \end{itemize}	
-\bigskip
 \subsubsection{Diagrammes de séquence du cas d' utilisation "Ajouter un utilisateur" }
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{DiagrammesdeséquenceducasdutilisationAjouterunutilisateur.jpg}
+	\includegraphics[width=13cm,height=7.5cm]{DiagrammesdeséquenceducasdutilisationAjouterunutilisateur.jpg}
 	\caption{Diagrammes de séquence du cas d' utilisation "Ajouter un utilisateur"  .}
 	\label{fig:Diagrammes de séquence du cas d' utilisation Ajouter un utilisateur  }
 \end{figure}
 \FloatBarrier
-\subsubsubsection{Description détaillée des cas d’utilisations}
+\clearpage
+{\Large \color{cyan} Description détaillée: "Ajouter un utilisateur"}
 \begin{itemize}
 	\item[$\bullet$] \textbf{Cas d’utilisation "Ajouter un utilisateur" :} 
 	\medskip
@@ -571,49 +489,7 @@ scénario nominal.
 	\end{itemize}
 \end{itemize}	
 \bigskip
-\subsubsection{Diagramme de séquence « d' ajout d'un professeur » }
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=13cm,height=10cm]{Diagrammedeséquencedajoutdunprofesseur.jpg}
-	\caption{Diagramme de séquence « d' ajout d'un professeur »  .}
-	\label{fig:Diagramme de séquence  d' ajout d'un professeur   }
-\end{figure}
-\FloatBarrier
-\subsubsubsection{Description détaillée des cas d’utilisations}
-
-
-
-\begin{itemize}
-	\item[$\bullet$] \textbf{Diagramme de séquence « d' ajout d'un professeur » :} 
-	\medskip
-	\begin{itemize}
-		\item \textit{\textbf{Objectif :}} Permettre à l’administration d’ajouter toutes les informations
-		concernant le professeur, y compris les informations personnelles, et la possibilité
-		d’ajouter les diplômes obtenus par le professeur .	
-		\item \textit{\textbf{Acteur :}} Administrateur	
-		\item \textit{\textbf{Pré-condition  :}} Authentification .\\
-		L’ajout d’un professeur doit répond aux conditions de recrutement établie par la direction régionale.
-		\item \textit{\textbf{Scénario :}}
-		\begin{enumerate}
-			\item Saisie des informations concernant le professeur.
-		\item Contrôle des données en temps réel, en cas de duplication.
-		\item Validation de la saisie.
-		\item Traitement des informations envoyées.
-		\item En cas d’une anomalie, l’ajout est rejeté en précisant l’erreur effectuée.
-		\item Si non, l’ajout est effectué avec succès avec redirection d’utilisateur vers la liste des
-			professeurs.
-		\end{enumerate}
-	\end{itemize}
-\end{itemize}	
-\bigskip
-
-
-
-
-
-
-
-
+\clearpage
 \subsubsection{Diagramme d’activités « Gérer les utilisateurs » }
 \begin{figure}[ht]
 	\centering
@@ -760,7 +636,53 @@ Cela consiste en un graphe dont les nœuds sont des objets et les arcs (numérot
 \end{itemize}
 
 
+\subsection{item 3 : Gestion des rôles utilisateurs}
+\subsubsection{Diagrammes de séquence système }
+
+La figure ci-dessous, décrit les opérations relatives à la gestion des rôles utilisateurs.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=13cm,height=12cm]{gestiondesrôlesutilisateurs.jpg}
+	\caption{Diagramme de cas d' utilisation gestion des rôles utilisateurs .}
+	\label{fig:Diagramme de cas d utilisation gestion des rôles utilisateurs }
+\end{figure}
+\FloatBarrier
+Ce diagramme de cas d’utilisation illustre les différentes opérations que l’administration peut effectuer pour gérer les rôles utilisateurs. L’administrateur doit s’authentifier
+pour accéder à son espace. Il peut consulter la liste des rôles utilisateurs. Il peut aussi
+ajouter, modifier ou supprimer un rôle. Toute opération effectuée, est enregistrée dans le
+journal des opérations.
 \clearpage
+\subsubsection{Diagrammes de séquence système }
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=13cm,height=15cm]{Diagséquencesystèmedemodificationderôleutilisateur.jpg}
+	\caption{Diagramme de séquence système de modification de rôle utilisateur .}
+	\label{fig:Diagramme de séquence système de modification de rôle utilisateur }
+\end{figure}
+\FloatBarrier
+
+Pour modifier un rôle, l’administrateur consulte, tout d’abord, la liste des rôles qui
+existent. Puis il peut choisir un rôle parmi la liste et met à jour les différents champs. Si
+les valeurs des champs sont valides alors le rôle est mis à jour. Sinon si les valeurs ne sont
+pas valides alors un message d’erreur apparaîtra à l’administrateur pour l’avertir.
+\clearpage
+\subsubsection{ Interface : Modification de rôle  }
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=13cm,height=10cm]{FGHt.png}
+	\caption{Interface : Modification un rôle d'un utilisateur.}
+	\label{fig:Modification de rôle1}
+\end{figure}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=13cm,height=4cm]{QVI.png}
+	\caption{Interface : Modification, Ajouter un rôle .}
+	\label{fig:2 }
+\end{figure}
+\FloatBarrier
 
 
 \clearpage
@@ -1018,41 +940,8 @@ indiquer un délai de remise, lui affecter un barème et lui configurer les droi
 Finalement, et c’est le cas d’annulation aussi, le tuteur doit ajouter l’évènement partagé pour informer l’apprenant du changement .
 \clearpage
 \subsubsection{ Interface : Gérer le profil  }
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=16cm,height=10cm]{14.png}
-	\caption{Diagramme de séque de rôle utilisateur .}
-	\label{fig:Diagramme de séon de rôle utilisateur }
-\end{figure}
-\FloatBarrier
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=17cm,height=9cm]{15.png}
-	\caption{Diagramme de séque de rôle utilisateur .}
-	\label{fig:Diagramme de séon de rôle utilisateur }
-\end{figure}
-\FloatBarrier
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=17cm,height=9cm]{16.png}
-	\caption{Diagramme de séque de rôle utilisateur .}
-	\label{fig:Diagramme de séon de rôle utilisateur }
-\end{figure}
-\FloatBarrier
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=16cm,height=6cm]{17.png}
-	\caption{Diagramme de séque de rôle utilisateur .}
-	\label{fig:Diagramme de séon de rôle utilisateur }
-\end{figure}
-\FloatBarrier
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=16cm,height=10cm]{Sansrttitgdhgre.png}
-	\caption{Diagramme de séque de rôle utilisateur .}
-	\label{fig:Diagramme de séon de rôle utilisateur }
-\end{figure}
-\FloatBarrier
+
+
 \clearpage
 \section{Sprint 4 : Étudiant}
 \label{sec:conception}
@@ -1096,31 +985,13 @@ Finalement, et c’est le cas d’annulation aussi, le tuteur doit ajouter l’�
 	\begin{tabular}{|l|l|l|l|}
 		\hline 
 		\rowcolor{-blue!20!red}{Item}                         & \textbf{User Story}                                                   & \textbf{Description}                                                                                              & \textbf{Priorité} \\ \hline
-		\textbf{s'inscrire}                    & s'inscrire                                                            & En tant qu'utilisateur, je peux m'inscrire                                                                        & 1    \\ \hline
-		\textbf{s'authentifier}                & s'authentifier                                                        & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur, je dois m'identifier \\ pour acceder a mon espace\end{tabular} & 2                 \\ \hline
-		\multirow{4}{*}{\textbf{gérer profil}} & \begin{tabular}[c]{@{}l@{}}Consulter\\ profil\end{tabular}            & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur je peux consulter mon \\ profil\end{tabular}                    & 3                 \\ \cline{2-4} 
-		& Modifier profil                                                       & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur je peux modifier mon \\ profil\end{tabular}                     &                   \\ \cline{2-4} 
-		& \begin{tabular}[c]{@{}l@{}}Modifier\\ image de \\ profil\end{tabular} & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisatuer je peux uploader modifier\\ une image de profil\end{tabular}    &                   \\ \cline{2-4} 
-		& Désactiver profil                                                     & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur je peux désactiver mon\\ profil\end{tabular}                    &                   \\ \hline
-		
-		\textbf{s'inscrire}                    & s'inscrire                                                            & En tant qu'utilisateur, je peux m'inscrire                                                                        & 1    \\ \hline
+		\begin{tabular}[c]{@{}l@{}}\textbf{Consulter  }\\ \textbf{les ressources  }\\ \textbf{ et les liens }\\ \textbf{d'apprentissage } \end{tabular}                    &        \begin{tabular}[c]{@{}l@{}}Consulter  \\ les ressources \\  et les liens \\ d'apprentissage  \end{tabular}                                                    & \begin{tabular}[c]{@{}l@{}}En tant qu'étudiant, je peux \\consulter la liste des catégories \\et puis je peux choisir un cours \\et je dois  le paye pour le suivre  \end{tabular}                                                                         & 1    \\ \hline
+			\begin{tabular}[c]{@{}l@{}}\textbf{Consulter  }\\ \textbf{le calendrier } \end{tabular}                & \begin{tabular}[c]{@{}l@{}}Consulter  \\ le calendrier  \end{tabular}                                                       & \begin{tabular}[c]{@{}l@{}}En tant qu'un étudiant\\  je peux
+				afficher le calendrier\end{tabular} & 2                 \\ \hline
 	\end{tabular}
-	
-	
 	\caption{Tables Backlog du sprint 4}
 	\label{Tables Backlog du sprint 4}
 \end{table}
-% \section{end_tableau}
-
-
-
-
-
-
-
-
-
-
 \begin{table}[h]
 	{\Large \color{cyan} les user stories de sprint 4:}
 	
@@ -1129,11 +1000,16 @@ Finalement, et c’est le cas d’annulation aussi, le tuteur doit ajouter l’�
 			
 			\rowcolor{-blue!20!red}ID U.S & \begin{bf}User Story \end{bf}  & \\
 			
-			1 & En tant qu’utilisateur, je dois m’authentifier pour accéder à mon espace \\
-			& En tant qu’utilisateur, je  m’authentifier pour accéder à mon espace entifier accéder
+			1 &en tant que étudiant je peux parcourir \\
+			&la liste  des catégories et puis je peux choisir \\
+			&un cours dans la liste des cours ou à partir de la catégorie\\
+			& choisir et pour accéder à la cours il faut tout d'abord\\
+			& payer les frais d'abonnement
 			\\
 			& \\
-			7 & En tant qu’utilisateur, je dois m’authentifier pour accéder à mon espace \\
+			2 & En tant qu'un étudiant je peux choisir l'option
+			calendrier\\
+			& de la menu gauche et puis le système afficher le calendriere \\
 			
 			
 		\end{tabular}
@@ -1147,70 +1023,165 @@ Finalement, et c’est le cas d’annulation aussi, le tuteur doit ajouter l’�
 \clearpage
 \clearpage
 \subsection{item 1 : Consulter les ressources et les liens d'apprentissage}
-\subsubsection{Diagramme de cas d’utilisation  détaillé «administrer du site de téléformation» }
-
+\subsubsection{Diagramme de cas d’utilisation  détaillé «Étudiant» }
+L’image suivante présente le diagramme de cas d’utilisation détaillé «Étudiant»
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{DiagrammedecasdutilisationdétailléÉtudiant.jpg}
+	\includegraphics[width=17cm,height=10cm]{DiagrammedecasdutilisationdétailléÉtudiant.jpg}
 	\caption{Diagramme de cas d' utilisation  détaillé «Étudiant» .}
 	\label{fig:Diagramme de cas d' utilisation  détaillé Étudiant  }
 \end{figure}
 \FloatBarrier
+{\Large \color{cyan} Description détaillée:}
 
-\subsubsubsection{Description détaillée des cas d’utilisations}
+Description textuelle de cas d’utilisation « Consulter la liste des cours fermé (privé)».
 
 
+\begin{itemize}
+	
+	\item[$\bullet$] \textbf{Consulter la liste des cours :} permet à l’acteur de Consulter la liste des cours et
+	 accéder à un cours
+	\begin{itemize}
+		\item \textit{\textbf{Objectif :}}  Permettre à l'étudiant de consulter la liste des catégories et la liste des cours et acceder a un cours privé (fermé) apres paiement . 
+		
+		\item \textit{\textbf{Acteur :}} Tous les étudiants
+		
+		\item \textit{\textbf{Pré-condition  :}}  L'étudiant s’authentifie.
+
+		\item \textit{\textbf{Scénario nominal :}}
+		\begin{enumerate}
+			\item L’utilisateur accède à la page d’accueil de E-Learning.
+\item L'utilisateur accède à la liste des catégories
+\item L'utilisateur choisit un catégorie
+\item L'utilisateur accède à la liste des cours privés.
+\item L’utilisateur clique sur l’un des liens de cours privés.
+\item L'utilisateur achète les cours
+\item Le système donner l'accès de l'utilisateur  a la cours
+\item Le système visualise le cours selon le format (Vidéo ,PDF…etc).
+		\end{enumerate}
+		\item \textit{\textbf{Scénario alternative :}} \\
+		les informations sont manquantes ou incorrectes: ce scénario commence au point 04 du
+		scénario nominal.
+		\begin{enumerate}
+			
+			\item L'étudiant n'est pas réussi a l'achat , le système affiche un
+			message d’erreur et revient à l’étape 4 de scénario nominal. nominal. 
+		\end{enumerate}
+	\end{itemize}
+\end{itemize}	
+\bigskip
 
 
 
 \subsubsection{diagramme de séquences }
-
+La figure  ci-dessous représente le diagramme de séquence: consulter les ressources et les liens d' apprentissage .
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{dliensapprentissage.jpg}
+	\includegraphics[width=13cm,height=7cm]{dliensapprentissage.jpg}
 	\caption{Diagramme de séquence: consulter les ressources et les liens d' apprentissage .}
 	\label{fig:diagramme de séquence: consulter les ressources et les liens d' apprentissage }
 \end{figure}
 \FloatBarrier
 
-\subsubsubsection{Description détaillée des cas d’utilisations}
+Ce diagramme de séquence illustre l’échange entre l'apprenant et le système  donc Pour consulter les ressources et les liens d' apprentissage, un apprenant doit demander la liste des ressources et liens , le systeme charger la page des ressources et liens  (categores , cours , tp et td) .
+
+
+\subsubsection{Les Interfaces de : Consulter les ressources et les liens d'apprentissage  }
+
+la figure ci-dessous représente l'interface de la liste des catégories donc à partir de cela l'étudiant peut  parcourir et reconnaît les différents catégories .
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=17cm,height=7cm]{eyjgkjo.png}
+	\caption{Interface : la liste des catégories .}
+	\label{fig:Interface : la liste des catégories }
+\end{figure}
+\FloatBarrier
+\bigskip
+\bigskip
+\bigskip
+la figure ci-dessous représente les différents détails de la catégorie et les différents cours qui appartient à cette catégorie  , donc à partir de la catégorie on peut passer à la cours choisir .
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=17cm,height=6cm]{eyooogkjo.png}
+	\caption{Interface : détail d'une catégorie .}
+	\label{fig:Interface : détail d'une catégorie }
+\end{figure}
+\FloatBarrier
+\clearpage
+la figure ci-dessous représente l'interface qui permet à l'étudiant de choisir et rejoindre un cours .
+
+\medskip
+
+Comme  il peut aussi regarder les Vidéos d'introduction à la courset comment la créateur de la cours .
+\bigskip
+\bigskip
+\bigskip
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=17cm,height=11cm]{qgbmb.png}
+	\caption{Interface : la liste des cours .}
+	\label{fig:Interface : la liste des cours }
+\end{figure}
+\FloatBarrier
+\bigskip
+\bigskip
+\bigskip
+Une fois l'étudiant accéder  à ce interface  après avoir appuyé sur le bouton dans le Figure précédentepleut il peut consulter les différents détails de la cours .
+
+\medskip
+
+ Comme il peut soit regarder les Vidéos d'introduction à la cours ou poser des questions sous forme des commentaires  ou bien payer les frais d'abonnement .
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=17cm,height=20cm]{screencapture-127-0-0-1-8000-courses-12-2020-06-22-12_20_28.png}
+	\caption{Interface : un cours avant paiement .}
+	\label{fig:Interface :un cours avant paiement }
+\end{figure}
+\FloatBarrier
+Paystack offre un interface de test gratuite pour leurs utilisateurs
+donc l'étudiant après passer par la figure précédente , le système ouvre automatiquement cette interface de payement .
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=17cm,height=14cm]{mimi.png}
+	\caption{Interface : la plateforme de test  paystack .}
+	\label{fig:Interface : la plateforme de test  paystack }
+\end{figure}
+\FloatBarrier
+la figure ci-dessous représente un cours déjà payé avec des nouveaux d'options .
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=17cm,height=20cm]{screencapture-localfhdhost-8000-courses-10-2020-06-22-12_43_22.png}
+	\caption{Interface : un cours après paiement .}
+	\label{fig:Interface :un cours après paiement }
+\end{figure}
+\FloatBarrier
+
+
+
+
+
 
 
 
 \clearpage
-\subsection{item 2 : Consulter agenda des livrables}
+\subsection{item 2 : Consulter le calendrier}
 \subsubsection{diagramme de séquences }
-
+La figure  ci-dessous représente le diagramme de séquences consulter agenda pour un  étudiant.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{diagrammedeséquencesconsulteragendadeslivrable.jpg}
-	\caption{Diagramme de séquences consulter agenda des livrables .}
-	\label{fig:Diagramme de séquences consulter agenda des livrables }
+	\includegraphics[width=13cm,height=4cm]{diagrammedeséquencesconsulteragendadeslivrable.jpg}
+	\caption{Diagramme de séquences consulter le calendrier  .}
+	\label{fig:Diagramme de séquences consulter le calendrier }
 \end{figure}
 \FloatBarrier
 
-\subsubsubsection{Description : Diagramme de séquences consulter agenda des livrables}
-Ce diagramme de séquence illustre l’interaction entre l’apprenant et le système afin de consulter le
-calendrier des livrables d’un projet dont il est participant.
+Ce diagramme de séquence illustre l'interaction entre l'apprenant et le système afin de consulter le
+calendrier donc  Pour consulter calendrier, un apprenant doit  demander calendrier , puis le systeme charger calendrier .
 \clearpage
-\subsection{item 3 : Passer les examens}
-\subsubsection{Diagramme de cas d’utilisation }
+\subsection{Diagramme d' activité: d' un apprenant sur l' espace}
 
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=13cm,height=10cm]{DiagrammedeséquencePasserlesexamens.jpg}
-	\caption{Diagramme de séquence " Passer les examens" .}
-	\label{fig:Diagramme de séquence " Passer les examens" }
-\end{figure}
-\FloatBarrier
-
-\subsubsubsection{Description :Diagramme de séquence " Passer les examens"}
-
-l’etudiant peut passer les examens en une durée du temps detérminé , sinon il affiche un
-message "examen est in trouvée"
 
 \begin{figure}[ht]
 	\centering
@@ -1220,58 +1191,13 @@ message "examen est in trouvée"
 \end{figure}
 \FloatBarrier
 
-\subsubsubsection{Description détaillée des cas d’utilisations}
 Ce digramme d’activités décrit les activités d’un apprenant sur l’espace destiné aux projets
 afin de garantir l’apprentissage par projet.
 
 
 
-\subsubsection{ Interface : Gérer le profil  }
-
-\clearpage
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=17cm,height=8cm]{Sae.png}
-	\caption{Interface : Gérer le profil .}
-	\label{fig:Interface : Gérer le profil }
-\end{figure}
-\FloatBarrier
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=17cm,height=8cm]{Santrmkmkmke.png}
-	\caption{Interface : Gérer le profil .}
-	\label{fig:Interface : Gérer le profil }
-\end{figure}
-\FloatBarrier
 
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=17cm,height=8cm]{Sanstidgsfdghjtre.png}
-	\caption{Interface : Gérer le profil .}
-	\label{fig:Interface : Gérer le profil }
-\end{figure}
-\FloatBarrier
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=17cm,height=8cm]{Sanstisdfgtre.png}
-	\caption{Interface : Gérer le profil .}
-	\label{fig:Interface : Gérer le profil }
-\end{figure}
-\FloatBarrier
-
-
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=17cm,height=8cm]{Sasdfghre.png}
-	\caption{Interface : Gérer le profil .}
-	\label{fig:Interface : Gérer le profil }
-\end{figure}
-\FloatBarrier
-\clearpage
 
 \section{Conclusion}
 

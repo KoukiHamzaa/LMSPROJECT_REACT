@@ -39,80 +39,66 @@
 \BOOKMARK [1][-]{section.3.1}{Sprint 1 : Utilisateur }{chapter.3}% 39
 \BOOKMARK [2][-]{subsection.3.1.1}{item 1 : Authentification}{section.3.1}% 40
 \BOOKMARK [3][-]{subsubsection.3.1.1.1}{Diagramme de cas d\220utilisation }{subsection.3.1.1}% 41
-\BOOKMARK [0][-]{subsubsubsection.3.1.1.1.1}{Description d\351taill\351e des cas d\220utilisations}{}% 42
-\BOOKMARK [1][-]{subsubsection.3.1.1.2}{Diagrammes de s\351quence syst\350me }{subsubsubsection.3.1.1.1.1}% 43
-\BOOKMARK [2][-]{subsubsection.3.1.1.3}{ Interface : Authentification }{subsubsection.3.1.1.2}% 44
-\BOOKMARK [2][-]{subsection.3.1.2}{item 2 : G\351rer le profil}{subsubsection.3.1.1.2}% 45
-\BOOKMARK [3][-]{subsubsection.3.1.2.1}{Diagramme de cas d\220utilisation }{subsection.3.1.2}% 46
-\BOOKMARK [3][-]{subsubsection.3.1.2.2}{ Interface : G\351rer le profil }{subsection.3.1.2}% 47
-\BOOKMARK [2][-]{subsection.3.1.3}{item 3 : Gestion des r\364les utilisateurs}{subsubsection.3.1.1.2}% 48
-\BOOKMARK [3][-]{subsubsection.3.1.3.1}{Diagrammes de s\351quence syst\350me }{subsection.3.1.3}% 49
-\BOOKMARK [3][-]{subsubsection.3.1.3.2}{Diagrammes de s\351quence syst\350me }{subsection.3.1.3}% 50
-\BOOKMARK [3][-]{subsubsection.3.1.3.3}{ Interface : Modification de r\364le }{subsection.3.1.3}% 51
-\BOOKMARK [1][-]{section.3.2}{Sprint 2 : Administration }{subsubsubsection.3.1.1.1.1}% 52
-\BOOKMARK [2][-]{subsection.3.2.1}{item 1 : G\351rer les utilisateurs}{section.3.2}% 53
-\BOOKMARK [3][-]{subsubsection.3.2.1.1}{Diagramme de cas d\220utilisation d\351taill\351 \253administrer du site de t\351l\351formation\273 }{subsection.3.2.1}% 54
-\BOOKMARK [0][-]{subsubsubsection.3.2.1.1.1}{Description d\351taill\351e des cas d\220utilisations}{}% 55
-\BOOKMARK [0][-]{subsubsubsection.3.2.1.1.2}{Description d\351taill\351e des cas d\220utilisations}{}% 56
-\BOOKMARK [1][-]{subsubsection.3.2.1.2}{Diagrammes de s\351quence du cas d' utilisation "Modifier un utilisateur" }{subsubsubsection.3.2.1.1.2}% 57
-\BOOKMARK [0][-]{subsubsubsection.3.2.1.2.1}{Description d\351taill\351e des cas d\220utilisations}{}% 58
-\BOOKMARK [1][-]{subsubsection.3.2.1.3}{Diagramme de s\351quence du cas d' utilisation "Supprimer un utilisateur" }{subsubsubsection.3.2.1.2.1}% 59
-\BOOKMARK [0][-]{subsubsubsection.3.2.1.3.1}{Description d\351taill\351e des cas d\220utilisations}{}% 60
-\BOOKMARK [1][-]{subsubsection.3.2.1.4}{Diagrammes de s\351quence du cas d' utilisation "Ajouter un utilisateur" }{subsubsubsection.3.2.1.3.1}% 61
-\BOOKMARK [0][-]{subsubsubsection.3.2.1.4.1}{Description d\351taill\351e des cas d\220utilisations}{}% 62
-\BOOKMARK [1][-]{subsubsection.3.2.1.5}{Diagramme de s\351quence \253 d' ajout d'un professeur \273 }{subsubsubsection.3.2.1.4.1}% 63
-\BOOKMARK [0][-]{subsubsubsection.3.2.1.5.1}{Description d\351taill\351e des cas d\220utilisations}{}% 64
-\BOOKMARK [1][-]{subsubsection.3.2.1.6}{Diagramme d\220activit\351s \253 G\351rer les utilisateurs \273 }{subsubsubsection.3.2.1.5.1}% 65
-\BOOKMARK [0][-]{subsubsubsection.3.2.1.6.1}{Description d\351taill\351e des cas d\220utilisations}{}% 66
-\BOOKMARK [1][-]{subsection.3.2.2}{item 2 : Inscription et r\351inscription d'un \351tudiant}{subsubsubsection.3.2.1.6.1}% 67
-\BOOKMARK [2][-]{subsubsection.3.2.2.1}{Diagramme de s\351quence \253 d' inscription d' un \351tudiant \273 }{subsection.3.2.2}% 68
-\BOOKMARK [0][-]{subsubsubsection.3.2.2.1.1}{Description : Diagramme de s\351quence \253 d' inscription d' un \351tudiant \273 }{}% 69
-\BOOKMARK [1][-]{subsubsection.3.2.2.2}{Diagramme d'activit\351s \253 d'inscription d'un \351tudiant\273 }{subsubsubsection.3.2.2.1.1}% 70
-\BOOKMARK [0][-]{subsubsubsection.3.2.2.2.1}{ Description du processus de diagramme d\220activit\351s \253Inscription d\220un \351l\350ve\273 :}{}% 71
-\BOOKMARK [1][-]{subsubsection.3.2.2.3}{Diagramme de collaboration \253r\351inscription d' un \351tudiant\273}{subsubsubsection.3.2.2.2.1}% 72
-\BOOKMARK [0][-]{subsubsubsection.3.2.2.3.1}{Description : Diagramme de collaboration \253r\351inscription d' un \351tudiant\273}{}% 73
-\BOOKMARK [1][-]{subsubsection.3.2.2.4}{Diagramme d' activit\351s \253 d' affectation des notes \351tudiant \273 }{subsubsubsection.3.2.2.3.1}% 74
-\BOOKMARK [0][-]{subsubsubsection.3.2.2.4.1}{Description du processus de diagramme d\220activit\351s \253Affecter les notes d\220\351l\350ves\273 :}{}% 75
-\BOOKMARK [1][-]{section.3.3}{Sprint 3 : Enseignants }{subsubsubsection.3.2.2.4.1}% 76
-\BOOKMARK [2][-]{subsection.3.3.1}{item 1 : G\351rer les cours}{section.3.3}% 77
-\BOOKMARK [3][-]{subsubsection.3.3.1.1}{Diagramme de cas d\220utilisation d\351taill\351 \253administrer du site de t\351l\351formation\273 }{subsection.3.3.1}% 78
-\BOOKMARK [0][-]{subsubsubsection.3.3.1.1.1}{Description d\351taill\351e des cas d\220utilisations}{}% 79
-\BOOKMARK [1][-]{subsubsection.3.3.1.2}{Diagramme des cas d' utilisation G\351rer les cours }{subsubsubsection.3.3.1.1.1}% 80
-\BOOKMARK [0][-]{subsubsubsection.3.3.1.2.1}{Description d\351taill\351e des cas d\220utilisations}{}% 81
-\BOOKMARK [1][-]{subsubsection.3.3.1.3}{diagramme de s\351quences }{subsubsubsection.3.3.1.2.1}% 82
-\BOOKMARK [0][-]{subsubsubsection.3.3.1.3.1}{Description :Diagramme de s\351quence "Gerer les cours"}{}% 83
-\BOOKMARK [1][-]{subsubsection.3.3.1.4}{diagramme de s\351quences }{subsubsubsection.3.3.1.3.1}% 84
-\BOOKMARK [0][-]{subsubsubsection.3.3.1.4.1}{Description d\351taill\351e des cas d\220utilisations}{}% 85
-\BOOKMARK [1][-]{subsubsection.3.3.1.5}{diagramme de s\351quences }{subsubsubsection.3.3.1.4.1}% 86
-\BOOKMARK [0][-]{subsubsubsection.3.3.1.5.1}{Description d\351taill\351e des cas d\220utilisations}{}% 87
-\BOOKMARK [1][-]{subsection.3.3.2}{item 2 : G\351rer les tests}{subsubsubsection.3.3.1.5.1}% 88
-\BOOKMARK [2][-]{subsubsection.3.3.2.1}{diagramme de s\351quences }{subsection.3.3.2}% 89
-\BOOKMARK [0][-]{subsubsubsection.3.3.2.1.1}{Description d\351taill\351e des cas d\220utilisations}{}% 90
-\BOOKMARK [1][-]{subsubsection.3.3.2.2}{diagramme de s\351quences }{subsubsubsection.3.3.2.1.1}% 91
-\BOOKMARK [0][-]{subsubsubsection.3.3.2.2.1}{Description d\351taill\351e des cas d\220utilisations}{}% 92
-\BOOKMARK [1][-]{subsubsection.3.3.2.3}{ Interface : G\351rer le profil }{subsubsubsection.3.3.2.2.1}% 93
-\BOOKMARK [1][-]{section.3.4}{Sprint 4 : \311tudiant}{subsubsubsection.3.3.2.2.1}% 94
-\BOOKMARK [2][-]{subsection.3.4.1}{item 1 : Consulter les ressources et les liens d'apprentissage}{section.3.4}% 95
-\BOOKMARK [3][-]{subsubsection.3.4.1.1}{Diagramme de cas d\220utilisation d\351taill\351 \253administrer du site de t\351l\351formation\273 }{subsection.3.4.1}% 96
-\BOOKMARK [0][-]{subsubsubsection.3.4.1.1.1}{Description d\351taill\351e des cas d\220utilisations}{}% 97
-\BOOKMARK [1][-]{subsubsection.3.4.1.2}{diagramme de s\351quences }{subsubsubsection.3.4.1.1.1}% 98
-\BOOKMARK [0][-]{subsubsubsection.3.4.1.2.1}{Description d\351taill\351e des cas d\220utilisations}{}% 99
-\BOOKMARK [1][-]{subsection.3.4.2}{item 2 : Consulter agenda des livrables}{subsubsubsection.3.4.1.2.1}% 100
-\BOOKMARK [2][-]{subsubsection.3.4.2.1}{diagramme de s\351quences }{subsection.3.4.2}% 101
-\BOOKMARK [0][-]{subsubsubsection.3.4.2.1.1}{Description : Diagramme de s\351quences consulter agenda des livrables}{}% 102
-\BOOKMARK [1][-]{subsection.3.4.3}{item 3 : Passer les examens}{subsubsubsection.3.4.2.1.1}% 103
-\BOOKMARK [2][-]{subsubsection.3.4.3.1}{Diagramme de cas d\220utilisation }{subsection.3.4.3}% 104
-\BOOKMARK [0][-]{subsubsubsection.3.4.3.1.1}{Description :Diagramme de s\351quence " Passer les examens"}{}% 105
-\BOOKMARK [0][-]{subsubsubsection.3.4.3.1.2}{Description d\351taill\351e des cas d\220utilisations}{}% 106
-\BOOKMARK [1][-]{subsubsection.3.4.3.2}{ Interface : G\351rer le profil }{subsubsubsection.3.4.3.1.2}% 107
-\BOOKMARK [1][-]{section.3.5}{Conclusion}{subsubsubsection.3.4.3.1.2}% 108
-\BOOKMARK [0][-]{chapter.4}{Mise en oeuvre de la solution}{}% 109
-\BOOKMARK [1][-]{section.4.1}{Environnement de travail : Outils et technologies utilis\351es }{chapter.4}% 110
-\BOOKMARK [2][-]{subsection.4.1.1}{Environnement mat\351riel}{section.4.1}% 111
-\BOOKMARK [2][-]{subsection.4.1.2}{Environnement logiciel}{section.4.1}% 112
-\BOOKMARK [3][-]{subsubsection.4.1.2.1}{Outils de d\351veloppement et mod\351lisation :}{subsection.4.1.2}% 113
-\BOOKMARK [3][-]{subsubsection.4.1.2.2}{Langages de programmation :}{subsection.4.1.2}% 114
-\BOOKMARK [1][-]{section.4.2}{Outils de r\351daction du rapport:}{chapter.4}% 115
-\BOOKMARK [1][-]{section.4.3}{Conclusion}{chapter.4}% 116
-\BOOKMARK [0][-]{chapter*.114}{Conclusion g\351n\351rale}{}% 117
-\BOOKMARK [0][-]{chapter*.116}{Webographie}{}% 118
+\BOOKMARK [3][-]{subsubsection.3.1.1.2}{Diagrammes de s\351quence syst\350me }{subsection.3.1.1}% 42
+\BOOKMARK [3][-]{subsubsection.3.1.1.3}{ Interface : Authentification }{subsection.3.1.1}% 43
+\BOOKMARK [2][-]{subsection.3.1.2}{item 2 : G\351rer le profil}{section.3.1}% 44
+\BOOKMARK [3][-]{subsubsection.3.1.2.1}{Diagramme de cas d\220utilisation }{subsection.3.1.2}% 45
+\BOOKMARK [3][-]{subsubsection.3.1.2.2}{ Interface : G\351rer le profil }{subsection.3.1.2}% 46
+\BOOKMARK [1][-]{section.3.2}{Sprint 2 : Administration }{chapter.3}% 47
+\BOOKMARK [2][-]{subsection.3.2.1}{item 1 : G\351rer les utilisateurs}{section.3.2}% 48
+\BOOKMARK [3][-]{subsubsection.3.2.1.1}{Diagramme de cas d\220utilisation d\351taill\351 \253administrer du site de t\351l\351formation\273 }{subsection.3.2.1}% 49
+\BOOKMARK [3][-]{subsubsection.3.2.1.2}{Diagrammes de s\351quence du cas d' utilisation "Modifier un utilisateur" }{subsection.3.2.1}% 50
+\BOOKMARK [3][-]{subsubsection.3.2.1.3}{Diagramme de s\351quence du cas d' utilisation "Supprimer un utilisateur" }{subsection.3.2.1}% 51
+\BOOKMARK [3][-]{subsubsection.3.2.1.4}{Diagrammes de s\351quence du cas d' utilisation "Ajouter un utilisateur" }{subsection.3.2.1}% 52
+\BOOKMARK [3][-]{subsubsection.3.2.1.5}{Diagramme d\220activit\351s \253 G\351rer les utilisateurs \273 }{subsection.3.2.1}% 53
+\BOOKMARK [0][-]{subsubsubsection.3.2.1.5.1}{Description d\351taill\351e des cas d\220utilisations}{}% 54
+\BOOKMARK [1][-]{subsection.3.2.2}{item 2 : Inscription et r\351inscription d'un \351tudiant}{subsubsubsection.3.2.1.5.1}% 55
+\BOOKMARK [2][-]{subsubsection.3.2.2.1}{Diagramme de s\351quence \253 d' inscription d' un \351tudiant \273 }{subsection.3.2.2}% 56
+\BOOKMARK [0][-]{subsubsubsection.3.2.2.1.1}{Description : Diagramme de s\351quence \253 d' inscription d' un \351tudiant \273 }{}% 57
+\BOOKMARK [1][-]{subsubsection.3.2.2.2}{Diagramme d'activit\351s \253 d'inscription d'un \351tudiant\273 }{subsubsubsection.3.2.2.1.1}% 58
+\BOOKMARK [0][-]{subsubsubsection.3.2.2.2.1}{ Description du processus de diagramme d\220activit\351s \253Inscription d\220un \351l\350ve\273 :}{}% 59
+\BOOKMARK [1][-]{subsubsection.3.2.2.3}{Diagramme de collaboration \253r\351inscription d' un \351tudiant\273}{subsubsubsection.3.2.2.2.1}% 60
+\BOOKMARK [0][-]{subsubsubsection.3.2.2.3.1}{Description : Diagramme de collaboration \253r\351inscription d' un \351tudiant\273}{}% 61
+\BOOKMARK [1][-]{subsubsection.3.2.2.4}{Diagramme d' activit\351s \253 d' affectation des notes \351tudiant \273 }{subsubsubsection.3.2.2.3.1}% 62
+\BOOKMARK [0][-]{subsubsubsection.3.2.2.4.1}{Description du processus de diagramme d\220activit\351s \253Affecter les notes d\220\351l\350ves\273 :}{}% 63
+\BOOKMARK [1][-]{subsection.3.2.3}{item 3 : Gestion des r\364les utilisateurs}{subsubsubsection.3.2.2.4.1}% 64
+\BOOKMARK [2][-]{subsubsection.3.2.3.1}{Diagrammes de s\351quence syst\350me }{subsection.3.2.3}% 65
+\BOOKMARK [3][-]{subsubsection.3.2.3.2}{Diagrammes de s\351quence syst\350me }{subsubsection.3.2.3.1}% 66
+\BOOKMARK [3][-]{subsubsection.3.2.3.3}{ Interface : Modification de r\364le }{subsubsection.3.2.3.1}% 67
+\BOOKMARK [1][-]{section.3.3}{Sprint 3 : Enseignants }{subsubsubsection.3.2.2.4.1}% 68
+\BOOKMARK [2][-]{subsection.3.3.1}{item 1 : G\351rer les cours}{section.3.3}% 69
+\BOOKMARK [3][-]{subsubsection.3.3.1.1}{Diagramme de cas d\220utilisation d\351taill\351 \253administrer du site de t\351l\351formation\273 }{subsection.3.3.1}% 70
+\BOOKMARK [0][-]{subsubsubsection.3.3.1.1.1}{Description d\351taill\351e des cas d\220utilisations}{}% 71
+\BOOKMARK [1][-]{subsubsection.3.3.1.2}{Diagramme des cas d' utilisation G\351rer les cours }{subsubsubsection.3.3.1.1.1}% 72
+\BOOKMARK [0][-]{subsubsubsection.3.3.1.2.1}{Description d\351taill\351e des cas d\220utilisations}{}% 73
+\BOOKMARK [1][-]{subsubsection.3.3.1.3}{diagramme de s\351quences }{subsubsubsection.3.3.1.2.1}% 74
+\BOOKMARK [0][-]{subsubsubsection.3.3.1.3.1}{Description :Diagramme de s\351quence "Gerer les cours"}{}% 75
+\BOOKMARK [1][-]{subsubsection.3.3.1.4}{diagramme de s\351quences }{subsubsubsection.3.3.1.3.1}% 76
+\BOOKMARK [0][-]{subsubsubsection.3.3.1.4.1}{Description d\351taill\351e des cas d\220utilisations}{}% 77
+\BOOKMARK [1][-]{subsubsection.3.3.1.5}{diagramme de s\351quences }{subsubsubsection.3.3.1.4.1}% 78
+\BOOKMARK [0][-]{subsubsubsection.3.3.1.5.1}{Description d\351taill\351e des cas d\220utilisations}{}% 79
+\BOOKMARK [1][-]{subsection.3.3.2}{item 2 : G\351rer les tests}{subsubsubsection.3.3.1.5.1}% 80
+\BOOKMARK [2][-]{subsubsection.3.3.2.1}{diagramme de s\351quences }{subsection.3.3.2}% 81
+\BOOKMARK [0][-]{subsubsubsection.3.3.2.1.1}{Description d\351taill\351e des cas d\220utilisations}{}% 82
+\BOOKMARK [1][-]{subsubsection.3.3.2.2}{diagramme de s\351quences }{subsubsubsection.3.3.2.1.1}% 83
+\BOOKMARK [0][-]{subsubsubsection.3.3.2.2.1}{Description d\351taill\351e des cas d\220utilisations}{}% 84
+\BOOKMARK [1][-]{subsubsection.3.3.2.3}{ Interface : G\351rer le profil }{subsubsubsection.3.3.2.2.1}% 85
+\BOOKMARK [1][-]{section.3.4}{Sprint 4 : \311tudiant}{subsubsubsection.3.3.2.2.1}% 86
+\BOOKMARK [2][-]{subsection.3.4.1}{item 1 : Consulter les ressources et les liens d'apprentissage}{section.3.4}% 87
+\BOOKMARK [3][-]{subsubsection.3.4.1.1}{Diagramme de cas d\220utilisation d\351taill\351 \253\311tudiant\273 }{subsection.3.4.1}% 88
+\BOOKMARK [3][-]{subsubsection.3.4.1.2}{diagramme de s\351quences }{subsection.3.4.1}% 89
+\BOOKMARK [3][-]{subsubsection.3.4.1.3}{Les Interfaces de : Consulter les ressources et les liens d'apprentissage }{subsection.3.4.1}% 90
+\BOOKMARK [2][-]{subsection.3.4.2}{item 2 : Consulter le calendrier}{section.3.4}% 91
+\BOOKMARK [3][-]{subsubsection.3.4.2.1}{diagramme de s\351quences }{subsection.3.4.2}% 92
+\BOOKMARK [2][-]{subsection.3.4.3}{Diagramme d' activit\351: d' un apprenant sur l' espace}{section.3.4}% 93
+\BOOKMARK [1][-]{section.3.5}{Conclusion}{subsubsubsection.3.3.2.2.1}% 94
+\BOOKMARK [0][-]{chapter.4}{Mise en oeuvre de la solution}{}% 95
+\BOOKMARK [1][-]{section.4.1}{Environnement de travail : Outils et technologies utilis\351es }{chapter.4}% 96
+\BOOKMARK [2][-]{subsection.4.1.1}{Environnement mat\351riel}{section.4.1}% 97
+\BOOKMARK [2][-]{subsection.4.1.2}{Environnement logiciel}{section.4.1}% 98
+\BOOKMARK [3][-]{subsubsection.4.1.2.1}{Outils de d\351veloppement et mod\351lisation :}{subsection.4.1.2}% 99
+\BOOKMARK [3][-]{subsubsection.4.1.2.2}{Langages de programmation :}{subsection.4.1.2}% 100
+\BOOKMARK [1][-]{section.4.2}{Outils de r\351daction du rapport:}{chapter.4}% 101
+\BOOKMARK [1][-]{section.4.3}{Conclusion}{chapter.4}% 102
+\BOOKMARK [0][-]{chapter*.107}{Conclusion g\351n\351rale}{}% 103
+\BOOKMARK [0][-]{chapter*.109}{Webographie}{}% 104
