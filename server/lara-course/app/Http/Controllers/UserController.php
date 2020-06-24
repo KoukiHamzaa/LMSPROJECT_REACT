@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use Hash;
 use Illuminate\Support\Facades\DB;
 use App\Models\Course;
 use App\Models\User;
@@ -59,12 +60,16 @@ class UserController extends AppBaseController
     public function store(CreateUserRequest $request)
     {
         $input = $request->all();
-
+		
+		if(!empty( $input['password'])){
+          $input['password'] = Hash::make($input['password']);   
+        }
+		
         $user = $this->userRepository->create($input);
 
         Flash::success('L utilisateur a été enregistré avec succès.');
 
-        return redirect(route('courses.index'));
+        return redirect(route('users.index'));
     }
 
     /**
@@ -123,6 +128,8 @@ class UserController extends AppBaseController
     public function update($id, UpdateUserRequest $request)
     {
         $user = $this->userRepository->findWithoutFail($id);
+		
+		
 
         if (empty($user)) {
             Flash::error('Utilisateur non trouvé');
@@ -130,8 +137,15 @@ class UserController extends AppBaseController
             return redirect(route('users.index'));
         }
 
-        $user = $this->userRepository->update($request->all(), $id);
+        $input = $request->all();
 
+        if(!empty( $input['password'])){
+          $input['password'] = Hash::make($input['password']);   
+        }
+       
+        $user = $this->userRepository->update($input, $id);
+
+        
         Flash::success('L utilisateur a été mis à jour avec succès.');
 
         return redirect(route('courses.index'));

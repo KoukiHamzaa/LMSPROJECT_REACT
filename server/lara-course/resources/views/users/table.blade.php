@@ -16,7 +16,11 @@
             <tr>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->gender }}</td>
-                <td>{{ $user->isSubscribed }}</td>
+                @if( $user->isSubscribed == 1)
+                     <td>Abonne</td>
+                @else
+                     <td>Non Abonne</td>
+                @endif
                 <td><a class="text-secondary font-weight-bold text-capitalize" href="mailto:{{$user->email}}"> {{ $user->email }}</a></td>
                 <td>{{ $user->view_count }}</td>
                 <td>{{ $user->role['name'] }}</td>
