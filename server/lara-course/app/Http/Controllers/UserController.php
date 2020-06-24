@@ -12,6 +12,7 @@ use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 use Illuminate\Support\Facades\DB;
 use App\Models\Course;
+use App\Models\User;
 
 class UserController extends AppBaseController
 {
@@ -63,7 +64,7 @@ class UserController extends AppBaseController
 
         Flash::success('L utilisateur a été enregistré avec succès.');
 
-        return redirect(route('users.index'));
+        return redirect(route('users.index'))->with('users', $users);
     }
 
     /**
@@ -126,14 +127,14 @@ class UserController extends AppBaseController
         if (empty($user)) {
             Flash::error('Utilisateur non trouvé');
 
-            return redirect(route('courses.index'));
+            return redirect(route('users.index'));
         }
 
         $user = $this->userRepository->update($request->all(), $id);
 
         Flash::success('L utilisateur a été mis à jour avec succès.');
 
-        return redirect(route('courses.index'));
+        return redirect(route('users.index'));
     }
 
     /**

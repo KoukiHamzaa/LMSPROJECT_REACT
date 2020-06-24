@@ -16,11 +16,9 @@
                     @if(Auth::user()->role_id == 1)
                             <p><div class="role_center">© Administrateur</div> <br/> {{ Auth::user()->name}}</p>
                         @elseif(Auth::user()->role_id == 2)
-                            <p><div class="role_center">© Instructeur</div> <br/>  {{ Auth::user()->name}}</p>
+                            <p><div class="role_center">© Enseignant</div> <br/>  {{ Auth::user()->name}}</p>
                         @elseif(Auth::user()->role_id == 3)
-                            <p><div class="role_center">© Instructeur</div> <br/>  {{ Auth::user()->name}}</p>
-                        @else 
-                        <p><div class="role_center">© étudiant</div> <br/>  {{ Auth::user()->name}}</p>
+                            <p><div class="role_center">© étudiant</div> <br/>  {{ Auth::user()->name}}</p>
                     @endif
 
                 @endif
