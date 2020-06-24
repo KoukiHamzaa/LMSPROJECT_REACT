@@ -12,11 +12,9 @@ use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 use Illuminate\Support\Facades\DB;
 use App\Models\Course;
-<<<<<<< HEAD
+
 use Hash;
-=======
 use App\Models\User;
->>>>>>> a0f2ba8f82ef5dc14cc14ccab879dd039b8f0c95
 
 class UserController extends AppBaseController
 {
