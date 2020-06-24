@@ -54,14 +54,17 @@
     {!! Form::email('email', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Password Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('password', 'Mot de passe:') !!}
+    {!! Form::password('password', ['class' => 'form-control']) !!}
+</div>
 
-@if(Auth::user()->role_id == 1)
 <!-- Role Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('role_id', 'Identifiant de rôle:') !!}
     {!! Form::number('role_id', null, ['class' => 'form-control']) !!}
 </div>
-@endif
 
 <!-- Remember Token Field -->
 <div class="form-group col-sm-6">
