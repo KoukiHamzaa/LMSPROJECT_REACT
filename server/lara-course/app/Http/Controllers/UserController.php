@@ -14,6 +14,7 @@ use Hash;
 use Illuminate\Support\Facades\DB;
 use App\Models\Course;
 use App\Models\User;
+use App\Models\Role;
 
 class UserController extends AppBaseController
 {
@@ -47,7 +48,9 @@ class UserController extends AppBaseController
      */
     public function create()
     {
-        return view('users.create');
+        $roles = Role::all();
+        return view('users.create')
+        ->with('roles', $roles);
     }
 
     /**
@@ -63,6 +66,8 @@ class UserController extends AppBaseController
 		
 		if(!empty( $input['password'])){
           $input['password'] = Hash::make($input['password']);   
+        }else{
+            return redirect(route('users.create'))->withErrors('Le champ du mot de passe est vide');
         }
 		
         $user = $this->userRepository->create($input);
@@ -107,14 +112,16 @@ class UserController extends AppBaseController
     public function edit($id)
     {
         $user = $this->userRepository->findWithoutFail($id);
-
+        $roles = Role::all();
         if (empty($user)) {
             Flash::error('Utilisateur non trouvé');
 
             return redirect(route('users.index'));
         }
 
-        return view('users.edit')->with('user', $user);
+        return view('users.edit')
+        ->with('user', $user)
+        ->with('roles', $roles);;
     }
 
     /**

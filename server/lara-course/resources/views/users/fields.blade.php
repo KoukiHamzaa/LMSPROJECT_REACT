@@ -67,8 +67,13 @@
 @if(Auth::user()->role_id == 1)
 <!-- Role Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('role_id', 'Identifiant de rôle:') !!}
-    {!! Form::number('role_id', null, ['class' => 'form-control']) !!}
+    {!! Form::label('role_id', 'Choisissez le rôle:') !!}
+    <!-- {!! Form::number('role_id', null, ['class' => 'form-control']) !!} -->
+<select	class="browser-default custom-select font-weight-bold" name="role_id" id="role_id">
+        @foreach($roles as $role)
+            <option class="font-weight-bold" value="{{$role->id}}"> {{$role->name}} </option>
+        @endforeach
+ </select>
 </div>
 @endif
 

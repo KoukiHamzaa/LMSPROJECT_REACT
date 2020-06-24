@@ -16,13 +16,19 @@
             <tr>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->gender }}</td>
-                @if( $user->isSubscribed == 1)
+                @if(($user->isSubscribed == 1) && ($user->role_id != 1))
                      <td>Abonne</td>
-                @else
+                @elseif(($user->isSubscribed != 1) && ($user->role_id != 1))
                      <td>Non Abonne</td>
+                @else
+                    <td>-</td>
                 @endif
                 <td><a class="text-secondary font-weight-bold text-capitalize" href="mailto:{{$user->email}}"> {{ $user->email }}</a></td>
-                <td>{{ $user->view_count }}</td>
+               @if($user->role_id != 1)
+                     <td>{{ $user->view_count }}</td>
+                @else
+                     <td>-</td>
+                @endif
                 <td>{{ $user->role['name'] }}</td>
                 @if(Auth::user()->id == $user->id || Auth::user()->role_id == 1)
                     <td>

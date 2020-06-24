@@ -14,7 +14,7 @@
                     {!! Form::open(['route' => 'users.store']) !!}
 
                         @include('users.fields_create')
-
+                        
                     {!! Form::close() !!}
                 </div>
             </div>
