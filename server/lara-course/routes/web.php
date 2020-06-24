@@ -17,12 +17,12 @@
 Route::get('/', 'HomeController@welcome');
 
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-// Auth::routes();
+Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
@@ -33,6 +33,7 @@ Route::resource('comments', 'CommentController');
 
 // Courses Routes
 Route::resource('courses', 'CourseController');
+
 Route::post('courses/disapprove', 'CourseController@disapprove')->name('courses.disapprove');
 Route::post('courses/approve', 'CourseController@approve')->name('courses.approve');
 //publish/unpublish
@@ -59,3 +60,23 @@ Route::resource('courseUsers', 'CourseUserController');
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
 
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback')->name('paymentCallback');
+
+
+
+
+
+//we re going to chanhe {Auth::routes();} whith these line bellow 
+/*Route::group(['prefix' => 'admin','namespace' => 'Auth'],function(){
+    // Authentication Routes...
+    Route::get('login', 'LoginController@showLoginForm')->name('login');
+    Route::post('login', 'LoginController@login');
+    Route::post('logout', 'LoginController@logout')->name('logout');
+
+    // Password Reset Routes...
+    Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('password.reset');
+    Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+    Route::get('password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset.token');
+    Route::post('password/reset', 'ResetPasswordController@reset');
+});*/
+//reset password 
+Route::post('/password/reset', 'Auth\PasswordController@reset');
