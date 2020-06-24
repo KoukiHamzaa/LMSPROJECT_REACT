@@ -57,7 +57,11 @@
 </div>
 
 <!-- Password Field -->
+<<<<<<< HEAD
 @if(Auth::user()->id == $user->id)
+=======
+@if((Auth::user()->id == $user->id) || Auth::user()->id == 1)
+>>>>>>> a0f2ba8f82ef5dc14cc14ccab879dd039b8f0c95
 <div class="form-group col-sm-6">
     {!! Form::label('password', 'Mot de passe:') !!}
     {!! Form::password('password', ['class' => 'form-control']) !!}

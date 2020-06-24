@@ -12,7 +12,11 @@ use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 use Illuminate\Support\Facades\DB;
 use App\Models\Course;
+<<<<<<< HEAD
 use Hash;
+=======
+use App\Models\User;
+>>>>>>> a0f2ba8f82ef5dc14cc14ccab879dd039b8f0c95
 
 class UserController extends AppBaseController
 {
@@ -64,7 +68,7 @@ class UserController extends AppBaseController
 
         Flash::success('L utilisateur a été enregistré avec succès.');
 
-        return redirect(route('users.index'));
+        return redirect(route('users.index'))->with('users', $users);
     }
 
     /**
@@ -127,7 +131,7 @@ class UserController extends AppBaseController
         if (empty($user)) {
             Flash::error('Utilisateur non trouvé');
 
-            return redirect(route('courses.index'));
+            return redirect(route('users.index'));
         }
 		
         $input = $request->all();
@@ -139,7 +143,7 @@ class UserController extends AppBaseController
         $user = $this->userRepository->update($input, $id);
         Flash::success('L utilisateur a été mis à jour avec succès.');
 
-        return redirect(route('courses.index'));
+        return redirect(route('users.index'));
     }
     /**
      * Remove the specified User from storage.
