@@ -12,6 +12,7 @@ use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 use Illuminate\Support\Facades\DB;
 use App\Models\Course;
+use Hash;
 
 class UserController extends AppBaseController
 {
@@ -128,14 +129,18 @@ class UserController extends AppBaseController
 
             return redirect(route('courses.index'));
         }
+		
+        $input = $request->all();
 
-        $user = $this->userRepository->update($request->all(), $id);
-
+        if(!empty( $input['password'])){
+          $input['password'] = Hash::make($input['password']);   
+        }
+       
+        $user = $this->userRepository->update($input, $id);
         Flash::success('L utilisateur a été mis à jour avec succès.');
 
         return redirect(route('courses.index'));
     }
-
     /**
      * Remove the specified User from storage.
      *
