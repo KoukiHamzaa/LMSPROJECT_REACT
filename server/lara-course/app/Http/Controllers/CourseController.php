@@ -113,7 +113,7 @@ class CourseController extends AppBaseController
 
         $course = $this->courseRepository->create($input);
 
-        Flash::success('Course saved successfully.');
+        Flash::success('Cours enregistré avec succès.');
 
         return redirect(route('courses.index'));
     }
@@ -147,18 +147,6 @@ class CourseController extends AppBaseController
      *
      * @return Response
      */
-    // public function edit($id)
-    // {
-    //     $course = $this->courseRepository->findWithoutFail($id);
-
-    //     if (empty($course)) {
-    //         Flash::error('Cours non trouvé');
-
-    //         return redirect(route('courses.index'));
-    //     }
-
-    //     return view('courses.edit')->with('course', $course);
-    // }
 
     public function edit($id)
     {
