@@ -12,8 +12,14 @@
     <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
+            @include('courses.menu')
                 <div class="row" style="padding-left: 20px">
-                            @include('courses.show_fields')
+                            @include('courses.header')
+                            @if(isset($contents) AND $contents == 'yes')
+                                @include('courses.contents')
+                            @elseif(isset($description) AND ($description == 'non'))
+                                 @include('courses.show_fields') 
+                            @endif
 <!-- ==================================================================================================================== -->
 <ul class="nav nav-pills col-md-12 mt-5" id="pills-tab" role="tablist" >
     @if(Auth::user()->role_id < 3 || Auth::user()->id == $course->user_id)

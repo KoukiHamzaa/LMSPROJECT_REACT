@@ -13,6 +13,7 @@ use Response;
 use Auth;
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\Item;
 
 class CourseController extends AppBaseController
 {
@@ -219,5 +220,18 @@ class CourseController extends AppBaseController
         Flash::success('Le cours a bien été supprimé.');
 
         return redirect(route('courses.index'));
+    }
+
+    public function contents($course_id)
+    {
+        //list courses 
+        $course = Course::where('id', $course_id)->first();
+        //passet to the course 
+        $contents = 'yes';
+        $description = 'yes';
+        return  view('courses.show', ['course_id' => $course->id])
+                ->with('course', $course)
+                ->with('contents', $contents)
+                ->with('description', $description);
     }
 }

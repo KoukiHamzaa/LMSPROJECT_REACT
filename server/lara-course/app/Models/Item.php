@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property integer course_id
  * @property integer view_count
  * @property string url
+* @property string title
  * @property string description
  */
 class Item extends Model
@@ -35,6 +36,7 @@ class Item extends Model
         'course_id',
         'view_count',
         'url',
+        'title',
         'description'
     ];
 
@@ -49,6 +51,7 @@ class Item extends Model
         'course_id' => 'integer',
         'view_count' => 'integer',
         'url' => 'string',
+        'url' => 'title',
         'description' => 'string'
     ];
 
@@ -60,9 +63,13 @@ class Item extends Model
     public static $rules = [
         'course_id' => 'required',
         'view_count' => 'required',
+        'title' =>'required', 
         // 'created_at' => 'required',
         // 'updated_at' => 'required'
     ];
 
-    
+    public function course()
+{
+    return $this->belongsTo('App\Models\Course');
+}
 }

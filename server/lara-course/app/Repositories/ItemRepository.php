@@ -24,6 +24,7 @@ class ItemRepository extends BaseRepository
         'course_id',
         'view_count',
         'url',
+        'title',
         'description'
     ];
 

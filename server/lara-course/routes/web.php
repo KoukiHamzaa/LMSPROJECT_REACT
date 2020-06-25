@@ -40,6 +40,8 @@ Route::post('courses/approve', 'CourseController@approve')->name('courses.approv
 Route::post('courses/publishCourse', 'CourseController@publishCourse')->name('courses.publishCourse');
 Route::post('courses/unpublishCourse', 'CourseController@unpublishCourse')->name('courses.unpublishCourse');
 
+//content
+Route::get('courses/contents/{course_id}', 'CourseController@contents')->name('courses.contents');
 
 Route::resource('courseUsers', 'CourseUserController');
 
