@@ -14,6 +14,7 @@ use Auth;
 use App\Models\Category;
 use App\Models\Course;
 use App\Models\Item;
+use App\Models\CourseUser;
 
 class CourseController extends AppBaseController
 {
@@ -228,10 +229,28 @@ class CourseController extends AppBaseController
         $course = Course::where('id', $course_id)->first();
         //passet to the course 
         $contents = 'yes';
-        $description = 'yes';
         return  view('courses.show', ['course_id' => $course->id])
                 ->with('course', $course)
-                ->with('contents', $contents)
-                ->with('description', $description);
+                ->with('contents', $contents);
     }
+
+    public function abonnes($course_id)
+    {
+        //list courses 
+        $course = Course::where('id', $course_id)->first();
+        if (empty($course)) {
+            Flash::error('Cours non trouvé');
+            
+            return redirect()->back();
+        }
+
+        //passet to the course 
+        $abonnes = 'yes';
+        
+        return  view('courses.show', ['course_id' => $course->id])
+                ->with('course', $course)
+                ->with('abonnes', $abonnes);
+    }
+    
+
 }

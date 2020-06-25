@@ -2,7 +2,7 @@
     <table class="table" id="courseUsers-table">
         <thead>
             <tr>
-                <th>Identifiant</th>
+                <th>Hamza</th>
         <th>Identifiant de cours</th>
         <th>Identifiant de catégorie</th>
         <th>Identifiant du compte utilisateur</th>
@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-        @foreach($courseUsers as $courseUser)
+        @foreach($course->courseUsers as $courseUser)
             <tr>
                 <td>{{ $courseUser->user_id }}</td>
             <td>{{ $courseUser->course_id }}</td>

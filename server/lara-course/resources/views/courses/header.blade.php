@@ -68,7 +68,8 @@
 </div>
 <!--end-- buy courses -->
 <!-- User namer Field -->
-<div class="form-group col-md-3 list-group-item disabled">
+@if(Auth::user()->role_id < 3)
+<div class="form-group col-md-4 list-group-item disabled">
     {!! Form::label('user_id', 'Auther:') !!}
     <a href="/users/{!! $course->user['id'] !!}" target="_blank">
         <p class="text-capitalize text-success text-dark  ml-5">
@@ -77,20 +78,22 @@
         </p>
     </a>
 </div>
+@else
+<div class="form-group col-md-4">
+    <a href="/users/{!! $course->user['id'] !!}" target="_blank">
+        <p class="text-capitalize text-success text-dark">
+        {!! Form::label('user_id', 'Auther:') !!}
+            <i class="fa fa-user ml-2" aria-hidden="true"></i>
+            {!! $course->user['name'] !!}
+        </p>
+    </a>
+</div>
+@endif
 
 @if(Auth::user()->role_id < 3)
-
-<!-- View Count Field -->
-<div class="form-group col-md-3 list-group-item disabled">
-    {!! Form::label('view_count', 'View Count:') !!}
-    <p>
-    <i class="fa fa-eye" aria-hidden="true"></i>
-    {{ $course->view_count }}
-    </p>
-</div>
-<!-- ======================================== -->
 <!-- Creator Status Field -->
-<div class="form-group col-md-3 list-group-item disabled">
+@if(Auth::user()->role_id < 3)
+<div class="form-group col-md-4 list-group-item disabled">
     {!! Form::label('creator_status', 'Creator Status:') !!}
     <p>
         @if($course->creator_status == 1)
@@ -116,7 +119,7 @@
 </div>
 
 <!-- Admin Status Field -->
-<div class="form-group col-md-3 list-group-item disabled">
+<div class="form-group col-md-4 list-group-item disabled">
     {!! Form::label('admin_status', 'Admin Status:') !!}
     <p>
         @if($course->admin_status == 1) 
@@ -141,5 +144,5 @@
         <!-- {{ $course->admin_status }} -->
     </p>
 </div>
-
+@endif
 @endif

@@ -152,4 +152,9 @@ public function items()
 {
     return $this->hasMany('App\Models\Item');
 }
+
+public function CourseUsers()
+{
+    return $this->hasMany('App\Models\CourseUser');
+}
 }

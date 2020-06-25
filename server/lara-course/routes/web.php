@@ -42,6 +42,7 @@ Route::post('courses/unpublishCourse', 'CourseController@unpublishCourse')->name
 
 //content
 Route::get('courses/contents/{course_id}', 'CourseController@contents')->name('courses.contents');
+Route::get('courses/abonnes/{course_id}', 'CourseController@abonnes')->name('courses.abonnes');
 
 Route::resource('courseUsers', 'CourseUserController');
 
