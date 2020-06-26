@@ -16,7 +16,7 @@
         </li>
  
  <li class="{{ Request::is('notes*') ? 'active' : '' }}">
-    <a href="{{ route('notes.index') }}"><i class="fa fa-edit"></i><span>Liste des notes</span></a>
+    <a href="{{ route('notes.index') }}"><i class="fa fa-edit"></i><span>Liste des évaluations</span></a>
 </li>
 
  <li class="{{ Request::is('roles*') ? 'active' : '' }}">
