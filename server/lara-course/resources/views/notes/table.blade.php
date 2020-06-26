@@ -3,9 +3,9 @@
         <thead>
             <tr>
         <th>Nom d étudiant</th>
-        <th>Nom du cours</th>
         <th>Nom de catégorie</th>
         <th>Note d évaluation</th>
+        <th>Nom du cours</th>
         <th>Remarque</th>
         @if(Auth::user()->role_id < 3 )
                 <th colspan="3">Action</th>
@@ -14,8 +14,8 @@
         </thead>
         <tbody>
         @foreach($notes as $note)
+            <td><h1 class="text-capitalize">{{ $note->title }}</h2><td>
             <tr>
-            <h1 class="text-capitalize">{{ $note->title }}</h2>
             
             
             <td class="text-capitalize font-weight-bold">
@@ -25,17 +25,17 @@
                     @endif
                 @endforeach	  
           </td>
-          <td class="text-capitalize font-weight-bold">
-                @foreach($courses as $course)
-                    @if($note->course_id == $course->id)
-                        {{$course->title}}
-                    @endif
-                @endforeach	  
-          </td>
           <td class="text-capitalize text-center font-weight-bold">
                 @foreach($categories as $category)
                     @if($note->category_id == $category->id)
                         {{$category->name}}
+                    @endif
+                @endforeach	  
+          </td>
+          <td class="text-capitalize font-weight-bold">
+                @foreach($courses as $course)
+                    @if($note->course_id == $course->id)
+                        {{$course->title}}
                     @endif
                 @endforeach	  
           </td>
