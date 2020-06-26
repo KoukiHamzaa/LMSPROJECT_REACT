@@ -111,6 +111,10 @@ class User extends Model
     return $this->hasMany('App\Models\Comment');
 }
 
+public function note()
+{
+    return $this->belongsTo('App\Models\Note');
+}
 
     
 }

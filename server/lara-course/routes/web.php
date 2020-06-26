@@ -84,3 +84,5 @@ Route::get('/payment/callback', 'PaymentController@handleGatewayCallback')->name
 });*/
 //reset password 
 Route::post('/password/reset', 'Auth\PasswordController@reset');
+
+Route::resource('notes', 'NoteController');

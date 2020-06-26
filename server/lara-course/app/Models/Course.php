@@ -157,4 +157,9 @@ public function CourseUsers()
 {
     return $this->hasMany('App\Models\CourseUser');
 }
+
+public function note()
+{
+    return $this->belongsTo('App\Models\Note');
+}
 }

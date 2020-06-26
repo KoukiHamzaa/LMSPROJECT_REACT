@@ -62,6 +62,10 @@ class Category extends Model
         // 'created_at' => 'required',
         // 'updated_at' => 'required'
     ];
-
+    
+    public function note()
+    {
+        return $this->belongsTo('App\Models\Note');
+    }
     
 }
