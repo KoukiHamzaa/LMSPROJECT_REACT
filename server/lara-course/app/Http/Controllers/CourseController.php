@@ -172,6 +172,7 @@ class CourseController extends AppBaseController
         $course = $this->courseRepository->findWithoutFail($id);
 		
         $categories = Category::all();
+        
         $mainCourses = Course::where('user_id',Auth::user()->id)
         ->where( 'admin_status', 1)
         ->where( 'creator_status', 1)

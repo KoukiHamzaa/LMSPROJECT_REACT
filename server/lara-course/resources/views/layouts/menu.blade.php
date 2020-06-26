@@ -12,7 +12,7 @@
             <a href="{{ route('courses.index') }}"><i class="fa fa-edit"></i><span>Cours</span></a>
         </li>
         <li class="{{ Request::is('courses*') ? 'active' : '' }} ml-5">
-            <a href=""><i class="fa fa-edit"></i><span>TP_TD</span></a>
+            <a href="{{ route('tpTds.index') }}"><i class="fa fa-edit"></i><span>TP_TD</span></a>
         </li>
  
  <li class="{{ Request::is('notes*') ? 'active' : '' }}">
@@ -68,4 +68,3 @@
 
 
 @endif
-<!---end--student section----->
