@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Course;
 use App\Models\User;
 use App\Models\Role;
+use App\Models\CourseUser;
 
 class UserController extends AppBaseController
 {
@@ -36,9 +37,11 @@ class UserController extends AppBaseController
     {
         $this->userRepository->pushCriteria(new RequestCriteria($request));
         $users = $this->userRepository->all();
+        // dd($courseUsers);
 
         return view('users.index')
             ->with('users', $users);
+
     }
 
     /**
@@ -87,6 +90,9 @@ class UserController extends AppBaseController
     public function show($id)
     {
         $user = $this->userRepository->findWithoutFail($id);
+        $courseUsers = CourseUser::all();
+
+        // dd($courseUsers);
 
         if (empty($user)) {
             Flash::error('Utilisateur non trouvé');
@@ -99,7 +105,8 @@ class UserController extends AppBaseController
         DB::table('users')->where('id', $id)->increment('view_count');
         return view('users.show')
         ->with('courses', $courses)
-        ->with('user', $user);
+        ->with('user', $user)
+        ->with('courseUsers', $courseUsers);
     }
 
     /**

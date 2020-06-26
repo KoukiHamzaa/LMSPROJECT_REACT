@@ -10,6 +10,7 @@
         </div>
     </div>
 </div>
+
 <!-- Actual Price Field -->
 <div class="form-group col-md-4  ">
     <!-- <div>{!! Form::label('actual_price', 'Price:') !!}</div> -->

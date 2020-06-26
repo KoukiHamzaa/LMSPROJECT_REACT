@@ -13,16 +13,17 @@
             <div class="box-body">
             @include('courses.menu')
                 <div class="row" style="padding-left: 20px">
-                
 					@include('courses.header')
 
 					@if(isset($abonnes) && $abonnes == 'yes')
 						@include('courses.abonnes')
-					@elseif(isset($contents) && $contents == 'yes')
+					@elseif(isset($items) && $items == 'yes')
+						@include('courses.items')            
+                    @elseif(isset($contents) && $contents == 'yes')
 						@include('courses.contents')                	
 					@endif
                     <div class="d-block">
-                            <div class="col-md-8 text-left text-bold m-5 h3">Ajouter un commentaire</div>
+                            <div class="col-md-8 text-left text-bold m-5 h3">Ajouter des commentaires ou des avis</div>
                             @include('comments.table')
                     </div>
 				</div>

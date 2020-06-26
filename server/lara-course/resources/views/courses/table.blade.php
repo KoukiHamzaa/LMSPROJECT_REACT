@@ -29,7 +29,17 @@
 							{!! Form::open(['route' => ['courses.destroy', $course->id], 'method' => 'delete']) !!}
 									<!-- <div class='btn-group'> -->
 									<div class="btn-toolbar">
-									@if(Auth::user()->role_id < 3)
+								<?php
+										$paymentCondition = 'NotPaid';
+											foreach($courseUsers as $courseUser)
+											{
+												if(($course->id == $courseUser->course_id) && (Auth::user()->id ==$courseUser->user_id ))
+												{
+													$paymentCondition = 'Paid';
+												}
+											}	
+								?>
+									@if(Auth::user()->role_id < 3 || $paymentCondition == 'Paid')
 									<a href="{{ route('courses.show', [$course->id]) }}" class="btn btn-primary" >Voir le cours</a>
 									@else
 									<a href="{{ route('courses.show', [$course->id]) }}" class="btn btn-primary" >Rejoignez le cours</a>

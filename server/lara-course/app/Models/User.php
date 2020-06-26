@@ -91,10 +91,10 @@ class User extends Model
         // 'role_id' => 'required'
     ];
 
-    // public function course()
-    // {
-    //     return $this->hasOne(Course::class);
-    // }
+    public function CourseUsers()
+    {
+        return $this->hasMany('App\Models\CourseUser');
+    }
 
     public function role()
     {

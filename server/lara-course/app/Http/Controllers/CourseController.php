@@ -76,9 +76,11 @@ class CourseController extends AppBaseController
     {
         $this->courseRepository->pushCriteria(new RequestCriteria($request));
         $courses = $this->courseRepository->all();
+        $courseUsers = CourseUser::all();
 
         return view('courses.index')
-            ->with('courses', $courses);
+            ->with('courses', $courses)
+            ->with('courseUsers', $courseUsers);
     }
 
     /**
@@ -132,14 +134,29 @@ class CourseController extends AppBaseController
         $course = $this->courseRepository->findWithoutFail($id);
         // dd($course);
 
+        // $userCourse = CourseUser::where('course_id', $id)->first();
+        $userCourse = CourseUser::where(['course_id' => $id,'user_id' => Auth::user()->id])->first();
+        $paymentCondition = 'NotPaid';
+        // dd($userCourse);
+
         if (empty($course)) {
             Flash::error('Cours non trouvé');
             
             return redirect(route('courses.index'));
         }
-        
+//if(($course->id == $courseUser->course_id) && (Auth::user()->id ==$courseUser->user_id ))
+        if (!empty($userCourse)) {
+            if(Auth::user()->id ==$userCourse->user_id){
 
-        return view('courses.show')->with('course', $course);
+                $paymentCondition = 'Paid';
+            }
+        }
+        
+        //dd($paymentCondition);
+
+        return view('courses.show')
+        ->with('course', $course)
+        ->with('paymentCondition', $paymentCondition);
     }
 
     /**
@@ -226,18 +243,53 @@ class CourseController extends AppBaseController
     public function contents($course_id)
     {
         //list courses 
-        $course = Course::where('id', $course_id)->first();
+        $course = $this->courseRepository->findWithoutFail($course_id);
+        $userCourse = CourseUser::where(['course_id' => $course_id,'user_id' => Auth::user()->id])->first();
         //passet to the course 
+
+        if (!empty($userCourse)) {
+                $paymentCondition = 'Paid';
+        }
+
+        
+
         $contents = 'yes';
         return  view('courses.show', ['course_id' => $course->id])
                 ->with('course', $course)
-                ->with('contents', $contents);
+                ->with('contents', $contents)
+                ->with('paymentCondition', $paymentCondition);
     }
 
     public function abonnes($course_id)
     {
         //list courses 
-        $course = Course::where('id', $course_id)->first();
+        $userCourse = CourseUser::where(['course_id' => $course_id,'user_id' => Auth::user()->id])->first();
+        $course = $this->courseRepository->findWithoutFail($course_id);
+        //passet to the course 
+
+        if (!empty($userCourse)) {
+                $paymentCondition = 'Paid';
+        } 
+
+        if (empty($course)) {
+            Flash::error('Cours non trouvé');
+            
+            return redirect()->back();
+        }
+
+        //passet to the course 
+        $abonnes = 'yes';
+        
+        return  view('courses.show', ['course_id' => $course->id])
+                ->with('course', $course)
+                ->with('abonnes', $abonnes)
+                ->with('paymentCondition', $paymentCondition);
+    }
+
+    public function items($course_id)
+    {
+        //list courses 
+        $course = $this->courseRepository->findWithoutFail($course_id);
         if (empty($course)) {
             Flash::error('Cours non trouvé');
             

@@ -6,7 +6,7 @@
 
 <!-- User Id Field -->
 <div class="form-group">
-    {!! Form::label('user_id', 'Identifiant d'utilisateur:') !!}
+    {!! Form::label('user_id', 'Identifiant d utilisateur:') !!}
     <p>{{ $item->user_id }}</p>
 </div>
 

@@ -14,9 +14,6 @@
         <li class="{{ Request::is('courses*') ? 'active' : '' }} ml-5">
             <a href=""><i class="fa fa-edit"></i><span>TP_TD</span></a>
         </li>
-        <li class="{{ Request::is('courses*') ? 'active' : '' }} ml-5">
-            <a href=""><i class="fa fa-edit"></i><span>Examens du calendrier</span></a>
-        </li>
  
  <li class="{{ Request::is('roles*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-edit"></i><span>Liste des notes</span></a>
