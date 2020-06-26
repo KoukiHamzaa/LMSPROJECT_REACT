@@ -20,7 +20,7 @@ class CreateNotesTable extends Migration
             $table->integer('course_id')->nullable();
             $table->integer('category_id')->nullable();
 			$table->integer('note'); //etudiant
-            $table->longText('NB');
+            $table->longText('NB')->nullable();;
             
             $table->softDeletes();
             $table->timestamps();

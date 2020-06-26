@@ -1,12 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="content-header">
-        <h1>
-            Note
-        </h1>
+<section class="content-header">
+        <h1 class="pull-left">Notes</h1>
     </section>
-    <div class="content">
+    <div class="content" style="margin-top:50px">
         @include('adminlte-templates::common.errors')
         <div class="box box-primary">
             <div class="box-body">

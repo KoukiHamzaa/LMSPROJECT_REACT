@@ -62,9 +62,9 @@ class Note extends Model
      */
     public static $rules = [
         'title' => 'required',
-        'user_id' => 'required',
+        // 'user_id' => 'required',
         'note' => 'required',
-        'NB' => 'required'
+        // 'NB' => 'required'
     ];
 
     public function Courses()

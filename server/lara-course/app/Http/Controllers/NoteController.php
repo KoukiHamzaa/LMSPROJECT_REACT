@@ -35,9 +35,16 @@ class NoteController extends AppBaseController
     {
         $this->noteRepository->pushCriteria(new RequestCriteria($request));
         $notes = $this->noteRepository->all();
+        $users = User::all();
+        $courses = Course::all();
+        // dd($courses);
+        $categories = Category::all();
 
         return view('notes.index')
-            ->with('notes', $notes);
+            ->with('notes', $notes)
+            ->with('users',$users)
+            ->with('courses',$courses)
+            ->with('categories',$categories);
     }
 
     /**
@@ -71,7 +78,7 @@ class NoteController extends AppBaseController
 
         $note = $this->noteRepository->create($input);
 
-        Flash::success('Note saved successfully.');
+        Flash::success('Note enregistrée avec succès.');
 
         return redirect(route('notes.index'));
     }
@@ -88,7 +95,7 @@ class NoteController extends AppBaseController
         $note = $this->noteRepository->findWithoutFail($id);
 
         if (empty($note)) {
-            Flash::error('Note not found');
+            Flash::error('Remarque introuvable');
 
             return redirect(route('notes.index'));
         }
@@ -107,13 +114,22 @@ class NoteController extends AppBaseController
     {
         $note = $this->noteRepository->findWithoutFail($id);
 
+        $users = User::all();
+        $courses = Course::all();
+        // dd($courses);
+        $categories = Category::all();
+      
         if (empty($note)) {
-            Flash::error('Note not found');
+            Flash::error('Remarque introuvable');
 
             return redirect(route('notes.index'));
         }
 
-        return view('notes.edit')->with('note', $note);
+        return view('notes.edit')
+        ->with('note', $note)
+        ->with('users',$users)
+        ->with('courses',$courses)
+        ->with('categories',$categories);
     }
 
     /**
@@ -129,14 +145,14 @@ class NoteController extends AppBaseController
         $note = $this->noteRepository->findWithoutFail($id);
 
         if (empty($note)) {
-            Flash::error('Note not found');
+            Flash::error('Remarque introuvable');
 
             return redirect(route('notes.index'));
         }
 
         $note = $this->noteRepository->update($request->all(), $id);
 
-        Flash::success('Note updated successfully.');
+        Flash::success('Note mise à jour avec succès.');
 
         return redirect(route('notes.index'));
     }
@@ -153,14 +169,14 @@ class NoteController extends AppBaseController
         $note = $this->noteRepository->findWithoutFail($id);
 
         if (empty($note)) {
-            Flash::error('Note not found');
+            Flash::error('Remarque introuvable');
 
             return redirect(route('notes.index'));
         }
 
         $this->noteRepository->delete($id);
 
-        Flash::success('Note deleted successfully.');
+        Flash::success('Remarque supprimée avec succès.');
 
         return redirect(route('notes.index'));
     }
