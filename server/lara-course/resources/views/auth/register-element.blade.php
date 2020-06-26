@@ -81,16 +81,24 @@
     </form>
 
     <a href="{{ url('/login') }}" class="text-center">Vous avez déjà un compte ??</a>
+    <br>
+    <a class="btn btn-primary text-capitalize" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Si vous êtes un enseignant?
+		  </a>
 </div>
-<div class="register-box-footer">
-<div class="h3 m-5 bg-white">
-<div  class="h4 text-left">
-<div class="text-capitalize">Si vous êtes un enseignant?</div>
-- Complétez votre  inscription<br>
-- Puis envoyez-nous un e-mail avec toute votre certification.<br>
-- Nous allons changer votre compte<br> de rôle par défaut (étudiant) en rôle enseignant(dans24h).
-</div>
-</div>
+	<div class="collapse" id="collapseExample">
+		<div class="card card-body">
+<div class="register-box-footer" style="background: #fff;height:160px;">
+			<div  class="text-left" style="margin-top:10px;margin-left:20px;font-family: 'MuseoModerno', cursive;">
+				<br>
+                <ul>
+					<li style="  margin: 5px 50px 5px 0px;">Complétez votre  inscription</li>
+					<li>Puis envoyez-nous un <a href="mailto: contact@ulearn.com">e-mail</a> avec toute votre certification.</li>
+					<li>Nous allons changer votre compte<br> de rôle par défaut (étudiant) en rôle enseignant(dans24h).</li>
+				<ul>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- /.form-box -->
 </div>
