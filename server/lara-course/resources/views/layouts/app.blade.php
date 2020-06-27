@@ -36,6 +36,7 @@
     <!-- <link rel="stylesheet" href="{{ url('/Ionicons/ionicons_min_css/ionicons.min.css') }}"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
     <!-- <link rel="stylesheet" href="{{ url('/Ionicons/bootstrap_datetimepicker_min_css/bootstrap-datetimepicker.min.css') }}"> -->
+   
     <!-- Nice_edit -->
     <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
     <!-- <script src="{{ url('/Nice_edit/nicEdit-latest.js') }}" type="text/javascript"></script> -->
