@@ -19,10 +19,10 @@
 \label{sec:conception}
 
 \begin{fquote}
-Ce premier sprint s’étale sur 18 jours et se décompose en trois items  \end{fquote}
+Ce premier sprint s’étale sur 6 jours et se décompose en 2 items  \end{fquote}
 \smallskip
 \begin{itemize}[label=$\diamond$]
-	\item Authentification
+	\item Authentification , Inscrire
 	\item Gérer le profil
 \end{itemize}
 \medskip
@@ -152,7 +152,7 @@ Pour s’authentifier, un administrateur doit saisir son login et son mot de pas
 données saisies sont correctes alors sa session sera ouverte et il sera redirigé automatiquement au dashboard dela plateforme. Si les données sont erronées alors un message d’erreur
 apparaîtra lui demandant de saisir de nouveau le login et le mot de passe corrects.
 \clearpage
-\subsubsection{ Interface : Authentification  }
+\subsubsection{les Interfaces : Authentification  }
 
 
 \begin{figure}[ht]
@@ -248,11 +248,12 @@ l’interface de son profil avec l’avatar par défaut et aucune formation pour
 
 
 \begin{fquote}
-Ce premier sprint s’étale sur 26 jours et se décompose en deux items \end{fquote}
+Ce premier sprint s’étale sur 10 jours et se décompose en 3 items \end{fquote}
 \smallskip
 \begin{itemize}[label=$\diamond$]
 	\item Gérer les utilisateurs
-    \item  Inscription et réinscription d'un étudiant
+    \item  vérifier les conditions d'inscription pour les utilisateurs
+    \item  Gestion des rôles utilisateurs
 	
 \end{itemize}
 \medskip
@@ -276,46 +277,61 @@ Ce premier sprint s’étale sur 26 jours et se décompose en deux items \end{fq
 \clearpage
 
 
+   
+ 
+
 
 
 \begin{table}[]
-	{\Large \color{cyan} Le backlog du sprint 2 est le suivant :}\\
+	{\Large\color{cyan} Le backlog du sprint 2 est le suivant :}\\
 	
 	\begin{tabular}{|l|l|l|l|}
 		\hline 
-		\rowcolor{-blue!20!red}{Item}           & \textbf{User Story}                                                   & \textbf{Description}                                                                                               & \textbf{Priorité} \\ \hline
-		\textbf{s'authentifier}                    & s'authentifier                                                            &  je dois m'identifier 
-			 pour acceder a mon espace                                                                       & 1    \\ \hline
-	
-		\multirow{4}{*}{\textbf{gérer profil}} & \begin{tabular}[c]{@{}l@{}}Consulter\\ profil\end{tabular}            & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur je peux consulter mon \\ profil\end{tabular}                    & 3                 \\ \cline{2-4} 
-		& Modifier profil                                                       & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur je peux modifier mon \\ profil\end{tabular}                     &                   \\ \cline{2-4} 
-		& \begin{tabular}[c]{@{}l@{}}Modifier\\ image de \\ profil\end{tabular} & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisatuer je peux uploader modifier\\ une image de profil\end{tabular}    &                   \\ \cline{2-4} 
-		& Désactiver profil                                                     & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur je peux désactiver mon\\ profil\end{tabular}                    &                   \\ \hline
+		\rowcolor{-blue!20!red}{Item}                         & \textbf{User Story}                                                   & \textbf{Description}                                                                                              & \textbf{Priorité} \\ \hline
+		\begin{tabular}[c]{@{}l@{}}\textbf{ vérifier }\\ \textbf{ les conditions }\\ \textbf{d'inscription pour  }\\ \textbf{les utilisateurs  } \end{tabular}                & \begin{tabular}[c]{@{}l@{}} vérifier les conditions\\ d'inscription pour\\ les utilisateurs \end{tabular}                                                         & \begin{tabular}[c]{@{}l@{}}en tant que je suis\\ l'administrateur je peux vérifier \\les conditions d'inscription utilisateur\\ si l'utilisateur est un enseignant \\il faut me envoyer \\ leur CV pour Candidat au poste  .\end{tabular} & 2               \\ \hline
+		\multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}\textbf{Gérer  }\\ \textbf{les utilisateurs  } \end{tabular}}
 		
-		\textbf{s'inscrire}                    & s'inscrire                                                            & En tant qu'utilisateur, je peux m'inscrire                                                                        & 1    \\ \hline
+		
+		
+		
+		
+		
+		
+		& \begin{tabular}[c]{@{}l@{}}Gérer les\\  utilisateurs \\ \end{tabular}       & \begin{tabular}[c]{@{}l@{}}En tant que je suis un administrateur\\ je peux gérer les utilisateurs :\\je peux ajouter des utilisateurs \\  comme des enseignants je peux\\ supprimer des utilisateurs\\ comme des étudiants et je peux \\modifier comme changer \\le rôle ou bien mise à jour\\ ces informations .\end{tabular}                    & 1                              
+		\\ \hline
+		
+		\begin{tabular}[c]{@{}l@{}}\textbf{gère les  }\\ \textbf{ rôles  } \\ \textbf{ utilisateurs}\end{tabular}                   & \begin{tabular}[c]{@{}l@{}}gère les  \\  rôles \\ des utilisateurs   \end{tabular}                                                           & \begin{tabular}[c]{@{}l@{}}	en tant que je suis un\\ administrateur je peux ajouter \\ des nouveaux rôle et aussi \\je peux changer le rôle d'un utilisateur \end{tabular}                                    & 3    \\ \hline
 	\end{tabular}
 	
 	
 	\caption{Tables Backlog du sprint 2}
 	\label{Tables Backlog du sprint 2}
 \end{table}
-% \section{end_tableau}
+
 
 \begin{table}[h]
-{\Large \color{cyan} les user stories de sprint 2:}\\
+	{\Large\color{cyan} les user stories de sprint 2:}\\
 	
 	\begin{center}
 		\begin{tabular}{>{\begin{bf} } c <{\end{bf}}ccc}
 			
 			\rowcolor{-blue!20!red}ID U.S & \begin{bf}User Story \end{bf}  & \\
 			
+			1 &en tant que je suis un administrateur \\
+			&je peux accéder à l'interface d'ajout \\
+			&utilisateur  où je peux supprimer ,\\
+			& modifier  ce utilisateur .    
 			
-			1.1  & En tant qu’utilisateur, je dois m’authentifier pour accéder à mon espace \\& \\
-		1.2  & En tant qu’utilisateur, je peux m’inscrire \\& \\
-			2.1 & En tant qu’utilisateur je peux uploader une image de profil \\& \\
-			2.2  & En tant qu’utilisateur je peux afficher mon profil \\& \\
-			2.3  & En tant qu’utilisateur je peux modifier mon profil \\& \\
-			2.4 & En tant qu’utilisateur je peux désactiver mon profil \\
+			& \\	2 &s'il confirme toutes les conditions de vérifications \\ 
+			&de son statut (enseignant), l'administration acceptera sa \\ 
+			&demande de changer le rôle de son compte en\\ 
+			& rôle d'enseignant
+			\\
+			3 & en tant que je suis un administrateur \\ 
+			& je peux changer les rôles des  utilisateurs
+			\\
+			
+			
 			
 			
 		\end{tabular}
@@ -326,21 +342,29 @@ Ce premier sprint s’étale sur 26 jours et se décompose en deux items \end{fq
 
 
 
+
 \clearpage
 
-
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
  
 \subsection{item 1 : Gérer les utilisateurs}
-\subsubsection{Diagramme de cas d’utilisation  détaillé «administrer du site de téléformation» }
+\subsubsection{Diagramme de cas d’utilisation  détaillé «administrer du plateforme» }
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=17cm,height=16cm]{Diagrammedecasdutilisationdétailléadministr.jpg}
+	\includegraphics[width=18cm,height=16cm]{Diagrammedecasdutilisationdétailléadministr.jpg}
 	\caption{Diagramme de cas d' utilisation  détaillé «administrer» .}
 	\label{fig:Diagramme de cas d' utilisation  détaillé administrer  }
 \end{figure}
 \FloatBarrier
 \clearpage
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 {\Large \color{cyan} Description détaillée des cas d’utilisations : gérer les composants de plate-forme}
 
 L'administrateur a comme rôle principale de gérer toutes les taches de la plateforme; gestion des enseignants, étudiants ,matières....ainsi que les affectations des
@@ -374,6 +398,10 @@ scénario nominal
 	\end{itemize}
 \end{itemize}
 \clearpage	
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 \subsubsection{Diagrammes de séquence du cas d' utilisation "Modifier un utilisateur" }
 \begin{figure}[ht]
 	\centering
@@ -413,6 +441,11 @@ scénario nominal
 		\end{enumerate}
 	\end{itemize}
 \end{itemize}	
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
 \subsubsection{Diagramme de séquence du cas d' utilisation "Supprimer un utilisateur" }
 \begin{figure}[ht]
 	\centering
@@ -446,7 +479,12 @@ scénario nominal
 			\item Le système annule la suppression.
 		\end{enumerate}
 	\end{itemize}
-\end{itemize}	
+\end{itemize}
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+	
 \subsubsection{Diagrammes de séquence du cas d' utilisation "Ajouter un utilisateur" }
 \begin{figure}[ht]
 	\centering
@@ -490,21 +528,31 @@ scénario nominal
 \end{itemize}	
 \bigskip
 \clearpage
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
 \subsubsection{Diagramme d’activités « Gérer les utilisateurs » }
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{DiagrammeactivitésGérerlesutilisateurs.jpg}
+	\includegraphics[width=13cm,height=13cm]{DiagrammeactivitésGérerlesutilisateurs.jpg}
 	\caption{Diagramme d' activités  « Gérer les utilisateurs »  .}
 	\label{fig:Diagramme d' activités  Gérer les utilisateurs  }
 \end{figure}
 \FloatBarrier
 
-\subsubsubsection{Description détaillée des cas d’utilisations}
+{\Large \color{cyan} Description détaillée:}
 La figure ci-dessus illustre le déroulement séquentiel de la gestion des utilisateurs accomplis par
 un administrateur .\\
 Après avoir s’authentifié, ces derniers peuvent ajouter ou supprimer un utilisateur.\\
 Pour l’ajout d’un utilisateur, le système doit vérifier la validation des informations saisies.\\
  Au cas où une information n’est pas valide, le système réaffiche l’interface d’ajout d’un utilisateur.
+ %{+++++++++++++++++un autre section+++++++++++++++++++ }
+ %{+++++++++++++++++un autre section+++++++++++++++++++ }
+ %{+++++++++++++++++un autre section+++++++++++++++++++ }
+ %{+++++++++++++++++un autre section+++++++++++++++++++ }
+ 
  \begin{figure}[ht]
  	\centering
  	\includegraphics[width=13cm,height=6cm]{SDFI.png}
@@ -512,84 +560,42 @@ Pour l’ajout d’un utilisateur, le système doit vérifier la validation des 
  	\label{fig:Diagramme d' activités  d' inscription d'un étudiant   }
  \end{figure}
  \FloatBarrier
+ 
+  \begin{figure}[ht]
+ 	\centering
+ 	\includegraphics[width=13cm,height=6cm]{screencapture-localhost-8000-users-2020-06-24-21_01_22.png}
+ 	\caption{Diagramme d'activités « d'inscription d'un étudiant» .}
+ 	\label{fig:Diagramme d' activités  d' inscription d'un étudiant   }
+ \end{figure}
+ \FloatBarrier
 \clearpage
-\subsection{item 2 : Inscription et réinscription d'un étudiant}
-\subsubsection{Diagramme de séquence « d' inscription d' un étudiant » }
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=13cm,height=10cm]{Diagrammeséquencenscriptiétudiant.jpg}
-	\caption{Diagramme de séquence « d' inscription d' un étudiant » .}
-	\label{fig:Diagramme de séquence  d' inscription d' un étudiant   }
-\end{figure}
-\FloatBarrier
-
-\subsubsubsection{Description : Diagramme de séquence « d' inscription d' un étudiant » }
-
-\begin{itemize}
-	\item[$\bullet$] \textbf{Diagramme de séquence « d' inscription d' un étudiant » :} 
-	\medskip
-	\begin{itemize}
-		\item \textit{\textbf{Objectif :}} Permettre à l'administration d'ajouter toutes les informations
-		concernant un étudiant, y compris l’état civil, et les
-		informations complémentaires .	
-		\item \textit{\textbf{Acteur :}} Administrateur	
-		\item \textit{\textbf{Pré-condition  :}} Authentification .\\
-		L’inscription d’un étudiant doit répond aux conditions d’inscription établie par
-		la direction régionale
-		\item \textit{\textbf{Scénario :}}
-		\begin{enumerate}
-		\item Saisie les informations de l’élève.
-		\item Contrôle des données en temps réel (matricule – cne – cin) en cas de duplication.
-		\item Validation de la saisie.
-		\item Traitement des informations envoyé.
-		\item En cas d’une anomalie, l’inscription est rejetée on précisant l’erreur effectuée.
-		\item Si non, l’inscription est effectuée avec succès avec redirection d’utilisateur vers la
-			liste d’élèves.
-		\end{enumerate}
-	\end{itemize}
-\end{itemize}	
-\bigskip
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\subsection{item 2 : Vérifie les conditions d’inscriptions pour un étudiant}
 
 
 \subsubsection{Diagramme d'activités « d'inscription d'un étudiant» }
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=13cm,height=10cm]{Diagrammeactivitésinscriptioun.jpg}
-	\caption{Diagramme d'activités « d'inscription d'un étudiant» .}
-	\label{fig:Diagramme d' activités  d' inscription d'un étudiant   }
+	\caption{Diagramme d'activités « Vérifie les conditions d’inscriptions pour un étudiant» .}
+	\label{fig:Diagramme d' activités Vérifie d' inscription d'un étudiant   }
 \end{figure}
 \FloatBarrier
+{\Large \color{cyan} Description du processus de diagramme d’activités «Vérifie d'inscription d'un étudiant»}
 
-\subsubsubsection{ Description du processus de diagramme d’activités «Inscription d’un élève» :}
 \begin{itemize}	
 \item[$\star$]L’élève demande l’inscription dans un niveau.
-\item[$\star$] L’administration vérifie les conditions d’inscriptions pour l’élève.
+\item[$\star$] L’administration vérifie les conditions d’inscriptions pour un étudiant.
 \item[$\star$] Si l’élève ne répond pas aux conditions de l’établissement, donc la demande est refusée.
 \item[$\star$] Si non, l’élève doit fournir les pièces et les informations nécessaires pour
 l’inscription.
-\item[$\star$] L’administration donne les informations personnelles de l’élève.
-\item[$\star$] L’administration introduit les informations complémentaires et celles concernant la santé de l’élève.
+\item[$\star$] L’administration donne les informations personnelles de l’étudiant.
+\item[$\star$] L’administration introduit les informations complémentaires et celles concernant la santé de l’étudiant.
 \item[$\star$] L’administration affecte le niveau et valide l’inscription.
 \item[$\star$] Le système traite les informations envoyées.
 \item[$\star$] En cas d’une anomalie, le système refuse l’inscription demandant à l’administration de vérifier l’anomalie.
 \item[$\star$] Si non, l’inscription est effectuée avec succès.
 \end{itemize}	
-\subsubsection{Diagramme de collaboration «réinscription d' un étudiant»}
+\subsubsection{Diagramme de collaboration :vérifie les conditions d’inscriptions pour un étudiant.}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=13cm,height=10cm]{Diagrammecollaborationréinscriptiondunétudiant.jpg}
@@ -597,52 +603,39 @@ l’inscription.
 	\label{fig:Diagramme de collaboration réinscription d' un étudiant  }
 \end{figure}
 \FloatBarrier
-
-\subsubsubsection{Description : Diagramme de collaboration «réinscription d' un étudiant»}
+{\Large \color{cyan} Description des entités : Diagramme de collaboration «réinscription d' un étudiant»}
 
 Un diagramme de collaboration est un diagramme d'interactions, représentation simplifiée d'un diagramme de séquence se concentrant sur les échanges de messages entre les objets, et où la chronologie n'intervient que de façon annexe.\\
 Cela consiste en un graphe dont les nœuds sont des objets et les arcs (numérotés selon la chronologie) et les échanges entre ces objets.
 
 
+\clearpage
 
-\subsubsection{Diagramme d' activités « d' affectation des notes étudiant » }
+\subsubsection{ Interface : Authentification  }
+
+
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{Diagrammedactivitésdaffectationdesnotesétudiant.jpg}
-	\caption{Diagramme d' activités « d' affectation des notes étudiant » .}
-	\label{fig:Diagramme d' activités  d' affectation des notes étudiant   }
+	\includegraphics[width=18cm,height=8cm]{inscription.png}
+	\caption{l'interface d'inscription avec les mails de vérification.}
+	\label{fig:l'interface d'inscription avec les mails de vérification }
 \end{figure}
-\FloatBarrier
-
-\subsubsubsection{Description du processus de diagramme d’activités «Affecter les notes d’élèves» :}
 
 
-	\begin{itemize}	
-	
-	
-	
-\item[$\star$] L’administration demande la liste des évaluations.
-\item[$\star$] Le système affiche la liste des évaluations.
-\item[$\star$] En cas d’absence d’évaluation, l’administration doit créer l’évaluation.
-\item[$\star$] Si non, l’administration choisit l’évaluation et affecte les notes pour chaque élève.
-\item[$\star$] Puis envoyer les notes pour les sauvegarder.
-\item[$\star$] Le système traite les informations envoyées.
-\item[$\star$] En cas, d’une anomalie l’ajout est annulé.
-\item[$\star$] Si non, l’ajout est effectué avec succès.
-	
-	
-	
-	
-\end{itemize}
-
-
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm,height=6.2cm]{sbahcbLIFEQ.png}
+	\caption{le message envoyé.}
+	\label{fig:le message envoyé }
+\end{figure}
+\clearpage
 \subsection{item 3 : Gestion des rôles utilisateurs}
 \subsubsection{Diagrammes de séquence système }
 
 La figure ci-dessous, décrit les opérations relatives à la gestion des rôles utilisateurs.
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=12cm]{gestiondesrôlesutilisateurs.jpg}
+	\includegraphics[width=13cm,height=12cm]{UseCaseDiagram1qw.jpg}
 	\caption{Diagramme de cas d' utilisation gestion des rôles utilisateurs .}
 	\label{fig:Diagramme de cas d utilisation gestion des rôles utilisateurs }
 \end{figure}
@@ -686,18 +679,23 @@ pas valides alors un message d’erreur apparaîtra à l’administrateur pour l
 
 
 \clearpage
-
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 \section{Sprint 3 : Enseignants }
 \label{sec:conception}
 
 \begin{fquote}
-	Ce premier sprint s’étale sur 18 jours et se décompose en deux items
+	Ce premier sprint s’étale sur 18 jours et se décompose en 3 items
 \end{fquote}
 \smallskip
 \begin{itemize}[label=$\diamond$]
-	\item Gérer les cours 
+	\item Gérer les catégories / les cours 
 	
-	\item Gérer les  tests
+	\item  gère les Tp/Td
+	\item  Gérer l'évaluation
+	
 \end{itemize}
 \medskip
 \medskip
@@ -720,6 +718,12 @@ pas valides alors un message d’erreur apparaîtra à l’administrateur pour l
 \clearpage
 
 
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++	\item  gère les Tp/Tds +++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
+
 
 
 
@@ -730,29 +734,26 @@ pas valides alors un message d’erreur apparaîtra à l’administrateur pour l
 	\begin{tabular}{|l|l|l|l|}
 		\hline 
 		\rowcolor{-blue!20!red}{Item}                         & \textbf{User Story}                                                   & \textbf{Description}                                                                                              & \textbf{Priorité} \\ \hline
-		\textbf{s'inscrire}                    & s'inscrire                                                            & En tant qu'utilisateur, je peux m'inscrire                                                                        & 1    \\ \hline
-		\textbf{s'authentifier}                & s'authentifier                                                        & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur, je dois m'identifier \\ pour acceder a mon espace\end{tabular} & 2                 \\ \hline
-		\multirow{4}{*}{\textbf{gérer profil}} & \begin{tabular}[c]{@{}l@{}}Consulter\\ profil\end{tabular}            & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur je peux consulter mon \\ profil\end{tabular}                    & 3                 \\ \cline{2-4} 
-		& Modifier profil                                                       & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur je peux modifier mon \\ profil\end{tabular}                     &                   \\ \cline{2-4} 
-		& \begin{tabular}[c]{@{}l@{}}Modifier\\ image de \\ profil\end{tabular} & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisatuer je peux uploader modifier\\ une image de profil\end{tabular}    &                   \\ \cline{2-4} 
-		& Désactiver profil                                                     & \begin{tabular}[c]{@{}l@{}}En tant qu'utilisateur je peux désactiver mon\\ profil\end{tabular}                    &                   \\ \hline
+		\begin{tabular}[c]{@{}l@{}}\textbf{Gérer  }\\ \textbf{l'évaluation  } \end{tabular}                & \begin{tabular}[c]{@{}l@{}}Gérer\\ l'évaluationl  \end{tabular}                                                         & \begin{tabular}[c]{@{}l@{}}En tant que je suis un enseignant \\je peux accéder à l'espace d'évaluation\\ et je peux modifier , créer\\ ou bien supprimer un évaluation\\ d'un étudiant .\\cette évaluation contient le résultat \\d'un étudiant , une remarque ,le type de\\ catégorie  et le nom de l'étudiant .\end{tabular} & 2                 \\ \hline
+		\multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}\textbf{Gérer  }\\ \textbf{les ressources  }\\ \textbf{ et les liens d'}\\ \textbf{apprentissage } \end{tabular}}
 		
-		\textbf{s'inscrire}                    & s'inscrire                                                            & En tant qu'utilisateur, je peux m'inscrire                                                                        & 1    \\ \hline
-	\end{tabular}
+		
+		
 	
+		
+		
+		
+		 & \begin{tabular}[c]{@{}l@{}}Gérer les\\ catégoriesl \\ \end{tabular}       & \begin{tabular}[c]{@{}l@{}}En tant que je suis à l'enseignant\\ je peux gérer les catégories :\\ ajouter modifier et supprimer\end{tabular}                    & 4                 \\ \cline{2-4} 
+		& \begin{tabular}[c]{@{}l@{}}Gérer les\\  cours \\   \end{tabular}                                                       & \begin{tabular}[c]{@{}l@{}}En tant que je suis à l'enseignant\\ je peux gérer les cours :\\ ajouter modifier et supprimer\end{tabular}                     &     2              
+	                       \\ \hline
+		
+		\begin{tabular}[c]{@{}l@{}}\textbf{gère les  }\\ \textbf{Tp/Td } \end{tabular}                   & \begin{tabular}[c]{@{}l@{}}gère les  \\ Tp/Td  \end{tabular}                                                           & \begin{tabular}[c]{@{}l@{}}	En tant qu'utilisateur, je peux ajouter \\Tp/Td  .\end{tabular}                                    & 3    \\ \hline
+	\end{tabular}
+
 	
 	\caption{Tables Backlog du sprint 3}
 	\label{Tables Backlog du sprint 3}
 \end{table}
-% \section{end_tableau}
-
-
-
-
-
-
-
-
 
 
 \begin{table}[h]
@@ -763,11 +764,19 @@ pas valides alors un message d’erreur apparaîtra à l’administrateur pour l
 			
 			\rowcolor{-blue!20!red}ID U.S & \begin{bf}User Story \end{bf}  & \\
 			
-			1 & En tant qu’utilisateur, je dois m’authentifier pour accéder à mon espace \\
-			& En tant qu’utilisateur, je  m’authentifier pour accéder à mon espace entifier accéder
+			1 &en tant que je suis un enseignant je peux remplir   \\
+		& le formulaire  de création d'un catégorie
+		\\
+			& \\	2 &en tant que je suis un enseignant je peux remplir   \\
+			& le formulaire  de création d'un cours
 			\\
-			& \\
-			7 & En tant qu’utilisateur, je dois m’authentifier pour accéder à mon espace \\
+			3 & en tant que je suis un enseignant je peux \\
+			& je peux ajouter Tp/Td 
+			\\
+				4 & en tant que je suis un enseignant je peux \\
+			&  remplir le formulaire d'évaluation d'un étudiant dans mon cours
+			\\
+			
 			
 			
 		\end{tabular}
@@ -780,51 +789,128 @@ pas valides alors un message d’erreur apparaîtra à l’administrateur pour l
 \clearpage
 
 \clearpage
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+\subsection{item 1 : Gérer les catégories / les cours}
 
-\subsection{item 1 : Gérer les cours}
-
-\subsubsection{Diagramme de cas d’utilisation  détaillé «administrer du site de téléformation» }
+\subsubsection{Diagramme de cas d’utilisation  détaillé «le rôle d'un enseignant dans le plate-forme» }
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{DiagrammedecasutilisationdétailléProfesseur.jpg}
+	\includegraphics[width=18cm,height=8cm]{DiagrammedecasutilisationdétailléProfesseur.jpg}
 	\caption{Diagramme de cas d' utilisation  détaillé «Professeur» .}
 	\label{fig:Diagramme de cas d' utilisation  détaillé Professeur  }
 \end{figure}
-\FloatBarrier
 
-\subsubsubsection{Description détaillée des cas d’utilisations}
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
 \subsubsection{Diagramme des cas d' utilisation  Gérer les cours }
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{CasutilisationGérerlescours.jpg}
+	\includegraphics[width=17cm,height=6cm]{CasutilisationGérerlescours.jpg}
 	\caption{Diagramme des cas d' utilisation « Gérer les cours » .}
 	\label{fig:Diagramme des cas d' utilisation  Gérer les cours  }
 \end{figure}
 \FloatBarrier
 
-\subsubsubsection{Description détaillée des cas d’utilisations}
+\clearpage
 
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
+\subsubsection{diagramme de séquences }
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=13cm,height=11cm]{DiagrammedeséquenceGererlescours.jpg}
+	\caption{Diagramme de séquence "Gerer les cours" .}
+	\label{fig:Diagramme de séquence "Gerer les cours"  }
+\end{figure}
+\FloatBarrier
+Aprés introduire le login et mot de passe l’enseignant peut gérer le cours (Modifier, Ajouter,
+Supprimer) Cours, sinon il affiche un message "cours est in trouvée"
+
+{\Large \color{cyan} Description détaillée: "Ajouter un cour"}
 \begin{itemize}
-	\item[$\bullet$] \textbf{Cas d’utilisation Gérer les cours :}
+	\item[$\bullet$] \textbf{Cas d’utilisation "Ajouter un cour" :} 
 	\medskip
 	\begin{itemize}
-		\item \textit{\textbf{Objectif :}}  permet à l’acteur d’ajouter, d’annuler et modifier un cours.
-		
-		\item \textit{\textbf{Acteur :}} Enseignants
-		
-		\item \textit{\textbf{Pré-condition :}} L‘acteur doit être connecté.
-		\item \textit{\textbf{Scénario nominal   :}}
+		\item \textit{\textbf{Objectif :}} Ajouter un cour	
+		\item \textit{\textbf{Acteur :}}  l'enseignant
+		\item \textit{\textbf{Pré-condition  :}} \\
+		Le responsable s’identifie.\\
+		Le responsable peut accéder à l’application.\\
+		Module affichée.
+		\item \textit{\textbf{Post-conditions   :}}ajouter les données de la cours à l'interface spécifiée .
+		\item \textit{\textbf{Scénario nominal :}}
 		\begin{enumerate}
-			\item  Le système affiche deux méthodes d’ajout d’un cours.\\
-			<méthode1: Créer un cours> 
-			\item L’acteur saisit le contenu du cours 
+			\item le responsable choisir la gestion de cours.
+			\item le système afficher la liste des cours .
+			\item le responsable clique sur le bouton ajouter nouveau .
+			
+			\item le système afficher un formulaire à remplir. 
+			\item  Le responsable sélectionne une remplir ces
+			informations, en validant l’opération d’ajout. 
+			\item L’ajout de la cours est confirmé par le système :Message de confirmation de l'Ajouter  
+
 		\end{enumerate}
-		<méthode2: téléverser un cours>
+		\item \textit{\textbf{Scénario alternative :}}
 		\begin{enumerate}
-			\item   L’acteur téléverse le cours.  
-			\item  L’acteur configure les droits d’accès à son cour.
-			\item  L’acteur enregistre le cours dans la base de données de la plateforme.
+			\item Tentative soldée par échec (informations existe et
+			déjà enregistrés)
+		\end{enumerate}
+	\end{itemize}
+\end{itemize}	
+\bigskip
+
+
+{\Large \color{cyan} Description détaillée: "Modifier un cour"}
+\begin{itemize}
+	\item[$\bullet$] \textbf{Cas d’utilisation "Modifier un cour" :} 
+	\medskip
+	\begin{itemize}
+		\item \textit{\textbf{Objectif :}} Modifier un cour	
+		\item \textit{\textbf{Acteur :}}  l'enseignant
+		\item \textit{\textbf{Pré-condition  :}} \\
+		Le responsable s’identifie.\\
+		Le responsable peut accéder à l’application.\\
+		Module affichée.
+		\item \textit{\textbf{Post-conditions   :}}Le cours est déjà modifiée et enregistrée dans
+		la base. 
+		\item \textit{\textbf{Scénario nominal :}}
+		\begin{enumerate}
+			\item le responsable choisir la gestion de cours.
+			\item le système afficher la liste des cours .
+			\item le responsable clique sur le bouton Modifier .
+			
+			\item le système afficher le formulaire du cours. 
+			\item  Le responsable sélectionne une modification. 
+			\item La modificationde la cours est confirmé par le système. 
+			\item Message de confirmation de La modificationde .
+			
+		\end{enumerate}
+		\item \textit{\textbf{Scénario alternative :}}
+		\begin{enumerate}
+			\item Tentative soldée par échec (informations existe et
+			déjà enregistrés)
 		\end{enumerate}
 	\end{itemize}
 \end{itemize}	
@@ -832,93 +918,406 @@ pas valides alors un message d’erreur apparaîtra à l’administrateur pour l
 
 
 
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
+\clearpage
 \subsubsection{diagramme de séquences }
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{DiagrammedeséquenceGererlescours.jpg}
-	\caption{Diagramme de séquence "Gerer les cours" .}
-	\label{fig:Diagramme de séquence "Gerer les cours"  }
+	\includegraphics[width=13cm,height=7cm]{Diagrammedeséquencesupprimerunematière.jpg}
+	\caption{ Diagramme de séquence « supprimer cours » .}
+	\label{fig: Diagramme de séquence  supprimer cours   }
 \end{figure}
 \FloatBarrier
 
-\subsubsubsection{Description :Diagramme de séquence "Gerer les cours"}
-Aprés introduire le login et mot de passe l’enseignant peut gérer le cours (Modifier, Ajouter,
-Supprimer) Cours, sinon il affiche un message "cours est in trouvée"
 
 
+{\Large \color{cyan} Description détaillée: "supprimer cours"}
+\begin{itemize}
+	\item[$\bullet$] \textbf{Cas d’utilisation "supprimer cours" :} 
+	\medskip
+	\begin{itemize}
+		\item \textit{\textbf{Objectif :}}supprimer cours	
+		\item \textit{\textbf{Acteur :}}  l'enseignant
+		\item \textit{\textbf{Pré-condition  :}} \\
+		Le responsable s’identifie.\\
+		Le responsable peut accéder à l’application.\\
+		Module affichée.
+		\item \textit{\textbf{Post-conditions   :}}Le module est déjà supprimé et enregistré dans la
+		base.
+		\item \textit{\textbf{Scénario nominal :}}
+		\begin{enumerate}
+			\item le responsable choisir la gestion de cours.
+			\item le système afficher la liste des cours .
+			\item le responsable choisir cours et cliquez sur le bouton Supprimer .
+			
+			\item le systèmea afficher un message pour le confirmation. 
+			\item  Le responsable confirmé
+			\item le systèmea afficher un message de le confirmation.
+		\end{enumerate}
+		\item \textit{\textbf{Scénario alternative :}}
+		\begin{enumerate}
+			\item Tentative soldée par échec (informations existe et
+			déjà enregistrés)
+		\end{enumerate}
+	\end{itemize}
+\end{itemize}	
+\bigskip
+
+\clearpage
+
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 \subsubsection{diagramme de séquences }
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{DiagrammeactivitésGérerlescou.jpg}
+	\includegraphics[width=16cm,height=14cm]{DiagrammeactivitésGérerlescou.jpg}
 	\caption{Diagramme d' activités « Gérer les cours » .}
 	\label{fig:Diagramme d' activités  Gérer les cours  }
 \end{figure}
 \FloatBarrier
 
-\subsubsubsection{Description détaillée des cas d’utilisations}
+{\Large \color{cyan} Description des entités:}\\
 La figure ci-dessus illustre le déroulement séquentiel de la gestion des cours accomplis par un Enseignant.\\
 Après avoir s’authentifié, un Enseignant peut ajouter, modifier ou supprimer un cours.\\
 Au cas d’ajout ou de modification du cours, le tuteur doit ajouter cet évènement  partagé pour informer les apprenants du changement.
+\clearpage
+
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+\subsubsection{Les Interfaces de : gérer les cours  }
+Une fois authentifié,  l'enseignant peut accéder à son espace. \\
+Il peut consulter la liste  des cours comme la figure suivante
+, comme il peut soit voir les cours ou les modifier
+via la liste affichée. \\
+Il peut aussi aussi ajouter un nouveau cours à partir de  la clique sur le bouton «ajouter un nouveau». \\
+à partir de cette clics la formulaire de la création d'un cours s'ouvre , il faut donc il faut que l'enseignant remplir le formulaire  pour créer un nouveau cours .\\
+ci-dessous, illustrent ces opérations.
+\medskip
+\medskip
+\medskip
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm,height=13cm]{screencapture-localhost-8000-courses-2020-06-24-14_44_16.png}
+	\caption{la liste des cours .}
+	\label{fig:la liste des cours  }
+\end{figure}
+\FloatBarrier
+
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm,height=20cm]{screencapture-localhost-8000-courses-11-edit-2020-06-24-14_43_47.png}
+	\caption{la formulaire de création un cours .}
+	\label{fig: la formulaire de création un cours  }
+\end{figure}
+\FloatBarrier
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+\clearpage
+
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
+\subsubsection{Diagramme des cas d' utilisation  Gérer les catégories }
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=17cm,height=6cm]{CasutilisationffGérerlescours.jpg}
+	\caption{Diagramme des cas d' utilisation « Gérer les catégories » .}
+	\label{fig:Diagramme des cas d' utilisation Gérer les catégories  }
+\end{figure}
+\FloatBarrier
 
 
 
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 
+\subsubsection{diagramme de séquences }
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=13cm,height=8cm]{DiagrammedeséqsfuenceGererlescours.jpg}
+	\caption{Diagramme de séquence "Gérer les catégories" .}
+	\label{fig:Diagramme de séquence "Gérer les catégories"  }
+\end{figure}
+\FloatBarrier
+\clearpage
+Aprés introduire le login et mot de passe l’enseignant peut gérer les catégories (Modifier, Ajouter,
+Supprimer) catégories , sinon il affiche un message "catégorie est in trouvée"
+
+{\Large \color{cyan} Description détaillée: "Ajouter catégorie"}
+\begin{itemize}
+	\item[$\bullet$] \textbf{Cas d’utilisation "Ajouter catégorie" :} 
+	\medskip
+	\begin{itemize}
+		\item \textit{\textbf{Objectif :}} Ajouter catégorie	
+		\item \textit{\textbf{Acteur :}}  l'enseignant
+		\item \textit{\textbf{Pré-condition  :}} \\
+		Le responsable s’identifie.\\
+		Le responsable peut accéder à l’application.\\
+		Module affichée.
+		\item \textit{\textbf{Post-conditions   :}}ajouter les données de la catégorie à l'interface spécifiée .
+		\item \textit{\textbf{Scénario nominal :}}
+		\begin{enumerate}
+			\item le responsable choisir la gestion de catégories.
+			\item le système afficher la liste des catégories .
+			\item le responsable clique sur le bouton ajouter nouveau .
+			
+			\item le système afficher un formulaire à remplir. 
+			\item  Le responsable sélectionne une remplir ces
+			informations, en validant l’opération d’ajout. 
+			\item L’ajout de la catégories est confirmé par le système :Message de confirmation de l'Ajouter  
+			
+		\end{enumerate}
+		\item \textit{\textbf{Scénario alternative :}}
+		\begin{enumerate}
+			\item Tentative soldée par échec (informations existe et
+			déjà enregistrés)
+		\end{enumerate}
+	\end{itemize}
+\end{itemize}	
+\bigskip
+
+
+{\Large \color{cyan} Description détaillée: "Modifier catégorie"}
+\begin{itemize}
+	\item[$\bullet$] \textbf{Cas d’utilisation "Modifier catégorie" :} 
+	\medskip
+	\begin{itemize}
+		\item \textit{\textbf{Objectif :}} Modifier catégorie	
+		\item \textit{\textbf{Acteur :}}  l'enseignant
+		\item \textit{\textbf{Pré-condition  :}} \\
+		Le responsable s’identifie.\\
+		Le responsable peut accéder à l’application.\\
+		Module affichée.
+		\item \textit{\textbf{Post-conditions   :}}La catégorie est déjà modifiée et enregistrée dans
+		la base. 
+		\item \textit{\textbf{Scénario nominal :}}
+		\begin{enumerate}
+			\item le responsable choisir la gestion de catégorie.
+			\item le système afficher la liste des catégories .
+			\item le responsable clique sur le bouton Modifier .
+			
+			\item le système afficher le formulaire du catégorie. 
+			\item  Le responsable sélectionne une modification. 
+			\item La modificationde la catégorie est confirmé par le système. 
+			\item Message de confirmation de La modificationde .
+			
+		\end{enumerate}
+		\item \textit{\textbf{Scénario alternative :}}
+		\begin{enumerate}
+			\item Tentative soldée par échec (informations existe et
+			déjà enregistrés)
+		\end{enumerate}
+	\end{itemize}
+\end{itemize}	
+\bigskip
+
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 
 
 \subsubsection{diagramme de séquences }
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{Diagrammedeséquencesupprimerunematière.jpg}
-	\caption{ Diagramme de séquence « supprimer une matière » .}
-	\label{fig: Diagramme de séquence  supprimer une matière   }
+	\includegraphics[width=13cm,height=11cm]{Diesupprimerunematière.jpg}
+	\caption{ Diagramme de séquence « supprimer catégorie » .}
+	\label{fig: Diagramme de séquence  supprimer catégorie   }
 \end{figure}
 \FloatBarrier
 
-\subsubsubsection{Description détaillée des cas d’utilisations}
+\clearpage
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{\Large \color{cyan} Description détaillée: "supprimer catégorie"}
+\begin{itemize}
+	\item[$\bullet$] \textbf{Cas d’utilisation "supprimer catégorie" :} 
+	\medskip
+	\begin{itemize}
+		\item \textit{\textbf{Objectif :}}supprimer catégorie	
+		\item \textit{\textbf{Acteur :}}  l'enseignant
+		\item \textit{\textbf{Pré-condition  :}} \\
+		Le responsable s’identifie.\\
+		Le responsable peut accéder à l’application.\\
+		Module affichée.
+		\item \textit{\textbf{Post-conditions   :}}Le module est déjà supprimé et enregistré dans la
+		base.
+		\item \textit{\textbf{Scénario nominal :}}
+		\begin{enumerate}
+			\item le responsable choisir la gestion de catégorie.
+			\item le système afficher la liste des catégories .
+			\item le responsable choisir catégorie et cliquez sur le bouton Supprimer .
+			
+			\item le systèmea afficher un message pour le confirmation. 
+			\item  Le responsable confirmé
+			\item le systèmea afficher un message de le confirmation.
+		\end{enumerate}
+		\item \textit{\textbf{Scénario alternative :}}
+		\begin{enumerate}
+			\item Tentative soldée par échec (informations existe et
+			déjà enregistrés)
+		\end{enumerate}
+	\end{itemize}
+\end{itemize}	
+\bigskip
 
 \clearpage
-\subsection{item 2 : Gérer les  tests}
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+\subsubsection{diagramme de séquences }
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=14cm,height=13cm]{DiagrammeactivitésGérerfgzdfglescou.jpg}
+	\caption{Diagramme d' activités « Gérer les catégories » .}
+	\label{fig:Diagramme d' activités  Gérer les catégories  }
+\end{figure}
+\FloatBarrier
+
+{\Large \color{cyan} Description des entités:}\\
+La figure ci-dessus illustre le déroulement séquentiel de la gestion des accomplis par un Enseignant.\\
+Après avoir s’authentifié, un Enseignant peut ajouter, modifier ou supprimer un catégorie.\\
+Au cas d’ajout ou de modification du cours, le tuteur doit ajouter cet évènement  partagé pour informer les apprenants du changement.
+\clearpage
+
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
+
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
+
+\subsubsection{Les Interfaces de : gérer les catégories  }
+Une fois authentifié,  l'enseignant peut accéder à son espace. \\ 
+Il peut consulter la liste  des catégories comme la figure suivante
+, comme il peut soit voir les catégories ou les modifier
+via la liste affichée.  \\
+Il peut aussi aussi ajouter un nouveau catégorie à partir de  la clique sur le bouton «ajouter un nouveau».  \\
+à partir de cette clics la formulaire de la création d'un catégorie s'ouvre , il faut donc il faut que l'enseignant remplir le formulaire  pour créer un nouveau cours . \\
+ci-dessous, illustrent ces opérations.
+\medskip
+\medskip
+\medskip
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm,height=13cm]{screencapture-localhost-8000-categories-2020-06-24-14_44_50.png}
+	\caption{la liste des catégories .}
+	\label{fig:la liste des catégories }
+\end{figure}
+\FloatBarrier
+
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm,height=9cm]{screencapture-localhost-8000-users-create-2020-06-24-18_08_37.png}
+	\caption{formulaire pour créer ou modifier un catégorie .}
+	\label{fig: formulaire pour créer ou modifier un catégorie }
+\end{figure}
+\FloatBarrier
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm,height=9cm]{screencapture-localhost-8000-catnbnbegories-2020-06-24-22_20_06.png}
+	\caption{Catégories avec quelques changements .}
+	\label{fig: Catégories avec quelques changements  }
+\end{figure}
+\FloatBarrier
+
+
+
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+\clearpage
+
+\subsection{item 2 : Gérer les  TD  -  TP}
 
 \subsubsection{diagramme de séquences }
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=13cm,height=10cm]{CasdutilisationGérerlestestslesexamens.jpg}
-	\caption{Diagramme de Cas d' utilisation « Gérer les tests / les examens » .}
-	\label{fig:Diagramme de Cas d' utilisation  Gérer les tests / les examens  }
+	\caption{Diagramme de Cas d' utilisation « Gérer les  TD  -  TP » .}
+	\label{fig:Diagramme de Cas d' utilisation  Gérer les  TD  -  TP }
 \end{figure}
 \FloatBarrier
-
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 \subsubsubsection{Description détaillée des cas d’utilisations}
 \begin{itemize}
-	\item[$\bullet$] \textbf{Cas d’utilisation Gérer les utilisateurs :} 
+	\item[$\bullet$] \textbf{Cas d’utilisation  Gérer les  TD  -  TP :} 
 	\medskip
 	\begin{itemize}
-		\item \textit{\textbf{Objectif :}} permet à l’acteur d’ajouter, d’annuler et modifier un test.
+		\item \textit{\textbf{Objectif :}} permet à l’acteur d’ajouter, d’annuler et modifier les  TD  -  TP.
 		\item \textit{\textbf{Acteur :}} Enseignants
 		
 		\item \textit{\textbf{Pré-condition  :}} L‘acteur doit être connecté.
 		\item \textit{\textbf{Post-conditions   :}}
 		\item \textit{\textbf{Scénario nominal :}}
 		\begin{enumerate} 
-			\item  L’acteur saisit les questions en indiquant la vraie réponse et en précisant un barème. 
-			\item    L’acteur configure les droits d’accès au test. 
-			\item   L’acteur enregistre le test dans la base de données .  
-			\item L’acteur ajoute le test au calendrier partagée et notifie les apprenants de l’ajout du test .
+			\item  l'enseignant saisir les informations de la formulaire TD  -  TP. 
+			\item     l'enseignant configure les droits d’accès au test. 
+			\item   l'enseignant enregistre informations .
+
+
 		\end{enumerate}
 	\end{itemize}
 \end{itemize}	
@@ -926,20 +1325,137 @@ Au cas d’ajout ou de modification du cours, le tuteur doit ajouter cet évène
 \subsubsection{diagramme de séquences }
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{DiagrammeactivitésGérerlestestslesexamens.jpg}
-	\caption{Diagramme d' activités « Gérer les tests / les examens » .}
-	\label{fig:Diagramme d' activités  Gérer les tests / les examens }
+	\includegraphics[width=13cm,height=13cm]{DiagrammeactivitésGérerlestestslesexamens.jpg}
+	\caption{Diagramme d' activités « Gérer les  TD  -  TP » .}
+	\label{fig:Diagramme d' activités  Gérer les  TD  -  TP }
 \end{figure}
 \FloatBarrier
-\subsubsubsection{Description détaillée des cas d’utilisations}
+{\Large \color{cyan} Description détaillée:}
 
-La figure ci-dessus illustre le déroulement séquentiel de la gestion des devoirs accomplis par un
+La figure ci-dessus illustre le déroulement séquentiel de la gestion les  TD  -  TP accomplis par un
 Enseignants.\\
-Après l’authentification, un Enseignants peut ajouter ou annuler un devoir. Au cas d’ajout, il faut lui
-indiquer un délai de remise, lui affecter un barème et lui configurer les droits d’accès.\\
-Finalement, et c’est le cas d’annulation aussi, le tuteur doit ajouter l’évènement partagé pour informer l’apprenant du changement .
+Après l’authentification, un Enseignants peut ajouter ou annuler les  TD  -  TP. Au cas d’ajout, il faut lui
+ remplir le formulaire  des informations de les  TD  -  TP.\\
+Finalement, et c’est le cas d’annulation aussi, le tuteur doit sur le bouton Supprimer .
 \clearpage
-\subsubsection{ Interface : Gérer le profil  }
+
+
+\subsubsection{Les Interfaces de :  Gérer les  TD  -  TP  }
+Une fois authentifié,  l'enseignant peut accéder à son espace. \\ 
+Il peut consulter la liste  les  TD  -  TP comme la figure suivante
+, comme il peut soit voir les  TD  -  TP  supprimerou , modifier
+ la liste affichée.  \\
+Il peut aussi aussi ajouter un nouveau les  TD  -  TP à partir de  la clique sur le bouton «ajouter un nouveau».  \\
+à partir de cette clics la formulaire de la création des les  TD  -  TP s'ouvre , il faut donc  l'enseignant remplir le formulaire  pour créer un nouveau les  TD  -  TP . \\
+ci-dessous, illustrent ces opérations.
+\medskip
+\medskip
+\medskip
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm,height=13cm]{screencapture-localhost-9000-tpTds-2020-06-26-23_47_21.png}
+	\caption{page d'évaluation.}
+	\label{fig:page des TD  -  TP }
+\end{figure}
+\FloatBarrier
+\clearpage
+la figure ci-dessous représente la formulaire de la création des TD  -  TP
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm,height=8cm]{screencapture-localhost-9000-tpTds-create-2020-06-26-23_47_33.png}
+	\caption{la formulaire de la création des TD  -  TP.}
+	\label{fig:la formulaire de la création des TD  -  TP }
+\end{figure}
+\FloatBarrier
+la figure ci-dessous représente la résultat de la création des TD  -  TP
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm,height=6cm]{screencapture-localhost-9000-tpTds-2020-06-26-23_48_46.png}
+	\caption{la résultat de la création des TD  -  TP.}
+	\label{fig:la résultat de la création des TD  -  TP}
+\end{figure}
+\FloatBarrier
+\clearpage
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+\subsection{item 3 : Gérer l'évaluation}
+\subsubsection{Diagramme d' activités « d' affectation des notes étudiant » }
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=13cm,height=10cm]{Diagrammedactivitésdaffectationdesnotesétudiant.jpg}
+	\caption{Diagramme d' activités « d' affectation des notes étudiant » .}
+	\label{fig:Diagramme d' activités  d' affectation des notes étudiant   }
+\end{figure}
+\FloatBarrier
+
+
+{\Large \color{cyan} Description des entités :de diagramme d’activités «Affecter les notes d’élèves» }
+\begin{itemize}	
+	
+	
+	
+	\item[$\star$]  l'enseignant demande la liste des évaluations.
+	\item[$\star$] Le système affiche la liste des évaluations.
+	\item[$\star$] En cas d’absence d’évaluation, l'enseignant doit créer l’évaluation.
+	\item[$\star$] Si non, l'enseignant choisit l’évaluation et affecte l'URL des notes pour chaque  étudiant  à partir de la Google Drive.
+	\item[$\star$] Puis envoyer les notes pour les sauvegarder.
+	\item[$\star$] Le système traite les informations envoyées.
+	\item[$\star$] En cas, d’une anomalie l’ajout est annulé.
+	\item[$\star$] Si non, l’ajout est effectué avec succès.
+	
+	
+	
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
+\subsubsection{Les Interfaces de : gérer l'évaluation  }
+Une fois authentifié,  l'enseignant peut accéder à son espace. \\ 
+Il peut consulter la liste  des évaluations comme la figure suivante
+, comme il peut soit voir les catégories  supprimerou les modifier
+via la liste affichée.  \\
+Il peut aussi aussi ajouter un nouveau d'évaluation à partir de  la clique sur le bouton «ajouter un nouveau».  \\
+à partir de cette clics la formulaire de la création d'évaluation s'ouvre , il faut donc  l'enseignant remplir le formulaire  pour créer un nouveau 'évaluation . \\
+ci-dessous, illustrent ces opérations.
+\medskip
+\medskip
+\medskip
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm,height=13cm]{screencapture-localhost-9000-notes-2020-06-26-23_11_18.png}
+	\caption{page d'évaluation.}
+	\label{fig:page d'évaluation }
+\end{figure}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm,height=7cm]{screencapture-localhost-9000-notes-create-2020-06-26-23_13_54.png}
+	\caption{formulaire d'évaluation .}
+	\label{fig:formulaire d'évaluation }
+\end{figure}
+\FloatBarrier
+la figure ci-dessous représente la résultat  d'enregistrement d'évaluation de côtés enseignant .
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm,height=7.4cm]{screencapture-localhost-9000-notes-2020-06-26-23_15_22.png}
+	\caption{résultat d'évaluation.}
+	\label{fig:résultat d'évaluation }
+\end{figure}
+\FloatBarrier
+\clearpage
+	
+\end{itemize}
 
 
 \clearpage
@@ -947,15 +1463,14 @@ Finalement, et c’est le cas d’annulation aussi, le tuteur doit ajouter l’�
 \label{sec:conception}
 
 \begin{fquote}
-	Ce premier sprint s’étale sur 21 jours et se décompose en trois items
+	Ce premier sprint s’étale sur 11 jours et se décompose en 2 items
 \end{fquote}
 \smallskip
 \begin{itemize}[label=$\diamond$]
 	\item Consulter les ressources et les liens d'apprentissage
 	
-	\item Consulter agenda des livrables
-	
-	\item Passer les examens
+	\item consulter calendrier , consulter l'évaluation
+ 
 	
 \end{itemize}
 \medskip
@@ -977,7 +1492,10 @@ Finalement, et c’est le cas d’annulation aussi, le tuteur doit ajouter l’�
 \FloatBarrier
 \clearpage
 
-
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 
 \begin{table}[]
 	{\Large\color{cyan} Le backlog du sprint 4 est le suivant :}\\
@@ -986,13 +1504,24 @@ Finalement, et c’est le cas d’annulation aussi, le tuteur doit ajouter l’�
 		\hline 
 		\rowcolor{-blue!20!red}{Item}                         & \textbf{User Story}                                                   & \textbf{Description}                                                                                              & \textbf{Priorité} \\ \hline
 		\begin{tabular}[c]{@{}l@{}}\textbf{Consulter  }\\ \textbf{les ressources  }\\ \textbf{ et les liens }\\ \textbf{d'apprentissage } \end{tabular}                    &        \begin{tabular}[c]{@{}l@{}}Consulter  \\ les ressources \\  et les liens \\ d'apprentissage  \end{tabular}                                                    & \begin{tabular}[c]{@{}l@{}}En tant qu'étudiant, je peux \\consulter la liste des catégories \\et puis je peux choisir un cours \\et je dois  le paye pour le suivre  \end{tabular}                                                                         & 1    \\ \hline
-			\begin{tabular}[c]{@{}l@{}}\textbf{Consulter  }\\ \textbf{le calendrier } \end{tabular}                & \begin{tabular}[c]{@{}l@{}}Consulter  \\ le calendrier  \end{tabular}                                                       & \begin{tabular}[c]{@{}l@{}}En tant qu'un étudiant\\  je peux
-				afficher le calendrier\end{tabular} & 2                 \\ \hline
+			\begin{tabular}[c]{@{}l@{}}\textbf{Consulter  }\\ \textbf{le calendrier ,}\\ \textbf{et consulter}\\ \textbf{l'évaluation} \end{tabular}                & \begin{tabular}[c]{@{}l@{}}Consulter  \\ le calendrier  \end{tabular}                                                       & \begin{tabular}[c]{@{}l@{}}En tant qu'un étudiant\\  je peux
+				afficher le calendrier\\et je peux consulter mes notes\end{tabular} & 2                 \\ \hline
 	\end{tabular}
 	\caption{Tables Backlog du sprint 4}
 	\label{Tables Backlog du sprint 4}
 \end{table}
 \begin{table}[h]
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }	
+	
+	 
+	
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }	
 	{\Large \color{cyan} les user stories de sprint 4:}
 	
 	\begin{center}
@@ -1008,9 +1537,8 @@ Finalement, et c’est le cas d’annulation aussi, le tuteur doit ajouter l’�
 			\\
 			& \\
 			2 & En tant qu'un étudiant je peux choisir l'option
-			calendrier\\
-			& de la menu gauche et puis le système afficher le calendriere \\
-			
+			calendrier \\ & et je peux consulter les notes	\\
+		
 			
 		\end{tabular}
 	\end{center}
@@ -1086,7 +1614,10 @@ La figure  ci-dessous représente le diagramme de séquence: consulter les resso
 
 Ce diagramme de séquence illustre l’échange entre l'apprenant et le système  donc Pour consulter les ressources et les liens d' apprentissage, un apprenant doit demander la liste des ressources et liens , le systeme charger la page des ressources et liens  (categores , cours , tp et td) .
 
-
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 \subsubsection{Les Interfaces de : Consulter les ressources et les liens d'apprentissage  }
 
 la figure ci-dessous représente l'interface de la liste des catégories donc à partir de cela l'étudiant peut  parcourir et reconnaît les différents catégories .
@@ -1097,6 +1628,10 @@ la figure ci-dessous représente l'interface de la liste des catégories donc à
 	\label{fig:Interface : la liste des catégories }
 \end{figure}
 \FloatBarrier
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 \bigskip
 \bigskip
 \bigskip
@@ -1108,6 +1643,10 @@ la figure ci-dessous représente les différents détails de la catégorie et le
 	\label{fig:Interface : détail d'une catégorie }
 \end{figure}
 \FloatBarrier
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 \clearpage
 la figure ci-dessous représente l'interface qui permet à l'étudiant de choisir et rejoindre un cours .
 
@@ -1124,6 +1663,10 @@ Comme  il peut aussi regarder les Vidéos d'introduction à la courset comment l
 	\label{fig:Interface : la liste des cours }
 \end{figure}
 \FloatBarrier
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 \bigskip
 \bigskip
 \bigskip
@@ -1139,6 +1682,10 @@ Une fois l'étudiant accéder  à ce interface  après avoir appuyé sur le bout
 	\label{fig:Interface :un cours avant paiement }
 \end{figure}
 \FloatBarrier
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 Paystack offre un interface de test gratuite pour leurs utilisateurs
 donc l'étudiant après passer par la figure précédente , le système ouvre automatiquement cette interface de payement .
 \begin{figure}[ht]
@@ -1148,6 +1695,10 @@ donc l'étudiant après passer par la figure précédente , le système ouvre au
 	\label{fig:Interface : la plateforme de test  paystack }
 \end{figure}
 \FloatBarrier
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 la figure ci-dessous représente un cours déjà payé avec des nouveaux d'options .
 \begin{figure}[ht]
 	\centering
@@ -1162,11 +1713,14 @@ la figure ci-dessous représente un cours déjà payé avec des nouveaux d'optio
 
 
 
-
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
 
 \clearpage
-\subsection{item 2 : Consulter le calendrier}
-\subsubsection{diagramme de séquences }
+\subsection{item 2 : consulter calendrier , consulter l'évaluation }
+\subsubsection{diagramme de séquences : consulter calendrier }
 La figure  ci-dessous représente le diagramme de séquences consulter agenda pour un  étudiant.
 
 \begin{figure}[ht]
@@ -1179,28 +1733,64 @@ La figure  ci-dessous représente le diagramme de séquences consulter agenda po
 
 Ce diagramme de séquence illustre l'interaction entre l'apprenant et le système afin de consulter le
 calendrier donc  Pour consulter calendrier, un apprenant doit  demander calendrier , puis le systeme charger calendrier .
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
+\subsubsection{diagramme de séquences : consulter l'évaluation }
+La figure  ci-dessous représente le diagramme de séquences de consulter l'évaluation  pour un  étudiant.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=13cm,height=4cm]{rfbhdtjlivrables.jpg}
+	\caption{Diagramme de séquences consulter l'évaluation   .}
+	\label{fig:Diagramme de séquences consulter l'évaluation  }
+\end{figure}
+\FloatBarrier
+
+Ce diagramme de séquence illustre l'interaction entre l'apprenant et le système afin de consulter l'évaluation  donc  Pour consulter l'évaluation, un apprenant doit  demander l'évaluation , puis le systeme charger l'évaluation .
+
+
+
 \clearpage
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+\subsubsection{Les Interfaces de : consulter calendrier , consulter l'évaluation   }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+
 \subsection{Diagramme d' activité: d' un apprenant sur l' espace}
 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=10cm]{Diagrammedactivitédunapprenantsurlespace.jpg}
+	\includegraphics[width=13cm,height=11cm]{Diagrammedactivitédunapprenantsurlespace.jpg}
 	\caption{Diagramme d' activité: d' un apprenant sur l' espace .}
 	\label{fig:Diagramme d' activité: d' un apprenant sur l' espace }
 \end{figure}
 \FloatBarrier
 
-Ce digramme d’activités décrit les activités d’un apprenant sur l’espace destiné aux projets
-afin de garantir l’apprentissage par projet.
+Ce digramme d’activités décrit les activités d’un apprenant  sur l'espace d'apprentissage .
+\subsubsection{Les Interfaces de :consulter l'évaluation  }
 
-
-
+la figure ci-dessous représente la résultat  d'enregistrement dévaluation : de côtés  étudiant .
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=17cm,height=13cm]{screencapture-localhost-9000-notes-2020-06-26-23_16_34.png}
+	\caption{consulter l'évaluation .}
+	\label{fig:consulter l'évaluation }
+\end{figure}
+\FloatBarrier
 
 
 
 \section{Conclusion}
 
-Ce chapitre présente une vue conceptuelle de la solution à mettre en place. Il expose les différents diagrammes UML pour mieux comprendre les fonctionnalités offertes et pour mieux représenter la communication entre les différents objets du projet. Le chapitre suivant, présente la partie mise en œuvre de l’application.
+Ce chapitre présente une vue conceptuelle de la solution à mettre en place. Il expose les différents diagrammes UML pour mieux comprendre les fonctionnalités offertes et pour mieux représenter la communication entre les différents objets du projet et la partie mise en œuvre de l’application .
 
 

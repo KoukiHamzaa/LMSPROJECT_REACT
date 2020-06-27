@@ -34,48 +34,67 @@
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Diagrammes de s\IeC {\'e}quence du cas d' utilisation "Ajouter un utilisateur" .\relax }}{58}{figure.caption.56}% 
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Diagramme d' activit\IeC {\'e}s \IeC {\guillemotleft } G\IeC {\'e}rer les utilisateurs \IeC {\guillemotright } .\relax }}{60}{figure.caption.57}% 
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Diagramme d'activit\IeC {\'e}s \IeC {\guillemotleft } d'inscription d'un \IeC {\'e}tudiant\IeC {\guillemotright } .\relax }}{61}{figure.caption.58}% 
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Diagramme de s\IeC {\'e}quence \IeC {\guillemotleft } d' inscription d' un \IeC {\'e}tudiant \IeC {\guillemotright } .\relax }}{62}{figure.caption.59}% 
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Diagramme d'activit\IeC {\'e}s \IeC {\guillemotleft } d'inscription d'un \IeC {\'e}tudiant\IeC {\guillemotright } .\relax }}{63}{figure.caption.60}% 
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Diagramme de collaboration \IeC {\guillemotleft }r\IeC {\'e}inscription d' un \IeC {\'e}tudiant\IeC {\guillemotright } .\relax }}{65}{figure.caption.61}% 
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Diagramme d' activit\IeC {\'e}s \IeC {\guillemotleft } d' affectation des notes \IeC {\'e}tudiant \IeC {\guillemotright } .\relax }}{66}{figure.caption.62}% 
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Diagramme de cas d' utilisation gestion des r\IeC {\^o}les utilisateurs .\relax }}{67}{figure.caption.63}% 
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Diagramme de s\IeC {\'e}quence syst\IeC {\`e}me de modification de r\IeC {\^o}le utilisateur .\relax }}{68}{figure.caption.64}% 
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Interface : Modification un r\IeC {\^o}le d'un utilisateur.\relax }}{69}{figure.caption.65}% 
-\contentsline {figure}{\numberline {3.23}{\ignorespaces Interface : Modification, Ajouter un r\IeC {\^o}le .\relax }}{69}{figure.caption.66}% 
-\contentsline {figure}{\numberline {3.24}{\ignorespaces D\IeC {\'e}composition sprint 3 en Items.\relax }}{70}{figure.caption.67}% 
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Diagramme de cas d' utilisation d\IeC {\'e}taill\IeC {\'e} \IeC {\guillemotleft }Professeur\IeC {\guillemotright } .\relax }}{72}{figure.caption.70}% 
-\contentsline {figure}{\numberline {3.26}{\ignorespaces Diagramme des cas d' utilisation \IeC {\guillemotleft } G\IeC {\'e}rer les cours \IeC {\guillemotright } .\relax }}{73}{figure.caption.71}% 
-\contentsline {figure}{\numberline {3.27}{\ignorespaces Diagramme de s\IeC {\'e}quence "Gerer les cours" .\relax }}{74}{figure.caption.72}% 
-\contentsline {figure}{\numberline {3.28}{\ignorespaces Diagramme d' activit\IeC {\'e}s \IeC {\guillemotleft } G\IeC {\'e}rer les cours \IeC {\guillemotright } .\relax }}{75}{figure.caption.73}% 
-\contentsline {figure}{\numberline {3.29}{\ignorespaces Diagramme de s\IeC {\'e}quence \IeC {\guillemotleft } supprimer une mati\IeC {\`e}re \IeC {\guillemotright } .\relax }}{76}{figure.caption.74}% 
-\contentsline {figure}{\numberline {3.30}{\ignorespaces Diagramme de Cas d' utilisation \IeC {\guillemotleft } G\IeC {\'e}rer les tests / les examens \IeC {\guillemotright } .\relax }}{77}{figure.caption.75}% 
-\contentsline {figure}{\numberline {3.31}{\ignorespaces Diagramme d' activit\IeC {\'e}s \IeC {\guillemotleft } G\IeC {\'e}rer les tests / les examens \IeC {\guillemotright } .\relax }}{78}{figure.caption.76}% 
-\contentsline {figure}{\numberline {3.32}{\ignorespaces D\IeC {\'e}composition sprint 4 en Items.\relax }}{80}{figure.caption.77}% 
-\contentsline {figure}{\numberline {3.33}{\ignorespaces Diagramme de cas d' utilisation d\IeC {\'e}taill\IeC {\'e} \IeC {\guillemotleft }\IeC {\'E}tudiant\IeC {\guillemotright } .\relax }}{82}{figure.caption.80}% 
-\contentsline {figure}{\numberline {3.34}{\ignorespaces Diagramme de s\IeC {\'e}quence: consulter les ressources et les liens d' apprentissage .\relax }}{83}{figure.caption.81}% 
-\contentsline {figure}{\numberline {3.35}{\ignorespaces Interface : la liste des cat\IeC {\'e}gories .\relax }}{84}{figure.caption.82}% 
-\contentsline {figure}{\numberline {3.36}{\ignorespaces Interface : d\IeC {\'e}tail d'une cat\IeC {\'e}gorie .\relax }}{84}{figure.caption.83}% 
-\contentsline {figure}{\numberline {3.37}{\ignorespaces Interface : la liste des cours .\relax }}{85}{figure.caption.84}% 
-\contentsline {figure}{\numberline {3.38}{\ignorespaces Interface : un cours avant paiement .\relax }}{86}{figure.caption.85}% 
-\contentsline {figure}{\numberline {3.39}{\ignorespaces Interface : la plateforme de test paystack .\relax }}{87}{figure.caption.86}% 
-\contentsline {figure}{\numberline {3.40}{\ignorespaces Interface : un cours apr\IeC {\`e}s paiement .\relax }}{88}{figure.caption.87}% 
-\contentsline {figure}{\numberline {3.41}{\ignorespaces Diagramme de s\IeC {\'e}quences consulter le calendrier .\relax }}{89}{figure.caption.88}% 
-\contentsline {figure}{\numberline {3.42}{\ignorespaces Diagramme d' activit\IeC {\'e}: d' un apprenant sur l' espace .\relax }}{90}{figure.caption.89}% 
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Diagramme d'activit\IeC {\'e}s \IeC {\guillemotleft } d'inscription d'un \IeC {\'e}tudiant\IeC {\guillemotright } .\relax }}{61}{figure.caption.59}% 
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Diagramme d'activit\IeC {\'e}s \IeC {\guillemotleft } V\IeC {\'e}rifie les conditions d\IeC {\textquoteright }inscriptions pour un \IeC {\'e}tudiant\IeC {\guillemotright } .\relax }}{62}{figure.caption.60}% 
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Diagramme de collaboration \IeC {\guillemotleft }r\IeC {\'e}inscription d' un \IeC {\'e}tudiant\IeC {\guillemotright } .\relax }}{63}{figure.caption.61}% 
+\contentsline {figure}{\numberline {3.19}{\ignorespaces l'interface d'inscription avec les mails de v\IeC {\'e}rification.\relax }}{64}{figure.caption.62}% 
+\contentsline {figure}{\numberline {3.20}{\ignorespaces le message envoy\IeC {\'e}.\relax }}{64}{figure.caption.63}% 
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Diagramme de cas d' utilisation gestion des r\IeC {\^o}les utilisateurs .\relax }}{65}{figure.caption.64}% 
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Diagramme de s\IeC {\'e}quence syst\IeC {\`e}me de modification de r\IeC {\^o}le utilisateur .\relax }}{66}{figure.caption.65}% 
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Interface : Modification un r\IeC {\^o}le d'un utilisateur.\relax }}{67}{figure.caption.66}% 
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Interface : Modification, Ajouter un r\IeC {\^o}le .\relax }}{67}{figure.caption.67}% 
+\contentsline {figure}{\numberline {3.25}{\ignorespaces D\IeC {\'e}composition sprint 3 en Items.\relax }}{68}{figure.caption.68}% 
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Diagramme de cas d' utilisation d\IeC {\'e}taill\IeC {\'e} \IeC {\guillemotleft }Professeur\IeC {\guillemotright } .\relax }}{70}{figure.caption.71}% 
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Diagramme des cas d' utilisation \IeC {\guillemotleft } G\IeC {\'e}rer les cours \IeC {\guillemotright } .\relax }}{70}{figure.caption.72}% 
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Diagramme de s\IeC {\'e}quence "Gerer les cours" .\relax }}{71}{figure.caption.73}% 
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Diagramme de s\IeC {\'e}quence \IeC {\guillemotleft } supprimer cours \IeC {\guillemotright } .\relax }}{73}{figure.caption.74}% 
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Diagramme d' activit\IeC {\'e}s \IeC {\guillemotleft } G\IeC {\'e}rer les cours \IeC {\guillemotright } .\relax }}{74}{figure.caption.75}% 
+\contentsline {figure}{\numberline {3.31}{\ignorespaces la liste des cours .\relax }}{75}{figure.caption.76}% 
+\contentsline {figure}{\numberline {3.32}{\ignorespaces la formulaire de cr\IeC {\'e}ation un cours .\relax }}{76}{figure.caption.77}% 
+\contentsline {figure}{\numberline {3.33}{\ignorespaces Diagramme des cas d' utilisation \IeC {\guillemotleft } G\IeC {\'e}rer les cat\IeC {\'e}gories \IeC {\guillemotright } .\relax }}{77}{figure.caption.78}% 
+\contentsline {figure}{\numberline {3.34}{\ignorespaces Diagramme de s\IeC {\'e}quence "G\IeC {\'e}rer les cat\IeC {\'e}gories" .\relax }}{77}{figure.caption.79}% 
+\contentsline {figure}{\numberline {3.35}{\ignorespaces Diagramme de s\IeC {\'e}quence \IeC {\guillemotleft } supprimer cat\IeC {\'e}gorie \IeC {\guillemotright } .\relax }}{79}{figure.caption.80}% 
+\contentsline {figure}{\numberline {3.36}{\ignorespaces Diagramme d' activit\IeC {\'e}s \IeC {\guillemotleft } G\IeC {\'e}rer les cat\IeC {\'e}gories \IeC {\guillemotright } .\relax }}{81}{figure.caption.81}% 
+\contentsline {figure}{\numberline {3.37}{\ignorespaces la liste des cat\IeC {\'e}gories .\relax }}{82}{figure.caption.82}% 
+\contentsline {figure}{\numberline {3.38}{\ignorespaces formulaire pour cr\IeC {\'e}er ou modifier un cat\IeC {\'e}gorie .\relax }}{83}{figure.caption.83}% 
+\contentsline {figure}{\numberline {3.39}{\ignorespaces Cat\IeC {\'e}gories avec quelques changements .\relax }}{83}{figure.caption.84}% 
+\contentsline {figure}{\numberline {3.40}{\ignorespaces Diagramme de Cas d' utilisation \IeC {\guillemotleft } G\IeC {\'e}rer les TD - TP \IeC {\guillemotright } .\relax }}{84}{figure.caption.85}% 
+\contentsline {figure}{\numberline {3.41}{\ignorespaces Diagramme d' activit\IeC {\'e}s \IeC {\guillemotleft } G\IeC {\'e}rer les TD - TP \IeC {\guillemotright } .\relax }}{85}{figure.caption.86}% 
+\contentsline {figure}{\numberline {3.42}{\ignorespaces page d'\IeC {\'e}valuation.\relax }}{86}{figure.caption.87}% 
+\contentsline {figure}{\numberline {3.43}{\ignorespaces la formulaire de la cr\IeC {\'e}ation des TD - TP.\relax }}{87}{figure.caption.88}% 
+\contentsline {figure}{\numberline {3.44}{\ignorespaces la r\IeC {\'e}sultat de la cr\IeC {\'e}ation des TD - TP.\relax }}{87}{figure.caption.89}% 
+\contentsline {figure}{\numberline {3.45}{\ignorespaces Diagramme d' activit\IeC {\'e}s \IeC {\guillemotleft } d' affectation des notes \IeC {\'e}tudiant \IeC {\guillemotright } .\relax }}{88}{figure.caption.90}% 
+\contentsline {figure}{\numberline {3.46}{\ignorespaces page d'\IeC {\'e}valuation.\relax }}{89}{figure.caption.91}% 
+\contentsline {figure}{\numberline {3.47}{\ignorespaces formulaire d'\IeC {\'e}valuation .\relax }}{90}{figure.caption.92}% 
+\contentsline {figure}{\numberline {3.48}{\ignorespaces r\IeC {\'e}sultat d'\IeC {\'e}valuation.\relax }}{90}{figure.caption.93}% 
+\contentsline {figure}{\numberline {3.49}{\ignorespaces D\IeC {\'e}composition sprint 4 en Items.\relax }}{91}{figure.caption.94}% 
+\contentsline {figure}{\numberline {3.50}{\ignorespaces Diagramme de cas d' utilisation d\IeC {\'e}taill\IeC {\'e} \IeC {\guillemotleft }\IeC {\'E}tudiant\IeC {\guillemotright } .\relax }}{93}{figure.caption.97}% 
+\contentsline {figure}{\numberline {3.51}{\ignorespaces Diagramme de s\IeC {\'e}quence: consulter les ressources et les liens d' apprentissage .\relax }}{94}{figure.caption.98}% 
+\contentsline {figure}{\numberline {3.52}{\ignorespaces Interface : la liste des cat\IeC {\'e}gories .\relax }}{95}{figure.caption.99}% 
+\contentsline {figure}{\numberline {3.53}{\ignorespaces Interface : d\IeC {\'e}tail d'une cat\IeC {\'e}gorie .\relax }}{95}{figure.caption.100}% 
+\contentsline {figure}{\numberline {3.54}{\ignorespaces Interface : la liste des cours .\relax }}{96}{figure.caption.101}% 
+\contentsline {figure}{\numberline {3.55}{\ignorespaces Interface : un cours avant paiement .\relax }}{97}{figure.caption.102}% 
+\contentsline {figure}{\numberline {3.56}{\ignorespaces Interface : la plateforme de test paystack .\relax }}{98}{figure.caption.103}% 
+\contentsline {figure}{\numberline {3.57}{\ignorespaces Interface : un cours apr\IeC {\`e}s paiement .\relax }}{99}{figure.caption.104}% 
+\contentsline {figure}{\numberline {3.58}{\ignorespaces Diagramme de s\IeC {\'e}quences consulter le calendrier .\relax }}{100}{figure.caption.105}% 
+\contentsline {figure}{\numberline {3.59}{\ignorespaces Diagramme de s\IeC {\'e}quences consulter l'\IeC {\'e}valuation .\relax }}{100}{figure.caption.106}% 
+\contentsline {figure}{\numberline {3.60}{\ignorespaces Diagramme d' activit\IeC {\'e}: d' un apprenant sur l' espace .\relax }}{101}{figure.caption.107}% 
+\contentsline {figure}{\numberline {3.61}{\ignorespaces consulter l'\IeC {\'e}valuation .\relax }}{102}{figure.caption.108}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Section de chapitre 4.\relax }}{91}{figure.caption.90}% 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Logo Visual code studio.\relax }}{92}{figure.caption.92}% 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Logo StarUML.\relax }}{93}{figure.caption.93}% 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Logo MySQL.\relax }}{93}{figure.caption.94}% 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Logo XAMPP.\relax }}{94}{figure.caption.95}% 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Logo Apache Tomcat.\relax }}{94}{figure.caption.96}% 
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Logo HTML.\relax }}{95}{figure.caption.97}% 
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Logo CSS4.\relax }}{95}{figure.caption.98}% 
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Logo Bootstrap.\relax }}{96}{figure.caption.99}% 
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Logo GIT et GitHub.\relax }}{96}{figure.caption.100}% 
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Exemple 1.\relax }}{97}{figure.caption.101}% 
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Exemple 2.\relax }}{97}{figure.caption.102}% 
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Logo php 7.1.3.\relax }}{98}{figure.caption.103}% 
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Logo Laravel.\relax }}{98}{figure.caption.104}% 
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Logo Infyom.\relax }}{99}{figure.caption.105}% 
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Logo LaTeX\relax }}{99}{figure.caption.106}% 
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Logo StarUML.\relax }}{100}{figure.caption.108}% 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Section de chapitre 4.\relax }}{103}{figure.caption.109}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Logo Visual code studio.\relax }}{104}{figure.caption.111}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Logo StarUML.\relax }}{105}{figure.caption.112}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Logo MySQL.\relax }}{105}{figure.caption.113}% 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Logo XAMPP.\relax }}{106}{figure.caption.114}% 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Logo Apache Tomcat.\relax }}{106}{figure.caption.115}% 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Logo HTML.\relax }}{107}{figure.caption.116}% 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Logo CSS4.\relax }}{107}{figure.caption.117}% 
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Logo Bootstrap.\relax }}{108}{figure.caption.118}% 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Logo GIT et GitHub.\relax }}{108}{figure.caption.119}% 
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Exemple 1.\relax }}{109}{figure.caption.120}% 
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Exemple 2.\relax }}{109}{figure.caption.121}% 
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Logo php 7.1.3.\relax }}{110}{figure.caption.122}% 
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Logo Laravel.\relax }}{110}{figure.caption.123}% 
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Logo Infyom.\relax }}{111}{figure.caption.124}% 
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Logo LaTeX\relax }}{111}{figure.caption.125}% 
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Logo StarUML.\relax }}{112}{figure.caption.127}% 
