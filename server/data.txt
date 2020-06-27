@@ -23,3 +23,7 @@ INSERT INTO `comments` (`id`, `user_id`, `course_id`, `category_id`, `item_id`, 
 
 INSERT INTO `course_user` (`id`, `user_id`, `course_id`, `category_id`, `user_account_id`, `paid_date`, `expiry_date`, `plan`, `paid_amount`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 1, 5, 1, 1, NULL, '2021-02-01 00:00:00', '200', 200, 1, NULL, '2020-06-15 12:26:53', '2020-06-15 12:26:53');
+
+
+INSERT INTO `items` (`id`, `user_id`, `course_id`, `view_count`, `url`, `title`, `description`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 3, 5, 2, 'https://www.youtube.com/watch?v=Ed8rcmlUR9M', 'example', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque dui ut luctus finibus. Nam euismod, velit sit amet porttitor vulputate, est nisl tincidunt ex, quis varius ex odio eget quam. Ut pretium turpis vel nisl malesuada, id gravida orci placerat. Maecenas nisl erat, sodales ac imperdiet eget, egestas eu erat. In sit amet metus at turpis semper fringilla. Nullam mollis euismod nibh nec consequat. Mauris sodales nisl nec sem dignissim pulvinar. Ut dictum pellentesque magna, at hendrerit lorem dictum vel. Vestibulum sollicitudin neque quis risus posuere, et porta eros viverra. Maecenas euismod sed ipsum in ornare. Pellentesque vitae diam justo. Ut ut ante id dolor commodo pharetra ac sed augue.', NULL, '2020-06-24 05:19:23', '2020-06-11 09:29:31');

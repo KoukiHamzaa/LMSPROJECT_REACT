@@ -13,7 +13,9 @@
         <tbody>
         
         @foreach($course->items as $item)
-            <div class="h3 text-capitalize">-- {{ $item->title}} --</div class="h3 ">
+            <div class="h3 text-capitalize">
+            <a href="{{route('courses.items' , ['course_id' => $course->id, 'item_id' => $item->id])}}"> -- {{ $item->title}}</a>
+            </div class="h3">
             <tr>
             <td>{{ $item->url }}</td>
             <td>{{ $item->description }}</td>

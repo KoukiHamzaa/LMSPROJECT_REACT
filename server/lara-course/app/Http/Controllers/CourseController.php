@@ -11,6 +11,7 @@ use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 use Auth;
+use Illuminate\Support\Facades\DB;
 use App\Models\Category;
 use App\Models\Course;
 use App\Models\Item;
@@ -287,10 +288,17 @@ class CourseController extends AppBaseController
                 ->with('paymentCondition', $paymentCondition);
     }
 
-    public function items($course_id)
+    public function items($course_id, $item_id)
     {
         //list courses 
+        $userCourse = CourseUser::where(['course_id' => $course_id,'user_id' => Auth::user()->id])->first();
         $course = $this->courseRepository->findWithoutFail($course_id);
+
+        if (!empty($userCourse))
+        {
+            $paymentCondition = 'Paid';
+        } 
+
         if (empty($course)) {
             Flash::error('Cours non trouvé');
             
@@ -298,11 +306,15 @@ class CourseController extends AppBaseController
         }
 
         //passet to the course 
-        $abonnes = 'yes';
+        $item = Item::where('id', $item_id)->first();
+        DB::table('items')->where('id', $item_id)->increment('view_count');
+        $items = 'yes';
         
         return  view('courses.show', ['course_id' => $course->id])
                 ->with('course', $course)
-                ->with('abonnes', $abonnes);
+                ->with('items', $items)
+                ->with('item', $item)
+                ->with('paymentCondition', $paymentCondition);
     }
     
 

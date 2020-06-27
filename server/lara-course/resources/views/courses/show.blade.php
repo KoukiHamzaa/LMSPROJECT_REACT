@@ -18,11 +18,12 @@
 					@if(isset($abonnes) && $abonnes == 'yes')
 						@include('courses.abonnes')
 					@elseif(isset($items) && $items == 'yes')
-						@include('courses.items')            
+						@include('courses.show-item')            
                     @elseif(isset($contents) && $contents == 'yes')
 						@include('courses.contents')                	
 					@endif
                     <div class="d-block">
+                    @include('courses.show_fields')
                             <div class="col-md-8 text-left text-bold m-5 h3">Ajouter des commentaires ou des avis</div>
                             @include('comments.table')
                     </div>
