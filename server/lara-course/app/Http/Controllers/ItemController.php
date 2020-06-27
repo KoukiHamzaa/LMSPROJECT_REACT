@@ -83,7 +83,7 @@ class ItemController extends AppBaseController
         }
         
         DB::table('items')->where('id', $id)->increment('view_count');
-        return view('items.show')->with('item', $item);
+        return view('courses.show')->with('item', $item);
     }
 
     /**
@@ -100,10 +100,10 @@ class ItemController extends AppBaseController
         if (empty($item)) {
             Flash::error('Objet non-trouvé');
 
-            return redirect(route('items.index'));
+            return redirect(route('courses.index'));
         }
 
-        return view('items.edit')->with('item', $item);
+        return view('courses.edit')->with('item', $item);
     }
 
     /**
@@ -121,14 +121,14 @@ class ItemController extends AppBaseController
         if (empty($item)) {
             Flash::error('Objet non-trouvé');
 
-            return redirect(route('items.index'));
+            return redirect(route('courses.index'));
         }
 
         $item = $this->itemRepository->update($request->all(), $id);
 
         Flash::success('Élément mis à jour avec succès.');
 
-        return redirect(route('items.index'));
+        return redirect(route('items.index', ['course_id' => $item->course_id, 'item_id' => $item->id]));
     }
 
     /**
@@ -145,13 +145,13 @@ class ItemController extends AppBaseController
         if (empty($item)) {
             Flash::error('Objet non-trouvé');
 
-            return redirect(route('items.index'));
+            return redirect(route('courses.index'));
         }
 
         $this->itemRepository->delete($id);
 
         Flash::success('Élément supprimé avec succès.');
 
-        return redirect(route('items.index'));
+        return redirect(route('courses.contents', ['course_id' => $item->course_id, 'contents' => 'yes'] ));
     }
 }
