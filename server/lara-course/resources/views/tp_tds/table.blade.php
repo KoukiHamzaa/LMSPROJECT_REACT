@@ -2,8 +2,8 @@
     <table class="table" id="tpTds-table">
         <thead>
             <tr>
-        <th>Nom du cours</th>
         <th>Type</th>
+        <th>Nom du cours</th>
         <th>Url</th>
         @if(Auth::user()->role_id < 3)
                 <th colspan="3">Action</th>
@@ -12,8 +12,15 @@
         </thead>
         <tbody>
         @foreach($tpTds as $tpTd)
+            <td><h3 class="text-capitalize">{{ $tpTd->title }}</h3></td>
             <tr>
-            <h3 class="text-capitalize">--- {{ $tpTd->title }}</h3>
+            <td>
+            @if($tpTd->tp_td == 0)
+                    <div class="font-weight-bold">TP</div>
+                @else 
+                    TD
+                @endif
+            </td>
             <td class="text-capitalize font-weight-bold">
                 @foreach($courses as $course)
                     @if($tpTd->course_id == $course->id)
@@ -21,13 +28,6 @@
                     @endif
                 @endforeach	  
           </td>
-            <td>
-            @if($tpTd->tp_td == 0)
-                    TP
-                @else 
-                    TD
-                @endif
-            </td>
             <td><a href="{{ $tpTd->file }}" target="_blank">{{ $tpTd->file }}</a></td>
             
             
