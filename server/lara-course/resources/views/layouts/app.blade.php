@@ -38,9 +38,9 @@
     <!-- <link rel="stylesheet" href="{{ url('/Ionicons/bootstrap_datetimepicker_min_css/bootstrap-datetimepicker.min.css') }}"> -->
    
     <!-- Nice_edit -->
-    <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+    <!-- <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script> -->
     <!-- <script src="{{ url('/Nice_edit/nicEdit-latest.js') }}" type="text/javascript"></script> -->
-    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+    <!-- <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script> -->
 						
     <!-- Icon Place -->
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/PcGSCyQ/Ulearn.png" />
