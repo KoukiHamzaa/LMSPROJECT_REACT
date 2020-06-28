@@ -2,13 +2,13 @@
 
 
 <!-- Description Field -->
-<div class="form-group col-md-9 list-group-item list-group-item-info">
+<div class="form-group col-md-9">
     {!! Form::label('description', 'Description:') !!}
     <p>{{ $course->description }}</p>
 </div>
 
 <!-- Category Id Field -->
-<div class="form-group col-md-3 list-group-item disabled">
+<div class="form-group col-md-3">
 <div class="mt-5">
     {!! Form::label('category_id', 'Category name:') !!}
     <a href="/categories/{!! $course->category['id'] !!}" target="_blank"><p class="h4 text-capitalize text-success"><i class="fa fa-link"  font-weight-bold" aria-hidden="true">{{ $course->category['name'] }}</i></p></a>
@@ -16,13 +16,13 @@
 </div>
 
 <!-- About Instructor Field -->
-<div class="form-group col-md-12 list-group-item list-group-item-info">
+<div class="form-group col-md-6 list-group-item list-group-item-info m-0">
     {!! Form::label('about_instructor', 'About Instructor:') !!}
     <p>{{ $course->about_instructor }}</p>
 </div>
 
 <!-- Playlist Url Field -->
-{{--<div class="form-group col-md-6 list-group-item-warning">
+{{--<div class="form-group col-md-6 list-group-item-warning m-0">
     {!! Form::label('playlist_url', 'Playlist Url:') !!}<br>
     <iframe  src="{{ $course->playlist_url }}" frameborder="0" 
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="400" height="200"></iframe>
@@ -30,12 +30,12 @@
 
 <!-- Photo Field -->
 <div class="form-group  list-group-item-warning">
-  <img src="{{ $course->photo }}" class="img-fluid col-md-6" alt="Responsive image">
+  <img src="{{ $course->photo }}" class="img-fluid" alt="Responsive image">
     <!-- <img src="" class="card-img-top" alt="Card image cap" width="400" height="200"> -->
 </div>
 
 <!-- Tags Field -->
-<div class="form-group col-md-6 list-group-item list-group-item-info">
+<div class="form-group col-md-12 list-group-item list-group-item-info">
     {!! Form::label('tags', 'Tags:') !!}
     <p>{{ $course->tags }}</p>
 </div>
