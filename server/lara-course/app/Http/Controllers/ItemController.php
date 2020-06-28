@@ -97,7 +97,8 @@ class ItemController extends AppBaseController
     public function edit($id)
     {
         $item = $this->itemRepository->findWithoutFail($id);
-        $courses = Course::all();
+        dd($item);
+        $course = Course::all();
         if (empty($item)) {
             Flash::error('Objet non-trouvé');
 
@@ -106,7 +107,7 @@ class ItemController extends AppBaseController
 
         return view('courses.edit')
         ->with('item', $item)
-        ->with('courses', $courses);
+        ->with('course', $course);
     }
 
     /**
