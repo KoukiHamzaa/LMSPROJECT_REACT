@@ -25,11 +25,6 @@
 					@else
                     @include('courses.show_fields')
                     @endif 
-                    
-                    @if($paymentCondition == "NotPaid")
-                    <div class="d-block">
-                    @include('courses.show_fields')
-                    @endif
                             <div class="col-md-8 text-left text-bold m-5 h3">Ajouter des commentaires ou des avis</div>
                             @include('comments.table')
                     </div>

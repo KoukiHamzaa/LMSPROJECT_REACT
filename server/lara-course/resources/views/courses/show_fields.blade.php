@@ -9,7 +9,6 @@
 
 <div class="form-group  col-md-3">
   <img src="{{ $course->photo }}" class="img-fluid" alt="Responsive image">
-    <!-- <img src="" class="card-img-top" alt="Card image cap" width="400" height="200"> -->
 </div>
 
 <!-- About Instructor Field -->
