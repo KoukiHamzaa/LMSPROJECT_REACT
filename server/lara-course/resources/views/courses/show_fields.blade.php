@@ -2,12 +2,12 @@
 
 
 <!-- Description Field -->
-<div class="form-group col-md-9">
+<div class="form-group col-md-9 mt-5">
     {!! Form::label('description', 'Description:') !!}
     <p>{{ $course->description }}</p>
 </div>
 
-<div class="form-group  col-md-3">
+<div class="form-group  col-md-3 mt-5">
   <img src="{{ $course->photo }}" class="img-fluid" alt="Responsive image">
 </div>
 
