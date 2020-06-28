@@ -29,12 +29,13 @@
 
 <!---start--Admin section----->
 @if(Auth::user()->role_id == 1)
-<li class="{{ Request::is('courseUsers*') ? 'active' : '' }}">
-    <a href="{{ route('courseUsers.index') }}"><i class="fa fa-edit"></i><span>Abonnement</span></a>  
-</li>
 
 <li class="{{ Request::is('payments*') ? 'active' : '' }}">
     <a href="{{ route('payments.index') }}"><i class="fa fa-edit"></i><span>Paiements</span></a>
+</li>
+
+<li class="{{ Request::is('users*') ? 'active' : '' }}">
+     <a href="{{ route('users.index') }}"><i class="fa fa-edit"></i><span>Liste d Utilisateurs</span></a>
 </li>
 .
 <li class="{{ Request::is('comments*') ? 'active' : '' }}">
@@ -58,13 +59,10 @@
     <a href="{{ route('comments.index') }}"><i class="fa fa-edit"></i><span>commentaires</span></a>
 </li>
 
-<li class="{{ Request::is('users*') ? 'active' : '' }}">
-     <a href="{{ route('users.index') }}"><i class="fa fa-edit"></i><span>Liste d Utilisateurs</span></a>
+<li class="{{ Request::is('courseUsers*') ? 'active' : '' }}">
+    <a href="{{ route('courseUsers.index') }}"><i class="fa fa-edit"></i><span>Abonnement</span></a>  
 </li>
 @endif
 <!---end--instructor section----->
 <!---start--student section----->
-@if(Auth::user()->role_id == 3)
-
-
-@endif
+<!---end--student section----->
