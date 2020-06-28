@@ -43,17 +43,21 @@
             </a>
             </td>
             <td class="text-capitalize font-weight-bold">
-            <?php 
-            foreach($categories as $category){
+                <?php 
+                foreach($categories as $category){
 
-               // $courseName ="-";
-                if($category->id == $courseUser->category_id){
-                    $categoryName = $category->name;
+                // $courseName ="-";
+                    if(($courseUser->user_id == $user->id)&&($category->id == $courseUser->category_id)){
+                        $categoryName = $category->name;
+                        $categoryId = $category->id;
+
+                    }   
                 }
-                
-            }
-            echo $categoryName;
-            ?>
+                ?>
+            <a href="{{ route('categories.show', [$categoryId]) }}" style="color: #212529;text-decoration: none;" 
+            target="_blank" data-toggle="tooltip" data-placement="top" title="voir le catégorie?"
+            >{{$categoryName}}</a>
+            </a>
             </td>
             <td class="font-weight-bold"><u>{{ $courseUser->paid_amount }} DT</u></td>
             <td class="font-weight-bold">
