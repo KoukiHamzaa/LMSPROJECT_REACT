@@ -26,21 +26,15 @@
             echo $userName;
             ?>
             </td>
-            <td class="text-capitalize font-weight-bold">
-            <a href="{{ route('users.show', [$courseUser->user_id]) }}">
-            <?php 
-            foreach($courses as $course){
-
-               // $courseName ="-";
-                if($course->id == $courseUser->course_id){
-                    $courseName = $course->title;
-                }
-                
-            }
-            echo $courseName;
-            ?>
-            </a>
-            </td>
+            @foreach($courses as $course)
+@if($course->id == $courseUser->course_id)
+{{$courseName = $course->title}}
+{{$courseId = $course->id}}
+@endif
+@endforeach
+<td class="text-capitalize font-weight-bold">
+            <a href="{{ route('users.show', [$courseId]) }}">{{$courseName}}</a>
+</td>
             <td class="text-capitalize font-weight-bold">
             <?php 
             foreach($categories as $category){
