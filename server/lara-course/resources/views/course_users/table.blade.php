@@ -27,6 +27,7 @@
             ?>
             </td>
             <td class="text-capitalize font-weight-bold">
+            <a href="{{ route('users.show', [$courseUser->user_id]) }}">
             <?php 
             foreach($courses as $course){
 
@@ -38,6 +39,7 @@
             }
             echo $courseName;
             ?>
+            </a>
             </td>
             <td class="text-capitalize font-weight-bold">
             <?php 
