@@ -12,7 +12,6 @@
         </thead>
         <tbody>
         @foreach($courseUsers as $courseUser)
-            @foreach($courses as $course)
             <tr>
             <td class="text-capitalize font-weight-bold">
             <?php 
@@ -28,12 +27,20 @@
             ?>
             </td>
             <td class="text-capitalize font-weight-bold">
-                @if($course->id == $courseUser->course_id)
-                    <a href="{{ route('users.show', [$course->id]) }}">{{$$course->name}}</a>
-                @endif
-            @endforeach
-            </td>
+            <a href="{{ route('users.show', [$courseUser->user_id]) }}">
+            <?php 
+            foreach($courses as $course){
 
+               // $courseName ="-";
+                if($course->id == $courseUser->course_id){
+                    $courseName = $course->title;
+                }
+                
+            }
+            echo $courseName;
+            ?>
+            </a>
+            </td>
             <td class="text-capitalize font-weight-bold">
             <?php 
             foreach($categories as $category){
@@ -65,7 +72,6 @@
                     {!! Form::close() !!}
                 </td>
             </tr>
-          @endforeach
         @endforeach
         </tbody>
     </table>
