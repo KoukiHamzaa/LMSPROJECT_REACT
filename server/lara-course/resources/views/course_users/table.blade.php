@@ -27,18 +27,17 @@
             ?>
             </td>
             <td class="text-capitalize font-weight-bold">
-            <a href="{{ route('users.show', [$courseUser->user_id]) }}">
             <?php 
             foreach($courses as $course){
 
                // $courseName ="-";
-                if($course->id == $courseUser->course_id){
+               if(($courseUser->user_id == $user->id) && ($courseUser->course_id == $course->id)){
                     $courseName = $course->title;
                 }
                 
             }
-            echo $courseName;
             ?>
+            
             </a>
             </td>
             <td class="text-capitalize font-weight-bold">
