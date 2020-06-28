@@ -22,7 +22,10 @@
 						@include('courses.show-item')            
                     @elseif(isset($contents) && $contents == 'yes')
 						@include('courses.contents')                	
-					@endif
+					@else
+                    @include('courses.show_fields')
+                    @endif 
+                    
                     @if($paymentCondition == "NotPaid")
                     <div class="d-block">
                     @include('courses.show_fields')

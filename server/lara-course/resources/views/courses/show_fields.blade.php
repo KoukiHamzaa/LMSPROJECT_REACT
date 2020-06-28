@@ -62,13 +62,13 @@
 </div>
 
 <!-- Target Student Field -->
-<div class="form-group col-md-12">
+<div class="form-group col-md-10">
     {!! Form::label('target_student', 'Target Student:') !!}
     <p>{{ $course->target_student }}</p>
 </div>
 
 <!-- Requirements Field -->
-<div class="form-group col-md-12 ">
+<div class="form-group col-md-10 ">
     {!! Form::label('requirements', 'Requirements:') !!}
     <p>{{ $course->requirements }}</p>
 </div>
