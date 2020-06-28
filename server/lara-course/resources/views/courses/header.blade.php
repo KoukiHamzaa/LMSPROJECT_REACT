@@ -50,7 +50,7 @@
 
 					 <input type="hidden" name="_token" value="{{ csrf_token() }}"> {{-- employ this in place of csrf_field only in laravel 5.0 --}}
 					 
-                    @if((Auth::user()->role_id < 3) || ($paymentCondition == "NotPaid"))
+                    @if((Auth::user()->role_id == 3) AND ($paymentCondition == "NotPaid"))
 					<p>
                             <button class="h3 mt-2 mr-5" type="submit" value="Pay Now!" style="background-color:transparent;border: none;width:150px">
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>Acheter maintenant
@@ -61,7 +61,10 @@
                             <div class="text-dark pt-0 mr-5" style="font-size: 9px;margin: 0;display: inline-block;">Garantie remboursement-24-h<br>{{ $course->actual_price }}$</div>
                             @endif
 					</p>
+                    @else
+                    <div></div>
                     @endif
+
 			  </div>
         </div>
 	</form>
