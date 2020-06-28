@@ -16,7 +16,7 @@
             <li>
               <i class="fa fa-pencil bg-yellow"></i>
               <div class="timeline-item col-xs-12 col-sm-6 col-lg-8">
-              <span class="time"><a href="http://127.0.0.1:8000/courses/"> <i class="fa fa-angle-double-left"></i>Retourner</a></span>
+              <span class="time"><a href="{{ route('courses.index') }}"> <i class="fa fa-angle-double-left"></i>Retourner</a></span>
                 <div class="timeline-header text-primary">
                 {!! Form::label('title', 'Titre:') !!}
                 </div>
