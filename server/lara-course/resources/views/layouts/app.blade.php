@@ -50,7 +50,6 @@
 
     @yield('css')
 </head>
-
 <body class="skin-blue sidebar-mini">
 <!-- style="background-image: url('https://i.ibb.co/Qb8PZvL/yellow-and-and-blue-colored-pencils-1762851.jpg'); -->
 @if (!Auth::guest())
@@ -207,5 +206,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- <script src="{{ url('/script/bootstrap.min.js') }}" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
     @stack('scripts')
+    <!-- ==================================================================================== -->
+<div class="js-pride-month-gradient" style="width: 100%; height: 0.8rem; background: linear-gradient(90deg, rgb(100, 91, 83) 0%, rgb(235, 82, 82) 18.23%, rgb(247, 143, 47) 34.37%, rgb(244, 193, 81) 48.96%, rgb(82, 187, 118) 66.15%, rgb(38, 165, 215) 82.29%, rgb(224, 105, 183) 100%);"></div>
+<!-- ==================================================================================== -->
 </body>
+
 </html>
