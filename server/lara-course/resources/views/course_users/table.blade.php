@@ -37,7 +37,9 @@
                 }
             }
             ?>
-            <a href="{{ route('courses.show', [$courseId]) }}">{{$courseName}}</a>
+            <a href="{{ route('courses.show', [$courseId]) }}" style="color: #212529;text-decoration: none;" 
+            target="_blank" data-toggle="tooltip" data-placement="top" title="voir le cours?"
+            >{{$courseName}}</a>
             </a>
             </td>
             <td class="text-capitalize font-weight-bold">
