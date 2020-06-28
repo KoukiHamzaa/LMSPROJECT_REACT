@@ -12,6 +12,7 @@
         </thead>
         <tbody>
         @foreach($courseUsers as $courseUser)
+            @foreach($courses as $course)
             <tr>
             <td class="text-capitalize font-weight-bold">
             <?php 
@@ -27,9 +28,8 @@
             ?>
             </td>
             <td class="text-capitalize font-weight-bold">
-            @foreach($courses as $course)
                 @if($course->id == $courseUser->course_id)
-                    <a href="{{ route('users.show', [$courseId]) }}">{{$courseName}}</a>
+                    <a href="{{ route('users.show', [$course->id]) }}">{{$$course->name}}</a>
                 @endif
             @endforeach
             </td>
@@ -65,6 +65,7 @@
                     {!! Form::close() !!}
                 </td>
             </tr>
+          @endforeach
         @endforeach
         </tbody>
     </table>
