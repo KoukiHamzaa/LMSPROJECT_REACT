@@ -29,15 +29,13 @@
 </div>--}}
 
 <!-- Photo Field -->
-<div class="form-group col-md-6 list-group-item-warning">
-  {!! Form::label('photo', 'Photo:') !!}<br>
-    <!--x   <p>{{ $course->photo }}</p> -->
-    <!-- <img src="{{ $course->photo }}" class="img-fluid" alt="Responsive image rounded mb-0" width="400" height="200"> -->
-    <img src="{{ $course->photo }}" class="card-img-top" alt="Card image cap" width="400" height="200">
+<div class="form-group  list-group-item-warning">
+  <img src="{{ $course->photo }}" class="img-fluid col-md-6" alt="Responsive image">
+    <!-- <img src="" class="card-img-top" alt="Card image cap" width="400" height="200"> -->
 </div>
 
 <!-- Tags Field -->
-<div class="form-group col-md-8 list-group-item list-group-item-info">
+<div class="form-group col-md-6 list-group-item list-group-item-info">
     {!! Form::label('tags', 'Tags:') !!}
     <p>{{ $course->tags }}</p>
 </div>
