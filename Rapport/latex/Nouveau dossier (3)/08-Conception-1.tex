@@ -14,7 +14,34 @@
 \end{figure}
 \FloatBarrier
 \clearpage
+\section{Présentation l'interfaces :page d'accueil}
+Après les phases d’étude de l’existant, la conception et la modélisation fonctionnelle et
+organisationnelle on a développé les interfaces de l’application.\\
+La page accueil présente la page d’accueil de l’application, à partir de cette interface, si
+l’internaute est un nouvel utilisateur, le site lui propose de rejoindre la communauté, donc de
+créer son compte.\\
+Les interfaces du site sont présentées sous forme de lien. Elles présentent cinq liens
+principaux se différenciant selon l’utilisateur qu’il soit connecté ou non. \\
+{\color{cyan} Lorsque l’utilisateur n’est pas connecté  :
+}
 
+\begin{itemize}
+	\item \underline{Accueil }  : qui amène l’utilisateur à la page d’accueil du site .
+	\item \underline{Inscription }  : qui amène l’utilisateur vers la page d’inscription.
+	\item \underline{Connexion}  :qui amène l’utilisateur sur la page de connexion du site.
+	
+	\item \underline{la liste des catégories}  : représente la liste des catégories.
+	\item \underline{meilleur cours}  :représente la liste des meilleurs cours.
+\end{itemize}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=16cm,height=9cm]{pageacui.png}
+	\caption{page d'accueil.}
+	\label{fig:page d'accueil }
+\end{figure}
+\FloatBarrier
+\clearpage 
 \section{Sprint 1 : Utilisateur }
 \label{sec:conception}
 
@@ -96,7 +123,8 @@ Ce premier sprint s’étale sur 6 jours et se décompose en 2 items  \end{fquot
 \subsection{item 1 : Authentification}
 \subsubsection{Diagramme de cas d’utilisation }
 
-
+La figure \ref{fig:Diagramme de Cas d utilisation S' authentifier } ci-dessous, décrit Diagramme de Cas d' utilisation S' authentifier
+de Uleran.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=13cm,height=10cm]{DiagrammedeCasdutilisationSauthentifier.png}
@@ -141,6 +169,7 @@ Ce premier sprint s’étale sur 6 jours et se décompose en 2 items  \end{fquot
 \end{itemize}
 \bigskip
 \subsubsection{Diagrammes de séquence système }
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=13cm,height=10cm]{Diagrséquencesystèmeauthentification.jpg}
@@ -536,7 +565,7 @@ scénario nominal
 \subsubsection{Diagramme d’activités « Gérer les utilisateurs » }
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=13cm]{DiagrammeactivitésGérerlesutilisateurs.jpg}
+	\includegraphics[width=14cm,height=14cm]{DiagrammeactivitésGérerlesutilisateurs.jpg}
 	\caption{Diagramme d' activités  « Gérer les utilisateurs »  .}
 	\label{fig:Diagramme d' activités  Gérer les utilisateurs  }
 \end{figure}
@@ -552,20 +581,22 @@ Pour l’ajout d’un utilisateur, le système doit vérifier la validation des 
  %{+++++++++++++++++un autre section+++++++++++++++++++ }
  %{+++++++++++++++++un autre section+++++++++++++++++++ }
  %{+++++++++++++++++un autre section+++++++++++++++++++ }
- 
+ \clearpage
+ \subsubsection{ Interface : Gérer les utilisateurs   }
+ Après l'authentification l'administrateur  à l'accès  de modifier , de supprimer et d'ajouter un nouvel utilisateur ,la figure ci-dessous représente le formulaire de gérer les utilisateurs.
  \begin{figure}[ht]
  	\centering
  	\includegraphics[width=13cm,height=6cm]{SDFI.png}
- 	\caption{Diagramme d'activités « d'inscription d'un étudiant» .}
- 	\label{fig:Diagramme d' activités  d' inscription d'un étudiant   }
+ 	\caption{l'interface de gérer les utilisateurs .}
+ 	\label{fig:l'interface de gérer les utilisateurs    }
  \end{figure}
  \FloatBarrier
- 
+ la figure ci-dessous représente la liste des et utilisateur .
   \begin{figure}[ht]
  	\centering
  	\includegraphics[width=13cm,height=6cm]{screencapture-localhost-8000-users-2020-06-24-21_01_22.png}
- 	\caption{Diagramme d'activités « d'inscription d'un étudiant» .}
- 	\label{fig:Diagramme d' activités  d' inscription d'un étudiant   }
+ 	\caption{la liste des utilisateurs avec une modification .}
+ 	\label{fig:la liste des utilisateurs avec une modification  }
  \end{figure}
  \FloatBarrier
 \clearpage
@@ -612,7 +643,7 @@ Cela consiste en un graphe dont les nœuds sont des objets et les arcs (numérot
 \clearpage
 
 \subsubsection{ Interface : Authentification  }
-
+l'interface d'identification à spécialement les mails de l'administrateur pour que si l'utilisateur est un enseignant  et il veut impliqué dans l'interface de Ulearn comme un enseignant il faut envoyer un email pour vérifier ses capasite .
 
 \begin{figure}[ht]
 	\centering
@@ -662,6 +693,7 @@ les valeurs des champs sont valides alors le rôle est mis à jour. Sinon si les
 pas valides alors un message d’erreur apparaîtra à l’administrateur pour l’avertir.
 \clearpage
 \subsubsection{ Interface : Modification de rôle  }
+les figures ci-dessous les représentent interfaces  de gérer les rôles des utilisateur à partir d'un administrateur .
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=13cm,height=10cm]{FGHt.png}
@@ -1261,7 +1293,7 @@ ci-dessous, illustrent ces opérations.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=15cm,height=9cm]{screencapture-localhost-8000-users-create-2020-06-24-18_08_37.png}
+	\includegraphics[width=15cm,height=9cm]{screencap.png}
 	\caption{formulaire pour créer ou modifier un catégorie .}
 	\label{fig: formulaire pour créer ou modifier un catégorie }
 \end{figure}
@@ -1758,7 +1790,7 @@ Ce diagramme de séquence illustre l'interaction entre l'apprenant et le systèm
 %{+++++++++++++++++un autre section+++++++++++++++++++ }
 %{+++++++++++++++++un autre section+++++++++++++++++++ }
 %{+++++++++++++++++un autre section+++++++++++++++++++ }
-\subsubsection{Les Interfaces de : consulter calendrier , consulter l'évaluation   }
+
 %{+++++++++++++++++un autre section+++++++++++++++++++ }
 %{+++++++++++++++++un autre section+++++++++++++++++++ }
 %{+++++++++++++++++un autre section+++++++++++++++++++ }
@@ -1769,7 +1801,7 @@ Ce diagramme de séquence illustre l'interaction entre l'apprenant et le systèm
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=13cm,height=11cm]{Diagrammedactivitédunapprenantsurlespace.jpg}
+	\includegraphics[width=15cm,height=16cm]{Diagrammedactivitédunapprenantsurlespace.jpg}
 	\caption{Diagramme d' activité: d' un apprenant sur l' espace .}
 	\label{fig:Diagramme d' activité: d' un apprenant sur l' espace }
 \end{figure}
@@ -1786,7 +1818,16 @@ la figure ci-dessous représente la résultat  d'enregistrement dévaluation : d
 	\label{fig:consulter l'évaluation }
 \end{figure}
 \FloatBarrier
+\subsubsection{Les Interfaces de :consulter l'évaluation  }
 
+la figure ci-dessous représente les TD TP .
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=17cm,height=13cm]{mmmmmwx.png}
+	\caption{consulter TD TP .}
+	\label{fig:consulter TD TP }
+\end{figure}
+\FloatBarrier
 
 
 \section{Conclusion}
