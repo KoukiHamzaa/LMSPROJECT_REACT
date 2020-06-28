@@ -33,10 +33,10 @@ class ItemController extends AppBaseController
     {
         $this->itemRepository->pushCriteria(new RequestCriteria($request));
         $items = $this->itemRepository->all();
-        
-         $course = DB::where('page', 'about-me')->first();
-         DB::table('courses')->where('id', $item_id)->increment('view_count');
-
+        $course = Course::all();
+        // dd($items);
+//         $course = DB::table('courses')->where('id', $request->course_id)->first();
+// dd($course);
         return view('items.index')
             ->with('items', $items)
             ->with('course', $course);
