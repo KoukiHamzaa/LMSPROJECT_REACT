@@ -88,3 +88,4 @@ Route::post('/password/reset', 'Auth\PasswordController@reset');
 Route::resource('notes', 'NoteController');
 
 Route::resource('tpTds', 'tp_tdController');
+Route::post('items/import-youtube', 'ItemController@importYoutube')->name('items.import-youtube');
