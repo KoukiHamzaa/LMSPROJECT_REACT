@@ -13,9 +13,9 @@
             <div class="box-body">
             @include('courses.menu')
                 <div class="row" style="padding-left: 20px">
-                @if($paymentCondition == "NotPaid")
+                
 					@include('courses.header')
-                @endif
+
 					@if(isset($abonnes) && $abonnes == 'yes')
 						@include('courses.abonnes')
 					@elseif(isset($items) && $items == 'yes')
@@ -23,8 +23,10 @@
                     @elseif(isset($contents) && $contents == 'yes')
 						@include('courses.contents')                	
 					@endif
+                    @if($paymentCondition == "NotPaid")
                     <div class="d-block">
                     @include('courses.show_fields')
+                    @endif
                             <div class="col-md-8 text-left text-bold m-5 h3">Ajouter des commentaires ou des avis</div>
                             @include('comments.table')
                     </div>
