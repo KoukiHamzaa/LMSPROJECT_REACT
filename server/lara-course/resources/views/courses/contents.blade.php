@@ -1,2 +1,2 @@
-@include('items.table')
+
 
