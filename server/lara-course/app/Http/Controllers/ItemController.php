@@ -33,8 +33,9 @@ class ItemController extends AppBaseController
     {
         $this->itemRepository->pushCriteria(new RequestCriteria($request));
         $items = $this->itemRepository->all();
-        $course = Course::all();
         
+         $course = DB::where('page', 'about-me')->first();
+         DB::table('courses')->where('id', $item_id)->increment('view_count');
 
         return view('items.index')
             ->with('items', $items)

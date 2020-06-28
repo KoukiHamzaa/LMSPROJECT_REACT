@@ -68,8 +68,8 @@ class Item extends Model
         // 'updated_at' => 'required'
     ];
 
-    public function course()
-{
-    return $this->belongsTo('App\Models\Course');
-}
+//     public function course()
+// {
+//     return $this->belongsTo('App\Models\Course');
+// }
 }
