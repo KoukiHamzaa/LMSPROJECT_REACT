@@ -13,8 +13,9 @@
             <div class="box-body">
             @include('courses.menu')
                 <div class="row" style="padding-left: 20px">
+                @if($paymentCondition == "NotPaid")
 					@include('courses.header')
-
+                @endif
 					@if(isset($abonnes) && $abonnes == 'yes')
 						@include('courses.abonnes')
 					@elseif(isset($items) && $items == 'yes')
