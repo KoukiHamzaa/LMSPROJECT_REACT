@@ -33,11 +33,11 @@
                // $courseName ="-";
                if(($courseUser->user_id == $user->id) && ($courseUser->course_id == $course->id)){
                     $courseName = $course->title;
+                    $courseId = $course->id;
                 }
-                
             }
             ?>
-            
+            <a href="{{ route('courses.show', [$courseId]) }}">{{$courseName}}</a>
             </a>
             </td>
             <td class="text-capitalize font-weight-bold">
