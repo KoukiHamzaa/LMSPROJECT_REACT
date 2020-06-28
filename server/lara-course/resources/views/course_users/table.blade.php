@@ -61,7 +61,7 @@
             </td>
             <td class="font-weight-bold"><u>{{ $courseUser->paid_amount }} DT</u></td>
             <td class="font-weight-bold">
-                @if($courseUser->status == 0)
+                @if($courseUser->status == 1)
                     Activé
                 @else 
                     Désactivé

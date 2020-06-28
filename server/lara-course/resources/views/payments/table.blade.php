@@ -24,10 +24,9 @@
                     if($user->id == $payment->user_id){
                         $userName = $user->name;
                     }
-                    
                 }
-                echo $userName;
                 ?>
+                {{$userName}}
                     </td>
             <td class="text-capitalize font-weight-bold">
                 <?php 
@@ -39,8 +38,8 @@
                     }
                     
                 }
-                echo $courseName;
                 ?>
+                {{$courseName}}
             </td>
             <td class="text-center text-capitalize font-weight-bold">
                 <?php 
@@ -50,8 +49,8 @@
                         $categoryName = $category->name;
                     }
                 }
-                echo $categoryName;
                 ?>
+                {{$categoryName}}
             </td>
             <td class="font-weight-bold" ><u>{{ $payment->amount }}</u>Dt</td>
             <td class="text-center text-capitalize">{{ $payment->status }}</td>
