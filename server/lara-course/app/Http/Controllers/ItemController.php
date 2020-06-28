@@ -33,9 +33,12 @@ class ItemController extends AppBaseController
     {
         $this->itemRepository->pushCriteria(new RequestCriteria($request));
         $items = $this->itemRepository->all();
+        $course = Course::all();
+        
 
         return view('items.index')
-            ->with('items', $items);
+            ->with('items', $items)
+            ->with('course', $course);
     }
 
     /**
@@ -97,7 +100,7 @@ class ItemController extends AppBaseController
     public function edit($id)
     {
         $item = $this->itemRepository->findWithoutFail($id);
-        dd($item);
+        //dd($item);
         $course = Course::all();
         if (empty($item)) {
             Flash::error('Objet non-trouvé');
