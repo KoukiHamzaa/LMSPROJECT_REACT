@@ -101,6 +101,7 @@ class ItemController extends AppBaseController
     public function edit($id)
     {
         $item = $this->itemRepository->findWithoutFail($id);
+        ()
         //dd($item);
         $course = Course::all();
         if (empty($item)) {
