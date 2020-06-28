@@ -12,7 +12,7 @@
             <li>
 				  <i class="fa fa-user bg-blue"></i>
 				  <div class="timeline-item">
-					  <span class="time"><a href="http://127.0.0.1:8000/categories/"> <i class="fa fa-angle-double-left"></i>Retourner</a></span>
+					  <span class="time"><a href="{{ route('categories.index') }}"> <i class="fa fa-angle-double-left"></i>Retourner</a></span>
 					  <h3 class="timeline-header">
 						<a href="http://127.0.0.1:8000/profile/">
 						<strong>Créé par: </strong>

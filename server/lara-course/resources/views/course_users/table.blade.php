@@ -1,35 +1,69 @@
 <div class="table-responsive">
     <table class="table" id="courseUsers-table">
         <thead>
-            <tr>
-                <th>Hamza</th>
-        <th>Identifiant de cours</th>
-        <th>Identifiant de catégorie</th>
-        <th>Identifiant du compte utilisateur</th>
-        <th>La date de paiement</th>
-        <th>Date d'expiration</th>
-        <th>Plan</th>
+        <tr>
+        <th>Nom d Etudiant </th>
+        <th>Nom du cours</th>
+        <th>Nom de catégorie</th>
         <th>Montant payé</th>
         <th>Statut</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
         <tbody>
-        @foreach($course->courseUsers as $courseUser)
+        @foreach($courseUsers as $courseUser)
             <tr>
-                <td>{{ $courseUser->user_id }}</td>
-            <td>{{ $courseUser->course_id }}</td>
-            <td>{{ $courseUser->category_id }}</td>
-            <td>{{ $courseUser->user_account_id }}</td>
-            <td>{{ $courseUser->paid_date }}</td>
-            <td>{{ $courseUser->expiry_date }}</td>
-            <td>{{ $courseUser->plan }}</td>
-            <td>{{ $courseUser->paid_amount }}</td>
-            <td>{{ $courseUser->status }}</td>
+            <td class="text-capitalize font-weight-bold">
+            <?php 
+            foreach($users as $user){
+
+               // $courseName ="-";
+                if($user->id == $courseUser->user_id){
+                    $userName = $user->name;
+                }
+                
+            }
+            echo $userName;
+            ?>
+            </td>
+            <td class="text-capitalize font-weight-bold">
+            <?php 
+            foreach($courses as $course){
+
+               // $courseName ="-";
+                if($course->id == $courseUser->course_id){
+                    $courseName = $course->title;
+                }
+                
+            }
+            echo $courseName;
+            ?>
+            </td>
+            <td class="text-capitalize font-weight-bold">
+            <?php 
+            foreach($categories as $category){
+
+               // $courseName ="-";
+                if($category->id == $courseUser->category_id){
+                    $categoryName = $category->name;
+                }
+                
+            }
+            echo $categoryName;
+            ?>
+            </td>
+            <td class="font-weight-bold"><u>{{ $courseUser->paid_amount }} DT</u></td>
+            <td class="font-weight-bold">
+                @if($courseUser->status == 0)
+                    Activé
+                @else 
+                    Désactivé
+                @endif
+            </td>
                 <td>
                     {!! Form::open(['route' => ['courseUsers.destroy', $courseUser->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{{ route('courseUsers.show', [$courseUser->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
+                        <a href="{{ route('users.show', [$courseUser->user_id]) }}" class='btn btn-default btn-xs' target="_blank" data-toggle="tooltip" data-placement="top" title="Profil utilisateur?"><i class="glyphicon glyphicon-eye-open"></i></a>
                         <a href="{{ route('courseUsers.edit', [$courseUser->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
                         {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Êtes-vous sûr?')"]) !!}
                     </div>

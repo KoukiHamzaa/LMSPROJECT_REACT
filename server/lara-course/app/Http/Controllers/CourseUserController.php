@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use App\Models\Category;
+use App\Models\Course;
+use App\Models\User;
+use Auth;
+
 
 class CourseUserController extends AppBaseController
 {
@@ -32,8 +37,16 @@ class CourseUserController extends AppBaseController
         $this->courseUserRepository->pushCriteria(new RequestCriteria($request));
         $courseUsers = $this->courseUserRepository->all();
 
+        $categories = Category::all();
+        $courses = Course::all();    
+        $users = User::all();
+
+       // dd($course);
         return view('course_users.index')
-            ->with('courseUsers', $courseUsers);
+        ->with('courseUsers', $courseUsers)
+        ->with('courses', $courses)
+        ->with('categories', $categories)
+        ->with('users', $users);
     }
 
     /**
@@ -95,13 +108,20 @@ class CourseUserController extends AppBaseController
     {
         $courseUser = $this->courseUserRepository->findWithoutFail($id);
 
+        $categories = Category::all();
+        $courses = Course::all();    
+        $users = User::all();
         if (empty($courseUser)) {
             Flash::error('Course User not found');
 
             return redirect(route('courseUsers.index'));
         }
 
-        return view('course_users.edit')->with('courseUser', $courseUser);
+        return view('course_users.edit')
+        ->with('courseUser', $courseUser)
+        ->with('courses', $courses)
+        ->with('categories', $categories)
+        ->with('users', $users);
     }
 
     /**

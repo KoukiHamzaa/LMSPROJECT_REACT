@@ -16,6 +16,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Payment;
 use App\Models\User;
 use App\Models\CourseUser;
+use App\Models\Category;
+use App\Models\Course;
 
 
 
@@ -88,6 +90,7 @@ class PaymentController extends AppBaseController
                 'course_id' => $paymentDetails['data']['metadata']['course_id'],
                 'amount' => ($paymentDetails['data']['amount']),
                 // 'status' =>'succès',
+                'category_id'=>($paymentDetails['data']['metadata']['category_id']),
                 'status' =>($paymentDetails['data']['status']),
                 'mode_of_payment' =>$paymentDetails['data']['channel'],
                 'payment_processor' => 'paystack',
@@ -126,9 +129,15 @@ class PaymentController extends AppBaseController
     {
         $this->paymentRepository->pushCriteria(new RequestCriteria($request));
         $payments = $this->paymentRepository->all();
+        $categories = Category::all();
+        $courses = Course::all();    
+        $users = User::all();
 
         return view('payments.index')
-            ->with('payments', $payments);
+            ->with('payments', $payments)
+            ->with('courses', $courses)
+            ->with('categories', $categories)
+            ->with('users', $users);
     }
 
     /**

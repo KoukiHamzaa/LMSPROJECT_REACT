@@ -133,6 +133,7 @@ class CourseController extends AppBaseController
     public function show($id)
     {
         $course = $this->courseRepository->findWithoutFail($id);
+        DB::table('courses')->where('id', $id)->increment('subscriber_count');
         // dd($course);
 
         // $userCourse = CourseUser::where('course_id', $id)->first();

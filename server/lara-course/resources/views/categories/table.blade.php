@@ -16,7 +16,7 @@
 									<!-- <li class="list-group-item">{!! $category->view_count !!}</li> -->
 									<!-- <small class="text-muted">Views :{{ $category->view_count }}</small> -->
 									@if(Auth::user()->role_id < 3)
-									<small class="text-muted">Vues :{{ $category->id }}</small>
+									<small class="text-muted">Views :{{ $category->view_count }}</small>
 									@endif 
 							</ul>
 						</div>

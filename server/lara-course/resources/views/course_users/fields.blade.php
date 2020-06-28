@@ -1,31 +1,31 @@
 <!-- User Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('user_id', 'Identifiant d'utilisateur:') !!}
-    {!! Form::number('user_id', null, ['class' => 'form-control']) !!}
+    {!! Form::label('user_id', 'Nom d Utilisateur:') !!}
+    <select	class="browser-default custom-select font-weight-bold" name="user_id" id="user_id">
+                                      @foreach($users as $user)
+                                    <option class="font-weight-bold" value="{{$user->id}}"> {{$user->name}} </option>
+                                      @endforeach
+                                  </select>
 </div>
 
 <!-- Course Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('course_id', 'Identifiant du cours:') !!}
-    {!! Form::number('course_id', null, ['class' => 'form-control']) !!}
+    {!! Form::label('course_id', 'Nom du cours:') !!}
+    <select	class="browser-default custom-select font-weight-bold" name="course_id" id="course_id">
+                                      @foreach($courses as $course)
+                                    <option class="font-weight-bold" value="{{$course->id}}"> {{$course->title}} </option>
+                                      @endforeach
+                                  </select>
 </div>
 
 <!-- Category Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('category_id', 'Identifiant de catégorie:') !!}
-    {!! Form::number('category_id', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- User Account Id Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('user_account_id', 'Identifiant du compte utilisateur:') !!}
-    {!! Form::number('user_account_id', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Paid Data Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('paid_date', 'Paid Date:') !!}
-    {!! Form::date('paid_date', null, ['class' => 'form-control','id'=>'paid_date']) !!}
+    <select	class="browser-default custom-select font-weight-bold" name="category_id" id="category_id">
+                                      @foreach($categories as $category)
+                                    <option class="font-weight-bold" value="{{$category->id}}"> {{$category->name}} </option>
+                                      @endforeach
+                                  </select>
 </div>
 
 @push('scripts')
@@ -37,11 +37,6 @@
     </script>
 @endpush
 
-<!-- Expiry Date Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('expiry_date', 'Date d'expiration:') !!}
-    {!! Form::date('expiry_date', null, ['class' => 'form-control','id'=>'expiry_date']) !!}
-</div>
 
 @push('scripts')
     <script type="text/javascript">
@@ -52,12 +47,6 @@
     </script>
 @endpush
 
-<!-- Plan Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('plan', 'Plan:') !!}
-    {!! Form::text('plan', null, ['class' => 'form-control']) !!}
-</div>
-
 <!-- Paid Amount Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('paid_amount', 'Montant payé:') !!}
@@ -66,11 +55,11 @@
 
 <!-- Status Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('status', 'Statut:') !!}
-    <label class="checkbox-inline">
-        {!! Form::hidden('status', 0) !!}
-        {!! Form::checkbox('status', '1', null) !!}
-    </label>
+    {!! Form::label('status', 'Statut du compte:') !!}
+    <select	class="browser-default custom-select font-weight-bold" name="status" id="status">
+                                   <option class="font-weight-bold" value="0">Activé</option>
+                                    <option class="font-weight-bold" value="1">Désactivé</option>
+                            </select>
 </div>
 
 
