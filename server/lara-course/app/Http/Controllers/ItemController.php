@@ -12,6 +12,7 @@ use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 use Illuminate\Support\Facades\DB;
 use App\Models\Course;
+use App\Models\Category;
 
 class ItemController extends AppBaseController
 {
@@ -101,8 +102,9 @@ class ItemController extends AppBaseController
     public function edit($id)
     {
         $item = $this->itemRepository->findWithoutFail($id);
+        // dd($item);
         $course = Course::find($item->course_id);
-        $categories = Course::find($item->category_id);
+        $categories = Category::find($item->category_id);
         // dd($item);
         //dd($item);
         // $course = Course::all();
