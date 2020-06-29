@@ -17,9 +17,16 @@
             <div class="box-body">
             
 
+			@foreach($courseusers as $courseuser)
+                    @if($courseuser->user_id == Auth::user()->id)
+                        {{$paidCourseId == courseuser->user_id}}
+                    @endif
+            @endforeach	 
 
             @if(Auth::user()->id< 3 || Auth::user()->id == $paidCourseId)
                     @include('tp_tds.table')
+            @else 
+                <div>empty</div>
             @endif
             </div>
         </div>

@@ -39,7 +39,7 @@ class tp_tdController extends AppBaseController
         $users = User::all();
         $courses = Course::all();
         $courseusers = CourseUser::all();
-        dd($courseusers);
+       // dd($courseusers);
 
         return view('tp_tds.index')
             ->with('tpTds', $tpTds)
