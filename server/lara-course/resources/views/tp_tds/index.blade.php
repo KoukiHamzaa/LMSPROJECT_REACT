@@ -16,8 +16,11 @@
         <div class="box box-primary">
             <div class="box-body">
             <php
-            foreach(usercourses as usercourse){
-                if()
+            
+            foreach($usercourses as $usercourse){
+                if($usercourse->user_id == Auth::user()->id){
+                    $paidCourseId = $usercourse->user_id
+                }
             }
             ?>
             @if(Auth::user()->id< 3 || Auth::user()->id == $paidCourseId)

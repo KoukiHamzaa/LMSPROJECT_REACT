@@ -12,6 +12,7 @@ use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 use App\Models\Course;
 use App\Models\User;
+use App\Models\CourseUser;
 use Auth;
 
 class tp_tdController extends AppBaseController
@@ -37,11 +38,13 @@ class tp_tdController extends AppBaseController
 
         $users = User::all();
         $courses = Course::all();
+        $courseusers = CourseUser::all();
 
         return view('tp_tds.index')
             ->with('tpTds', $tpTds)
             ->with('users',$users)
-            ->with('courses',$courses);
+            ->with('courses',$courses)
+            ->with('courseusers', $courseusers);
     }
 
     /**
