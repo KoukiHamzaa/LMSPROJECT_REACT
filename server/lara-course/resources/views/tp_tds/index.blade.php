@@ -4,7 +4,9 @@
     <section class="content-header">
         <h1 class="pull-left">TP TD</h1>
         <h1 class="pull-right">
+        @if(Auth::user()->id< 3)
            <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('tpTds.create') }}">Ajouter un nouveau</a>
+        @endif
         </h1>
     </section>
     <div class="content">
@@ -19,7 +21,7 @@
 
 			@foreach($courseusers as $courseuser)
                     @if($courseuser->user_id == Auth::user()->id)
-                        {{$paidCourseId == courseuser->user_id}}
+                        {{$paidCourseId == $courseuser->user_id}}
                     @endif
             @endforeach	 
 
