@@ -148,10 +148,10 @@ public function comments()
     return $this->hasMany('App\Models\Comment');
 }
 
-// public function items()
-// {
-//     return $this->hasMany('App\Models\Item');
-// }
+public function items()
+{
+    return $this->hasMany('App\Models\Item');
+}
 
 public function CourseUsers()
 {

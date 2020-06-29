@@ -1,41 +1,62 @@
-<!-- User Id Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('user_id', 'Identifiant d utilisateur:') !!}
-    {!! Form::number('user_id', null, ['class' => 'form-control']) !!}
+
+
+<input type="hidden" name="course_id" value="{{ $course_id }}" >
+<!-- Url Field -->
+<div class="col-md-12" >
+<div class="form-group col-md-6">
+<h3> Course: <a href="/courses/{{$course->id}}"> {{ $course->title }} </a></h3></div>
+
+</div>
 </div>
 
-<!-- Course Id Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('course_id', 'Identifiant du cours:') !!}
-    {!! Form::number('course_id', null, ['class' => 'form-control']) !!}
+<div class="col-md-12" >
+<div class="form-group col-md-6">
+<h4>  Add or modify item </h4>
 </div>
-
-<!-- View Count Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('view_count', 'Nombre de vues:') !!}
-    {!! Form::number('view_count', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Url Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('url', 'URL:') !!}
+<div class="col-md-12" >
+<div class="form-group col-md-6">
+    {!! Form::label('title', 'Title:') !!}
+    {!! Form::text('title', null, ['class' => 'form-control','required']) !!}
+</div>
+</div>
+
+<!-- Url Field -->
+<div class="col-md-12" > 
+<div class="form-group col-md-6">
+    {!! Form::label('url', 'Url:') !!}
     {!! Form::text('url', null, ['class' => 'form-control']) !!}
 </div>
-
-<!-- Url Title -->
-<div class="form-group col-sm-6">
-    {!! Form::label('title', 'Titre:') !!}
-    {!! Form::text('title', null, ['class' => 'form-control']) !!}
 </div>
+<div class="col-md-12" > 
+    <div class="form-group col-md-6">
+    <label for="sel1">Status:</label>
+    <select class="form-control" id="sel1" name="is_free">
+
+        @if(isset($item))
+        <option value="{{ $item->is_free }}">
+            @if($item->is_free  == 0)
+            Paid 
+            @elseif($item->is_free  == 1)
+            Free 
+            @endif </option>
+  @endif
+        <option value="1">Free</option>
+        <option value="0">Paid</option>
+    </select>
+    </div>
+</div>
+
 
 <!-- Description Field -->
-<div class="form-group col-sm-12 col-lg-12">
-    {!! Form::label('description', 'Description:') !!}
+<div class="form-group col-md-12 ">
+  {!! Form::label('description', 'Description:') !!}
     {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
-</div>
+</div>  
 
 <!-- Submit Field -->
-<div class="form-group col-sm-12">
-    {!! Form::submit('Enregistrer ', ['class' => 'btn btn-primary']) !!}
-    <a href="{{ route('items.index') }}" class="btn btn-default">Cancel</a>
+<div class="form-group col-md-12">
+    {!! Form::submit('Submit', ['class' => 'btn btn-primary']) !!}
 </div>
