@@ -162,4 +162,10 @@ public function note()
 {
     return $this->belongsTo('App\Models\Note');
 }
+
+public function tp_td()
+{
+    return $this->belongsTo('App\Models\tp_td');
+}
+
 }

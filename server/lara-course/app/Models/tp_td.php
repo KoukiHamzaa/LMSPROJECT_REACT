@@ -71,5 +71,10 @@ class tp_td extends Model
         return $this->hasMany('App\Models\User');
     }
 
+    public function course()
+    {
+        return $this->belongsTo('App\Models\Cote');
+    }
+
     
 }
