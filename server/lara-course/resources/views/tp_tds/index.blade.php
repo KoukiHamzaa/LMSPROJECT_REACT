@@ -20,14 +20,18 @@
             
 
             <?php 
-            foreach($courseusers as $courseuser){
-                if($courseuser->user_id == Auth::user()->id){
-                    $paidCourseId == $courseuser->user_id
-                }           
+            foreach($courseusers as $courseuser)
+            {
+                if(($courseuser->user_id) == (Auth::user()->id))
+                    {
+                    $paidCourseId = $courseuser->user_id;
+                    }          
             }
-?>
 
-            @if(Auth::user()->role_id < 3 || Auth::user()->id == $paidCourseId)
+            if
+            ?>
+
+            @if(Auth::user()->role_id < 3 || Auth::user()->id == <?php $paidCourseId; ?>)
                     @include('tp_tds.table')
             @else 
                 <div>empty</div>
