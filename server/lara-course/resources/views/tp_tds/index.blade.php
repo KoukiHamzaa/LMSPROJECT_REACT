@@ -15,14 +15,9 @@
         <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
-            <php
             
-            foreach($usercourses as $usercourse){
-                if($usercourse->user_id == Auth::user()->id){
-                    $paidCourseId = $usercourse->user_id
-                }
-            }
-            ?>
+
+
             @if(Auth::user()->id< 3 || Auth::user()->id == $paidCourseId)
                     @include('tp_tds.table')
             @endif
