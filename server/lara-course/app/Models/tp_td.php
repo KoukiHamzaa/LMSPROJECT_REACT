@@ -73,7 +73,7 @@ class tp_td extends Model
 
     public function course()
     {
-        return $this->belongsTo('App\Models\Cote');
+        return $this->belongsTo('App\Models\Course');
     }
 
     
