@@ -295,10 +295,13 @@ class CourseController extends AppBaseController
         $userCourse = CourseUser::where(['course_id' => $course_id,'user_id' => Auth::user()->id])->first();
         $course = $this->courseRepository->findWithoutFail($course_id);
 
+        
         if (!empty($userCourse))
         {
             $paymentCondition = 'Paid';
-        } 
+        } else {
+            $paymentCondition = 'NotPaid';
+        }
 
         if (empty($course)) {
             Flash::error('Cours non trouvé');
