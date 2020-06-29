@@ -249,7 +249,7 @@ class CourseController extends AppBaseController
         $course = $this->courseRepository->findWithoutFail($course_id);
         $userCourse = CourseUser::where(['course_id' => $course_id,'user_id' => Auth::user()->id])->first();
         //passet to the course 
-
+        $paymentCondition = 'NotPaid';
         if (!empty($userCourse)) {
                 $paymentCondition = 'Paid';
         }
@@ -269,10 +269,10 @@ class CourseController extends AppBaseController
         $userCourse = CourseUser::where(['course_id' => $course_id,'user_id' => Auth::user()->id])->first();
         $course = $this->courseRepository->findWithoutFail($course_id);
         //passet to the course 
-
+        $paymentCondition = 'NotPaid';
         if (!empty($userCourse)) {
                 $paymentCondition = 'Paid';
-        } 
+        }
 
         if (empty($course)) {
             Flash::error('Cours non trouvé');
