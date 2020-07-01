@@ -103,7 +103,7 @@
 </div>
 <div class="container mt-5 text-center" >
            <h3>
-                <small class="text-muted">Meilleurs cours</small>
+                <small class="text-muted">La list des  cours</small>
             </h3>
             <div class="card-columns row" >
                   @foreach($courses as $course)
