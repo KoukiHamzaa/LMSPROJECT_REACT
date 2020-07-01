@@ -86,7 +86,8 @@ class CategoryController extends AppBaseController
         DB::table('categories')->where('id', $id)->increment('view_count');
 
         $courses = Course::where('category_id', $category->id)->get();
-
+        //dd($courses);
+        
         return view('categories.show')
         ->with('category', $category)
         ->with('courses', $courses);
