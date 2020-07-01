@@ -1,5 +1,4 @@
-  
- <div class="login-box-body">
+  <div class="login-box-body">
 
 <div class="social-auth-links text-center">
 <p class="login-box-msg">Entrez vos informations de connexion</p>
