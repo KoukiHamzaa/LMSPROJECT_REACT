@@ -1,0 +1,77 @@
+{\Large \color{cyan} Description détaillée:}
+{\Large \color{cyan} Description des entités:}
+\clearpage
+\medskip          \\
+\subsubsection{Les Interfaces de : Consulter les ressources et les liens d'apprentissage  }
+
+
+
+
+
+
+
+{\Large \color{cyan} Description détaillée des cas d’utilisations :d’ajouter et de supprimer un utilisateur}
+\begin{itemize}
+	\item[$\bullet$] \textbf{Cas d’utilisation Gérer les utilisateurs :} 
+	\medskip
+	\begin{itemize}
+		\item \textit{\textbf{Objectif :}} permet à l’acteur d’ajouter et de supprimer un utilisateur. 
+		
+		\item \textit{\textbf{Acteur :}} Administrateur
+		
+		\item \textit{\textbf{Pré-condition  :}} L‘acteur doit être connecté.
+		\item \textit{\textbf{Post-conditions   :}}
+		\item \textit{\textbf{Scénario nominal :}}
+		\begin{enumerate}
+			\item Le système affiche un formulaire d’inscription à l’acteur. 
+			\item L’acteur saisit les informations du nouvel utilisateur et lui affecter un rôle. 
+			\item    Le système vérifie la validité des informations saisies. 
+			\item  Le système enregistre ces informations dans la base de données.  
+			\item Le système notifie l’acteur du bon déroulement de l’inscription..
+		\end{enumerate}
+		\item \textit{\textbf{Scénario alternative :}} \\
+les informations sont manquantes ou incorrectes: ce scénario commence au point 03 du
+scénario nominal.
+		\begin{enumerate}
+			\item  Le système informe l’acteur que les données saisies sont erronées et le scénario reprend au point 02 du scénario nominal.
+		\end{enumerate}
+	\end{itemize}
+\end{itemize}
+Sony@1khalfi
+
+
+
+
+7 8 9 hhh 20 038 125
+
+\subsubsubsection{Description détaillée des cas d’utilisations}
+
+\begin{itemize}
+	\item[$\bullet$] \textbf{Cas d’utilisation Gérer les cours :}
+	\medskip
+	\begin{itemize}
+		\item \textit{\textbf{Objectif :}}  permet à l’acteur d’ajouter, d’annuler et modifier un cours.
+		
+		\item \textit{\textbf{Acteur :}} Enseignants
+		
+		\item \textit{\textbf{Pré-condition :}} L‘acteur doit être connecté.
+		\item \textit{\textbf{Scénario nominal   :}}
+		\begin{enumerate}
+			\item  Le système affiche deux méthodes d’ajout d’un cours.\\
+			<méthode1: Créer un cours> 
+			\item L’acteur saisit le contenu du cours 
+		\end{enumerate}
+		<méthode2: téléverser un cours>
+		\begin{enumerate}
+			\item   L’acteur téléverse le cours.  
+			\item  L’acteur configure les droits d’accès à son cour.
+			\item  L’acteur enregistre le cours dans la base de données de la plateforme.
+		\end{enumerate}
+	\end{itemize}
+\end{itemize}	
+\bigskip
+
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
+%{+++++++++++++++++un autre section+++++++++++++++++++ }
