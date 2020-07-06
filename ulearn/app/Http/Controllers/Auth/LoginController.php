@@ -5,9 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Socialite;
-use App\Models\User;
 use Auth;
-
+use App\User;
 class LoginController extends Controller
 {
     /*
@@ -28,7 +27,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/payments';
 
     /**
      * Create a new controller instance.
@@ -40,74 +39,64 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function login(\Illuminate\Http\Request $request) {
-        $this->validateLogin($request);
+    /**
+     * Redirect the user to the GitHub authentication page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function redirectToProvider()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderCallback()
+    {
 
-        // This section is the only change
-        if ($this->guard()->validate($this->credentials($request))) {
-            $user = $this->guard()->getLastAttempted();
+        $userSocial  = Socialite::driver('facebook')->user();
 
-            // Make sure the user is active
-            if ($user->is_active && $this->attemptLogin($request)) {
-                // Send the normal successful login response
-                return $this->sendLoginResponse($request);
-            } else {
-                // login form with an error message.
-                return redirect()
-                    ->back()
-                    ->withInput($request->only($this->username(), 'remember'))
-                    ->withErrors(['active' => 'You must be active to login.']);
+        //check if user exists and log user in
+        $user = User::where('email', $userSocial->user['email'])->first();
+        if ($user) {
+            if (Auth::loginUsingId($user->id)) {
+                //decide where to redirect 
+                if (Auth::user()->role_id < 3) {
+                    return redirect()->route('settings.index');
+                }
+                return redirect()->route('categories.index');
             }
         }
 
-        return $this->sendFailedLoginResponse($request);
-    }
-
-    public function authenticated($request , $user){
-
-        if($user->hasRole('instructor')){
-            return redirect()->route('instructor.dashboard') ;
+        if (empty($userSocial->user['link']) || !isset($userSocial->user['link'])) {
+            $userSocial->user['link'] = 'https://fb.com';
         }
-        elseif($user->hasRole('admin')){
-            return redirect()->route('admin.dashboard') ;
-        }else{
-            return redirect()->route('home') ;
-        }
-    }
 
-    /**
-    * Handle Social login request
-    *
-    * @return response
-    */
- 
-    public function socialLogin($social)
-    {
-        return Socialite::driver($social)->redirect();
-    }
- 
-   /**
-    * Obtain the user information from Social Logged in.
-    * @param $social
-    * @return Response
-    */
- 
-    public function handleProviderCallback($social)
-    {
- 
-        $userSocial = Socialite::driver($social)->user();
-        // echo '<pre>';print_r($userSocial);exit;
-        $user = User::where(['email' => $userSocial->getEmail()])->first();
- 
-       if($user){
- 
-            Auth::login($user);
-            return redirect()->action('HomeController@index');
- 
-       }else{
- 
-            return view('auth.register',['name' => $userSocial->getName(), 'email' => $userSocial->getEmail()]);
+        if (empty($userSocial->user['gender']) || !isset($userSocial->user['gender'])) {
+            $userSocial->user['gender'] = 'not specified';
         }
- 
-   }
+
+        //else sign the user up
+        $userSignup = User::create([
+            'name' => $userSocial->user['name'],
+            'email' => $userSocial->user['email'],
+            'password' => bcrypt('1234'),
+            'avatar' => $userSocial->avatar,
+            'facebook_profile' => $userSocial->user['link'],
+            'gender' => $userSocial->user['gender']
+        ]);
+
+        //finally log the user in
+        if ($userSignup) {
+            if (Auth::loginUsingId($userSignup->id)) {
+
+
+                return redirect()->route('categories.index');
+            }
+        }
+
+
+    }
 }

@@ -16,7 +16,7 @@ class Storage extends Facade
      *
      * @param  string|null  $disk
      *
-     * @return \Illuminate\Filesystem\Filesystem
+     * @return void
      */
     public static function fake($disk = null)
     {
@@ -26,26 +26,22 @@ class Storage extends Facade
             $root = storage_path('framework/testing/disks/'.$disk)
         );
 
-        static::set($disk, $fake = self::createLocalDriver(['root' => $root]));
-
-        return $fake;
+        static::set($disk, self::createLocalDriver(['root' => $root]));
     }
 
     /**
      * Replace the given disk with a persistent local testing disk.
      *
      * @param  string|null  $disk
-     * @return \Illuminate\Filesystem\Filesystem
+     * @return void
      */
     public static function persistentFake($disk = null)
     {
         $disk = $disk ?: self::$app['config']->get('filesystems.default');
 
-        static::set($disk, $fake = self::createLocalDriver([
+        static::set($disk, self::createLocalDriver([
             'root' => storage_path('framework/testing/disks/'.$disk),
         ]));
-
-        return $fake;
     }
 
     /**

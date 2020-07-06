@@ -53,7 +53,7 @@ class ThrottleRequests
             throw $this->buildException($key, $maxAttempts);
         }
 
-        $this->limiter->hit($key, $decayMinutes * 60);
+        $this->limiter->hit($key, $decayMinutes);
 
         $response = $next($request);
 

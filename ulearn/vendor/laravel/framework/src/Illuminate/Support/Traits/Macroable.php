@@ -33,22 +33,20 @@ trait Macroable
      * Mix another object into the class.
      *
      * @param  object  $mixin
-     * @param  bool  $replace
      * @return void
      *
      * @throws \ReflectionException
      */
-    public static function mixin($mixin, $replace = true)
+    public static function mixin($mixin)
     {
         $methods = (new ReflectionClass($mixin))->getMethods(
             ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_PROTECTED
         );
 
         foreach ($methods as $method) {
-            if ($replace || ! static::hasMacro($method->name)) {
-                $method->setAccessible(true);
-                static::macro($method->name, $method->invoke($mixin));
-            }
+            $method->setAccessible(true);
+
+            static::macro($method->name, $method->invoke($mixin));
         }
     }
 
@@ -67,7 +65,7 @@ trait Macroable
      * Dynamically handle calls to the class.
      *
      * @param  string  $method
-     * @param  array  $parameters
+     * @param  array   $parameters
      * @return mixed
      *
      * @throws \BadMethodCallException
@@ -91,7 +89,7 @@ trait Macroable
      * Dynamically handle calls to the class.
      *
      * @param  string  $method
-     * @param  array  $parameters
+     * @param  array   $parameters
      * @return mixed
      *
      * @throws \BadMethodCallException

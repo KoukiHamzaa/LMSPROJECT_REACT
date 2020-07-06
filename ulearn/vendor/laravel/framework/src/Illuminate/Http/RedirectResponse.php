@@ -37,7 +37,7 @@ class RedirectResponse extends BaseRedirectResponse
      *
      * @param  string|array  $key
      * @param  mixed  $value
-     * @return $this
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function with($key, $value = null)
     {
@@ -68,7 +68,7 @@ class RedirectResponse extends BaseRedirectResponse
     /**
      * Flash an array of input to the session.
      *
-     * @param  array|null  $input
+     * @param  array  $input
      * @return $this
      */
     public function withInput(array $input = null)
@@ -114,7 +114,7 @@ class RedirectResponse extends BaseRedirectResponse
     /**
      * Flash an array of input to the session.
      *
-     * @return $this
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function exceptInput()
     {
@@ -217,7 +217,7 @@ class RedirectResponse extends BaseRedirectResponse
      *
      * @param  string  $method
      * @param  array  $parameters
-     * @return mixed
+     * @return $this
      *
      * @throws \BadMethodCallException
      */

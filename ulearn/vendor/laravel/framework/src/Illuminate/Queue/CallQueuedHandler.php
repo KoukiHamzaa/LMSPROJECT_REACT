@@ -127,7 +127,9 @@ class CallQueuedHandler
             return $job->delete();
         }
 
-        return $job->fail($e);
+        return FailingJob::handle(
+            $job->getConnectionName(), $job, $e
+        );
     }
 
     /**

@@ -71,7 +71,7 @@ class Builder
      * @var array
      */
     protected $passthru = [
-        'insert', 'insertGetId', 'getBindings', 'toSql', 'dump', 'dd',
+        'insert', 'insertGetId', 'getBindings', 'toSql',
         'exists', 'doesntExist', 'count', 'min', 'max', 'avg', 'average', 'sum', 'getConnection',
     ];
 
@@ -338,8 +338,6 @@ class Builder
      */
     public function findMany($ids, $columns = ['*'])
     {
-        $ids = $ids instanceof Arrayable ? $ids->toArray() : $ids;
-
         if (empty($ids)) {
             return $this->model->newCollection();
         }
@@ -643,7 +641,7 @@ class Builder
     public function cursor()
     {
         foreach ($this->applyScopes()->query->cursor() as $record) {
-            yield $this->newModelInstance()->newFromBuilder($record);
+            yield $this->model->newFromBuilder($record);
         }
     }
 
@@ -858,27 +856,14 @@ class Builder
      */
     protected function addUpdatedAtColumn(array $values)
     {
-        if (! $this->model->usesTimestamps() ||
-            is_null($this->model->getUpdatedAtColumn())) {
+        if (! $this->model->usesTimestamps()) {
             return $values;
         }
 
-        $column = $this->model->getUpdatedAtColumn();
-
-        $values = array_merge(
-            [$column => $this->model->freshTimestampString()],
-            $values
+        return Arr::add(
+            $values, $this->model->getUpdatedAtColumn(),
+            $this->model->freshTimestampString()
         );
-
-        $segments = preg_split('/\s+as\s+/i', $this->query->from);
-
-        $qualifiedColumn = end($segments).'.'.$column;
-
-        $values[$qualifiedColumn] = $values[$column];
-
-        unset($values[$column]);
-
-        return $values;
     }
 
     /**

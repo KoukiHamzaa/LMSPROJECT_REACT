@@ -1,38 +1,33 @@
 
 /**
  * First we will load all of this project's JavaScript dependencies which
- * includes React and other helpers. It's a great starting point while
- * building robust, powerful web applications using React + Laravel.
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
  */
 
 require('./bootstrap');
 
+window.Vue = require('vue');
+
 /**
- * Next, we will create a fresh React component instance and attach it to
+ * The following block of code may be used to automatically register your
+ * Vue components. It will recursively scan this directory for the Vue
+ * components and automatically register them with their "basename".
+ *
+ * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ */
+
+// const files = require.context('./', true, /\.vue$/i)
+// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-require('./components/TopBar');
 
-import React from 'react';
-import { render } from 'react-dom';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.css';
-import './site.css';
-
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleRight, faCheck, faArrowLeft, faDownload, faPaperclip, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-
-library.add(faAngleDoubleRight, faCheck, faArrowLeft, faDownload, faPaperclip, faExternalLinkAlt);
-
-
-import Master from './components/Master';
-import Footer from './components/Footer';
-
-render(
-    <Router >
-        <Route path={base_url+"/:l_slug"} component={Master} />
-     </Router>,
-  document.getElementById('course-enroll-container')
-);
+const app = new Vue({
+    el: '#app'
+});

@@ -14,7 +14,7 @@ class PasswordBrokerManager implements FactoryContract
     /**
      * The application instance.
      *
-     * @var \Illuminate\Contracts\Foundation\Application
+     * @var \Illuminate\Foundation\Application
      */
     protected $app;
 
@@ -28,7 +28,7 @@ class PasswordBrokerManager implements FactoryContract
     /**
      * Create a new PasswordBroker manager instance.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \Illuminate\Foundation\Application  $app
      * @return void
      */
     public function __construct($app)
@@ -46,7 +46,9 @@ class PasswordBrokerManager implements FactoryContract
     {
         $name = $name ?: $this->getDefaultDriver();
 
-        return $this->brokers[$name] ?? ($this->brokers[$name] = $this->resolve($name));
+        return isset($this->brokers[$name])
+                    ? $this->brokers[$name]
+                    : $this->brokers[$name] = $this->resolve($name);
     }
 
     /**

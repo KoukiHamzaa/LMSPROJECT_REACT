@@ -4,7 +4,6 @@ namespace Illuminate\Support\Testing\Fakes;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Traits\Macroable;
 use PHPUnit\Framework\Assert as PHPUnit;
 use Illuminate\Contracts\Translation\HasLocalePreference;
 use Illuminate\Contracts\Notifications\Factory as NotificationFactory;
@@ -12,8 +11,6 @@ use Illuminate\Contracts\Notifications\Dispatcher as NotificationDispatcher;
 
 class NotificationFake implements NotificationFactory, NotificationDispatcher
 {
-    use Macroable;
-
     /**
      * All of the notifications that have been sent.
      *
@@ -173,7 +170,11 @@ class NotificationFake implements NotificationFactory, NotificationDispatcher
      */
     protected function notificationsFor($notifiable, $notification)
     {
-        return $this->notifications[get_class($notifiable)][$notifiable->getKey()][$notification] ?? [];
+        if (isset($this->notifications[get_class($notifiable)][$notifiable->getKey()][$notification])) {
+            return $this->notifications[get_class($notifiable)][$notifiable->getKey()][$notification];
+        }
+
+        return [];
     }
 
     /**

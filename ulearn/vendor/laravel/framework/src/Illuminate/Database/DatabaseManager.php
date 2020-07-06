@@ -6,7 +6,6 @@ use PDO;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
-use Illuminate\Support\ConfigurationUrlParser;
 use Illuminate\Database\Connectors\ConnectionFactory;
 
 /**
@@ -17,7 +16,7 @@ class DatabaseManager implements ConnectionResolverInterface
     /**
      * The application instance.
      *
-     * @var \Illuminate\Contracts\Foundation\Application
+     * @var \Illuminate\Foundation\Application
      */
     protected $app;
 
@@ -43,16 +42,9 @@ class DatabaseManager implements ConnectionResolverInterface
     protected $extensions = [];
 
     /**
-     * The callback to be executed to reconnect to a database.
-     *
-     * @var callable
-     */
-    protected $reconnector;
-
-    /**
      * Create a new database manager instance.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \Illuminate\Foundation\Application  $app
      * @param  \Illuminate\Database\Connectors\ConnectionFactory  $factory
      * @return void
      */
@@ -60,16 +52,12 @@ class DatabaseManager implements ConnectionResolverInterface
     {
         $this->app = $app;
         $this->factory = $factory;
-
-        $this->reconnector = function ($connection) {
-            $this->reconnect($connection->getName());
-        };
     }
 
     /**
      * Get a database connection instance.
      *
-     * @param  string|null  $name
+     * @param  string  $name
      * @return \Illuminate\Database\Connection
      */
     public function connection($name = null)
@@ -152,8 +140,7 @@ class DatabaseManager implements ConnectionResolverInterface
             throw new InvalidArgumentException("Database [{$name}] not configured.");
         }
 
-        return (new ConfigurationUrlParser)
-                    ->parseConfiguration($config);
+        return $config;
     }
 
     /**
@@ -177,7 +164,9 @@ class DatabaseManager implements ConnectionResolverInterface
         // Here we'll set a reconnector callback. This reconnector can be any callable
         // so we will set a Closure to reconnect from this manager with the name of
         // the connection, which will allow us to reconnect from the connections.
-        $connection->setReconnector($this->reconnector);
+        $connection->setReconnector(function ($connection) {
+            $this->reconnect($connection->getName());
+        });
 
         return $connection;
     }
@@ -186,7 +175,7 @@ class DatabaseManager implements ConnectionResolverInterface
      * Prepare the read / write mode for database connection instance.
      *
      * @param  \Illuminate\Database\Connection  $connection
-     * @param  string|null  $type
+     * @param  string  $type
      * @return \Illuminate\Database\Connection
      */
     protected function setPdoForType(Connection $connection, $type = null)
@@ -203,7 +192,7 @@ class DatabaseManager implements ConnectionResolverInterface
     /**
      * Disconnect from the given database and remove from local cache.
      *
-     * @param  string|null  $name
+     * @param  string  $name
      * @return void
      */
     public function purge($name = null)
@@ -218,7 +207,7 @@ class DatabaseManager implements ConnectionResolverInterface
     /**
      * Disconnect from the given database.
      *
-     * @param  string|null  $name
+     * @param  string  $name
      * @return void
      */
     public function disconnect($name = null)
@@ -231,7 +220,7 @@ class DatabaseManager implements ConnectionResolverInterface
     /**
      * Reconnect to the given database.
      *
-     * @param  string|null  $name
+     * @param  string  $name
      * @return \Illuminate\Database\Connection
      */
     public function reconnect($name = null)
@@ -324,17 +313,6 @@ class DatabaseManager implements ConnectionResolverInterface
     public function getConnections()
     {
         return $this->connections;
-    }
-
-    /**
-     * Set the database reconnector callback.
-     *
-     * @param  callable  $reconnector
-     * @return void
-     */
-    public function setReconnector(callable $reconnector)
-    {
-        $this->reconnector = $reconnector;
     }
 
     /**

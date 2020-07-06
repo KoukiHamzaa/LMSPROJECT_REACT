@@ -2,7 +2,9 @@
 
 namespace Illuminate\Cache;
 
-class ApcStore extends TaggableStore
+use Illuminate\Contracts\Cache\Store;
+
+class ApcStore extends TaggableStore implements Store
 {
     use RetrievesMultipleKeys;
 
@@ -49,16 +51,16 @@ class ApcStore extends TaggableStore
     }
 
     /**
-     * Store an item in the cache for a given number of seconds.
+     * Store an item in the cache for a given number of minutes.
      *
      * @param  string  $key
      * @param  mixed   $value
-     * @param  int  $seconds
-     * @return bool
+     * @param  float|int  $minutes
+     * @return void
      */
-    public function put($key, $value, $seconds)
+    public function put($key, $value, $minutes)
     {
-        return $this->apc->put($this->prefix.$key, $value, $seconds);
+        $this->apc->put($this->prefix.$key, $value, (int) ($minutes * 60));
     }
 
     /**
@@ -90,11 +92,11 @@ class ApcStore extends TaggableStore
      *
      * @param  string  $key
      * @param  mixed   $value
-     * @return bool
+     * @return void
      */
     public function forever($key, $value)
     {
-        return $this->put($key, $value, 0);
+        $this->put($key, $value, 0);
     }
 
     /**

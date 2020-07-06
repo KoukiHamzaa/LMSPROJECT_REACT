@@ -3,6 +3,7 @@
 namespace Illuminate\Database\Query\Grammars;
 
 use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Query\JsonExpression;
 
@@ -64,9 +65,7 @@ class MySqlGrammar extends Grammar
      */
     protected function compileJsonContains($column, $value)
     {
-        [$field, $path] = $this->wrapJsonFieldAndPath($column);
-
-        return 'json_contains('.$field.', '.$value.$path.')';
+        return 'json_contains('.$this->wrap($column).', '.$value.')';
     }
 
     /**
@@ -259,7 +258,7 @@ class MySqlGrammar extends Grammar
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  string  $table
-     * @param  string  $where
+     * @param  array  $where
      * @return string
      */
     protected function compileDeleteWithoutJoins($query, $table, $where)
@@ -285,7 +284,7 @@ class MySqlGrammar extends Grammar
      *
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  string  $table
-     * @param  string  $where
+     * @param  array  $where
      * @return string
      */
     protected function compileDeleteWithJoins($query, $table, $where)
@@ -317,21 +316,16 @@ class MySqlGrammar extends Grammar
      */
     protected function wrapJsonSelector($value)
     {
-        [$field, $path] = $this->wrapJsonFieldAndPath($value);
+        $delimiter = Str::contains($value, '->>')
+            ? '->>'
+            : '->';
 
-        return 'json_unquote(json_extract('.$field.$path.'))';
-    }
+        $path = explode($delimiter, $value);
 
-    /**
-     * Wrap the given JSON selector for boolean values.
-     *
-     * @param  string  $value
-     * @return string
-     */
-    protected function wrapJsonBooleanSelector($value)
-    {
-        [$field, $path] = $this->wrapJsonFieldAndPath($value);
+        $field = $this->wrapSegments(explode('.', array_shift($path)));
 
-        return 'json_extract('.$field.$path.')';
+        return sprintf('%s'.$delimiter.'\'$.%s\'', $field, collect($path)->map(function ($part) {
+            return '"'.$part.'"';
+        })->implode('.'));
     }
 }

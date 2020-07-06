@@ -24,13 +24,6 @@ class ServeCommand extends Command
     protected $description = 'Serve the application on the PHP development server';
 
     /**
-     * The current port offset.
-     *
-     * @var int
-     */
-    protected $portOffset = 0;
-
-    /**
      * Execute the console command.
      *
      * @return int
@@ -44,12 +37,6 @@ class ServeCommand extends Command
         $this->line("<info>Laravel development server started:</info> <http://{$this->host()}:{$this->port()}>");
 
         passthru($this->serverCommand(), $status);
-
-        if ($status && $this->canTryAnotherPort()) {
-            $this->portOffset += 1;
-
-            return $this->handle();
-        }
 
         return $status;
     }
@@ -86,20 +73,7 @@ class ServeCommand extends Command
      */
     protected function port()
     {
-        $port = $this->input->getOption('port') ?: 8000;
-
-        return $port + $this->portOffset;
-    }
-
-    /**
-     * Check if command has reached its max amount of port tries.
-     *
-     * @return bool
-     */
-    protected function canTryAnotherPort()
-    {
-        return is_null($this->input->getOption('port')) &&
-               ($this->input->getOption('tries') > $this->portOffset);
+        return $this->input->getOption('port');
     }
 
     /**
@@ -112,9 +86,7 @@ class ServeCommand extends Command
         return [
             ['host', null, InputOption::VALUE_OPTIONAL, 'The host address to serve the application on', '127.0.0.1'],
 
-            ['port', null, InputOption::VALUE_OPTIONAL, 'The port to serve the application on', $_ENV['SERVER_PORT'] ?? null],
-
-            ['tries', null, InputOption::VALUE_OPTIONAL, 'The max number of ports to attempt to serve from', 10],
+            ['port', null, InputOption::VALUE_OPTIONAL, 'The port to serve the application on', 8000],
         ];
     }
 }

@@ -13,7 +13,7 @@ class AuthManager implements FactoryContract
     /**
      * The application instance.
      *
-     * @var \Illuminate\Contracts\Foundation\Application
+     * @var \Illuminate\Foundation\Application
      */
     protected $app;
 
@@ -43,7 +43,7 @@ class AuthManager implements FactoryContract
     /**
      * Create a new Auth manager instance.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \Illuminate\Foundation\Application  $app
      * @return void
      */
     public function __construct($app)
@@ -58,7 +58,7 @@ class AuthManager implements FactoryContract
     /**
      * Attempt to get the guard from the local cache.
      *
-     * @param  string|null  $name
+     * @param  string  $name
      * @return \Illuminate\Contracts\Auth\Guard|\Illuminate\Contracts\Auth\StatefulGuard
      */
     public function guard($name = null)
@@ -94,9 +94,7 @@ class AuthManager implements FactoryContract
             return $this->{$driverMethod}($name, $config);
         }
 
-        throw new InvalidArgumentException(
-            "Auth driver [{$config['driver']}] for guard [{$name}] is not defined."
-        );
+        throw new InvalidArgumentException("Auth driver [{$config['driver']}] for guard [{$name}] is not defined.");
     }
 
     /**
@@ -158,8 +156,7 @@ class AuthManager implements FactoryContract
             $this->createUserProvider($config['provider'] ?? null),
             $this->app['request'],
             $config['input_key'] ?? 'api_token',
-            $config['storage_key'] ?? 'api_token',
-            $config['hash'] ?? false
+            $config['storage_key'] ?? 'api_token'
         );
 
         $this->app->refresh('request', $guard, 'setRequest');

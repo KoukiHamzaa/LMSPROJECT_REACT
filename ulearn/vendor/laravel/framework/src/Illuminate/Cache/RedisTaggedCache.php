@@ -22,25 +22,21 @@ class RedisTaggedCache extends TaggedCache
      *
      * @param  string  $key
      * @param  mixed   $value
-     * @param  \DateTimeInterface|\DateInterval|int|null  $ttl
-     * @return bool
+     * @param  \DateTime|float|int|null  $minutes
+     * @return void
      */
-    public function put($key, $value, $ttl = null)
+    public function put($key, $value, $minutes = null)
     {
-        if ($ttl === null) {
-            return $this->forever($key, $value);
-        }
-
         $this->pushStandardKeys($this->tags->getNamespace(), $key);
 
-        return parent::put($key, $value, $ttl);
+        parent::put($key, $value, $minutes);
     }
 
     /**
      * Increment the value of an item in the cache.
      *
      * @param  string  $key
-     * @param  mixed  $value
+     * @param  mixed   $value
      * @return void
      */
     public function increment($key, $value = 1)
@@ -54,7 +50,7 @@ class RedisTaggedCache extends TaggedCache
      * Decrement the value of an item in the cache.
      *
      * @param  string  $key
-     * @param  mixed  $value
+     * @param  mixed   $value
      * @return void
      */
     public function decrement($key, $value = 1)
@@ -68,14 +64,14 @@ class RedisTaggedCache extends TaggedCache
      * Store an item in the cache indefinitely.
      *
      * @param  string  $key
-     * @param  mixed  $value
-     * @return bool
+     * @param  mixed   $value
+     * @return void
      */
     public function forever($key, $value)
     {
         $this->pushForeverKeys($this->tags->getNamespace(), $key);
 
-        return parent::forever($key, $value);
+        parent::forever($key, $value);
     }
 
     /**

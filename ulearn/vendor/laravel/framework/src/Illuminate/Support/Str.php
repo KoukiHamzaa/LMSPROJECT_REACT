@@ -113,24 +113,6 @@ class Str
     }
 
     /**
-     * Determine if a given string contains all array values.
-     *
-     * @param  string  $haystack
-     * @param  array  $needles
-     * @return bool
-     */
-    public static function containsAll($haystack, array $needles)
-    {
-        foreach ($needles as $needle) {
-            if (! static::contains($haystack, $needle)) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-    /**
      * Determine if a given string ends with a given substring.
      *
      * @param  string  $haystack
@@ -299,22 +281,6 @@ class Str
     }
 
     /**
-     * Pluralize the last word of an English, studly caps case string.
-     *
-     * @param  string  $value
-     * @param  int     $count
-     * @return string
-     */
-    public static function pluralStudly($value, $count = 2)
-    {
-        $parts = preg_split('/(.)(?=[A-Z])/u', $value, -1, PREG_SPLIT_DELIM_CAPTURE);
-
-        $lastWord = array_pop($parts);
-
-        return implode('', $parts).self::plural($lastWord, $count);
-    }
-
-    /**
      * Generate a more truly "random" alpha-numeric string.
      *
      * @param  int  $length
@@ -345,15 +311,11 @@ class Str
      */
     public static function replaceArray($search, array $replace, $subject)
     {
-        $segments = explode($search, $subject);
-
-        $result = array_shift($segments);
-
-        foreach ($segments as $segment) {
-            $result .= (array_shift($replace) ?? $search).$segment;
+        foreach ($replace as $value) {
+            $subject = static::replaceFirst($search, $value, $subject);
         }
 
-        return $result;
+        return $subject;
     }
 
     /**
@@ -744,17 +706,9 @@ class Str
                     ['х', 'Х', 'щ', 'Щ', 'ъ', 'Ъ', 'ь', 'Ь'],
                     ['h', 'H', 'sht', 'SHT', 'a', 'А', 'y', 'Y'],
                 ],
-                'da' => [
-                    ['æ', 'ø', 'å', 'Æ', 'Ø', 'Å'],
-                    ['ae', 'oe', 'aa', 'Ae', 'Oe', 'Aa'],
-                ],
                 'de' => [
                     ['ä',  'ö',  'ü',  'Ä',  'Ö',  'Ü'],
                     ['ae', 'oe', 'ue', 'AE', 'OE', 'UE'],
-                ],
-                'ro' => [
-                    ['ă', 'â', 'î', 'ș', 'ț', 'Ă', 'Â', 'Î', 'Ș', 'Ț'],
-                    ['a', 'a', 'i', 's', 't', 'A', 'A', 'I', 'S', 'T'],
                 ],
             ];
         }

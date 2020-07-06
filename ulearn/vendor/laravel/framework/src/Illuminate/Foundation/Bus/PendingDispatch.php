@@ -79,7 +79,7 @@ class PendingDispatch
     /**
      * Set the desired delay for the job.
      *
-     * @param  \DateTimeInterface|\DateInterval|int|null  $delay
+     * @param  \DateTime|int|null  $delay
      * @return $this
      */
     public function delay($delay)

@@ -614,7 +614,7 @@ class SQLiteGrammar extends Grammar
      */
     protected function typeDateTime(Fluent $column)
     {
-        return $this->typeTimestamp($column);
+        return 'datetime';
     }
 
     /**

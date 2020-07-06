@@ -13,7 +13,7 @@ trait InteractsWithInput
     /**
      * Retrieve a server variable from the request.
      *
-     * @param  string|null  $key
+     * @param  string  $key
      * @param  string|array|null  $default
      * @return string|array|null
      */
@@ -36,7 +36,7 @@ trait InteractsWithInput
     /**
      * Retrieve a header from the request.
      *
-     * @param  string|null  $key
+     * @param  string  $key
      * @param  string|array|null  $default
      * @return string|array|null
      */
@@ -176,7 +176,7 @@ trait InteractsWithInput
     /**
      * Get all of the input and files for the request.
      *
-     * @param  array|mixed|null  $keys
+     * @param  array|mixed  $keys
      * @return array
      */
     public function all($keys = null)
@@ -255,7 +255,7 @@ trait InteractsWithInput
     /**
      * Retrieve a query string item from the request.
      *
-     * @param  string|null  $key
+     * @param  string  $key
      * @param  string|array|null  $default
      * @return string|array|null
      */
@@ -267,8 +267,9 @@ trait InteractsWithInput
     /**
      * Retrieve a request payload item from the request.
      *
-     * @param  string|null  $key
+     * @param  string  $key
      * @param  string|array|null  $default
+     *
      * @return string|array|null
      */
     public function post($key = null, $default = null)
@@ -290,7 +291,7 @@ trait InteractsWithInput
     /**
      * Retrieve a cookie from the request.
      *
-     * @param  string|null  $key
+     * @param  string  $key
      * @param  string|array|null  $default
      * @return string|array|null
      */
@@ -308,7 +309,9 @@ trait InteractsWithInput
     {
         $files = $this->files->all();
 
-        return $this->convertedFiles = $this->convertedFiles ?? $this->convertUploadedFiles($files);
+        return $this->convertedFiles
+                    ? $this->convertedFiles
+                    : $this->convertedFiles = $this->convertUploadedFiles($files);
     }
 
     /**
@@ -365,7 +368,7 @@ trait InteractsWithInput
     /**
      * Retrieve a file from the request.
      *
-     * @param  string|null  $key
+     * @param  string  $key
      * @param  mixed  $default
      * @return \Illuminate\Http\UploadedFile|\Illuminate\Http\UploadedFile[]|array|null
      */

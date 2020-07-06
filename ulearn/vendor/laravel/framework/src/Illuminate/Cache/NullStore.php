@@ -2,7 +2,9 @@
 
 namespace Illuminate\Cache;
 
-class NullStore extends TaggableStore
+use Illuminate\Contracts\Cache\Store;
+
+class NullStore extends TaggableStore implements Store
 {
     use RetrievesMultipleKeys;
 
@@ -21,19 +23,20 @@ class NullStore extends TaggableStore
      */
     public function get($key)
     {
+        //
     }
 
     /**
-     * Store an item in the cache for a given number of seconds.
+     * Store an item in the cache for a given number of minutes.
      *
      * @param  string  $key
      * @param  mixed   $value
-     * @param  int  $seconds
-     * @return bool
+     * @param  float|int  $minutes
+     * @return void
      */
-    public function put($key, $value, $seconds)
+    public function put($key, $value, $minutes)
     {
-        return false;
+        //
     }
 
     /**
@@ -41,11 +44,11 @@ class NullStore extends TaggableStore
      *
      * @param  string  $key
      * @param  mixed   $value
-     * @return int|bool
+     * @return int
      */
     public function increment($key, $value = 1)
     {
-        return false;
+        //
     }
 
     /**
@@ -53,11 +56,11 @@ class NullStore extends TaggableStore
      *
      * @param  string  $key
      * @param  mixed   $value
-     * @return int|bool
+     * @return int
      */
     public function decrement($key, $value = 1)
     {
-        return false;
+        //
     }
 
     /**
@@ -65,22 +68,22 @@ class NullStore extends TaggableStore
      *
      * @param  string  $key
      * @param  mixed   $value
-     * @return bool
+     * @return void
      */
     public function forever($key, $value)
     {
-        return false;
+        //
     }
 
     /**
      * Remove an item from the cache.
      *
      * @param  string  $key
-     * @return bool
+     * @return void
      */
     public function forget($key)
     {
-        return true;
+        //
     }
 
     /**

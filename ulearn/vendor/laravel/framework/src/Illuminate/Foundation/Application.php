@@ -29,7 +29,7 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
      *
      * @var string
      */
-    const VERSION = '5.8.26';
+    const VERSION = '5.7.29';
 
     /**
      * The base path for the Laravel installation.
@@ -149,7 +149,9 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
         }
 
         $this->registerBaseBindings();
+
         $this->registerBaseServiceProviders();
+
         $this->registerCoreContainerAliases();
     }
 
@@ -175,7 +177,6 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
         $this->instance('app', $this);
 
         $this->instance(Container::class, $this);
-        $this->singleton(Mix::class);
 
         $this->instance(PackageManifest::class, new PackageManifest(
             new Filesystem, $this->basePath(), $this->getCachedPackagesPath()
@@ -495,13 +496,12 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
     /**
      * Get or check the current application environment.
      *
-     * @param  string|array  $environments
      * @return string|bool
      */
-    public function environment(...$environments)
+    public function environment()
     {
-        if (count($environments) > 0) {
-            $patterns = is_array($environments[0]) ? $environments[0] : $environments;
+        if (func_num_args() > 0) {
+            $patterns = is_array(func_get_arg(0)) ? func_get_arg(0) : func_get_args();
 
             return Str::is($patterns, $this['env']);
         }
@@ -517,16 +517,6 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
     public function isLocal()
     {
         return $this['env'] === 'local';
-    }
-
-    /**
-     * Determine if application is in production environment.
-     *
-     * @return bool
-     */
-    public function isProduction()
-    {
-        return $this['env'] === 'production';
     }
 
     /**
@@ -604,7 +594,9 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
             $provider = $this->resolveProvider($provider);
         }
 
-        $provider->register();
+        if (method_exists($provider, 'register')) {
+            $provider->register();
+        }
 
         // If there are bindings / singletons set as properties on the provider we
         // will spin through them and register them with the application, which
@@ -947,26 +939,6 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
     }
 
     /**
-     * Determine if the application events are cached.
-     *
-     * @return bool
-     */
-    public function eventsAreCached()
-    {
-        return $this['files']->exists($this->getCachedEventsPath());
-    }
-
-    /**
-     * Get the path to the events cache file.
-     *
-     * @return string
-     */
-    public function getCachedEventsPath()
-    {
-        return $_ENV['APP_EVENTS_CACHE'] ?? $this->bootstrapPath().'/cache/events.php';
-    }
-
-    /**
      * Determine if the application is currently down for maintenance.
      *
      * @return bool
@@ -998,10 +970,10 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
     /**
      * Register a terminating callback with the application.
      *
-     * @param  callable|string  $callback
+     * @param  \Closure  $callback
      * @return $this
      */
-    public function terminating($callback)
+    public function terminating(Closure $callback)
     {
         $this->terminatingCallbacks[] = $callback;
 
@@ -1204,11 +1176,11 @@ class Application extends Container implements ApplicationContract, HttpKernelIn
             return $this->namespace;
         }
 
-        $composer = json_decode(file_get_contents($this->basePath('composer.json')), true);
+        $composer = json_decode(file_get_contents(base_path('composer.json')), true);
 
         foreach ((array) data_get($composer, 'autoload.psr-4') as $namespace => $path) {
             foreach ((array) $path as $pathChoice) {
-                if (realpath($this->path()) === realpath($this->basePath($pathChoice))) {
+                if (realpath(app_path()) == realpath(base_path().'/'.$pathChoice)) {
                     return $this->namespace = $namespace;
                 }
             }

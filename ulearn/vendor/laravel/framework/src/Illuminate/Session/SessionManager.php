@@ -128,16 +128,6 @@ class SessionManager extends Manager
     }
 
     /**
-     * Create an instance of the DynamoDB session driver.
-     *
-     * @return \Illuminate\Session\Store
-     */
-    protected function createDynamodbDriver()
-    {
-        return $this->createCacheBased('dynamodb');
-    }
-
-    /**
      * Create an instance of a cache driven driver.
      *
      * @param  string  $driver
@@ -172,9 +162,11 @@ class SessionManager extends Manager
      */
     protected function buildSession($handler)
     {
-        return $this->app['config']['session.encrypt']
-                ? $this->buildEncryptedSession($handler)
-                : new Store($this->app['config']['session.cookie'], $handler);
+        if ($this->app['config']['session.encrypt']) {
+            return $this->buildEncryptedSession($handler);
+        }
+
+        return new Store($this->app['config']['session.cookie'], $handler);
     }
 
     /**

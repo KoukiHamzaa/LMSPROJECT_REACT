@@ -367,11 +367,7 @@ class Worker
             // so it is not lost entirely. This'll let the job be retried at a later time by
             // another listener (or this same one). We will re-throw this exception after.
             if (! $job->isDeleted() && ! $job->isReleased() && ! $job->hasFailed()) {
-                $job->release(
-                    method_exists($job, 'delaySeconds') && ! is_null($job->delaySeconds())
-                                ? $job->delaySeconds()
-                                : $options->delay
-                );
+                $job->release($options->delay);
             }
         }
 
@@ -402,7 +398,7 @@ class Worker
             return;
         }
 
-        $this->failJob($job, $e = new MaxAttemptsExceededException(
+        $this->failJob($connectionName, $job, $e = new MaxAttemptsExceededException(
             $job->resolveName().' has been attempted too many times or run too long. The job may have previously timed out.'
         ));
 
@@ -423,24 +419,25 @@ class Worker
         $maxTries = ! is_null($job->maxTries()) ? $job->maxTries() : $maxTries;
 
         if ($job->timeoutAt() && $job->timeoutAt() <= Carbon::now()->getTimestamp()) {
-            $this->failJob($job, $e);
+            $this->failJob($connectionName, $job, $e);
         }
 
         if ($maxTries > 0 && $job->attempts() >= $maxTries) {
-            $this->failJob($job, $e);
+            $this->failJob($connectionName, $job, $e);
         }
     }
 
     /**
      * Mark the given job as failed and raise the relevant event.
      *
+     * @param  string  $connectionName
      * @param  \Illuminate\Contracts\Queue\Job  $job
      * @param  \Exception  $e
      * @return void
      */
-    protected function failJob($job, $e)
+    protected function failJob($connectionName, $job, $e)
     {
-        return $job->fail($e);
+        return FailingJob::handle($connectionName, $job, $e);
     }
 
     /**

@@ -50,22 +50,20 @@ class FileStore implements Store
     }
 
     /**
-     * Store an item in the cache for a given number of seconds.
+     * Store an item in the cache for a given number of minutes.
      *
      * @param  string  $key
      * @param  mixed   $value
-     * @param  int  $seconds
-     * @return bool
+     * @param  float|int  $minutes
+     * @return void
      */
-    public function put($key, $value, $seconds)
+    public function put($key, $value, $minutes)
     {
         $this->ensureCacheDirectoryExists($path = $this->path($key));
 
-        $result = $this->files->put(
-            $path, $this->expiration($seconds).serialize($value), true
+        $this->files->put(
+            $path, $this->expiration($minutes).serialize($value), true
         );
-
-        return $result !== false && $result > 0;
     }
 
     /**
@@ -114,11 +112,11 @@ class FileStore implements Store
      *
      * @param  string  $key
      * @param  mixed   $value
-     * @return bool
+     * @return void
      */
     public function forever($key, $value)
     {
-        return $this->put($key, $value, 0);
+        $this->put($key, $value, 0);
     }
 
     /**
@@ -186,18 +184,12 @@ class FileStore implements Store
             return $this->emptyPayload();
         }
 
-        try {
-            $data = unserialize(substr($contents, 10));
-        } catch (Exception $e) {
-            $this->forget($key);
+        $data = unserialize(substr($contents, 10));
 
-            return $this->emptyPayload();
-        }
-
-        // Next, we'll extract the number of seconds that are remaining for a cache
+        // Next, we'll extract the number of minutes that are remaining for a cache
         // so that we can properly retain the time for things like the increment
         // operation that may be performed on this cache on a later operation.
-        $time = $expire - $this->currentTime();
+        $time = ($expire - $this->currentTime()) / 60;
 
         return compact('data', 'time');
     }
@@ -226,16 +218,16 @@ class FileStore implements Store
     }
 
     /**
-     * Get the expiration time based on the given seconds.
+     * Get the expiration time based on the given minutes.
      *
-     * @param  int  $seconds
+     * @param  float|int  $minutes
      * @return int
      */
-    protected function expiration($seconds)
+    protected function expiration($minutes)
     {
-        $time = $this->availableAt($seconds);
+        $time = $this->availableAt((int) ($minutes * 60));
 
-        return $seconds === 0 || $time > 9999999999 ? 9999999999 : $time;
+        return $minutes === 0 || $time > 9999999999 ? 9999999999 : (int) $time;
     }
 
     /**

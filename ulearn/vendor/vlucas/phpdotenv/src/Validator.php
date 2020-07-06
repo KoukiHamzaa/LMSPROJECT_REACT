@@ -2,6 +2,7 @@
 
 namespace Dotenv;
 
+use Dotenv\Exception\InvalidCallbackException;
 use Dotenv\Exception\ValidationException;
 
 /**
@@ -14,7 +15,7 @@ class Validator
     /**
      * The variables to validate.
      *
-     * @var string[]
+     * @var array
      */
     protected $variables;
 
@@ -28,10 +29,8 @@ class Validator
     /**
      * Create a new validator instance.
      *
-     * @param string[]       $variables
+     * @param array          $variables
      * @param \Dotenv\Loader $loader
-     *
-     * @throws \Dotenv\Exception\ValidationException
      *
      * @return void
      */
@@ -51,8 +50,6 @@ class Validator
     /**
      * Assert that each variable is not empty.
      *
-     * @throws \Dotenv\Exception\ValidationException
-     *
      * @return \Dotenv\Validator
      */
     public function notEmpty()
@@ -68,8 +65,6 @@ class Validator
     /**
      * Assert that each specified variable is an integer.
      *
-     * @throws \Dotenv\Exception\ValidationException
-     *
      * @return \Dotenv\Validator
      */
     public function isInteger()
@@ -84,8 +79,6 @@ class Validator
 
     /**
      * Assert that each specified variable is a boolean.
-     *
-     * @throws \Dotenv\Exception\ValidationException
      *
      * @return \Dotenv\Validator
      */
@@ -108,17 +101,15 @@ class Validator
      *
      * @param string[] $choices
      *
-     * @throws \Dotenv\Exception\ValidationException
-     *
      * @return \Dotenv\Validator
      */
     public function allowedValues(array $choices)
     {
         return $this->assertCallback(
             function ($value) use ($choices) {
-                return in_array($value, $choices, true);
+                return in_array($value, $choices);
             },
-            sprintf('is not one of [%s]', implode(', ', $choices))
+            'is not an allowed value'
         );
     }
 
@@ -128,24 +119,28 @@ class Validator
      * @param callable $callback
      * @param string   $message
      *
-     * @throws \Dotenv\Exception\ValidationException
+     * @throws \Dotenv\Exception\InvalidCallbackException|\Dotenv\Exception\ValidationException
      *
      * @return \Dotenv\Validator
      */
-    protected function assertCallback(callable $callback, $message = 'failed callback assertion')
+    protected function assertCallback($callback, $message = 'failed callback assertion')
     {
-        $failing = [];
+        if (!is_callable($callback)) {
+            throw new InvalidCallbackException('The provided callback must be callable.');
+        }
 
-        foreach ($this->variables as $variable) {
-            if ($callback($this->loader->getEnvironmentVariable($variable)) === false) {
-                $failing[] = sprintf('%s %s', $variable, $message);
+        $variablesFailingAssertion = array();
+        foreach ($this->variables as $variableName) {
+            $variableValue = $this->loader->getEnvironmentVariable($variableName);
+            if (call_user_func($callback, $variableValue) === false) {
+                $variablesFailingAssertion[] = $variableName." $message";
             }
         }
 
-        if (count($failing) > 0) {
+        if (count($variablesFailingAssertion) > 0) {
             throw new ValidationException(sprintf(
                 'One or more environment variables failed assertions: %s.',
-                implode(', ', $failing)
+                implode(', ', $variablesFailingAssertion)
             ));
         }
 

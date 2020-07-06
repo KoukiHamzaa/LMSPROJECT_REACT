@@ -1,118 +1,87 @@
-@extends('layouts.frontend.index')
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Braintem - Email password</title>
 
-@section('content')
-<!-- content start -->
-    <div class="container-fluid p-0 home-content container-top-border">
-        <!-- account block start -->
-        <div class="container">
-            <nav class="navbar clearfix secondary-nav pt-0 pb-0 login-page-seperator">
-                <ul class="list mt-0">
-                     <li><a href="{{ route('login') }}" class="active">Login</a></li>
-                     <li><a href="{{ route('register') }}">Register</a></li>
-                </ul>
-            </nav>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css">
+
+    <!-- iCheck -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+    <div class="login-logo">
+        <a href="{{ url('/home') }}"><b>Braintem </b>Online School</a>
+    </div>
+
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">Enter Email to reset password</p>
+
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
+
+        <form method="post" action="{{ url('/password/email') }}">
+            {!! csrf_field() !!}
+
+            <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
+                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                @if ($errors->has('email'))
+                    <span class="help-block">
+                    <strong>{{ $errors->first('email') }}</strong>
+                </span>
+                @endif
+            </div>
 
             <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 vertical-align d-none d-lg-block">
-                    <img class="img-fluid" src="{{ asset('frontend/img/fimg.png') }}" width="500px" height="500px">
-                </div>
-                <div class="col-xl-6 offset-xl-0 col-lg-6 offset-lg-0 col-md-8 offset-md-2">
-                    <div class="rightRegisterForm">
-                    <form id="resetForm" class="form-horizontal" method="POST" action="{{ route('password.email') }}">
-                        {{ csrf_field() }}
-                        <div class="box-header">
-                            Reset Password
-                        </div>
-                        <div class="p-4">
-                            <div class="form-group">
-                                <label>Email ID</label>
-                                <input name="email" type="text" class="form-control form-control-sm" placeholder="Email ID" value="{{ old('email') }}">
-                                @if ($errors->has('email'))
-                                <label class="error" for="email">{{ $errors->first('email') }}</label>
-                                @endif
-                                
-                            </div>
-                            <div class="form-group">
-                                <div class="row m-0">
-                                    <div class="custom-control custom-checkbox col-6">
-                                        
-                                    </div>
-                                    <div class="col-6">
-                                        <a href="{{ url('login') }}" class="float-right forgot-text">Back to login?</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-lg btn-block login-page-button">Send Password Reset Link</button>
-                            </div>
-
-                            <div class="hr-container">
-                               <hr class="hr-inline" align="left">
-                               <span class="hr-text"> or </span>
-                               <hr class="hr-inline" align="right">
-                            </div>
-
-                            <div class="form-group">
-                                <a href="{{ url('login/facebook') }}" class="btn btn-lg btn-block social-btn facebook-btn">
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <i class="fab fa-facebook-f float-right"></i>
-                                        </div>
-                                        <div class="col-9">
-                                            <span>
-                                            Login with Facebook
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="form-group">
-                                <button type="button" class="btn btn-lg btn-block social-btn google-btn">
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <i class="fab fa-google-plus-g float-right"></i>
-                                        </div>
-                                        <div class="col-9">
-                                            <span>
-                                            Login with Google plus
-                                            </span>
-                                        </div>
-                                    </div>
-                                </button>
-                            </div>
-
-                        </div>
-                        </form>
-                    </div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary pull-right">
+                        <i class="fa fa-btn fa-envelope"></i> Send Password Reset Link
+                    </button>
                 </div>
             </div>
-        </div>
 
-        <!-- account block end -->
+        </form>
+
     </div>
-    <!-- content end -->
-@endsection
+    <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
 
-@section('javascript')
-<script type="text/javascript">
-$(document).ready(function()
-{
-    $("#resetForm").validate({
-            rules: {
-                email:{
-                    required: true,
-                    email:true
-                }
-            },
-            messages: {
-                email: {
-                    required: 'The email field is required.',
-                    email: 'The email must be a valid email address.'
-                }
-            }
-        });
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-});
-</script>
-@endsection
+<!-- AdminLTE App -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
+</body>
+</html>

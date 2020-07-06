@@ -313,21 +313,6 @@ class SqlServerGrammar extends Grammar
     }
 
     /**
-     * Compile the command to drop all foreign keys.
-     *
-     * @return string
-     */
-    public function compileDropAllForeignKeys()
-    {
-        return "DECLARE @sql NVARCHAR(MAX) = N'';
-            SELECT @sql += 'ALTER TABLE ' + QUOTENAME(OBJECT_NAME(parent_object_id)) 
-                + ' DROP CONSTRAINT ' + QUOTENAME(name) + ';'
-            FROM sys.foreign_keys;
-            
-            EXEC sp_executesql @sql;";
-    }
-
-    /**
      * Create the column definition for a char type.
      *
      * @param  \Illuminate\Support\Fluent  $column
@@ -537,7 +522,7 @@ class SqlServerGrammar extends Grammar
      */
     protected function typeDateTime(Fluent $column)
     {
-        return $this->typeTimestamp($column);
+        return $column->precision ? "datetime2($column->precision)" : 'datetime';
     }
 
     /**
@@ -548,7 +533,7 @@ class SqlServerGrammar extends Grammar
      */
     protected function typeDateTimeTz(Fluent $column)
     {
-        return $this->typeTimestampTz($column);
+        return $column->precision ? "datetimeoffset($column->precision)" : 'datetimeoffset';
     }
 
     /**
@@ -596,9 +581,13 @@ class SqlServerGrammar extends Grammar
      */
     protected function typeTimestampTz(Fluent $column)
     {
-        $columnType = $column->precision ? "datetimeoffset($column->precision)" : 'datetimeoffset';
+        if ($column->useCurrent) {
+            $columnType = $column->precision ? "datetimeoffset($column->precision)" : 'datetimeoffset';
 
-        return $column->useCurrent ? "$columnType default CURRENT_TIMESTAMP" : $columnType;
+            return "$columnType default CURRENT_TIMESTAMP";
+        }
+
+        return "datetimeoffset($column->precision)";
     }
 
     /**
@@ -838,20 +827,5 @@ class SqlServerGrammar extends Grammar
         }
 
         return parent::wrapTable($table);
-    }
-
-    /**
-     * Quote the given string literal.
-     *
-     * @param  string|array  $value
-     * @return string
-     */
-    public function quoteString($value)
-    {
-        if (is_array($value)) {
-            return implode(', ', array_map([$this, __FUNCTION__], $value));
-        }
-
-        return "N'$value'";
     }
 }

@@ -2,73 +2,103 @@
 
 namespace App\Models;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Eloquent as Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class User extends Authenticatable
+/**
+ * Class User
+ * @package App\Models
+ * @version February 20, 2019, 2:31 pm UTC
+ *
+ * @property string name
+ * @property string email
+ * @property string first_name
+ * @property string last_name
+ * @property string gender
+ * @property date date_of_birth
+ * @property boolean is_subscribed
+ * @property string|\Carbon\Carbon email_verified_at
+ * @property string password
+ * @property integer view_count
+ * @property integer role_id
+ * @property string remember_token
+ */
+class User extends Model
 {
-    use Notifiable;
+    use SoftDeletes;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'first_name', 'last_name', 'email', 'password', 'provider', 'provider_id'
+    public $table = 'users';
+    
+    const CREATED_AT = 'created_at';
+    const UPDATED_AT = 'updated_at';
+
+
+    protected $dates = ['deleted_at'];
+
+
+    public $fillable = [
+        'name',
+        'email',
+        'first_name',
+        'last_name',
+        'gender',
+        'date_of_birth',
+        'is_subscribed',
+        'email_verified_at',
+        'password',
+        'view_count',
+        'role_id',
+        'remember_token'
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
+     * The attributes that should be casted to native types.
      *
      * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
+    protected $casts = [
+        'id' => 'integer',
+        'name' => 'string',
+        'email' => 'string',
+        'first_name' => 'string',
+        'last_name' => 'string',
+        'gender' => 'string',
+        'date_of_birth' => 'date',
+        'is_subscribed' => 'boolean',
+        'password' => 'string',
+        'view_count' => 'integer',
+        'role_id' => 'integer',
+        'remember_token' => 'string'
     ];
 
-    public function instructor()
+    /**
+     * Validation rules
+     *
+     * @var array
+     */
+    public static $rules = [
+        
+    ];
+
+    public function role()
     {
-        return $this->hasOne('App\Models\Instructor', 'user_id', 'id');
+        return $this->belongsTo('App\Models\Role');
     }
 
-    public function roles()
+    public function courses()
     {
-        return $this->belongsToMany(Role::class);
+        return $this->belongsToMany('App\Models\Course');
     }
 
     /**
-    * @param string|array $roles
-    */
-    public function authorizeRoles($roles)
+     * Get the comments for the blog post.
+     */
+    public function comments()
     {
-      if (is_array($roles)) {
-          return $this->hasAnyRole($roles) || 
-                 abort(401, 'This action is unauthorized.');
-      }
-      return $this->hasRole($roles) || 
-             abort(401, 'This action is unauthorized.');
+        return $this->hasMany('App\Models\Comment');
     }
-    /**
-    * Check multiple roles
-    * @param array $roles
-    */
-    public function hasAnyRole($roles)
+    public function payments()
     {
-      return null !== $this->roles()->whereIn('name', $roles)->first();
+        return $this->hasMany('App\Models\Payment');
     }
-    /**
-    * Check one role
-    * @param string $role
-    */
-    public function hasRole($role)
-    {
-      return null !== $this->roles()->where('name', $role)->first();
-    }
-
-    public function RoleUser()
-    {
-        return $this->hasMany('App\Models\RoleUser', 'user_id', 'id');
-    }
-
 }

@@ -1,228 +1,376 @@
-<?php  
+<?php
+
 namespace App\Http\Controllers;
+
+use App\Http\Requests\CreatePaymentRequest;
+use App\Http\Requests\UpdatePaymentRequest;
+use App\Repositories\PaymentRepository;
+use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
-use Validator, Input, Redirect; 
+use Flash;
+use Auth;
+use Hash;
+use Mail;
+use Prettus\Repository\Criteria\RequestCriteria;
+use Response;
+use Paystack;
+use App\Models\Payment;
+use App\Models\User;
+use App\Models\CourseUser; 
 use App\Models\Course;
-use App\Models\Transaction;
-use App\Models\Credit;
-use App\Models\Config;
-use App\Models\CourseTaken;
-use App\Models\Instructor;
+use App\Mail\PaymentSubmitted;
+use App\Mail\PaymentSubmittedAdmin;
+use App\Mail\PaymentConfirmed;
 
 
-class PaymentController extends Controller {
+class PaymentController extends AppBaseController
+{
+    /** @var  PaymentRepository */
+    private $paymentRepository;
 
-	public function __construct()
-	{
-		
-	}
-	
-	function getSuccess()
-	{
-		$gateway = \Omnipay::gateway('paypal');
-
-		//get the transaction id from session, so as to update the status and order details
-		$transaction = Transaction::find(\Session::get('transaction_id'));
-
-		if($transaction->amount!=0){
-		//get values from db and pass it to paypal
-		$express_checkout = Config::get_options('settingPayment');
-
-		$gateway->setUsername($express_checkout['username']);
-		$gateway->setPassword($express_checkout['password']);
-		$gateway->setSignature($express_checkout['signature']);
-		$gateway->setTestMode($express_checkout['test_mode']);
-
-		
-		$response = $gateway->completePurchase([
-		'amount'    => floatval($transaction->amount),
-		'returnUrl' => url('payment/success'),
-		'cancelUrl' => url('payment/failure'),
-		])->send();
-
-		$response_data = $response->getData();
-		}else{
-			$response_data = array(
-					"TOKEN" => 'success',
-					"status" => "succeeded",
-					"Timestamp"=>time(),
-					'ACK' =>'Success',
-			);
-		}
-
-		$course_id = \Session::get('course_id');
-		$course = Course::find($course_id);
-
-		if(isset($response_data['ACK'])){
-			//process only if the acknowledgement is success
-			if($response_data['ACK'] == 'Success')
-			{
-				$save_transaction['id'] = \Session::get('transaction_id');
-				$save_transaction['order_details'] = json_encode($response_data);
-				$save_transaction['status'] = 'completed';
-				$transaction_id = $this->save_transaction($save_transaction);
-			
-				// add for taken course by user
-				$courseTaken = new CourseTaken;
-				$courseTaken->user_id = \Auth::user()->id;
-				$courseTaken->course_id = $course_id;
-				$courseTaken->save();
-
-				\Session::forget('course_id');
-				\Session::forget('transaction_id');
-
-				return view('site/course/success')->with('course', $course)->with('title', 'Course')->with('status', 'success')->with('transId', $transaction_id);
-			}else{
-				return view('site/course/success')->with('course', $course)->with('status', 'failed')->with('transId', \Session::get('transaction_id'))->with('title', 'Course');
-			}
-		}else{
-			return view('site/course/success')->with('course', $course)->with('status', 'failed')->with('transId', \Session::get('transaction_id'))->with('title', 'Course');
-		}
-	}
-
-	function getFailure(Request $request)
-	{
-		$save_transaction['id'] = \Session::get('transaction_id');
-		$save_transaction['status'] = 'failed';
-		$save_transaction['order_details'] = json_encode(array('token'=>$request->input('token')));
-		$transaction_id = $this->save_transaction($save_transaction);
-		$course_id = \Session::get('course_id');
-		$course = Course::find($course_id);
-
-		\Session::forget('course_id');
-		\Session::forget('transaction_id');
-
-		return view('site/course/success')->with('course', $course)->with('status', 'failed')->with('transId', $transaction_id)->with('title', 'Course');
-	}
-
-	function paymentForm(Request $request)
-	{
-		// get all values from form
-		$payment_method = $request->input('payment_method');
-		$course_title = $request->input('course_title');
-		$course_id = $request->input('course_id');
-		$gateway = \Omnipay::gateway('paypal');
-
-			$paypal = Config::get_options('settingPayment');
-			
-			$course = Course::find($course_id);
-			$paypal_amount = $amount = $course->price;
-
-			//get values from db and pass it to paypal
-			$gateway->setUsername($paypal['username']);
-			$gateway->setPassword($paypal['password']);
-			$gateway->setSignature($paypal['signature']);
-
-			if($paypal['test_mode'] == 'true')
-			{
-				$gateway->setTestMode(true);
-			}
-
-			
-			//save the transaction details in DB
-			$transaction = new Transaction;
-			$transaction->user_id = \Auth::user()->id;
-			$transaction->course_id = $course_id;
-			$transaction->amount = floatval($amount);
-			$transaction->status = 'pending';
-			$transaction->payment_method = $payment_method;
-
-			$transaction->save();
-
-			\Session::put('transaction_id', $transaction->id);
-			\Session::put('course_id', $course_id);
-			\Session::save();
-			
-			if($amount==0){
-				return Redirect::to('payment/success');
-			}
-
-			$response = $gateway->purchase([
-						'amount'    => floatval($paypal_amount),
-						'description' => 'Course Title: '.$course_title,
-						'returnUrl' => url('payment/success'),
-						'cancelUrl' => url('payment/failure'),
-						])->send();
-
-			if ($response->isRedirect()) 
-			{
-            	// redirect to offsite payment gateway
-           		 $response->redirect();
-        	} 
-        	else 
-        	{
-            	// payment failed: display message to customer
-            	return Redirect::to('payment/form')->withErrors(['payment_error', true]);
-        	}
-	}
-
-	function save_transaction($data)
-	{
-		//check if the status is completed
-		$completed = in_array('completed', $data) ? true : false;
-		
-		//check if there is transaction id, if so find it or else create a new one
-		$transaction = array_key_exists('id', $data) ? Transaction::find($data['id']) : new Transaction;
-		//insert all the values in object
-		foreach ($data as $key => $value) 
-		{
-			$transaction->$key = $value;
-		}
-		$transaction->save();
+    public function __construct(PaymentRepository $paymentRepo)
+    {
+        $this->paymentRepository = $paymentRepo;
+    }
 
 
-		//process the invoice generation(get transaction details and save it in invoice table), if the status is completed
-		if($completed)
-		{
-			//save credits
-			$this->save_credits($transaction->id);
-		}
-		return $transaction->id;
-	}
+    /**
+     * Redirect the User to Paystack Payment Page
+     * @return Url
+     */
+    public function redirectToGateway()
+    {
+        return Paystack::getAuthorizationUrl()->redirectNow();
+    }
 
-	function save_credits($transaction_id)
-	{
-		//get transaction details
-		$transaction = Transaction::find($transaction_id);
+    /**
+     * Obtain Paystack payment information
+     * @return void
+     */
+    public function handleGatewayCallback()
+    {
+        $paymentDetails = Paystack::getPaymentData();
 
-		//get commision percentage from db
-		
-		$commision_percentage = Config::get_option('settingGeneral', 'admin_commission');
-		//calculate the credits
-		$amount = $transaction->amount;
-		$admin_credit = ($amount * $commision_percentage)/100;
-		$instructor_credit = $amount - $admin_credit;
+        // Now you have the payment details,
+        // you can store the authorization_code in your db to allow for recurrent subscriptions
+        // you can then redirect or do whatever you want
 
-		//get instructor id for the course id
-		$course = Course::find($transaction->course_id);
-		$instructor_id = $course->instructor_id;
+        //confirm that payment went through
+        //Grant user access to course paid for
 
-		//save credit for instructor
-		$credit = new Credit;
-		$credit->transaction_id = $transaction_id;
-		$credit->instructor_id = $instructor_id;
-		$credit->course_id = $transaction->course_id;
-		$credit->user_id = $transaction->user_id;
-		$credit->is_admin = 0;
-		$credit->credits_for = 1;
-		$credit->credit = $instructor_credit;
-		$credit->created_at = time();
+        //redirect if payment failed
+        if ($paymentDetails['data']['status'] != 'success') {
+            Flash::error('Sorry, payment failed. Please try another form of payment');
 
-		$credit->save();
+            //redirect
+            return redirect()->route('courses.show',['id'=> $paymentDetails['data']['metadata']['course_id']]);
+        }
 
-        //update the total credits
-        $instructor = Instructor::find($instructor_id)->increment('total_credits', $instructor_credit);
+
+        if(Auth::check()){
+            $user_id = Auth::user()->id;
+        }else{
+            //check if already has an account
+            $checkUser = User::where('email', $paymentDetails['data']['customer']['email'])->first();
+            //if true, get their email
+            if($checkUser){
+                $user_id = $checkUser->id;
+            }else{
+                //otherwise, create new account for user
+                User::create([
+                    'name' => $paymentDetails['data']['customer']['first_name'] . ' ' . $paymentDetails['data']['customer']['last_name'],
+                    'first_name' => $paymentDetails['data']['customer']['first_name'],
+                    'last_name' => $paymentDetails['data']['customer']['last_name'],
+                    'email' => $paymentDetails['data']['customer']['email'],
+                    'password' => Hash::make($paymentDetails['data']['customer']['email']) 
+
+                    ]);
+
+                $checkUser2 = User::where('email', $paymentDetails['data']['customer']['email'])->first();
+                if($checkUser2){
+                    $user_id = $checkUser2->id;
+                }
+            }
+            
+
+        }
+
+        //update payments table
+        Payment::create([
+            'user_id' => $user_id,
+            'course_id' => $paymentDetails['data']['metadata']['course_id'],
+            'amount' => ($paymentDetails['data']['amount']/100),
+            'status' => 'confirmed',
+            'mode_of_payment' => $paymentDetails['data']['channel'],
+            'payment_processor' => 'paystack',
+        ]);
+
+        //update course_user table 
+            CourseUser::create([
+                'user_id' => $user_id,
+                'course_id' => $paymentDetails['data']['metadata']['course_id'],
+                'status' => 1,
+                'paid_amount' => ($paymentDetails['data']['amount'] / 100),
+                //'paid_date' => $paymentDetails['data']['paid_at'] 
+            ]);
+
+            //TODO: send success email/sms
+
+ //redirect 
+        Flash::success('Payment successful, you are now subscribed to this course');
+        if (!Auth::check()) {
+            Auth::loginUsingId($user_id);
+        }
+            //redirect
+        return redirect()->route('courses.show', ['id' => $paymentDetails['data']['metadata']['course_id']]);
+      
+    }
+
+    
+    /**
+     * Display a listing of the Payment.
+     *
+     * @param Request $request
+     * @return Response
+     */
+    public function index(Request $request)
+    {
+        if(Auth::user()->role_id < 3){
+            $payments = Payment::latest()->get();
+        }else{
+            $payments = Payment::where('user_id', Auth::user()->id)->latest()->get();
+        }
+        return view('payments.index')
+            ->with('payments', $payments);
+    }
+
+    /**
+     * Show the form for creating a new Payment.
+     *
+     * @return Response
+     */
+    public function create()
+    {
+        return view('payments.create');
+    }
+
+    /**
+     * Store a newly created Payment in storage.
+     *
+     * @param CreatePaymentRequest $request
+     *
+     * @return Response
+     */
+    public function store(CreatePaymentRequest $request)
+    {
+        $input = $request->all();
+
+        // Mail::to($request->user())
+        //     ->cc($moreUsers)
+        //     ->bcc($evenMoreUsers)
+        //     ->send(new OrderShipped($order));
+
+        //GET THE USER ID USING EITHER OF 3 WAYS
+//check if user is currently logged in while reporting bank account
+        if (Auth::check() AND Auth::user()->role_id > 2) {
+            
+                $user_id = Auth::user()->id;
+                $input['user_id'] = Auth::user()->id;
+            
+         
+        } else {
+            //check if already has an account
+            $checkUser = User::where('email', $input['email'])->first();
+            //if true, get their id
+            if ($checkUser) {
+                $user_id = $checkUser->id;
+                $input['user_id'] = $checkUser->id;
+            } else {
+                //otherwise, create new account for user
+              $userCreate =  User::create([
+                    'name' => $input['email'],
+                    'first_name' => 'null',
+                    'last_name' => 'null',
+                    'email' => $input['email'],
+                    'password' =>  Hash::make($input['email'])
+
+                ]);
+
+                if($userCreate){
+                    $input['user_id'] = $userCreate->id;
+                }
+            }
+
+
+        }
+//now we've got the user id, lets check if the payment has been submitted before
+
+        $payment = Payment::where('user_id', $input['user_id'])
+        ->where('course_id', $input['course_id'])->first();
+
+        if(!exists($payment)){
+                $payment = $this->paymentRepository->create($input);
+                //send email to user  
+                Mail::to($input['email'])
+                ->send(new PaymentSubmitted( $payment)); 
+                
+                //send email to admin
+             Mail::to('realdavepartner@gmail.com')
+            ->send(new PaymentSubmittedAdmin($payment)); 
+            
+            Flash::success('Payment submitted successfully. You will get an email once we receive the payment confirmation. Admin will activate your course once your payment is verified within 24 hours');
+            if(!Auth::check()){
+                    Auth::loginUsingId($user_id);
+                }
+                
+                return redirect()->route('payments.index');
+             }else{
+            //log this person in with a message
+            Flash::success('You already subscribed to this course, you just need to login');
+            
+            return redirect()->route('login');
+             }
+
+      
+
         
-		//save credit for instructor
-		$credit = new Credit;
-		$credit->transaction_id = $transaction_id;
-		$credit->instructor_id = 0;
-		$credit->course_id = $transaction->course_id;
-		$credit->user_id = $transaction->user_id;
-		$credit->is_admin = 1;
-		$credit->credits_for = 2;
-		$credit->credit = $admin_credit;
-		$credit->save();
-	}
+        
+    }
 
+    /**
+     * Display the specified Payment.
+     *
+     * @param  int $id
+     *
+     * @return Response
+     */
+    public function show($id)
+    {
+        $payment = $this->paymentRepository->findWithoutFail($id);
+
+        if (empty($payment)) {
+            Flash::error('Payment not found');
+
+            return redirect(route('payments.index'));
+        }
+
+        return view('payments.show')->with('payment', $payment);
+    }
+
+    /**
+     * Show the form for editing the specified Payment.
+     *
+     * @param  int $id
+     *
+     * @return Response
+     */
+    public function edit($id)
+    {
+        $payment = $this->paymentRepository->findWithoutFail($id);
+
+        if (empty($payment)) {
+            Flash::error('Payment not found');
+
+            return redirect(route('payments.index'));
+        }
+
+        $courses = Course::all();
+
+        return view('payments.edit')
+        ->with('courses', $courses)
+        ->with('payment', $payment);
+    }
+
+    /**
+     * Update the specified Payment in storage.
+     *
+     * @param  int              $id
+     * @param UpdatePaymentRequest $request
+     *
+     * @return Response
+     */
+    public function update($id, UpdatePaymentRequest $request)
+    {
+
+        $payment = $this->paymentRepository->findWithoutFail($id);
+        $input = $request->all();
+        if (empty($payment)) {
+            Flash::error('Payment not found');
+
+            return redirect(route('payments.index'));
+        }
+
+
+
+ //TODO: send notification email to user
+
+        Flash::success('Payment updated successfully.');
+
+
+
+        $payment = $this->paymentRepository->update($input, $id);
+      
+      //Payment::where('id', $id)->update($input); 
+        //
+
+
+if($input['status'] == 'confirmed'){
+        CourseUser::create([
+            'user_id' => $payment->user_id,
+            'course_id' => $payment->course_id,
+            'status' => 1,
+            'paid_amount' => $payment->amount,
+                //'paid_date' => $paymentDetails['data']['paid_at'] 
+        ]);
+
+            Mail::to($payment->user['email'])
+                ->send(new PaymentConfirmed($payment));
+
+    }elseif($input['status'] == 'refund requested'){
+        //delete subscription if this guy asked for refund
+           $getCourseUser =  CourseUser::where('user_id', Auth::user()->id)
+            ->where('course_id', $payment->course_id )->first();
+                $this->paymentRepository->delete($id);
+
+            Flash::success('Refund requested successfully. 
+            Access to course revoked. You\'ll get your refund within 7 days');    
+    }
+
+
+       
+
+        return redirect(route('payments.index'));
+    }
+
+    /**
+     * Remove the specified Payment from storage.
+     *
+     * @param  int $id
+     *
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        $payment = $this->paymentRepository->findWithoutFail($id);
+
+        if (empty($payment)) {
+            Flash::error('Payment not found');
+
+            return redirect(route('payments.index'));
+        }
+        if (Auth::check() and (Auth::user()->role_id < 2 )) {
+        $this->paymentRepository->delete($id);
+
+        if($payment->status == 'confirmed'){
+        //delete courseUser too
+        //Find the courseUser
+        $courseUser = CourseUser::where('course_id', $payment->course_id)
+        ->where('user_id', $payment->user_id)->delete();
+        }
+
+        Flash::success('Payment deleted successfully.');
+        }
+
+        return redirect(route('payments.index'));
+    }
 }

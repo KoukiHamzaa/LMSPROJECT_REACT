@@ -12,26 +12,26 @@ class KeyWritten extends CacheEvent
     public $value;
 
     /**
-     * The number of seconds the key should be valid.
+     * The number of minutes the key should be valid.
      *
-     * @var int|null
+     * @var int
      */
-    public $seconds;
+    public $minutes;
 
     /**
      * Create a new event instance.
      *
      * @param  string  $key
      * @param  mixed  $value
-     * @param  int|null  $seconds
+     * @param  int  $minutes
      * @param  array  $tags
      * @return void
      */
-    public function __construct($key, $value, $seconds = null, $tags = [])
+    public function __construct($key, $value, $minutes, $tags = [])
     {
         parent::__construct($key, $tags);
 
         $this->value = $value;
-        $this->seconds = $seconds;
+        $this->minutes = $minutes;
     }
 }

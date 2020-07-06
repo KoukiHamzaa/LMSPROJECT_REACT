@@ -114,8 +114,6 @@ class Encrypter implements EncrypterContract
      *
      * @param  string  $value
      * @return string
-     *
-     * @throws \Illuminate\Contracts\Encryption\EncryptException
      */
     public function encryptString($value)
     {
@@ -125,7 +123,7 @@ class Encrypter implements EncrypterContract
     /**
      * Decrypt the given value.
      *
-     * @param  string  $payload
+     * @param  mixed  $payload
      * @param  bool  $unserialize
      * @return mixed
      *
@@ -156,8 +154,6 @@ class Encrypter implements EncrypterContract
      *
      * @param  string  $payload
      * @return string
-     *
-     * @throws \Illuminate\Contracts\Encryption\DecryptException
      */
     public function decryptString($payload)
     {

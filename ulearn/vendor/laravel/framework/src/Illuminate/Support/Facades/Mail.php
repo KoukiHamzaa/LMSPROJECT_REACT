@@ -31,13 +31,11 @@ class Mail extends Facade
     /**
      * Replace the bound instance with a fake.
      *
-     * @return \Illuminate\Support\Testing\Fakes\MailFake
+     * @return void
      */
     public static function fake()
     {
-        static::swap($fake = new MailFake);
-
-        return $fake;
+        static::swap(new MailFake);
     }
 
     /**

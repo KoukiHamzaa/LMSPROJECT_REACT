@@ -120,7 +120,7 @@ class DatabasePresenceVerifier implements PresenceVerifierInterface
      * @param  string  $table
      * @return \Illuminate\Database\Query\Builder
      */
-    public function table($table)
+    protected function table($table)
     {
         return $this->db->connection($this->connection)->table($table)->useWritePdo();
     }

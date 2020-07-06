@@ -11,7 +11,6 @@ use GuzzleHttp\Client as HttpClient;
 use Swift_SmtpTransport as SmtpTransport;
 use Illuminate\Mail\Transport\LogTransport;
 use Illuminate\Mail\Transport\SesTransport;
-use Postmark\Transport as PostmarkTransport;
 use Illuminate\Mail\Transport\ArrayTransport;
 use Illuminate\Mail\Transport\MailgunTransport;
 use Illuminate\Mail\Transport\MandrillTransport;
@@ -47,28 +46,11 @@ class TransportManager extends Manager
             $transport->setPassword($config['password']);
         }
 
-        return $this->configureSmtpDriver($transport, $config);
-    }
-
-    /**
-     * Configure the additional SMTP driver options.
-     *
-     * @param  \Swift_SmtpTransport  $transport
-     * @param  array  $config
-     * @return \Swift_SmtpTransport
-     */
-    protected function configureSmtpDriver($transport, $config)
-    {
+        // Next we will set any stream context options specified for the transport
+        // and then return it. The option is not required any may not be inside
+        // the configuration array at all so we'll verify that before adding.
         if (isset($config['stream'])) {
             $transport->setStreamOptions($config['stream']);
-        }
-
-        if (isset($config['source_ip'])) {
-            $transport->setSourceIp($config['source_ip']);
-        }
-
-        if (isset($config['local_domain'])) {
-            $transport->setLocalDomain($config['local_domain']);
         }
 
         return $transport;
@@ -168,18 +150,6 @@ class TransportManager extends Manager
 
         return new SparkPostTransport(
             $this->guzzle($config), $config['secret'], $config['options'] ?? []
-        );
-    }
-
-    /**
-     * Create an instance of the Postmark Swift Transport driver.
-     *
-     * @return \Swift_Transport
-     */
-    protected function createPostmarkDriver()
-    {
-        return new PostmarkTransport(
-            $this->app['config']->get('services.postmark.token')
         );
     }
 

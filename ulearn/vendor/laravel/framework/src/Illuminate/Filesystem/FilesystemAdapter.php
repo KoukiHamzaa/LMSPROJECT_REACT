@@ -138,11 +138,7 @@ class FilesystemAdapter implements FilesystemContract, CloudFilesystemContract
     {
         $response = new StreamedResponse;
 
-        $filename = $name ?? basename($path);
-
-        $disposition = $response->headers->makeDisposition(
-            $disposition, $filename, $this->fallbackName($filename)
-        );
+        $disposition = $response->headers->makeDisposition($disposition, $name ?? basename($path));
 
         $response->headers->replace($headers + [
             'Content-Type' => $this->mimeType($path),
@@ -170,17 +166,6 @@ class FilesystemAdapter implements FilesystemContract, CloudFilesystemContract
     public function download($path, $name = null, array $headers = [])
     {
         return $this->response($path, $name, $headers, 'attachment');
-    }
-
-    /**
-     * Convert the string to ASCII characters that are equivalent to the given name.
-     *
-     * @param  string  $name
-     * @return string
-     */
-    protected function fallbackName($name)
-    {
-        return str_replace('%', '', Str::ascii($name));
     }
 
     /**
@@ -430,7 +415,9 @@ class FilesystemAdapter implements FilesystemContract, CloudFilesystemContract
     public function readStream($path)
     {
         try {
-            return $this->driver->readStream($path) ?: null;
+            $resource = $this->driver->readStream($path);
+
+            return $resource ? $resource : null;
         } catch (FileNotFoundException $e) {
             throw new ContractFileNotFoundException($e->getMessage(), $e->getCode(), $e);
         }

@@ -466,20 +466,11 @@ class SqlServerGrammar extends Grammar
      */
     protected function wrapJsonSelector($value)
     {
-        [$field, $path] = $this->wrapJsonFieldAndPath($value);
+        $parts = explode('->', $value, 2);
 
-        return 'json_value('.$field.$path.')';
-    }
+        $field = $this->wrapSegments(explode('.', array_shift($parts)));
 
-    /**
-     * Wrap the given JSON boolean value.
-     *
-     * @param  string  $value
-     * @return string
-     */
-    protected function wrapJsonBooleanValue($value)
-    {
-        return "'".$value."'";
+        return 'json_value('.$field.', '.$this->wrapJsonPath($parts[0]).')';
     }
 
     /**

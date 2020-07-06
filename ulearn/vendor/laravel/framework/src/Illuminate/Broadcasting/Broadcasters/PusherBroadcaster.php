@@ -10,8 +10,6 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 class PusherBroadcaster extends Broadcaster
 {
-    use UsePusherChannelConventions;
-
     /**
      * The Pusher SDK instance.
      *
@@ -40,12 +38,14 @@ class PusherBroadcaster extends Broadcaster
      */
     public function auth($request)
     {
-        $channelName = $this->normalizeChannelName($request->channel_name);
-
-        if ($this->isGuardedChannel($request->channel_name) &&
-            ! $this->retrieveUser($request, $channelName)) {
+        if (Str::startsWith($request->channel_name, ['private-', 'presence-']) &&
+            ! $request->user()) {
             throw new AccessDeniedHttpException;
         }
+
+        $channelName = Str::startsWith($request->channel_name, 'private-')
+                            ? Str::replaceFirst('private-', '', $request->channel_name)
+                            : Str::replaceFirst('presence-', '', $request->channel_name);
 
         return parent::verifyUserCanAccessChannel(
             $request, $channelName
@@ -67,13 +67,11 @@ class PusherBroadcaster extends Broadcaster
             );
         }
 
-        $channelName = $this->normalizeChannelName($request->channel_name);
-
         return $this->decodePusherResponse(
             $request,
             $this->pusher->presence_auth(
                 $request->channel_name, $request->socket_id,
-                $this->retrieveUser($request, $channelName)->getAuthIdentifier(), $result
+                $request->user()->getAuthIdentifier(), $result
             )
         );
     }

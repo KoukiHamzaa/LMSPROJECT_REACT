@@ -1,16 +1,11 @@
 <?php
 
-use PhpOption\Option;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Support\Optional;
 use Illuminate\Support\Collection;
-use Dotenv\Environment\DotenvFactory;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\HigherOrderTapProxy;
-use Dotenv\Environment\Adapter\PutenvAdapter;
-use Dotenv\Environment\Adapter\EnvConstAdapter;
-use Dotenv\Environment\Adapter\ServerConstAdapter;
 
 if (! function_exists('append_config')) {
     /**
@@ -43,8 +38,6 @@ if (! function_exists('array_add')) {
      * @param  string  $key
      * @param  mixed   $value
      * @return array
-     *
-     * @deprecated Arr::add() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_add($array, $key, $value)
     {
@@ -58,8 +51,6 @@ if (! function_exists('array_collapse')) {
      *
      * @param  array  $array
      * @return array
-     *
-     * @deprecated Arr::collapse() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_collapse($array)
     {
@@ -73,8 +64,6 @@ if (! function_exists('array_divide')) {
      *
      * @param  array  $array
      * @return array
-     *
-     * @deprecated Arr::divide() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_divide($array)
     {
@@ -89,8 +78,6 @@ if (! function_exists('array_dot')) {
      * @param  array   $array
      * @param  string  $prepend
      * @return array
-     *
-     * @deprecated Arr::dot() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_dot($array, $prepend = '')
     {
@@ -105,8 +92,6 @@ if (! function_exists('array_except')) {
      * @param  array  $array
      * @param  array|string  $keys
      * @return array
-     *
-     * @deprecated Arr::except() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_except($array, $keys)
     {
@@ -122,8 +107,6 @@ if (! function_exists('array_first')) {
      * @param  callable|null  $callback
      * @param  mixed  $default
      * @return mixed
-     *
-     * @deprecated Arr::first() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_first($array, callable $callback = null, $default = null)
     {
@@ -138,8 +121,6 @@ if (! function_exists('array_flatten')) {
      * @param  array  $array
      * @param  int  $depth
      * @return array
-     *
-     * @deprecated Arr::flatten() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_flatten($array, $depth = INF)
     {
@@ -154,8 +135,6 @@ if (! function_exists('array_forget')) {
      * @param  array  $array
      * @param  array|string  $keys
      * @return void
-     *
-     * @deprecated Arr::forget() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_forget(&$array, $keys)
     {
@@ -171,8 +150,6 @@ if (! function_exists('array_get')) {
      * @param  string  $key
      * @param  mixed   $default
      * @return mixed
-     *
-     * @deprecated Arr::get() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_get($array, $key, $default = null)
     {
@@ -187,8 +164,6 @@ if (! function_exists('array_has')) {
      * @param  \ArrayAccess|array  $array
      * @param  string|array  $keys
      * @return bool
-     *
-     * @deprecated Arr::has() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_has($array, $keys)
     {
@@ -204,8 +179,6 @@ if (! function_exists('array_last')) {
      * @param  callable|null  $callback
      * @param  mixed  $default
      * @return mixed
-     *
-     * @deprecated Arr::last() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_last($array, callable $callback = null, $default = null)
     {
@@ -220,8 +193,6 @@ if (! function_exists('array_only')) {
      * @param  array  $array
      * @param  array|string  $keys
      * @return array
-     *
-     * @deprecated Arr::only() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_only($array, $keys)
     {
@@ -237,8 +208,6 @@ if (! function_exists('array_pluck')) {
      * @param  string|array  $value
      * @param  string|array|null  $key
      * @return array
-     *
-     * @deprecated Arr::pluck() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_pluck($array, $value, $key = null)
     {
@@ -254,8 +223,6 @@ if (! function_exists('array_prepend')) {
      * @param  mixed  $value
      * @param  mixed  $key
      * @return array
-     *
-     * @deprecated Arr::prepend() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_prepend($array, $value, $key = null)
     {
@@ -271,8 +238,6 @@ if (! function_exists('array_pull')) {
      * @param  string  $key
      * @param  mixed   $default
      * @return mixed
-     *
-     * @deprecated Arr::pull() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_pull(&$array, $key, $default = null)
     {
@@ -287,8 +252,6 @@ if (! function_exists('array_random')) {
      * @param  array  $array
      * @param  int|null  $num
      * @return mixed
-     *
-     * @deprecated Arr::random() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_random($array, $num = null)
     {
@@ -306,8 +269,6 @@ if (! function_exists('array_set')) {
      * @param  string  $key
      * @param  mixed   $value
      * @return array
-     *
-     * @deprecated Arr::set() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_set(&$array, $key, $value)
     {
@@ -322,8 +283,6 @@ if (! function_exists('array_sort')) {
      * @param  array  $array
      * @param  callable|string|null  $callback
      * @return array
-     *
-     * @deprecated Arr::sort() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_sort($array, $callback = null)
     {
@@ -337,8 +296,6 @@ if (! function_exists('array_sort_recursive')) {
      *
      * @param  array  $array
      * @return array
-     *
-     * @deprecated Arr::sortRecursive() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_sort_recursive($array)
     {
@@ -353,8 +310,6 @@ if (! function_exists('array_where')) {
      * @param  array  $array
      * @param  callable  $callback
      * @return array
-     *
-     * @deprecated Arr::where() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_where($array, callable $callback)
     {
@@ -368,8 +323,6 @@ if (! function_exists('array_wrap')) {
      *
      * @param  mixed  $value
      * @return array
-     *
-     * @deprecated Arr::wrap() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function array_wrap($value)
     {
@@ -412,8 +365,6 @@ if (! function_exists('camel_case')) {
      *
      * @param  string  $value
      * @return string
-     *
-     * @deprecated Str::camel() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function camel_case($value)
     {
@@ -598,7 +549,7 @@ if (! function_exists('data_set')) {
 
 if (! function_exists('e')) {
     /**
-     * Encode HTML special characters in a string.
+     * Escape HTML special characters in a string.
      *
      * @param  \Illuminate\Contracts\Support\Htmlable|string  $value
      * @param  bool  $doubleEncode
@@ -621,8 +572,6 @@ if (! function_exists('ends_with')) {
      * @param  string  $haystack
      * @param  string|array  $needles
      * @return bool
-     *
-     * @deprecated Str::endsWith() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function ends_with($haystack, $needles)
     {
@@ -640,38 +589,32 @@ if (! function_exists('env')) {
      */
     function env($key, $default = null)
     {
-        static $variables;
+        $value = getenv($key);
 
-        if ($variables === null) {
-            $variables = (new DotenvFactory([new EnvConstAdapter, new PutenvAdapter, new ServerConstAdapter]))->createImmutable();
+        if ($value === false) {
+            return value($default);
         }
 
-        return Option::fromValue($variables->get($key))
-            ->map(function ($value) {
-                switch (strtolower($value)) {
-                    case 'true':
-                    case '(true)':
-                        return true;
-                    case 'false':
-                    case '(false)':
-                        return false;
-                    case 'empty':
-                    case '(empty)':
-                        return '';
-                    case 'null':
-                    case '(null)':
-                        return;
-                }
+        switch (strtolower($value)) {
+            case 'true':
+            case '(true)':
+                return true;
+            case 'false':
+            case '(false)':
+                return false;
+            case 'empty':
+            case '(empty)':
+                return '';
+            case 'null':
+            case '(null)':
+                return;
+        }
 
-                if (preg_match('/\A([\'"])(.*)\1\z/', $value, $matches)) {
-                    return $matches[2];
-                }
+        if (($valueLength = strlen($value)) > 1 && $value[0] === '"' && $value[$valueLength - 1] === '"') {
+            return substr($value, 1, -1);
+        }
 
-                return $value;
-            })
-            ->getOrCall(function () use ($default) {
-                return value($default);
-            });
+        return $value;
     }
 }
 
@@ -707,8 +650,6 @@ if (! function_exists('kebab_case')) {
      *
      * @param  string  $value
      * @return string
-     *
-     * @deprecated Str::kebab() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function kebab_case($value)
     {
@@ -800,23 +741,19 @@ if (! function_exists('retry')) {
      * @param  int  $times
      * @param  callable  $callback
      * @param  int  $sleep
-     * @param  callable  $when
      * @return mixed
      *
      * @throws \Exception
      */
-    function retry($times, callable $callback, $sleep = 0, $when = null)
+    function retry($times, callable $callback, $sleep = 0)
     {
-        $attempts = 0;
         $times--;
 
         beginning:
-        $attempts++;
-
         try {
-            return $callback($attempts);
+            return $callback();
         } catch (Exception $e) {
-            if (! $times || ($when && ! $when($e))) {
+            if (! $times) {
                 throw $e;
             }
 
@@ -838,8 +775,6 @@ if (! function_exists('snake_case')) {
      * @param  string  $value
      * @param  string  $delimiter
      * @return string
-     *
-     * @deprecated Str::snake() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function snake_case($value, $delimiter = '_')
     {
@@ -854,8 +789,6 @@ if (! function_exists('starts_with')) {
      * @param  string  $haystack
      * @param  string|array  $needles
      * @return bool
-     *
-     * @deprecated Str::startsWith() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function starts_with($haystack, $needles)
     {
@@ -870,8 +803,6 @@ if (! function_exists('str_after')) {
      * @param  string  $subject
      * @param  string  $search
      * @return string
-     *
-     * @deprecated Str::after() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function str_after($subject, $search)
     {
@@ -886,8 +817,6 @@ if (! function_exists('str_before')) {
      * @param  string  $subject
      * @param  string  $search
      * @return string
-     *
-     * @deprecated Str::before() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function str_before($subject, $search)
     {
@@ -902,8 +831,6 @@ if (! function_exists('str_contains')) {
      * @param  string  $haystack
      * @param  string|array  $needles
      * @return bool
-     *
-     * @deprecated Str::contains() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function str_contains($haystack, $needles)
     {
@@ -918,8 +845,6 @@ if (! function_exists('str_finish')) {
      * @param  string  $value
      * @param  string  $cap
      * @return string
-     *
-     * @deprecated Str::finish() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function str_finish($value, $cap)
     {
@@ -934,8 +859,6 @@ if (! function_exists('str_is')) {
      * @param  string|array  $pattern
      * @param  string  $value
      * @return bool
-     *
-     * @deprecated Str::is() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function str_is($pattern, $value)
     {
@@ -951,8 +874,6 @@ if (! function_exists('str_limit')) {
      * @param  int     $limit
      * @param  string  $end
      * @return string
-     *
-     * @deprecated Str::limit() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function str_limit($value, $limit = 100, $end = '...')
     {
@@ -967,8 +888,6 @@ if (! function_exists('str_plural')) {
      * @param  string  $value
      * @param  int     $count
      * @return string
-     *
-     * @deprecated Str::plural() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function str_plural($value, $count = 2)
     {
@@ -984,8 +903,6 @@ if (! function_exists('str_random')) {
      * @return string
      *
      * @throws \RuntimeException
-     *
-     * @deprecated Str::random() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function str_random($length = 16)
     {
@@ -1001,8 +918,6 @@ if (! function_exists('str_replace_array')) {
      * @param  array   $replace
      * @param  string  $subject
      * @return string
-     *
-     * @deprecated Str::replaceArray() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function str_replace_array($search, array $replace, $subject)
     {
@@ -1018,8 +933,6 @@ if (! function_exists('str_replace_first')) {
      * @param  string  $replace
      * @param  string  $subject
      * @return string
-     *
-     * @deprecated Str::replaceFirst() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function str_replace_first($search, $replace, $subject)
     {
@@ -1035,8 +948,6 @@ if (! function_exists('str_replace_last')) {
      * @param  string  $replace
      * @param  string  $subject
      * @return string
-     *
-     * @deprecated Str::replaceLast() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function str_replace_last($search, $replace, $subject)
     {
@@ -1050,8 +961,6 @@ if (! function_exists('str_singular')) {
      *
      * @param  string  $value
      * @return string
-     *
-     * @deprecated Str::singular() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function str_singular($value)
     {
@@ -1067,8 +976,6 @@ if (! function_exists('str_slug')) {
      * @param  string  $separator
      * @param  string  $language
      * @return string
-     *
-     * @deprecated Str::slug() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function str_slug($title, $separator = '-', $language = 'en')
     {
@@ -1083,8 +990,6 @@ if (! function_exists('str_start')) {
      * @param  string  $value
      * @param  string  $prefix
      * @return string
-     *
-     * @deprecated Str::start() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function str_start($value, $prefix)
     {
@@ -1098,8 +1003,6 @@ if (! function_exists('studly_case')) {
      *
      * @param  string  $value
      * @return string
-     *
-     * @deprecated Str::studly() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function studly_case($value)
     {
@@ -1174,8 +1077,6 @@ if (! function_exists('title_case')) {
      *
      * @param  string  $value
      * @return string
-     *
-     * @deprecated Str::title() should be used directly instead. Will be removed in Laravel 5.9.
      */
     function title_case($value)
     {

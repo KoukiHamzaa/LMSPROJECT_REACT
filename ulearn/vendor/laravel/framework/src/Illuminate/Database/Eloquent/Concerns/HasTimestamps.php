@@ -2,7 +2,7 @@
 
 namespace Illuminate\Database\Eloquent\Concerns;
 
-use Illuminate\Support\Facades\Date;
+use Illuminate\Support\Carbon;
 
 trait HasTimestamps
 {
@@ -81,7 +81,7 @@ trait HasTimestamps
      */
     public function freshTimestamp()
     {
-        return Date::now();
+        return new Carbon;
     }
 
     /**

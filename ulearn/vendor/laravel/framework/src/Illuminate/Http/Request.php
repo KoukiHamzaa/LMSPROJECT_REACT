@@ -184,10 +184,8 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
      */
     public function is(...$patterns)
     {
-        $path = $this->decodedPath();
-
         foreach ($patterns as $pattern) {
-            if (Str::is($pattern, $path)) {
+            if (Str::is($pattern, $this->decodedPath())) {
                 return true;
             }
         }
@@ -269,7 +267,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     /**
      * Get the client IP address.
      *
-     * @return string|null
+     * @return string
      */
     public function ip()
     {
@@ -300,7 +298,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
      * Merge new input into the current request's input array.
      *
      * @param  array  $input
-     * @return $this
+     * @return \Illuminate\Http\Request
      */
     public function merge(array $input)
     {
@@ -313,7 +311,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
      * Replace the input for the current request.
      *
      * @param  array  $input
-     * @return $this
+     * @return \Illuminate\Http\Request
      */
     public function replace(array $input)
     {
@@ -339,7 +337,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     /**
      * Get the JSON payload for the request.
      *
-     * @param  string|null  $key
+     * @param  string  $key
      * @param  mixed   $default
      * @return \Symfony\Component\HttpFoundation\ParameterBag|mixed
      */
@@ -395,8 +393,6 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
             $from->getContent()
         );
 
-        $request->headers->replace($from->headers->all());
-
         $request->setJson($from->json());
 
         if ($session = $from->getSession()) {
@@ -414,7 +410,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
      * Create an Illuminate request from a Symfony instance.
      *
      * @param  \Symfony\Component\HttpFoundation\Request  $request
-     * @return static
+     * @return \Illuminate\Http\Request
      */
     public static function createFromBase(SymfonyRequest $request)
     {
@@ -424,18 +420,16 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
         $content = $request->content;
 
-        $newRequest = (new static)->duplicate(
+        $request = (new static)->duplicate(
             $request->query->all(), $request->request->all(), $request->attributes->all(),
             $request->cookies->all(), $request->files->all(), $request->server->all()
         );
 
-        $newRequest->headers->replace($request->headers->all());
+        $request->content = $content;
 
-        $newRequest->content = $content;
+        $request->request = $request->getInputSource();
 
-        $newRequest->request = $newRequest->getInputSource();
-
-        return $newRequest;
+        return $request;
     }
 
     /**

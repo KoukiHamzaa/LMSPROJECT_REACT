@@ -34,9 +34,19 @@ trait FileHelpers
     }
 
     /**
+     * Get the file's extension supplied by the client.
+     *
+     * @return string
+     */
+    public function clientExtension()
+    {
+        return $this->guessClientExtension();
+    }
+
+    /**
      * Get a filename for the file.
      *
-     * @param  string|null  $path
+     * @param  string  $path
      * @return string
      */
     public function hashName($path = null)

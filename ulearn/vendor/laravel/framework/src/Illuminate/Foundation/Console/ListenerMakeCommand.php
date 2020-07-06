@@ -52,7 +52,7 @@ class ListenerMakeCommand extends GeneratorCommand
         );
 
         return str_replace(
-            'DummyFullEvent', trim($event, '\\'), $stub
+            'DummyFullEvent', $event, $stub
         );
     }
 

@@ -35,7 +35,7 @@ class BelongsTo extends Relation
      *
      * @var string
      */
-    protected $relationName;
+    protected $relation;
 
     /**
      * The count of self joins.
@@ -51,14 +51,13 @@ class BelongsTo extends Relation
      * @param  \Illuminate\Database\Eloquent\Model  $child
      * @param  string  $foreignKey
      * @param  string  $ownerKey
-     * @param  string  $relationName
-     *
+     * @param  string  $relation
      * @return void
      */
-    public function __construct(Builder $query, Model $child, $foreignKey, $ownerKey, $relationName)
+    public function __construct(Builder $query, Model $child, $foreignKey, $ownerKey, $relation)
     {
         $this->ownerKey = $ownerKey;
-        $this->relationName = $relationName;
+        $this->relation = $relation;
         $this->foreignKey = $foreignKey;
 
         // In the underlying base relationship class, this variable is referred to as
@@ -217,9 +216,7 @@ class BelongsTo extends Relation
         $this->child->setAttribute($this->foreignKey, $ownerKey);
 
         if ($model instanceof Model) {
-            $this->child->setRelation($this->relationName, $model);
-        } elseif ($this->child->isDirty($this->foreignKey)) {
-            $this->child->unsetRelation($this->relationName);
+            $this->child->setRelation($this->relation, $model);
         }
 
         return $this->child;
@@ -234,7 +231,7 @@ class BelongsTo extends Relation
     {
         $this->child->setAttribute($this->foreignKey, null);
 
-        return $this->child->setRelation($this->relationName, null);
+        return $this->child->setRelation($this->relation, null);
     }
 
     /**
@@ -252,7 +249,7 @@ class BelongsTo extends Relation
         }
 
         return $query->select($columns)->whereColumn(
-            $this->getQualifiedForeignKeyName(), '=', $query->qualifyColumn($this->ownerKey)
+            $this->getQualifiedForeignKey(), '=', $query->qualifyColumn($this->ownerKey)
         );
     }
 
@@ -273,7 +270,7 @@ class BelongsTo extends Relation
         $query->getModel()->setTable($hash);
 
         return $query->whereColumn(
-            $hash.'.'.$this->ownerKey, '=', $this->getQualifiedForeignKeyName()
+            $hash.'.'.$this->ownerKey, '=', $this->getQualifiedForeignKey()
         );
     }
 
@@ -310,21 +307,11 @@ class BelongsTo extends Relation
     }
 
     /**
-     * Get the child of the relationship.
-     *
-     * @return \Illuminate\Database\Eloquent\Model
-     */
-    public function getChild()
-    {
-        return $this->child;
-    }
-
-    /**
      * Get the foreign key of the relationship.
      *
      * @return string
      */
-    public function getForeignKeyName()
+    public function getForeignKey()
     {
         return $this->foreignKey;
     }
@@ -334,7 +321,7 @@ class BelongsTo extends Relation
      *
      * @return string
      */
-    public function getQualifiedForeignKeyName()
+    public function getQualifiedForeignKey()
     {
         return $this->child->qualifyColumn($this->foreignKey);
     }
@@ -344,7 +331,7 @@ class BelongsTo extends Relation
      *
      * @return string
      */
-    public function getOwnerKeyName()
+    public function getOwnerKey()
     {
         return $this->ownerKey;
     }
@@ -364,19 +351,8 @@ class BelongsTo extends Relation
      *
      * @return string
      */
-    public function getRelationName()
-    {
-        return $this->relationName;
-    }
-
-    /**
-     * Get the name of the relationship.
-     *
-     * @return string
-     * @deprecated The getRelationName() method should be used instead. Will be removed in Laravel 5.9.
-     */
     public function getRelation()
     {
-        return $this->relationName;
+        return $this->relation;
     }
 }

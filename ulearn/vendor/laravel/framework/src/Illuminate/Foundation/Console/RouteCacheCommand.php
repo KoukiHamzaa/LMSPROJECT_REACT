@@ -85,7 +85,7 @@ class RouteCacheCommand extends Command
     /**
      * Get a fresh application instance.
      *
-     * @return \Illuminate\Contracts\Foundation\Application
+     * @return \Illuminate\Foundation\Application
      */
     protected function getFreshApplication()
     {

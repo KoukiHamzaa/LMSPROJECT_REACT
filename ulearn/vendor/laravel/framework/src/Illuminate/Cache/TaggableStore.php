@@ -2,9 +2,7 @@
 
 namespace Illuminate\Cache;
 
-use Illuminate\Contracts\Cache\Store;
-
-abstract class TaggableStore implements Store
+abstract class TaggableStore
 {
     /**
      * Begin executing a new tags operation.

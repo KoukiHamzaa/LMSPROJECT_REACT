@@ -52,11 +52,8 @@ return [
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
             'prefix_indexes' => true,
-            'strict' => false,
+            'strict' => true,
             'engine' => null,
-            // 'options' => extension_loaded('pdo_mysql') ? array_filter([
-            //     PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            // ]) : [],
         ],
 
         'pgsql' => [
@@ -82,7 +79,7 @@ return [
             'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
-            // 'prefix_indexes' => true,
+            'prefix_indexes' => true,
         ],
 
     ],
@@ -113,11 +110,7 @@ return [
 
     'redis' => [
 
-        'client' => env('REDIS_CLIENT', 'predis'),
-
-        'options' => [
-            'cluster' => env('REDIS_CLUSTER', 'predis'),
-        ],
+        'client' => 'predis',
 
         'default' => [
             'host' => env('REDIS_HOST', '127.0.0.1'),
@@ -126,12 +119,12 @@ return [
             'database' => env('REDIS_DB', 0),
         ],
 
-        // 'cache' => [
-        //     'host' => env('REDIS_HOST', '127.0.0.1'),
-        //     'password' => env('REDIS_PASSWORD', null),
-        //     'port' => env('REDIS_PORT', 6379),
-        //     'database' => env('REDIS_CACHE_DB', 1),
-        // ],
+        'cache' => [
+            'host' => env('REDIS_HOST', '127.0.0.1'),
+            'password' => env('REDIS_PASSWORD', null),
+            'port' => env('REDIS_PORT', 6379),
+            'database' => env('REDIS_CACHE_DB', 1),
+        ],
 
     ],
 

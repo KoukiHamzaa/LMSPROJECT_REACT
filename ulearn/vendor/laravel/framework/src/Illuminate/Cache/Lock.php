@@ -2,7 +2,6 @@
 
 namespace Illuminate\Cache;
 
-use Illuminate\Support\Str;
 use Illuminate\Support\InteractsWithTime;
 use Illuminate\Contracts\Cache\Lock as LockContract;
 use Illuminate\Contracts\Cache\LockTimeoutException;
@@ -26,28 +25,15 @@ abstract class Lock implements LockContract
     protected $seconds;
 
     /**
-     * The scope identifier of this lock.
-     *
-     * @var string
-     */
-    protected $owner;
-
-    /**
      * Create a new lock instance.
      *
      * @param  string  $name
      * @param  int  $seconds
-     * @param  string|null  $owner
      * @return void
      */
-    public function __construct($name, $seconds, $owner = null)
+    public function __construct($name, $seconds)
     {
-        if (is_null($owner)) {
-            $owner = Str::random();
-        }
-
         $this->name = $name;
-        $this->owner = $owner;
         $this->seconds = $seconds;
     }
 
@@ -66,28 +52,19 @@ abstract class Lock implements LockContract
     abstract public function release();
 
     /**
-     * Returns the owner value written into the driver for this lock.
-     *
-     * @return string
-     */
-    abstract protected function getCurrentOwner();
-
-    /**
      * Attempt to acquire the lock.
      *
      * @param  callable|null  $callback
-     * @return mixed
+     * @return bool
      */
     public function get($callback = null)
     {
         $result = $this->acquire();
 
         if ($result && is_callable($callback)) {
-            try {
-                return $callback();
-            } finally {
+            return tap($callback(), function () {
                 $this->release();
-            }
+            });
         }
 
         return $result;
@@ -115,33 +92,11 @@ abstract class Lock implements LockContract
         }
 
         if (is_callable($callback)) {
-            try {
-                return $callback();
-            } finally {
+            return tap($callback(), function () {
                 $this->release();
-            }
+            });
         }
 
         return true;
-    }
-
-    /**
-     * Returns the current owner of the lock.
-     *
-     * @return string
-     */
-    public function owner()
-    {
-        return $this->owner;
-    }
-
-    /**
-     * Determines whether this lock is allowed to release the lock in the driver.
-     *
-     * @return bool
-     */
-    protected function isOwnedByCurrentProcess()
-    {
-        return $this->getCurrentOwner() === $this->owner;
     }
 }

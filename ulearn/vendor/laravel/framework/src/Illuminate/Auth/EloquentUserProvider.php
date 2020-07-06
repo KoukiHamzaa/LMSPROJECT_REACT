@@ -47,9 +47,9 @@ class EloquentUserProvider implements UserProvider
     {
         $model = $this->createModel();
 
-        return $this->newModelQuery($model)
-                    ->where($model->getAuthIdentifierName(), $identifier)
-                    ->first();
+        return $model->newQuery()
+            ->where($model->getAuthIdentifierName(), $identifier)
+            ->first();
     }
 
     /**
@@ -63,18 +63,15 @@ class EloquentUserProvider implements UserProvider
     {
         $model = $this->createModel();
 
-        $retrievedModel = $this->newModelQuery($model)->where(
-            $model->getAuthIdentifierName(), $identifier
-        )->first();
+        $model = $model->where($model->getAuthIdentifierName(), $identifier)->first();
 
-        if (! $retrievedModel) {
+        if (! $model) {
             return;
         }
 
-        $rememberToken = $retrievedModel->getRememberToken();
+        $rememberToken = $model->getRememberToken();
 
-        return $rememberToken && hash_equals($rememberToken, $token)
-                        ? $retrievedModel : null;
+        return $rememberToken && hash_equals($rememberToken, $token) ? $model : null;
     }
 
     /**
@@ -114,7 +111,7 @@ class EloquentUserProvider implements UserProvider
         // First we will add each credential element to the query as a where clause.
         // Then we can execute the query and, if we found a user, return it in a
         // Eloquent User "model" that will be utilized by the Guard instances.
-        $query = $this->newModelQuery();
+        $query = $this->createModel()->newQuery();
 
         foreach ($credentials as $key => $value) {
             if (Str::contains($key, 'password')) {
@@ -143,19 +140,6 @@ class EloquentUserProvider implements UserProvider
         $plain = $credentials['password'];
 
         return $this->hasher->check($plain, $user->getAuthPassword());
-    }
-
-    /**
-     * Get a new query builder for the model instance.
-     *
-     * @param  \Illuminate\Database\Eloquent\Model|null  $model
-     * @return \Illuminate\Database\Eloquent\Builder
-     */
-    protected function newModelQuery($model = null)
-    {
-        return is_null($model)
-                ? $this->createModel()->newQuery()
-                : $model->newQuery();
     }
 
     /**

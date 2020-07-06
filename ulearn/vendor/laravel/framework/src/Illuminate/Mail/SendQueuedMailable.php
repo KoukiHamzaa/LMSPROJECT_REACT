@@ -10,7 +10,7 @@ class SendQueuedMailable
     /**
      * The mailable message instance.
      *
-     * @var \Illuminate\Contracts\Mail\Mailable
+     * @var \Illuminate\Mail\Mailable
      */
     public $mailable;
 
@@ -73,20 +73,6 @@ class SendQueuedMailable
         if (method_exists($this->mailable, 'failed')) {
             $this->mailable->failed($e);
         }
-    }
-
-    /**
-     * Get the retry delay for the mailable object.
-     *
-     * @return mixed
-     */
-    public function retryAfter()
-    {
-        if (! method_exists($this->mailable, 'retryAfter') && ! isset($this->mailable->retryAfter)) {
-            return;
-        }
-
-        return $this->mailable->retryAfter ?? $this->mailable->retryAfter();
     }
 
     /**

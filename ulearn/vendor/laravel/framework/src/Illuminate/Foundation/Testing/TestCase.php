@@ -3,8 +3,7 @@
 namespace Illuminate\Foundation\Testing;
 
 use Mockery;
-use Carbon\Carbon;
-use Carbon\CarbonImmutable;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Console\Application as Artisan;
@@ -24,7 +23,7 @@ abstract class TestCase extends BaseTestCase
     /**
      * The Illuminate application instance.
      *
-     * @var \Illuminate\Contracts\Foundation\Application
+     * @var \Illuminate\Foundation\Application
      */
     protected $app;
 
@@ -63,7 +62,7 @@ abstract class TestCase extends BaseTestCase
      *
      * @return void
      */
-    protected function setUp(): void
+    protected function setUp()
     {
         if (! $this->app) {
             $this->refreshApplication();
@@ -133,7 +132,7 @@ abstract class TestCase extends BaseTestCase
      *
      * @return void
      */
-    protected function tearDown(): void
+    protected function tearDown()
     {
         if ($this->app) {
             foreach ($this->beforeApplicationDestroyedCallbacks as $callback) {
@@ -165,10 +164,6 @@ abstract class TestCase extends BaseTestCase
 
         if (class_exists(Carbon::class)) {
             Carbon::setTestNow();
-        }
-
-        if (class_exists(CarbonImmutable::class)) {
-            CarbonImmutable::setTestNow();
         }
 
         $this->afterApplicationCreatedCallbacks = [];

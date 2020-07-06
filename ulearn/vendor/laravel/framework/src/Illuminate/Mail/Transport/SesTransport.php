@@ -60,16 +60,6 @@ class SesTransport extends Transport
     }
 
     /**
-     * Get the Amazon SES client for the SesTransport instance.
-     *
-     * @return \Aws\Ses\SesClient
-     */
-    public function ses()
-    {
-        return $this->ses;
-    }
-
-    /**
      * Get the transmission options being used by the transport.
      *
      * @return array

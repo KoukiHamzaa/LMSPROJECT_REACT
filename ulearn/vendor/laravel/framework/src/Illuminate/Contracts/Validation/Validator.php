@@ -14,13 +14,6 @@ interface Validator extends MessageProvider
     public function validate();
 
     /**
-     * Get the attributes and values that were validated.
-     *
-     * @return array
-     */
-    public function validated();
-
-    /**
      * Determine if the data fails the validation rules.
      *
      * @return bool

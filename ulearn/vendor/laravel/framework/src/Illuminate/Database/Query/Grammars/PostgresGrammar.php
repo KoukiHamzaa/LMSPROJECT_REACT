@@ -226,7 +226,7 @@ class PostgresGrammar extends Grammar
         // Each one of the columns in the update statements needs to be wrapped in the
         // keyword identifiers, also a place-holder needs to be created for each of
         // the values in the list of bindings so we can make the sets statements.
-        $columns = $this->compileUpdateColumns($query, $values);
+        $columns = $this->compileUpdateColumns($values);
 
         $from = $this->compileUpdateFrom($query);
 
@@ -238,23 +238,20 @@ class PostgresGrammar extends Grammar
     /**
      * Compile the columns for the update statement.
      *
-     * @param  \Illuminate\Database\Query\Builder  $query
      * @param  array   $values
      * @return string
      */
-    protected function compileUpdateColumns($query, $values)
+    protected function compileUpdateColumns($values)
     {
         // When gathering the columns for an update statement, we'll wrap each of the
         // columns and convert it to a parameter value. Then we will concatenate a
         // list of the columns that can be added into this update query clauses.
-        return collect($values)->map(function ($value, $key) use ($query) {
-            $column = Str::after($key, $query->from.'.');
-
+        return collect($values)->map(function ($value, $key) {
             if ($this->isJsonSelector($key)) {
-                return $this->compileJsonUpdateColumn($column, $value);
+                return $this->compileJsonUpdateColumn($key, $value);
             }
 
-            return $this->wrap($column).' = '.$this->parameter($value);
+            return $this->wrap($key).' = '.$this->parameter($value);
         })->implode(', ');
     }
 
@@ -440,33 +437,6 @@ class PostgresGrammar extends Grammar
         }
 
         return $field.'->>'.$attribute;
-    }
-
-    /**
-     *Wrap the given JSON selector for boolean values.
-     *
-     * @param  string  $value
-     * @return string
-     */
-    protected function wrapJsonBooleanSelector($value)
-    {
-        $selector = str_replace(
-            '->>', '->',
-            $this->wrapJsonSelector($value)
-        );
-
-        return '('.$selector.')::jsonb';
-    }
-
-    /**
-     * Wrap the given JSON boolean value.
-     *
-     * @param  string  $value
-     * @return string
-     */
-    protected function wrapJsonBooleanValue($value)
-    {
-        return "'".$value."'::jsonb";
     }
 
     /**

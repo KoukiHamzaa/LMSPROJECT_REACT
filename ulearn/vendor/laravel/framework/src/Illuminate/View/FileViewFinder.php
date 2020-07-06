@@ -40,20 +40,20 @@ class FileViewFinder implements ViewFinderInterface
      *
      * @var array
      */
-    protected $extensions = ['blade.php', 'php', 'css', 'html'];
+    protected $extensions = ['blade.php', 'php', 'css'];
 
     /**
      * Create a new file view loader instance.
      *
      * @param  \Illuminate\Filesystem\Filesystem  $files
      * @param  array  $paths
-     * @param  array|null  $extensions
+     * @param  array  $extensions
      * @return void
      */
     public function __construct(Filesystem $files, array $paths, array $extensions = null)
     {
         $this->files = $files;
-        $this->paths = array_map([$this, 'resolvePath'], $paths);
+        $this->paths = $paths;
 
         if (isset($extensions)) {
             $this->extensions = $extensions;
@@ -158,7 +158,7 @@ class FileViewFinder implements ViewFinderInterface
      */
     public function addLocation($location)
     {
-        $this->paths[] = $this->resolvePath($location);
+        $this->paths[] = $location;
     }
 
     /**
@@ -169,18 +169,7 @@ class FileViewFinder implements ViewFinderInterface
      */
     public function prependLocation($location)
     {
-        array_unshift($this->paths, $this->resolvePath($location));
-    }
-
-    /**
-     * Resolve the path.
-     *
-     * @param  string  $path
-     * @return string
-     */
-    protected function resolvePath($path)
-    {
-        return realpath($path) ?: $path;
+        array_unshift($this->paths, $location);
     }
 
     /**
@@ -298,16 +287,6 @@ class FileViewFinder implements ViewFinderInterface
     public function getPaths()
     {
         return $this->paths;
-    }
-
-    /**
-     * Get the views that have been located.
-     *
-     * @return array
-     */
-    public function getViews()
-    {
-        return $this->views;
     }
 
     /**
